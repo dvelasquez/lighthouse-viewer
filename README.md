@@ -4,7 +4,18 @@ from `lighthouse@next` (v6). It should be compatible with early reports from Lig
 
 ## Getting started
 1. Install using `npm install vue-lighthouse-viewer` or `yarn add vue-lighthouse-viewer`
-
+2. Import in your project:
+```ts
+import "vue-lighthouse-viewer/dist/vuelighthouseviewer.css";
+import VueLighthouseViewer from "vue-lighthouse-viewer";
+```
+3. Load the component in your code as follows:
+```vue
+<div id="app">
+    <VueLighthouseViewer :json="json" />
+  </div>
+```
+4. That's all!
 
 ## TODO
 - [X] Sync at install or serve with the sources from lighthouse
@@ -13,5 +24,6 @@ from `lighthouse@next` (v6). It should be compatible with early reports from Lig
 - [ ] Write unit tests
 - [ ] Write E2E tests
 - [ ] Setup CI
-- [ ] Migrate to Rollup 
+- [ ] Migrate to Rollup
+- [ ] Make unnecessary to add the css manually 
 - [ ] Export ESM version
