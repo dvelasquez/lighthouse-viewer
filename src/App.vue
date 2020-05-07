@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <VueLighthouseViewer v-if="json" :json="json" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import VueLighthouseViewer from "./components/VueLighthouseViewer.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    VueLighthouseViewer
+  },
+  data: () => {
+    return {
+      json: null
+    };
+  },
+  created() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData: async function() {
+      try {
+        const result = await fetch("./report.json");
+        this.json = await result.json();
+      } catch (e) {
+        console.error(e);
+      }
+    }
   }
 };
 </script>

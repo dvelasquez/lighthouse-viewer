@@ -1,34 +1,17 @@
 # vue-lighthouse-viewer
+This component is a Vue wrapper for the lighthouse-viewer for Vue. For now is using the sourcefiles
+from `lighthouse@next` (v6). It should be compatible with early reports from Lighthouse.
 
-## Project setup
-```
-npm install
-```
+## Getting started
+1. Install using `npm install vue-lighthouse-viewer` or `yarn add vue-lighthouse-viewer`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## TODO
+- [X] Sync at install or serve with the sources from lighthouse
+- [ ] Add Typescript Definitions
+- [ ] Generate example
+- [ ] Write unit tests
+- [ ] Write E2E tests
+- [ ] Setup CI
+- [ ] Migrate to Rollup 
+- [ ] Export ESM version
