@@ -1,10 +1,12 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": false,
-  "main": "./dist/vueLighthouseViewer.umd.js",
+  "main": "./dist/vuelighthouseviewer.umd.min.js",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
-    "postinstall": "node copy-deps.js",
     "preserve": "node copy-deps.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
