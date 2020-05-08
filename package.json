@@ -1,6 +1,6 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "main": "./dist/vuelighthouseviewer.umd.min.js",
   "types": "./types/VueLighthouseViewer.d.ts",
