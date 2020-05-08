@@ -64,6 +64,13 @@ export default {
       const features = new ReportUIFeatures(dom);
       features.initFeatures(this.json);
     }
+  },
+  watch: {
+    json: function(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        this.generateReport();
+      }
+    }
   }
 };
 </script>

@@ -26,9 +26,8 @@
     "webperf"
   ],
   "scripts": {
-    "preserve": "node copy-deps.js",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "predev": "node copy-deps.js",
+    "dev": "vue-cli-service serve",
     "build-lib": "vue-cli-service build --target lib --name vuelighthouseviewer src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
