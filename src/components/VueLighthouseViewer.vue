@@ -33,9 +33,7 @@ export default {
   },
   mounted() {
     document.addEventListener("lh-log", e => {
-      debugger;
       const lhLogElement = document.querySelector("#lh-log");
-      debugger;
       if (lhLogElement) {
         const logger = new Logger(lhLogElement);
         switch (e.detail.cmd) {

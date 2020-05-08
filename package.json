@@ -1,10 +1,29 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "main": "./dist/vuelighthouseviewer.umd.min.js",
+  "types": "./types/VueLighthouseViewer.d.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "/types"
+  ],
+  "license": "Apache-2.0",
+  "author": {
+    "name":"Danilo Velasquez",
+    "email": "danilo.velasquez@gmail.com",
+    "url": "https://d13z.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/dvelasquez/vue-lighthouse-viewer/issues"
+  },
+  "repository": "https://github.com/dvelasquez/vue-lighthouse-viewer",
+  "keywords": [
+    "lighthouse",
+    "devtools",
+    "vue",
+    "performance",
+    "webperf"
   ],
   "scripts": {
     "preserve": "node copy-deps.js",
@@ -15,11 +34,11 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "core-js": "^3.6.4",
+  "peerDependencies": {
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "core-js": "^3.6.4",
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-e2e-cypress": "~4.3.0",
     "@vue/cli-plugin-eslint": "~4.3.0",

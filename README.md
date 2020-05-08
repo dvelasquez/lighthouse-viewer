@@ -19,7 +19,7 @@ import VueLighthouseViewer from "vue-lighthouse-viewer";
 
 ## TODO
 - [X] Sync at install or serve with the sources from lighthouse
-- [ ] Add Typescript Definitions
+- [x] Add Typescript Definitions
 - [ ] Generate example
 - [ ] Write unit tests
 - [ ] Write E2E tests
