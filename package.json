@@ -1,6 +1,6 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "main": "./dist/vuelighthouseviewer.umd.min.js",
   "types": "./types/VueLighthouseViewer.d.ts",
@@ -10,7 +10,7 @@
   ],
   "license": "Apache-2.0",
   "author": {
-    "name":"Danilo Velasquez",
+    "name": "Danilo Velasquez",
     "email": "danilo.velasquez@gmail.com",
     "url": "https://d13z.dev"
   },
