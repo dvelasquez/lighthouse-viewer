@@ -14,15 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-const DOM = require("./dom");
-const Util = require("./util");
-const DetailsRenderer = require("./details-renderer");
-const CategoryRenderer = require("./category-renderer");
-const PerformanceCategoryRenderer = require("./performance-category-renderer");
-const PwaCategoryRenderer = require("./pwa-category-renderer");
-const I18n = require("./i18n");
-
 'use strict';
 
 /**

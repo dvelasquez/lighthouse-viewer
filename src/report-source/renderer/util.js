@@ -14,9 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-const I18n = require("./i18n");
-
 'use strict';
 
 /* globals self, URL */

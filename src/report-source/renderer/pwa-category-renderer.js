@@ -14,10 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-const Util = require("./util");
-const CategoryRenderer = require("./category-renderer");
-
 'use strict';
 
 /* globals self, Util, CategoryRenderer */
