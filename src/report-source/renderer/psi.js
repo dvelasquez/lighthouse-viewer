@@ -14,6 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+const DOM = require("./dom");
+const Util = require("./util");
+const DetailsRenderer = require("./details-renderer");
+const PerformanceCategoryRenderer = require("./performance-category-renderer");
+
 'use strict';
 
 /* globals self DOM PerformanceCategoryRenderer Util DetailsRenderer */

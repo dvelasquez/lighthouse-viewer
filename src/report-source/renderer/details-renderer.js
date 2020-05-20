@@ -14,6 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+const DOM = require("./dom");
+const Util = require("./util");
+const CriticalRequestChainRenderer = require("./crc-details-renderer");
+const SnippetRenderer = require("./snippet-renderer");
+
 'use strict';
 
 /* globals self CriticalRequestChainRenderer SnippetRenderer Util URL */
