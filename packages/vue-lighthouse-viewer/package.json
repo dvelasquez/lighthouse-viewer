@@ -6,7 +6,7 @@
   "types": "./types/VueLighthouseViewer.d.ts",
   "files": [
     "/dist",
-    "/types"
+    "/packages/lighthouse-viewer/types"
   ],
   "license": "Apache-2.0",
   "author": {
