@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import VueLighthouseViewer from "./components/VueLighthouseViewer.vue";
+import VueLighthouseViewer from "./components/VueLighthouseViewer.js";
 
 export default {
   name: "App",

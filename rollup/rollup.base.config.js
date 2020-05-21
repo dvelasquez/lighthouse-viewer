@@ -4,6 +4,8 @@ import { terser } from 'rollup-plugin-terser';
 import analyzer from 'rollup-plugin-analyzer';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import html from '@rollup/plugin-html';
+import postcss from 'rollup-plugin-postcss';
 
 export default (
   {
@@ -29,6 +31,8 @@ export default (
     ],
     external,
     plugins: [
+      html(),
+      postcss(),
       typescript({ tsconfig: `${cwd}/tsconfig.json` }),
       // Some libraries (such as React) needs to be in production mode, or you risk have unusable code
       replace({
@@ -57,6 +61,8 @@ export default (
     ],
     external,
     plugins: [
+      html(),
+      postcss(),
       typescript({ lib: ['es5', 'es6', 'dom'], target: 'es5' }),
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
