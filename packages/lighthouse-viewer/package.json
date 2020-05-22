@@ -5,7 +5,7 @@
   "private": false,
   "main": "./dist/lighthouse-viewer.umd.js",
   "module": "./dist/lighthouse-viewer.esm.js",
-  "types": "./types/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "/dist"
   ],
@@ -28,7 +28,8 @@
   ],
   "scripts": {
     "prebuild": "rimraf src/imported/* && node utils/copy-deps.js",
-    "build": "rollup -c"
+    "build": "rollup -c && npm run copy:types",
+    "copy:types": "cpx \"src/types/**/*\" dist/types"
   },
   "devDependencies": {
     "fs-extra": "^9.0.0",

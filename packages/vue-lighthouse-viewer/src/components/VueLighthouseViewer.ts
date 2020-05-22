@@ -1,6 +1,5 @@
 import Vue from 'vue';
-import 'lighthouse-viewer/dist/report-styles.css';
-import { DOM, ReportRenderer, ReportUIFeatures, Logger } from 'lighthouse-viewer';
+import { DOM, ReportRenderer, ReportUIFeatures, Logger, reportStyles } from 'lighthouse-viewer';
 import VueReportTemplate from './VueReportTemplate';
 
 export default Vue.extend({
@@ -9,11 +8,12 @@ export default Vue.extend({
     VueReportTemplate,
   },
   template: `
-    <div class="lh-root lh-vars">
+      <div><style>{{reportStyles}}</style>
+        <div class="lh-root lh-vars">
       <vue-report-template />
-      <main class="vue-lighthouse-viewer"></main>
+      <main class="vue-lighthouse-viewer" />
       <div id="lh-log" />
-    </div>`,
+    </div></div>`,
   props: {
     json: {
       type: Object,

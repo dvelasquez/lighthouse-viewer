@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import htmlTemplate from 'lighthouse-viewer/templates.html';
+import { template } from 'lighthouse-viewer';
 
 export default Vue.extend({
   name: 'VueReportTemplate',
@@ -7,7 +7,7 @@ export default Vue.extend({
   props: {
     template: {
       type: String,
-      default: htmlTemplate,
+      default: template,
     },
   },
 });

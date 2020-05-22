@@ -10,7 +10,7 @@ const config = rollupBase({
   entry: 'src/index.ts',
   libraryName: 'vueLighthouseViewer',
   minify: false,
-  external: [],
+  external: ['vue'],
   pkg,
 });
 

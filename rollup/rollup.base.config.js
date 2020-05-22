@@ -6,6 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import html from '@rollup/plugin-html';
 import postcss from 'rollup-plugin-postcss';
+import htmlString from 'rollup-plugin-html';
 
 export default (
   {
@@ -15,7 +16,7 @@ export default (
     external = [],
     libraryName,
     minify = false,
-    extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx'],
+    extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx', 'html', 'css'],
   },
   sourcemap = true,
 ) => {
@@ -31,9 +32,15 @@ export default (
     ],
     external,
     plugins: [
-      html(),
-      postcss(),
       typescript({ tsconfig: `${cwd}/tsconfig.json` }),
+      htmlString({
+        htmlMinifierOptions: {
+          collapseWhitespace: true,
+          collapseBooleanAttributes: true,
+          conservativeCollapse: true,
+        },
+      }),
+      postcss(),
       // Some libraries (such as React) needs to be in production mode, or you risk have unusable code
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
@@ -61,9 +68,15 @@ export default (
     ],
     external,
     plugins: [
-      html(),
-      postcss(),
       typescript({ lib: ['es5', 'es6', 'dom'], target: 'es5' }),
+      htmlString({
+        htmlMinifierOptions: {
+          collapseWhitespace: true,
+          collapseBooleanAttributes: true,
+          conservativeCollapse: true,
+        },
+      }),
+      postcss(),
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
       }),
