@@ -8,7 +8,7 @@ export default Vue.extend({
     VueReportTemplate,
   },
   template: `
-      <div><style>{{reportStyles}}</style>
+      <div>
         <div class="lh-root lh-vars">
       <vue-report-template />
       <main class="vue-lighthouse-viewer" />
@@ -26,6 +26,12 @@ export default Vue.extend({
     },
   },
   mounted() {
+    const style = document.createElement('link');
+    style.type = 'text/css';
+    style.rel = 'stylesheet';
+    style.innerText = reportStyles;
+    document.head.appendChild(style);
+
     document.addEventListener('lh-log', (e: CustomEventInit) => {
       const lhLogElement = document.querySelector('#lh-log');
       if (lhLogElement) {

@@ -12,6 +12,7 @@ const config = rollupBase({
   minify: true,
   external: [],
   pkg,
+  type: 'lib',
 });
 
 export default config;

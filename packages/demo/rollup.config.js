@@ -8,11 +8,11 @@ const cwd = path.resolve(__dirname);
 const config = rollupBase({
   cwd,
   entry: 'src/index.ts',
-  libraryName: 'vueLighthouseViewer',
+  libraryName: 'demo',
   minify: false,
-  external: ['vue'],
+  external: [],
   pkg,
-  type: 'lib',
+  type: 'app',
 });
 
 export default config;
