@@ -33,7 +33,7 @@ if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
   release
 fi
 # The following script will only run for the branch "build/ci", so we can test our changes
-if [[ "$TRAVIS_BRANCH" = "build/ci" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+if [[ "$TRAVIS_BRANCH" = "build/monorepo-multipackage" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
   setup_git
   setup_npm
   release_canary
