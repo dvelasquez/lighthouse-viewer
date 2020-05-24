@@ -1,9 +1,9 @@
 #!/bin/sh
 
 setup_git() {
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
-  git remote set-url origin "https://${GITHUB_API_TOKEN}@github.com/dvelasquez/d13z-lerna.git" > /dev/null 2>&1
+  git config --global user.email "danilo.velasquez@gmail.com"
+  git config --global user.name "Danilo Velasquez"
+  git remote set-url origin "https://${GITHUB_API_TOKEN}@github.com/dvelasquez/lighthouse-viewer.git" > /dev/null 2>&1
 }
 
 setup_npm() {

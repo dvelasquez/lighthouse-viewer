@@ -7,7 +7,7 @@ cache:
     - ~/.nvm
     - node_modules
 before_install:
-  - git remote set-url origin "https://${GITHUB_API_TOKEN}@github.com/dvelasquez/d13z-lerna.git" > /dev/null 2>&1
+  - git remote set-url origin "https://${GITHUB_API_TOKEN}@github.com/dvelasquez/lighthouse-viewer.git" > /dev/null 2>&1
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 install:
   - npm ci
