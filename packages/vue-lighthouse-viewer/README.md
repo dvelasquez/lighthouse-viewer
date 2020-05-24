@@ -17,13 +17,3 @@ import VueLighthouseViewer from "vue-lighthouse-viewer";
 ```
 4. That's all!
 
-## TODO
-- [X] Sync at install or serve with the sources from lighthouse
-- [x] Add Typescript Definitions
-- [ ] Generate example
-- [ ] Write unit tests
-- [ ] Write E2E tests
-- [ ] Setup CI
-- [ ] Migrate to Rollup
-- [ ] Make unnecessary to add the css manually 
-- [ ] Export ESM version

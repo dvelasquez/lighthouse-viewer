@@ -10,10 +10,11 @@ export default Vue.extend({
   template: `
       <div>
         <div class="lh-root lh-vars">
-      <vue-report-template />
-      <main class="vue-lighthouse-viewer" />
-      <div id="lh-log" />
-    </div></div>`,
+          <vue-report-template />
+          <main class="vue-lighthouse-viewer" />
+          <div id="lh-log" />
+        </div>
+      </div>`,
   props: {
     json: {
       type: Object,
