@@ -1,1 +1,3 @@
-src/report-source
+dist
+node_modules
+**/src/imported/**/*

@@ -1,0 +1,13 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "lib": ["ESNext", "ES6", "DOM"],
+        "strict": true,
+        "baseUrl": "src/",
+        "declaration": false,
+        "allowJs": false
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
