@@ -12,7 +12,7 @@
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:publish": "lerna publish from-git --yes",
     "lerna:publish:canary": "lerna publish from-git --canary --yes",
-    "lint": "eslint '*/**/*.{js,ts}' --quiet",
+    "lint": "eslint --quiet",
     "lint:fix": "npm run lint -- --fix",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
