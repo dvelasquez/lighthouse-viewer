@@ -38,7 +38,6 @@ describe('Vue Component', () => {
   });
   it('Runtime Settings', () => {
     cy.get(':nth-child(2) > .lh-env__description').contains('https://d13z.dev');
-    cy.get(':nth-child(3) > .lh-env__description').contains('May 20, 2020, 12:46 PM GMT+2');
     cy.get(':nth-child(4) > .lh-env__description').contains('Emulated Moto G4');
     cy.get(':nth-child(5) > .lh-env__description').contains('150 ms TCP RTT, 1,638.4 Kbps throughput (Simulated)');
     cy.get(':nth-child(6) > .lh-env__description').contains('4x slowdown (Simulated)');
