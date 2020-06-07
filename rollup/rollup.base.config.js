@@ -21,6 +21,7 @@ export default (
     minify = false,
     extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx'],
     type = 'lib',
+    globals,
   },
   sourcemap = true,
 ) => {
@@ -38,16 +39,18 @@ export default (
       ],
       external,
       plugins: [
-        typescript({ tsconfig: `${cwd}/tsconfig.json` }),
-        replace({
-          'process.env.NODE_ENV': JSON.stringify('production'),
+        alias({
+          entries: [{ find: 'vue', replacement: `${cwd}/node_modules/vue/dist/vue.esm.browser.js` }],
         }),
-        postcss(),
-        alias({ entries: [{ find: 'vue', replacement: `${cwd}/node_modules/vue/dist/vue.esm.browser.js` }] }),
         resolve({
           mainFields: ['module', 'main'], // Since the target of this is ESM, we will prioritise modules, and then main
           extensions: extensions, // List of extensions of files to be included
         }),
+        typescript({ tsconfig: `${cwd}/tsconfig.json` }),
+        replace({
+          'process.env.NODE_ENV': JSON.stringify('development'),
+        }),
+        postcss(),
         commonjs(),
         !isDev && terser({ module: true, output: { comments: false } }),
         isDev && dev({ dirs: ['dist', 'public'] }),
@@ -103,6 +106,7 @@ export default (
           name: libraryName,
           exports: 'named',
           sourcemap: sourcemap,
+          globals,
         },
       ],
       external,
@@ -124,7 +128,7 @@ export default (
         }),
         resolve({
           mainFields: ['main'],
-          modulesOnly: true,
+          modulesOnly: false,
           extensions: extensions,
         }),
         commonjs(),

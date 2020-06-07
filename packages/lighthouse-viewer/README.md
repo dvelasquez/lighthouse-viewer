@@ -22,7 +22,7 @@ import {
     } from 'lighthouse-viewer';
 
     const mountViewer = () => {
-        const style = document.createElement('link');
+        const style = document.createElement('style');
         style.type = 'text/css';
         style.rel = 'stylesheet';
         style.innerText = reportStyles;

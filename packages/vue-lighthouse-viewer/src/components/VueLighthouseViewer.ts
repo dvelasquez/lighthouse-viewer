@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { DOM, ReportRenderer, ReportUIFeatures, Logger, reportStyles } from 'lighthouse-viewer';
+import { DOM, ReportRenderer, ReportUIFeatures, Logger } from 'lighthouse-viewer';
 import VueReportTemplate from './VueReportTemplate';
 
 export default Vue.extend({
@@ -27,12 +27,6 @@ export default Vue.extend({
     },
   },
   mounted() {
-    const style = document.createElement('link');
-    style.type = 'text/css';
-    style.rel = 'stylesheet';
-    style.innerText = reportStyles;
-    document.head.appendChild(style);
-
     document.addEventListener('lh-log', (e: CustomEventInit) => {
       const lhLogElement = document.querySelector('#lh-log');
       if (lhLogElement) {
