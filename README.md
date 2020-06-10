@@ -13,8 +13,7 @@ The idea is by following this pattern to be able to create wrappers to other lib
 - [X] Sync at install or serve with the sources from lighthouse
 - [x] Add Typescript Definitions
 - [x] Generate example
-- [ ] Write unit tests
-- [ ] Write E2E tests
+- [x] Write E2E tests
 - [x] Setup CI
 - [x] Migrate to Rollup
 - [x] Make unnecessary to add the css manually 

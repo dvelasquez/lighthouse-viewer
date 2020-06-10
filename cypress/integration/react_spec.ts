@@ -1,9 +1,9 @@
-describe('Vue Component', () => {
+describe('React Component', () => {
   before(() => {
-    cy.visit('/');
+    cy.visit('/react.html');
   });
   it('Check heading categories results', () => {
-    cy.get('h1').contains('It should be something awesome here');
+    cy.get('h1').contains('REACT APP');
     cy.get('.lh-scores-header > [href="#performance"] > .lh-gauge__percentage').contains(89);
     cy.get('.lh-scores-header > [href="#accessibility"] > .lh-gauge__percentage').contains(97);
     cy.get('.lh-scores-header > [href="#best-practices"] > .lh-gauge__percentage').contains(100);
