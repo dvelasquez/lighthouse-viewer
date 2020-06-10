@@ -14,14 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^2.6.11",
-    "react": "^16.13.1",
+    "react": "file:../react2-lighthouse-viewer/node_modules/react",
+    "vue": "file:../vue-lighthouse-viewer/node_modules/vue",
     "react-dom": "^16.13.1",
     "react2-lighthouse-viewer": "*",
-    "vue-lighthouse-viewer": "^0.0.9"
+    "vue-lighthouse-viewer": "*"
   },
   "devDependencies": {
-    "@types/react": "^16.9.35",
+    "@types/react": "file:../react2-lighthouse-viewer/node_modules/@types/react",
     "@types/react-dom": "^16.9.8"
   }
 }
