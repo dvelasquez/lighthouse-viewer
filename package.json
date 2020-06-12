@@ -6,7 +6,6 @@
   "scripts": {
     "postinstall": "npm run lerna:link && npm run lerna:bootstrap",
     "lerna:start": "lerna run start --stream",
-    "lerna:start:demo": "lerna run demo --stream --parallel",
     "lerna:build": "lerna run build",
     "lerna:bootstrap": "lerna bootstrap --no-ci",
     "lerna:link": "lerna link",
@@ -15,11 +14,13 @@
     "lerna:publish:canary": "lerna publish from-git --canary --yes",
     "lint": "eslint --quiet",
     "lint:fix": "npm run lint -- --fix",
-    "test": "start-server-and-test lerna:start:demo http://localhost:8080 cypress:run",
+    "test": "start-server-and-test demo:serve http://localhost:8080 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "demo:serve": "rimraf demo && parcel index.html --port 8080 -d demo --open",
+    "demo:build": "rimraf demo && parcel build index.html -d demo"
   },
   "keywords": [],
   "author": "",

@@ -1,9 +1,9 @@
-describe('Vue Component', () => {
+describe('React Component', () => {
   before(() => {
-    cy.visit('/packages/vue-lighthouse-viewer/demo/index.html');
+    cy.visit('/packages/lighthouse-viewer/demo/index.html');
   });
   it('Check heading categories results', () => {
-    cy.get('h1').contains('Vue 2 APP');
+    cy.get('h1').contains('VANILLA APP');
     cy.get('.lh-scores-header > [href="#performance"] > .lh-gauge__percentage').contains(89);
     cy.get('.lh-scores-header > [href="#accessibility"] > .lh-gauge__percentage').contains(97);
     cy.get('.lh-scores-header > [href="#best-practices"] > .lh-gauge__percentage').contains(100);

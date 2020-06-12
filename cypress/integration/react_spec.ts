@@ -1,6 +1,6 @@
 describe('React Component', () => {
   before(() => {
-    cy.visit('/index.html');
+    cy.visit('/packages/react2-lighthouse-viewer/demo/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('REACT APP');
