@@ -27,7 +27,6 @@
     "webperf"
   ],
   "scripts": {
-    "demo": "parcel demo/index.html --port 8080 --open",
     "prebuild": "rimraf src/imported/* && node utils/copy-deps.js",
     "build": "rollup -c && npm run copy:types",
     "copy:types": "cpx \"src/types/**/*\" dist/types"

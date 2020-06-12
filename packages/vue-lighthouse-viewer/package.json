@@ -31,7 +31,6 @@
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "start": "rollup -c -w",
-    "demo": "parcel demo/index.html --port 8082 --open",
     "prebuild": "rimraf dist"
   },
   "peerDependencies": {
