@@ -5,7 +5,8 @@
         "strict": true,
         "baseUrl": "src/",
         "declaration": false,
-        "allowJs": false
+        "allowJs": false,
+        "jsx": "react"
     },
     "include": [
         "./src/**/*"

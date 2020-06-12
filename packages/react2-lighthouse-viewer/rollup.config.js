@@ -7,12 +7,16 @@ const cwd = path.resolve(__dirname);
 
 const config = rollupBase({
   cwd,
-  entry: 'src/index.tsx',
-  libraryName: 'demo',
+  entry: 'src/index.ts',
+  libraryName: 'react2LighthouseViewer',
   minify: false,
-  external: [],
+  external: ['react'],
+  globals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   pkg,
-  type: 'app',
+  type: 'lib',
 });
 
 export default config;

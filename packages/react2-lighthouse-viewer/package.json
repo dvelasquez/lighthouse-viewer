@@ -1,6 +1,6 @@
 {
-  "name": "vue-lighthouse-viewer",
-  "version": "0.0.9",
+  "name": "react2-lighthouse-viewer",
+  "version": "0.0.0",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -33,13 +33,11 @@
     "start": "rollup -c -w",
     "prebuild": "rimraf dist"
   },
-  "peerDependencies": {
-    "vue": "^2.6.11"
-  },
   "dependencies": {
     "lighthouse-viewer": "^0.0.2"
   },
   "devDependencies": {
-    "vue": "^2.6.11"
+    "@types/react": "^16.9.35",
+    "react": "^16.13.1"
   }
 }
