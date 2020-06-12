@@ -8,7 +8,7 @@
     "lerna:start": "lerna run start --stream",
     "lerna:start:demo": "lerna run start --scope demo --stream",
     "lerna:build": "lerna run build",
-    "lerna:bootstrap": "lerna bootstrap",
+    "lerna:bootstrap": "lerna bootstrap --no-ci",
     "lerna:link": "lerna link",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:publish": "lerna publish from-git --yes",
