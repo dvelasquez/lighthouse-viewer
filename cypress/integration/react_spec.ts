@@ -1,6 +1,6 @@
 describe('React Component', () => {
   before(() => {
-    cy.visit('/react.html');
+    cy.visit('/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('REACT APP');

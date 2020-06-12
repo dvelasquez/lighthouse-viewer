@@ -1,21 +1,9 @@
-# Lighthouse Viewer
-This is the code extracted from the [lighthouse original repository](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/report/html)
-and packaged as an ES Modules for convenience and tree shaking.
- 
-The code for this repository **is automatically generated every time is built**, copying the files, adding the `imports` 
-and `exports` for every file.
-
-This is only for convenience, and it would be cool if some day the people from Lighthouse could export this code as well.
-
-## Getting started
-
-1. Install it using `npm i lighthouse-viewer`
-2. In your code, import the following modules:
-```js
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { DOM, ReportRenderer, ReportUIFeatures, Logger, template } from '..';
 import reportJson from './report.json';
 
-const generateReport = (lighthouseReport) => {
+const generateReport = (lighthouseReport: any) => {
   const dom = new DOM(document);
   const renderer = new ReportRenderer(dom);
   const container = document.querySelector('main.lighthouse-viewer');
@@ -31,7 +19,7 @@ const mountViewer = () => {
   if (htmlTemplateElement) {
     htmlTemplateElement.appendChild(htmlTemplate);
 
-    document.addEventListener('lh-log', (e) => {
+    document.addEventListener('lh-log', (e: any) => {
       const lhLogElement = document.querySelector('#lh-log');
       if (lhLogElement) {
         const logger = new Logger(lhLogElement);
@@ -58,17 +46,3 @@ const mountViewer = () => {
 };
 
 mountViewer();
-```
-3. And in your HTML
-```html
-<div>
-    <div class="lh-root lh-vars">
-        <div id="html-template"></div>
-        <main class="lighthouse-viewer"></main>
-        <div id="lh-log"></div>
-    </div>
-</div>
-```
-## All the credits to the Lightouse Authors
-If there is any issue with the license or the copyrights, please let me know. There is no other intentions behind this 
-besides making it easy to find.

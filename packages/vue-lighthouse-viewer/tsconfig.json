@@ -4,9 +4,11 @@
         "strict": true,
         "baseUrl": "src/",
         "declaration": false,
-        "allowJs": false
+        "allowJs": false,
+        "resolveJsonModule": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./demo/**/*"
     ]
 }

@@ -5,9 +5,11 @@
         "baseUrl": "src/",
         "declaration": false,
         "allowJs": false,
-        "jsx": "react"
+        "jsx": "react",
+        "resolveJsonModule": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./demo/**/*"
     ]
 }
