@@ -1,6 +1,6 @@
 {
   "name": "demo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "",
   "main": "./dist/app.js",
@@ -15,10 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "react": "file:../react2-lighthouse-viewer/node_modules/react",
-    "vue": "file:../vue-lighthouse-viewer/node_modules/vue",
     "react-dom": "^16.13.1",
-    "react2-lighthouse-viewer": "*",
-    "vue-lighthouse-viewer": "*"
+    "react2-lighthouse-viewer": "^0.0.1",
+    "vue": "file:../vue-lighthouse-viewer/node_modules/vue",
+    "vue-lighthouse-viewer": "^0.0.10"
   },
   "devDependencies": {
     "@types/react": "file:../react2-lighthouse-viewer/node_modules/@types/react",
