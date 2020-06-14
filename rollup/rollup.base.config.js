@@ -16,7 +16,6 @@ export default (
     libraryName,
     minify = false,
     extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx'],
-    type = 'lib',
     globals,
   },
   sourcemap = true,
