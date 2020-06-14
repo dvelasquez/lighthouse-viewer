@@ -6,6 +6,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import htmlString from 'rollup-plugin-html';
+import svelte from 'rollup-plugin-svelte';
+import autoPreprocess from 'svelte-preprocess';
 
 export default (
   {
@@ -15,7 +17,7 @@ export default (
     external = [],
     libraryName,
     minify = false,
-    extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx'],
+    extensions = ['js', 'jsx', 'mjs', 'ts', 'tsx', 'svelte'],
     globals,
   },
   sourcemap = true,
@@ -32,6 +34,14 @@ export default (
     ],
     external,
     plugins: [
+      svelte({
+        include: './src/**/*.svelte',
+        preprocess: autoPreprocess({
+          typescript: {
+            tsconfigFile: `${cwd}/tsconfig.json`,
+          },
+        }),
+      }),
       typescript({ tsconfig: `${cwd}/tsconfig.json`, exclude: ['./demo/**/*'] }),
       htmlString({
         htmlMinifierOptions: {
@@ -72,6 +82,14 @@ export default (
     ],
     external,
     plugins: [
+      svelte({
+        include: './src/**/*.svelte',
+        preprocess: autoPreprocess({
+          typescript: {
+            tsconfigFile: `${cwd}/tsconfig.json`,
+          },
+        }),
+      }),
       typescript({ lib: ['es5', 'es6', 'dom'], target: 'es5', exclude: ['./demo/**/*'] }),
       htmlString({
         htmlMinifierOptions: {

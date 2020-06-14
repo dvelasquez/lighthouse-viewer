@@ -1,0 +1,49 @@
+{
+  "name": "svelte-lighthouse-viewer",
+  "version": "0.0.0",
+  "private": false,
+  "module": "./dist/index.esm.js",
+  "main": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "svelte": "./src/components/SvelteLighthouseViewer.svelte",
+  "files": [
+    "/dist"
+  ],
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Danilo Velasquez",
+    "email": "danilo.velasquez@gmail.com",
+    "url": "https://d13z.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
+  },
+  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
+  "repository": "https://github.com/dvelasquez/lighthouse-viewer",
+  "keywords": [
+    "lighthouse",
+    "devtools",
+    "svelte",
+    "performance",
+    "webperf"
+  ],
+  "scripts": {
+    "build": "npm run build:dist && npm run build:types && npm run copy:types",
+    "build:dist": "rollup -c",
+    "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
+    "copy:types": "cpx \"src/types/**/*\" dist/types",
+    "start": "rollup -c -w",
+    "prebuild": "rimraf dist"
+  },
+  "peerDependencies": {
+    "svelte": "^3.23.2"
+  },
+  "dependencies": {
+    "lighthouse-viewer": "^0.0.6"
+  },
+  "devDependencies": {
+    "svelte": "^3.23.2",
+    "svelte-preprocess": "^3.9.7"
+  },
+  "alias": {}
+}
