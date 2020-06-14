@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
   },
+  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/vue-lighthouse-viewer/demo/index.html",
   "repository": "https://github.com/dvelasquez/lighthouse-viewer",
   "keywords": [
     "lighthouse",
@@ -41,5 +42,8 @@
   },
   "devDependencies": {
     "vue": "^2.6.11"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.esm.js"
   }
 }

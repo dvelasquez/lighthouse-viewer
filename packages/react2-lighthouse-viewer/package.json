@@ -17,11 +17,12 @@
   "bugs": {
     "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
   },
+  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/react2-lighthouse-viewer/demo/index.html",
   "repository": "https://github.com/dvelasquez/lighthouse-viewer",
   "keywords": [
     "lighthouse",
     "devtools",
-    "vue",
+    "react",
     "performance",
     "webperf"
   ],
@@ -38,6 +39,8 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.35",
-    "react": "^16.13.1"
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

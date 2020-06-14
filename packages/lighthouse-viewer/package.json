@@ -15,6 +15,7 @@
     "email": "danilo.velasquez@gmail.com",
     "url": "https://d13z.dev"
   },
+  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/lighthouse-viewer/demo/index.html",
   "bugs": {
     "url": "https://github.com/dvelasquez/vue-lighthouse-viewer/issues"
   },

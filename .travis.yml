@@ -4,8 +4,7 @@ language: node_js
 node_js: '12'
 cache:
   directories:
-    - ~/.nvm
-    - node_modules
+    - ~/.cache
 before_install:
   - git remote set-url origin "https://${GITHUB_API_TOKEN}@github.com/dvelasquez/lighthouse-viewer.git" > /dev/null 2>&1
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null

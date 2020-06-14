@@ -3,9 +3,11 @@
     "compilerOptions": {
         "strict": false,
         "baseUrl": "src/",
-        "declaration": false
+        "declaration": false,
+        "resolveJsonModule": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./demo/**/*"
     ]
 }
