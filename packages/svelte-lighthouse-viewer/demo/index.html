@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Lighthouse Viewer / Reporter Vanilla JS</title>
+	<title>Lighthouse Viewer / Reporter Svelte</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105846650-1"></script>
@@ -25,10 +25,10 @@
 			<li><a href="/packages/svelte-lighthouse-viewer/demo/index.html">Svelte Demo</a></li>
 		</ul>
 	</nav>
-	<h1>Vanilla JS Implementation</h1>
+	<h1>Svelte Implementation</h1>
 	<br>
 	<p>
-		<a href="https://github.com/dvelasquez/lighthouse-viewer/tree/master/packages/lighthouse-viewer">
+		<a href="https://github.com/dvelasquez/lighthouse-viewer/tree/master/packages/svelte-lighthouse-viewer">
 			<b>
 				<img
 						style="filter: invert(); height: 1rem"
@@ -37,7 +37,7 @@
 				View on Github
 			</b>
 		</a>
-		<a href="https://www.npmjs.com/package/lighthouse-viewer">
+		<a href="https://www.npmjs.com/package/vue-lighthouse-viewer">
 			<b>
 				<img
 						style="filter: invert(); height: 1rem"
@@ -49,14 +49,8 @@
 	</p>
 </header>
 <main>
-	<div>
-		<h1>VANILLA APP</h1>
-		<div class="lh-root lh-vars">
-			<div id="html-template"></div>
-			<main class="lighthouse-viewer"></main>
-			<div id="lh-log"></div>
-		</div>
-	</div>
+	<h1>Svelte APP</h1>
+	<div id="svelte-app"></div>
 	<script src="./index.ts"></script>
 </main>
 <footer>
