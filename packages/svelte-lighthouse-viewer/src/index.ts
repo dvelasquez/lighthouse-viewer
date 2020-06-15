@@ -1,3 +1,1 @@
-import SvelteLighthouseViewer from './components/SvelteLighthouseViewer.svelte';
-export { SvelteLighthouseViewer };
-export default SvelteLighthouseViewer;
+export { default } from './components/SvelteLighthouseViewer.svelte';

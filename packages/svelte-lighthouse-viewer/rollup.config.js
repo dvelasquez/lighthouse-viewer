@@ -10,7 +10,7 @@ const config = rollupBase({
   entry: 'src/index.ts',
   libraryName: 'svelteLighthouseViewer',
   minify: false,
-  external: ['svelte'],
+  external: [],
   pkg,
 });
 
