@@ -40,7 +40,7 @@ commit_demo () {
   git subtree push --prefix demo origin gh-pages
 }
 
-if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+if [[ "$TRAVIS_BRANCH" = "main" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
   setup_git
   setup_npm
   commit_demo
