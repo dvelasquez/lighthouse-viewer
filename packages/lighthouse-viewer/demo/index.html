@@ -8,7 +8,11 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105846650-1"></script>
 	<script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'UA-105846650-1');
@@ -49,15 +53,10 @@
 	</p>
 </header>
 <main>
-	<div>
-		<h1>VANILLA APP</h1>
-		<div class="lh-root lh-vars">
-			<div id="html-template"></div>
-			<main class="lighthouse-viewer"></main>
-			<div id="lh-log"></div>
-		</div>
-	</div>
-	<script src="./index.ts"></script>
+	<iframe src="lh-demo.html"
+					allowtransparency="true" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"
+					scrolling="no" style="width:100%;border:none;"
+	></iframe>
 </main>
 <footer>
 	<p><small>Css made by <a href="https://www.andybrewer.com/">Andy Brewer</a> from <a
