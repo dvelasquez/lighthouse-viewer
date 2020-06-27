@@ -12,7 +12,7 @@ This is only for convenience, and it would be cool if some day the people from L
 1. Install it using `npm i lighthouse-viewer`
 2. In your code, import the following modules:
 ```js
-import { DOM, ReportRenderer, ReportUIFeatures, Logger, template } from '..';
+import { DOM, ReportRenderer, ReportUIFeatures, Logger, template } from 'lighthouse-viewer';
 import reportJson from './report.json';
 
 const generateReport = (lighthouseReport) => {
