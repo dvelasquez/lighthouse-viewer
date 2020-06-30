@@ -41,9 +41,9 @@
     "lighthouse-viewer": "^0.0.7"
   },
   "devDependencies": {
-    "vue": "^2.6.11"
-  },
-  "alias": {
-    "vue": "./node_modules/vue/dist/vue.esm.js"
+    "vue-hot-reload-api": "^2.3.4",
+    "@vue/component-compiler-utils": "^3.1.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   }
 }
