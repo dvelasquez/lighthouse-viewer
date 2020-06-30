@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/dvelasquez/lighthouse-viewer/compare/react2-lighthouse-viewer@0.0.6...react2-lighthouse-viewer@0.0.7) (2020-06-30)
+
+
+### Bug Fixes
+
+* **vue-component:** fixed vue component template ([#16](https://github.com/dvelasquez/lighthouse-viewer/issues/16)) ([c9d3982](https://github.com/dvelasquez/lighthouse-viewer/commit/c9d39829e27b39da054e1065397e87df8df53c43))
+
+
+
+
+
 ## [0.0.6](https://github.com/dvelasquez/lighthouse-viewer/compare/react2-lighthouse-viewer@0.0.5...react2-lighthouse-viewer@0.0.6) (2020-06-27)
 
 **Note:** Version bump only for package react2-lighthouse-viewer
