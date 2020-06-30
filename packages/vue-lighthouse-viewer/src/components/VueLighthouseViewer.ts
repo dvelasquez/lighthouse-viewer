@@ -2,19 +2,20 @@ import Vue from 'vue';
 import { DOM, ReportRenderer, ReportUIFeatures, Logger } from 'lighthouse-viewer';
 import VueReportTemplate from './VueReportTemplate';
 
-export default Vue.extend({
+export default Vue.extend<any, any, any, any>({
   name: 'VueLighthouseViewer',
   components: {
     VueReportTemplate,
   },
-  template: `
-      <div>
-        <div class="lh-root lh-vars">
-          <vue-report-template />
-          <main class="vue-lighthouse-viewer" />
-          <div id="lh-log" />
-        </div>
-      </div>`,
+  render(h) {
+    return h('div', {}, [
+      h('div', { class: 'lh-root lh-vars' }, [
+        h('vue-report-template'),
+        h('main', { class: 'vue-lighthouse-viewer' }),
+        h('div', { attrs: { id: 'lh-log' } }),
+      ]),
+    ]);
+  },
   props: {
     json: {
       type: Object,
