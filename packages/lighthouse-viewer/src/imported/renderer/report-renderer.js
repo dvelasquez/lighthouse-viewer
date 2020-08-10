@@ -33,7 +33,7 @@ import I18n from './i18n';
 /** @typedef {import('./category-renderer')} CategoryRenderer */
 /** @typedef {import('./dom.js')} DOM */
 
-/* globals self, Util, DetailsRenderer, CategoryRenderer, I18n, PerformanceCategoryRenderer, PwaCategoryRenderer */
+/* globals self, Util, DetailsRenderer, CategoryRenderer, I18n, PerformanceCategoryRenderer, PwaCategoryRenderer, ElementScreenshotRenderer */
 
 export default class ReportRenderer {
   /**
@@ -200,7 +200,16 @@ export default class ReportRenderer {
     Util.i18n = i18n;
     Util.reportJson = report;
 
-    const detailsRenderer = new DetailsRenderer(this._dom);
+    const fullPageScreenshot =
+      report.audits['full-page-screenshot'] && report.audits['full-page-screenshot'].details &&
+      report.audits['full-page-screenshot'].details.type === 'full-page-screenshot' ?
+      report.audits['full-page-screenshot'].details : undefined;
+    const detailsRenderer = new DetailsRenderer(this._dom, {
+      fullPageScreenshot,
+    });
+    const fullPageScreenshotStyleEl = fullPageScreenshot &&
+      ElementScreenshotRenderer.createBackgroundImageStyle(this._dom, fullPageScreenshot);
+
     const categoryRenderer = new CategoryRenderer(this._dom, detailsRenderer);
     categoryRenderer.setTemplateContext(this._templateContext);
 
@@ -258,6 +267,7 @@ export default class ReportRenderer {
     reportFragment.appendChild(reportContainer);
     reportContainer.appendChild(headerContainer);
     reportContainer.appendChild(reportSection);
+    fullPageScreenshotStyleEl && reportContainer.appendChild(fullPageScreenshotStyleEl);
     reportSection.appendChild(this._renderReportFooter(report));
 
     return reportFragment;
