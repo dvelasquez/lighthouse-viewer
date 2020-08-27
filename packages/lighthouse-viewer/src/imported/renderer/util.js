@@ -597,6 +597,8 @@ Util.UIStrings = {
   runtimeSettingsUANetwork: 'User agent (network)',
   /** Label for a row in a table that shows the estimated CPU power of the machine running Lighthouse. Example row values: 532, 1492, 783. */
   runtimeSettingsBenchmark: 'CPU/Memory Power',
+  /** Label for a row in a table that shows the version of the Axe library used. Example row values: 2.1.0, 3.2.3 */
+  runtimeSettingsAxeVersion: 'Axe version',
 
   /** Label for button to create an issue against the Lighthouse Github project. */
   footerIssue: 'File an issue',

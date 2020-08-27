@@ -90,17 +90,21 @@ export default class I18n {
       month: 'short', day: 'numeric', year: 'numeric',
       hour: 'numeric', minute: 'numeric', timeZoneName: 'short',
     };
-    let formatter = new Intl.DateTimeFormat(this._numberDateLocale, options);
 
     // Force UTC if runtime timezone could not be detected.
     // See https://github.com/GoogleChrome/lighthouse/issues/1056
-    const tz = formatter.resolvedOptions().timeZone;
-    if (!tz || tz.toLowerCase() === 'etc/unknown') {
+    // and https://github.com/GoogleChrome/lighthouse/pull/9822
+    let formatter;
+    try {
+      formatter = new Intl.DateTimeFormat(this._numberDateLocale, options);
+    } catch (err) {
       options.timeZone = 'UTC';
       formatter = new Intl.DateTimeFormat(this._numberDateLocale, options);
     }
+
     return formatter.format(new Date(date));
   }
+
   /**
    * Converts a time in milliseconds into a duration string, i.e. `1d 2h 13m 52s`
    * @param {number} timeInMilliseconds

@@ -116,7 +116,7 @@ export default class DetailsRenderer {
     try {
       const parsed = Util.parseURL(url);
       displayedPath = parsed.file === '/' ? parsed.origin : parsed.file;
-      displayedHost = parsed.file === '/' ? '' : `(${parsed.hostname})`;
+      displayedHost = parsed.file === '/' || parsed.hostname === '' ? '' : `(${parsed.hostname})`;
       title = url;
     } catch (e) {
       displayedPath = url;
@@ -152,7 +152,9 @@ export default class DetailsRenderer {
 
     if (!url || !allowedProtocols.includes(url.protocol)) {
       // Fall back to just the link text if invalid or protocol not allowed.
-      return this._renderText(details.text);
+      const element = this._renderText(details.text);
+      element.classList.add('lh-link');
+      return element;
     }
 
     const a = this._dom.createElement('a');
@@ -160,7 +162,7 @@ export default class DetailsRenderer {
     a.target = '_blank';
     a.textContent = details.text;
     a.href = url.href;
-
+    a.classList.add('lh-link');
     return a;
   }
 
@@ -550,7 +552,7 @@ export default class DetailsRenderer {
     let element;
     if (item.urlProvider === 'network') {
       element = this.renderTextURL(item.url);
-      this._dom.find('a', element).textContent += `:${line}:${column}`;
+      this._dom.find('.lh-link', element).textContent += `:${line}:${column}`;
     } else {
       element = this._renderText(`${item.url}:${line}:${column} (from sourceURL)`);
     }
