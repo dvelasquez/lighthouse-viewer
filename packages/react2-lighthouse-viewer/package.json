@@ -1,6 +1,6 @@
 {
   "name": "react2-lighthouse-viewer",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
