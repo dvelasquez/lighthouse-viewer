@@ -1,6 +1,6 @@
 {
   "name": "react2-lighthouse-viewer",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -35,7 +35,7 @@
     "prebuild": "rimraf dist"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.0.11"
+    "lighthouse-viewer": "^0.0.12"
   },
   "devDependencies": {
     "@types/react": "^16.9.50",
