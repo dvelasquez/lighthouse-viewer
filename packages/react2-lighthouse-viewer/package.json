@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/react": "^16.9.52",
     "@types/react-dom": "^16.9.8",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1"
   }
 }
