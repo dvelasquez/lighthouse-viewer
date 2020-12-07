@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.21](https://github.com/dvelasquez/lighthouse-viewer/compare/svelte-lighthouse-viewer@0.0.20...svelte-lighthouse-viewer@0.0.21) (2020-12-07)
+
+**Note:** Version bump only for package svelte-lighthouse-viewer
+
+
+
+
+
 ## [0.0.20](https://github.com/dvelasquez/lighthouse-viewer/compare/svelte-lighthouse-viewer@0.0.19...svelte-lighthouse-viewer@0.0.20) (2020-12-02)
 
 **Note:** Version bump only for package svelte-lighthouse-viewer
