@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.14](https://github.com/dvelasquez/vue-lighthouse-viewer/compare/lighthouse-viewer@0.0.13...lighthouse-viewer@0.0.14) (2020-12-10)
+
+**Note:** Version bump only for package lighthouse-viewer
+
+
+
+
+
 ## 0.0.13 (2020-12-02)
 
 **Note:** Version bump only for package lighthouse-viewer
