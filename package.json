@@ -33,7 +33,7 @@
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-run": "^2.0.2",
     "@rollup/plugin-typescript": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
