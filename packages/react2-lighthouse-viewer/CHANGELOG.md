@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/dvelasquez/lighthouse-viewer/compare/react2-lighthouse-viewer@0.0.23...react2-lighthouse-viewer@0.1.0) (2020-12-19)
+
+
+### Features
+
+* **lighthouse-v7.0.0:** fixed lh builders after upgrade to v7.0.0 ([#178](https://github.com/dvelasquez/lighthouse-viewer/issues/178)) ([8497509](https://github.com/dvelasquez/lighthouse-viewer/commit/84975098be82b2dc917a49f9c2fa361f3cb76a96))
+
+
+
+
+
 ## [0.0.23](https://github.com/dvelasquez/lighthouse-viewer/compare/react2-lighthouse-viewer@0.0.22...react2-lighthouse-viewer@0.0.23) (2020-12-10)
 
 **Note:** Version bump only for package react2-lighthouse-viewer
