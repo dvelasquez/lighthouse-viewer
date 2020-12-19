@@ -82,6 +82,7 @@ export default class Util {
         // into 'debugdata' (LHR ≥5.0).
         // @ts-expect-error tsc rightly flags that these values shouldn't occur.
         if (audit.details.type === undefined || audit.details.type === 'diagnostic') {
+          // @ts-expect-error details is of type never.
           audit.details.type = 'debugdata';
         }
 
@@ -424,12 +425,10 @@ export default class Util {
         networkThrottling = Util.i18n.strings.runtimeUnknown;
     }
 
-    let deviceEmulation = Util.i18n.strings.runtimeNoEmulation;
-    if (settings.emulatedFormFactor === 'mobile') {
-      deviceEmulation = Util.i18n.strings.runtimeMobileEmulation;
-    } else if (settings.emulatedFormFactor === 'desktop') {
-      deviceEmulation = Util.i18n.strings.runtimeDesktopEmulation;
-    }
+    // TODO(paulirish): revise Runtime Settings strings: https://github.com/GoogleChrome/lighthouse/pull/11796
+    const deviceEmulation = settings.formFactor === 'mobile'
+      ? Util.i18n.strings.runtimeMobileEmulation
+      : Util.i18n.strings.runtimeDesktopEmulation;
 
     return {
       deviceEmulation,

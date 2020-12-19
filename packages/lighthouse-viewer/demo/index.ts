@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { DOM, ReportRenderer, ReportUIFeatures, Logger, template } from '..';
-import reportJson from './report.json';
+import reportJson from './report-v7.0.0.json';
 
 const generateReport = (lighthouseReport: any) => {
   const dom = new DOM(document);

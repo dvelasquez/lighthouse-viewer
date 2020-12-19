@@ -3,7 +3,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
-'use strict';
+
+import DOM from './dom';
+import Util from './util';
 
 /**
  * @fileoverview These functions define {Rect}s and {Size}s using two different coordinate spaces:
@@ -16,6 +18,18 @@
 /** @typedef {import('./dom.js')} DOM */
 /** @typedef {LH.Artifacts.Rect} Rect */
 /** @typedef {{width: number, height: number}} Size */
+
+/**
+ * @param {LH.Artifacts.FullPageScreenshot['screenshot']} screenshot
+ * @param {LH.Artifacts.Rect} rect
+ * @return {boolean}
+ */
+function screenshotOverlapsRect(screenshot, rect) {
+  return rect.left <= screenshot.width &&
+    0 <= rect.right &&
+    rect.top <= screenshot.height &&
+    0 <= rect.bottom;
+}
 
 /**
  * @param {number} value
@@ -38,7 +52,7 @@ function getRectCenterPoint(rect) {
   };
 }
 
-class ElementScreenshotRenderer {
+export default class ElementScreenshotRenderer {
   /**
    * Given the location of an element and the sizes of the preview and screenshot,
    * compute the absolute positions (in screenshot coordinate scale) of the screenshot content
@@ -108,14 +122,14 @@ class ElementScreenshotRenderer {
   /**
    * Called externally and must be injected to the report in order to use this renderer.
    * @param {DOM} dom
-   * @param {LH.Audit.Details.FullPageScreenshot} fullPageScreenshot
+   * @param {LH.Artifacts.FullPageScreenshot['screenshot']} screenshot
    */
-  static createBackgroundImageStyle(dom, fullPageScreenshot) {
+  static createBackgroundImageStyle(dom, screenshot) {
     const styleEl = dom.createElement('style');
     styleEl.id = 'full-page-screenshot-style';
     styleEl.textContent = `
       .lh-element-screenshot__image {
-        background-image: url(${fullPageScreenshot.data})
+        background-image: url(${screenshot.data})
       }`;
     return styleEl;
   }
@@ -124,27 +138,37 @@ class ElementScreenshotRenderer {
    * Installs the lightbox elements and wires up click listeners to all .lh-element-screenshot elements.
    * @param {DOM} dom
    * @param {ParentNode} templateContext
-   * @param {LH.Audit.Details.FullPageScreenshot} fullPageScreenshot
+   * @param {LH.Artifacts.FullPageScreenshot} fullPageScreenshot
    */
   static installOverlayFeature(dom, templateContext, fullPageScreenshot) {
-    const reportEl = dom.find('.lh-report', dom.document());
-    const screenshotOverlayClass = 'lh-feature-screenshot-overlay';
-    if (reportEl.classList.contains(screenshotOverlayClass)) return;
-    reportEl.classList.add(screenshotOverlayClass);
+    const rootEl = dom.find('.lh-root', dom.document());
+    if (!rootEl) {
+      console.warn('No lh-root. Overlay install failed.'); // eslint-disable-line no-console
+      return;
+    }
 
-    const maxLightboxSize = {
-      width: dom.document().documentElement.clientWidth,
-      height: dom.document().documentElement.clientHeight * 0.75,
-    };
+    const screenshotOverlayClass = 'lh-screenshot-overlay--enabled';
+    // Don't install the feature more than once.
+    if (rootEl.classList.contains(screenshotOverlayClass)) return;
+    rootEl.classList.add(screenshotOverlayClass);
 
-    dom.document().addEventListener('click', e => {
+    // Add a single listener to the root element to handle all clicks within (event delegation).
+    rootEl.addEventListener('click', e => {
       const target = /** @type {?HTMLElement} */ (e.target);
       if (!target) return;
-      const el = /** @type {?HTMLElement} */ (target.closest('.lh-element-screenshot'));
+      // Only activate the overlay for clicks on the screenshot *preview* of an element, not the full-size too.
+      const el = /** @type {?HTMLElement} */ (target.closest('.lh-node > .lh-element-screenshot'));
       if (!el) return;
 
-      const overlay = dom.createElement('div');
-      overlay.classList.add('lh-element-screenshot__overlay');
+      const overlay = dom.createElement('div', 'lh-element-screenshot__overlay');
+      rootEl.append(overlay);
+
+      // The newly-added overlay has the dimensions we need.
+      const maxLightboxSize = {
+        width: overlay.clientWidth * 0.95,
+        height: overlay.clientHeight * 0.80,
+      };
+
       const elementRectSC = {
         width: Number(el.dataset['rectWidth']),
         height: Number(el.dataset['rectHeight']),
@@ -153,18 +177,22 @@ class ElementScreenshotRenderer {
         top: Number(el.dataset['rectTop']),
         bottom: Number(el.dataset['rectTop']) + Number(el.dataset['rectHeight']),
       };
-      overlay.appendChild(ElementScreenshotRenderer.render(
+      const screenshotElement = ElementScreenshotRenderer.render(
         dom,
         templateContext,
-        fullPageScreenshot,
+        fullPageScreenshot.screenshot,
         elementRectSC,
         maxLightboxSize
-      ));
-      overlay.addEventListener('click', () => {
-        overlay.remove();
-      });
+      );
 
-      reportEl.appendChild(overlay);
+      // This would be unexpected here.
+      // When `screenshotElement` is `null`, there is also no thumbnail element for the user to have clicked to make it this far.
+      if (!screenshotElement) {
+        overlay.remove();
+        return;
+      }
+      overlay.appendChild(screenshotElement);
+      overlay.addEventListener('click', () => overlay.remove());
     });
   }
 
@@ -188,14 +216,19 @@ class ElementScreenshotRenderer {
   /**
    * Renders an element with surrounding context from the full page screenshot.
    * Used to render both the thumbnail preview in details tables and the full-page screenshot in the lightbox.
+   * Returns null if element rect is outside screenshot bounds.
    * @param {DOM} dom
    * @param {ParentNode} templateContext
-   * @param {LH.Audit.Details.FullPageScreenshot} fullPageScreenshot
+   * @param {LH.Artifacts.FullPageScreenshot['screenshot']} screenshot
    * @param {LH.Artifacts.Rect} elementRectSC Region of screenshot to highlight.
    * @param {Size} maxRenderSizeDC e.g. maxThumbnailSize or maxLightboxSize.
-   * @return {Element}
+   * @return {Element|null}
    */
-  static render(dom, templateContext, fullPageScreenshot, elementRectSC, maxRenderSizeDC) {
+  static render(dom, templateContext, screenshot, elementRectSC, maxRenderSizeDC) {
+    if (!screenshotOverlapsRect(screenshot, elementRectSC)) {
+      return null;
+    }
+
     const tmpl = dom.cloneTemplate('#tmpl-lh-element-screenshot', templateContext);
     const containerEl = dom.find('.lh-element-screenshot', tmpl);
 
@@ -212,7 +245,7 @@ class ElementScreenshotRenderer {
       width: maxRenderSizeDC.width / zoomFactor,
       height: maxRenderSizeDC.height / zoomFactor,
     };
-    elementPreviewSizeSC.width = Math.min(fullPageScreenshot.width, elementPreviewSizeSC.width);
+    elementPreviewSizeSC.width = Math.min(screenshot.width, elementPreviewSizeSC.width);
     /* This preview size is either the size of the thumbnail or size of the Lightbox */
     const elementPreviewSizeDC = {
       width: elementPreviewSizeSC.width * zoomFactor,
@@ -222,7 +255,7 @@ class ElementScreenshotRenderer {
     const positions = ElementScreenshotRenderer.getScreenshotPositions(
       elementRectSC,
       elementPreviewSizeSC,
-      {width: fullPageScreenshot.width, height: fullPageScreenshot.height}
+      {width: screenshot.width, height: screenshot.height}
     );
 
     const contentEl = dom.find('.lh-element-screenshot__content', containerEl);
@@ -235,7 +268,7 @@ class ElementScreenshotRenderer {
     imageEl.style.backgroundPositionY = -(positions.screenshot.top * zoomFactor) + 'px';
     imageEl.style.backgroundPositionX = -(positions.screenshot.left * zoomFactor) + 'px';
     imageEl.style.backgroundSize =
-      `${fullPageScreenshot.width * zoomFactor}px ${fullPageScreenshot.height * zoomFactor}px`;
+      `${screenshot.width * zoomFactor}px ${screenshot.height * zoomFactor}px`;
 
     const markerEl = dom.find('.lh-element-screenshot__element-marker', containerEl);
     markerEl.style.width = elementRectSC.width * zoomFactor + 'px';
@@ -259,8 +292,4 @@ class ElementScreenshotRenderer {
   }
 }
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ElementScreenshotRenderer;
-} else {
-  self.ElementScreenshotRenderer = ElementScreenshotRenderer;
-}
+

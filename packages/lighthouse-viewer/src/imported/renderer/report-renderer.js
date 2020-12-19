@@ -21,6 +21,7 @@ import DetailsRenderer from './details-renderer';
 import CategoryRenderer from './category-renderer';
 import PerformanceCategoryRenderer from './performance-category-renderer';
 import PwaCategoryRenderer from './pwa-category-renderer';
+import ElementScreenshotRenderer from './element-screenshot-renderer';
 import I18n from './i18n';
 
 /**
@@ -156,7 +157,7 @@ export default class ReportRenderer {
     const warnings = this._dom.find('ul', container);
     for (const warningString of report.runWarnings) {
       const warning = warnings.appendChild(this._dom.createElement('li'));
-      warning.textContent = warningString;
+      warning.appendChild(this._dom.convertMarkdownLinkSnippets(warningString));
     }
 
     return container;
@@ -216,7 +217,8 @@ export default class ReportRenderer {
       fullPageScreenshot,
     });
     const fullPageScreenshotStyleEl = fullPageScreenshot &&
-      ElementScreenshotRenderer.createBackgroundImageStyle(this._dom, fullPageScreenshot);
+      ElementScreenshotRenderer.createBackgroundImageStyle(
+        this._dom, fullPageScreenshot.screenshot);
 
     const categoryRenderer = new CategoryRenderer(this._dom, detailsRenderer);
     categoryRenderer.setTemplateContext(this._templateContext);
