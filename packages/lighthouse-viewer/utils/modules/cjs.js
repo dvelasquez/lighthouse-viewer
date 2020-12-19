@@ -66,6 +66,7 @@ const DetailsRenderer = require("./details-renderer");
 const I18n = require("./i18n");
 
 'use strict';`,
+  'element-screenshot-renderer.js': `'use strict';`,
 };
 
 module.exports = manifest;

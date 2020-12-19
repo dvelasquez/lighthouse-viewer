@@ -46,7 +46,8 @@ const detailsRenderer = () => ({
 import DOM from './dom';
 import Util from './util';
 import CriticalRequestChainRenderer from './crc-details-renderer';
-import SnippetRenderer from './snippet-renderer';`,
+import SnippetRenderer from './snippet-renderer';
+import ElementScreenshotRenderer from './element-screenshot-renderer';`,
   },
   export: {
     //     from: `if (typeof module !== 'undefined' && module.exports) {
@@ -164,6 +165,7 @@ import DetailsRenderer from './details-renderer';
 import CategoryRenderer from './category-renderer';
 import PerformanceCategoryRenderer from './performance-category-renderer';
 import PwaCategoryRenderer from './pwa-category-renderer';
+import ElementScreenshotRenderer from './element-screenshot-renderer';
 import I18n from './i18n';`,
   },
   export: {
@@ -183,7 +185,8 @@ const reportUIFeatures = () => ({
     from: topFrom,
     to: `
 import DOM from './dom';
-import Util from './util';`,
+import Util from './util';
+import ElementScreenshotRenderer from './element-screenshot-renderer';`,
   },
   export: {
     //     from: `if (typeof module !== 'undefined' && module.exports) {
@@ -234,6 +237,25 @@ import I18n from './i18n';`,
   },
 });
 
+const elementScreenshotRenderer = () => ({
+  import: {
+    from: topFrom,
+    to: `
+import DOM from './dom';
+import Util from './util';`,
+  },
+  export: {
+    //     from: `if (typeof module !== 'undefined' && module.exports) {
+    //   module.exports = ElementScreenshotRenderer;
+    // } else {
+    //   self.ElementScreenshotRenderer = ElementScreenshotRenderer;
+    // }`,
+    //     to: 'export default ElementScreenshotRenderer;',
+    from: /class ElementScreenshotRenderer/,
+    to: 'export default class ElementScreenshotRenderer',
+  },
+});
+
 const manifest = {
   'category-renderer.js': categoryRenderer(),
   'crc-details-renderer.js': crcDetailsRenderer(),
@@ -248,6 +270,7 @@ const manifest = {
   'report-ui-features.js': reportUIFeatures(),
   'snippet-renderer.js': snippetRenderer(),
   'util.js': utils(),
+  'element-screenshot-renderer.js': elementScreenshotRenderer(),
 };
 
 module.exports = manifest;
