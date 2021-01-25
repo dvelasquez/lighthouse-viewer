@@ -33,7 +33,7 @@
     "copy:types": "cpx \"src/types/**/*\" dist/types"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^9.1.0",
     "lighthouse": "^7.0.0",
     "replace-in-file": "^6.1.0"
   }
