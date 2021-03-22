@@ -42,7 +42,7 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "lerna": "^4.0.0",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.6",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
