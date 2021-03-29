@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "svelte": "^3.35.0",
-    "svelte-preprocess": "^4.6.9"
+    "svelte-preprocess": "^4.7.0"
   },
   "alias": {}
 }
