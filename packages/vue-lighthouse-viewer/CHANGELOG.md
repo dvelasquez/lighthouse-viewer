@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/dvelasquez/lighthouse-viewer/compare/vue-lighthouse-viewer@0.1.6...vue-lighthouse-viewer@0.1.7) (2021-05-09)
+
+**Note:** Version bump only for package vue-lighthouse-viewer
+
+
+
+
+
 ## [0.1.6](https://github.com/dvelasquez/lighthouse-viewer/compare/vue-lighthouse-viewer@0.1.5...vue-lighthouse-viewer@0.1.6) (2021-04-29)
 
 **Note:** Version bump only for package vue-lighthouse-viewer
