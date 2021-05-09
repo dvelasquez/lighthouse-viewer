@@ -14,7 +14,7 @@
     "lerna:publish:canary": "lerna publish from-git --canary --yes",
     "lint": "eslint --quiet",
     "lint:fix": "npm run lint -- --fix",
-    "test": "start-server-and-test demo:serve http://localhost:8080 cypress:run",
+    "test": "snyk test && start-server-and-test demo:serve http://localhost:8080 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
@@ -56,10 +56,8 @@
     "start-server-and-test": "^1.12.1",
     "svelte": "^3.38.2",
     "svelte-preprocess": "^4.7.3",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "snyk": "^1.587.0"
   },
-  "snyk": true,
-  "dependencies": {
-    "snyk": "^1.522.0"
-  }
+  "snyk": true
 }
