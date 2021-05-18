@@ -8,7 +8,7 @@
 <script lang="ts">
 	import Vue from 'vue';
   import VueLighthouseViewer from '..';
-  import reportJson from './report-v7.0.0.json';
+  import reportJson from './report-v7.5.0.json';
 
   export default Vue.extend({
     name: 'VueApp',
