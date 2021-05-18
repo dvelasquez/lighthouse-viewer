@@ -20,7 +20,7 @@ import Util from './util';
 import DetailsRenderer from './details-renderer';
 import PerformanceCategoryRenderer from './performance-category-renderer';
 
-/* globals self DOM PerformanceCategoryRenderer Util I18n DetailsRenderer */
+/* globals self DOM PerformanceCategoryRenderer Util I18n DetailsRenderer ElementScreenshotRenderer */
 
 
 /**
@@ -35,7 +35,7 @@ import PerformanceCategoryRenderer from './performance-category-renderer';
  *
  * @param {LH.Result | string} LHResult The stringified version of {LH.Result}
  * @param {Document} document The host page's window.document
- * @return {{scoreGaugeEl: Element, perfCategoryEl: Element, finalScreenshotDataUri: string|null, scoreScaleEl: Element}}
+ * @return {{scoreGaugeEl: Element, perfCategoryEl: Element, finalScreenshotDataUri: string|null, scoreScaleEl: Element, installFeatures: Function}}
  */
 export default function prepareLabData(LHResult, document) {
   const lhResult = (typeof LHResult === 'string') ?
@@ -63,7 +63,13 @@ export default function prepareLabData(LHResult, document) {
   reportLHR.categoryGroups.metrics.description =
       Util.i18n.strings.lsPerformanceCategoryDescription;
 
-  const perfRenderer = new PerformanceCategoryRenderer(dom, new DetailsRenderer(dom));
+  const fullPageScreenshot =
+    reportLHR.audits['full-page-screenshot'] && reportLHR.audits['full-page-screenshot'].details &&
+    reportLHR.audits['full-page-screenshot'].details.type === 'full-page-screenshot' ?
+    reportLHR.audits['full-page-screenshot'].details : undefined;
+
+  const detailsRenderer = new DetailsRenderer(dom, {fullPageScreenshot});
+  const perfRenderer = new PerformanceCategoryRenderer(dom, detailsRenderer);
   // PSI environment string will ensure the categoryHeader and permalink elements are excluded
   const perfCategoryEl = perfRenderer.render(perfCategory, reportLHR.categoryGroups, 'PSI');
 
@@ -79,7 +85,37 @@ export default function prepareLabData(LHResult, document) {
   const clonedScoreTemplate = dom.cloneTemplate('#tmpl-lh-scorescale', dom.document());
   const scoreScaleEl = dom.find('.lh-scorescale', clonedScoreTemplate);
 
-  return {scoreGaugeEl, perfCategoryEl, finalScreenshotDataUri, scoreScaleEl};
+  /** @param {HTMLElement} reportEl */
+  const installFeatures = (reportEl) => {
+    if (fullPageScreenshot) {
+      ElementScreenshotRenderer.installFullPageScreenshot(
+        reportEl, fullPageScreenshot.screenshot);
+
+      // Append the overlay element to a specific part of the DOM so that
+      // the sticky tab group element renders correctly. If put in the reportEl
+      // like normal, then the sticky header would bleed through the overlay
+      // element.
+      const screenshotsContainer = document.querySelector('.element-screenshots-container');
+      if (!screenshotsContainer) {
+        throw new Error('missing .element-screenshots-container');
+      }
+
+      const screenshotEl = document.createElement('div');
+      screenshotsContainer.append(screenshotEl);
+      ElementScreenshotRenderer.installOverlayFeature({
+        dom,
+        reportEl,
+        overlayContainerEl: screenshotEl,
+        templateContext: document,
+        fullPageScreenshot,
+      });
+      // Not part of the reportEl, so have to install the feature here too.
+      ElementScreenshotRenderer.installFullPageScreenshot(
+        screenshotEl, fullPageScreenshot.screenshot);
+    }
+  };
+
+  return {scoreGaugeEl, perfCategoryEl, finalScreenshotDataUri, scoreScaleEl, installFeatures};
 }
 
 /**
