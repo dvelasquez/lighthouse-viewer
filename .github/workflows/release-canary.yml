@@ -1,0 +1,117 @@
+name: Release Canary Version
+
+on:
+  push:
+    branches:
+      - build/ci
+      - ci/*
+
+jobs:
+  install_dependencies:
+    name: Install dependencies & lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14
+
+      - name: Cache npm cache 📦
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+
+  run_cypress:
+    name: E2E tests
+    runs-on: ubuntu-latest
+    needs: install_dependencies
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2.1.5
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run lerna:build
+          start: npm run demo:serve
+
+  release_canary:
+    name: Build & Canary Release
+    runs-on: ubuntu-latest
+    needs: run_cypress
+    env:
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2.1.5
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-node-
+
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'Danilo Velasquez'
+          git config --global user.email 'danilo.velasquez@gmail.com'
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/dvelasquez/lighthouse-viewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+
+      - name: Build libraries
+        run: npm run lerna:build
+
+      - name: Bootstrap dependencies
+        run: npm run lerna:bootstrap
+
+      - name: Version
+        run: npm run lerna:release
+
+      - name: NPM Auth
+        run: |
+          yarn logout
+          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> .npmrc 2> /dev/null
+          npm whoami
+          npm config set access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish package
+        run: npm run lerna:deploy:ci:canary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

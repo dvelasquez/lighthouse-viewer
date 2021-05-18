@@ -82,8 +82,15 @@ export default class CategoryRenderer {
 
     const titleEl = this.dom.find('.lh-audit__title', auditEl);
     titleEl.appendChild(this.dom.convertMarkdownCodeSnippets(audit.result.title));
-    this.dom.find('.lh-audit__description', auditEl)
-        .appendChild(this.dom.convertMarkdownLinkSnippets(audit.result.description));
+    const descEl = this.dom.find('.lh-audit__description', auditEl);
+    descEl.appendChild(this.dom.convertMarkdownLinkSnippets(audit.result.description));
+
+    for (const relevantMetric of audit.relevantMetrics || []) {
+      const adornEl = this.dom.createChildOf(descEl, 'span', 'lh-audit__adorn', {
+        title: `Relevant to ${relevantMetric.result.title}`,
+      });
+      adornEl.textContent = relevantMetric.acronym || relevantMetric.id;
+    }
 
     if (audit.stackPacks) {
       audit.stackPacks.forEach(pack => {
@@ -103,7 +110,7 @@ export default class CategoryRenderer {
       });
     }
 
-    const header = /** @type {HTMLDetailsElement} */ (this.dom.find('details', auditEl));
+    const header = this.dom.find('details', auditEl);
     if (audit.result.details) {
       const elem = this.detailsRenderer.render(audit.result.details);
       if (elem) {
@@ -147,11 +154,11 @@ export default class CategoryRenderer {
   }
 
   /**
-   * @return {HTMLElement}
+   * @return {Element}
    */
   _createChevron() {
     const chevronTmpl = this.dom.cloneTemplate('#tmpl-lh-chevron', this.templateContext);
-    const chevronEl = this.dom.find('.lh-chevron', chevronTmpl);
+    const chevronEl = this.dom.find('svg.lh-chevron', chevronTmpl);
     return chevronEl;
   }
 
@@ -173,7 +180,7 @@ export default class CategoryRenderer {
   /**
    * @param {LH.ReportResult.Category} category
    * @param {Record<string, LH.Result.ReportGroup>} groupDefinitions
-   * @return {Element}
+   * @return {DocumentFragment}
    */
   renderCategoryHeader(category, groupDefinitions) {
     const tmpl = this.dom.cloneTemplate('#tmpl-lh-category-header', this.templateContext);
@@ -187,7 +194,7 @@ export default class CategoryRenderer {
       this.dom.find('.lh-category-header__description', tmpl).appendChild(descEl);
     }
 
-    return /** @type {Element} */ (tmpl.firstElementChild);
+    return tmpl;
   }
 
   /**
@@ -290,9 +297,8 @@ export default class CategoryRenderer {
       clumpElement.setAttribute('open', '');
     }
 
-    const summaryInnerEl = this.dom.find('.lh-audit-group__summary', clumpElement);
-    const chevronEl = summaryInnerEl.appendChild(this._createChevron());
-    chevronEl.title = Util.i18n.strings.auditGroupExpandTooltip;
+    const summaryInnerEl = this.dom.find('div.lh-audit-group__summary', clumpElement);
+    summaryInnerEl.appendChild(this._createChevron());
 
     const headerEl = this.dom.find('.lh-audit-group__header', clumpElement);
     const title = this._clumpTitles[clumpId];
@@ -329,7 +335,7 @@ export default class CategoryRenderer {
    */
   renderScoreGauge(category, groupDefinitions) { // eslint-disable-line no-unused-vars
     const tmpl = this.dom.cloneTemplate('#tmpl-lh-gauge', this.templateContext);
-    const wrapper = /** @type {HTMLAnchorElement} */ (this.dom.find('.lh-gauge__wrapper', tmpl));
+    const wrapper = this.dom.find('a.lh-gauge__wrapper', tmpl);
     wrapper.href = `#${category.id}`;
 
     if (Util.isPluginCategory(category.id)) {
@@ -339,13 +345,12 @@ export default class CategoryRenderer {
     // Cast `null` to 0
     const numericScore = Number(category.score);
     const gauge = this.dom.find('.lh-gauge', tmpl);
-    /** @type {?SVGCircleElement} */
-    const gaugeArc = gauge.querySelector('.lh-gauge-arc');
+    const gaugeArc = this.dom.find('circle.lh-gauge-arc', gauge);
 
     if (gaugeArc) this._setGaugeArc(gaugeArc, numericScore);
 
     const scoreOutOf100 = Math.round(numericScore * 100);
-    const percentageEl = this.dom.find('.lh-gauge__percentage', tmpl);
+    const percentageEl = this.dom.find('div.lh-gauge__percentage', tmpl);
     percentageEl.textContent = scoreOutOf100.toString();
     if (category.score === null) {
       percentageEl.textContent = '?';

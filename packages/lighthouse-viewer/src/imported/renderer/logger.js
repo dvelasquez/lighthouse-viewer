@@ -24,7 +24,6 @@ export default class Logger {
    * @param {Element} element
    */
   constructor(element) {
-    /** @type {Element} */
     this.el = element;
     this._id = undefined;
   }

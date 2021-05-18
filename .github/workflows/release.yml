@@ -1,0 +1,66 @@
+name: Release New Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Release new version to npm
+    runs-on: ubuntu-latest
+    env:
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14
+
+      - name: Cache npm cache 📦
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'Danilo Velasquez'
+          git config --global user.email 'danilo.velasquez@gmail.com'
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/dvelasquez/lighthouse-viewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build libraries
+        run: npm run lerna:build
+
+      - name: Bootstrap dependencies
+        run: npm run lerna:bootstrap
+
+      - name: Version
+        run: npm run lerna:release
+
+      - name: NPM Auth
+        run: |
+          yarn logout
+          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> .npmrc 2> /dev/null
+          npm whoami
+          npm config set access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish package
+        run: npm run lerna:deploy:ci
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

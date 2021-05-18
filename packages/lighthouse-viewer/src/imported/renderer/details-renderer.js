@@ -21,7 +21,7 @@ import CriticalRequestChainRenderer from './crc-details-renderer';
 import SnippetRenderer from './snippet-renderer';
 import ElementScreenshotRenderer from './element-screenshot-renderer';
 
-/* globals self CriticalRequestChainRenderer SnippetRenderer ElementScreenshotRenderer Util URL */
+/* globals self CriticalRequestChainRenderer SnippetRenderer ElementScreenshotRenderer Util */
 
 /** @typedef {import('./dom.js')} DOM */
 
@@ -75,6 +75,7 @@ export default class DetailsRenderer {
       case 'screenshot':
       case 'debugdata':
       case 'full-page-screenshot':
+      case 'treemap-data':
         return null;
 
       default: {
@@ -149,7 +150,7 @@ export default class DetailsRenderer {
 
   /**
    * @param {{text: string, url: string}} details
-   * @return {Element}
+   * @return {HTMLElement}
    */
   _renderLink(details) {
     const allowedProtocols = ['https:', 'http:'];
@@ -528,9 +529,8 @@ export default class DetailsRenderer {
 
     if (!this._fullPageScreenshot) return element;
 
-    const rect =
-      (item.lhId ? this._fullPageScreenshot.nodes[item.lhId] : null) || item.boundingRect;
-    if (!rect) return element;
+    const rect = item.lhId && this._fullPageScreenshot.nodes[item.lhId];
+    if (!rect || rect.width === 0 || rect.height === 0) return element;
 
     const maxThumbnailSize = {width: 147, height: 100};
     const elementScreenshot = ElementScreenshotRenderer.render(
@@ -556,15 +556,31 @@ export default class DetailsRenderer {
     }
 
     // Lines are shown as one-indexed.
-    const line = item.line + 1;
-    const column = item.column;
+    const generatedLocation = `${item.url}:${item.line + 1}:${item.column}`;
+    let sourceMappedOriginalLocation;
+    if (item.original) {
+      const file = item.original.file || '<unmapped>';
+      sourceMappedOriginalLocation = `${file}:${item.original.line + 1}:${item.original.column}`;
+    }
 
+    // We render slightly differently based on presence of source map and provenance of URL.
     let element;
-    if (item.urlProvider === 'network') {
+    if (item.urlProvider === 'network' && sourceMappedOriginalLocation) {
+      element = this._renderLink({
+        url: item.url,
+        text: sourceMappedOriginalLocation,
+      });
+      element.title = `maps to generated location ${generatedLocation}`;
+    } else if (item.urlProvider === 'network' && !sourceMappedOriginalLocation) {
       element = this.renderTextURL(item.url);
-      this._dom.find('.lh-link', element).textContent += `:${line}:${column}`;
+      this._dom.find('.lh-link', element).textContent += `:${item.line + 1}:${item.column}`;
+    } else if (item.urlProvider === 'comment' && sourceMappedOriginalLocation) {
+      element = this._renderText(`${sourceMappedOriginalLocation} (from source map)`);
+      element.title = `${generatedLocation} (from sourceURL)`;
+    } else if (item.urlProvider === 'comment' && !sourceMappedOriginalLocation) {
+      element = this._renderText(`${generatedLocation} (from sourceURL)`);
     } else {
-      element = this._renderText(`${item.url}:${line}:${column} (from sourceURL)`);
+      return null;
     }
 
     element.classList.add('lh-source-location');
@@ -572,6 +588,7 @@ export default class DetailsRenderer {
     // DevTools expects zero-indexed lines.
     element.setAttribute('data-source-line', String(item.line));
     element.setAttribute('data-source-column', String(item.column));
+
     return element;
   }
 

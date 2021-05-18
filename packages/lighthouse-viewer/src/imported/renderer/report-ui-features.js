@@ -94,7 +94,7 @@ export default class ReportUIFeatures {
     this._setupMediaQueryListeners();
     this._dropDown.setup(this.onDropDownMenuClick);
     this._setupThirdPartyFilter();
-    this._setupElementScreenshotOverlay();
+    this._setupElementScreenshotOverlay(this._dom.find('.lh-container', this._document));
     this._setUpCollapseDetailsAfterPrinting();
     this._resetUIState();
     this._document.addEventListener('keyup', this.onKeyUp);
@@ -150,9 +150,19 @@ export default class ReportUIFeatures {
     const hasMetricError = report.categories.performance && report.categories.performance.auditRefs
       .some(audit => Boolean(audit.group === 'metrics' && report.audits[audit.id].errorMessage));
     if (hasMetricError) {
-      const toggleInputEl = /** @type {HTMLInputElement} */ (
-        this._dom.find('.lh-metrics-toggle__input', this._document));
+      const toggleInputEl = this._dom.find('input.lh-metrics-toggle__input', this._document);
       toggleInputEl.checked = true;
+    }
+
+    const showTreemapApp =
+      this.json.audits['script-treemap-data'] && this.json.audits['script-treemap-data'].details;
+    // TODO: need window.opener to work in DevTools.
+    if (showTreemapApp && !this._dom.isDevTools()) {
+      this.addButton({
+        text: Util.i18n.strings.viewTreemapLabel,
+        icon: 'treemap',
+        onClick: () => ReportUIFeatures.openTreemap(this.json),
+      });
     }
 
     // Fill in all i18n data.
@@ -174,8 +184,30 @@ export default class ReportUIFeatures {
   }
 
   /**
+   * @param {{text: string, icon?: string, onClick: () => void}} opts
+   */
+  addButton(opts) {
+    const metricsEl = this._document.querySelector('.lh-audit-group--metrics');
+    // Not supported without metrics group.
+    if (!metricsEl) return;
+
+    const classes = [
+      'lh-button',
+    ];
+    if (opts.icon) {
+      classes.push('report-icon');
+      classes.push(`report-icon--${opts.icon}`);
+    }
+    const buttonEl = this._dom.createChildOf(metricsEl, 'button', classes.join(' '));
+    buttonEl.addEventListener('click', opts.onClick);
+    buttonEl.textContent = opts.text;
+    metricsEl.append(buttonEl);
+    return buttonEl;
+  }
+
+  /**
    * Finds the first scrollable ancestor of `element`. Falls back to the document.
-   * @param {HTMLElement} element
+   * @param {Element} element
    * @return {Node}
    */
   _getScrollParent(element) {
@@ -242,8 +274,7 @@ export default class ReportUIFeatures {
     ];
 
     // Get all tables with a text url column.
-    /** @type {Array<HTMLTableElement>} */
-    const tables = Array.from(this._document.querySelectorAll('.lh-table'));
+    const tables = Array.from(this._document.querySelectorAll('table.lh-table'));
     const tablesWithUrls = tables
       .filter(el =>
         el.querySelector('td.lh-table-column--url, td.lh-table-column--source-location'))
@@ -259,8 +290,7 @@ export default class ReportUIFeatures {
 
       // create input box
       const filterTemplate = this._dom.cloneTemplate('#tmpl-lh-3p-filter', this._templateContext);
-      const filterInput =
-        /** @type {HTMLInputElement} */ (this._dom.find('input', filterTemplate));
+      const filterInput = this._dom.find('input', filterTemplate);
       const id = `lh-3p-filter-label--${index}`;
 
       filterInput.id = id;
@@ -313,7 +343,10 @@ export default class ReportUIFeatures {
     });
   }
 
-  _setupElementScreenshotOverlay() {
+  /**
+   * @param {Element} el
+   */
+  _setupElementScreenshotOverlay(el) {
     const fullPageScreenshot =
       this.json.audits['full-page-screenshot'] &&
       this.json.audits['full-page-screenshot'].details &&
@@ -321,8 +354,13 @@ export default class ReportUIFeatures {
       this.json.audits['full-page-screenshot'].details;
     if (!fullPageScreenshot) return;
 
-    ElementScreenshotRenderer.installOverlayFeature(
-      this._dom, this._templateContext, fullPageScreenshot);
+    ElementScreenshotRenderer.installOverlayFeature({
+      dom: this._dom,
+      reportEl: el,
+      overlayContainerEl: el,
+      templateContext: this._templateContext,
+      fullPageScreenshot,
+    });
   }
 
   /**
@@ -340,8 +378,7 @@ export default class ReportUIFeatures {
     for (const rowEl of rowEls) {
       if (rowEl.classList.contains('lh-sub-item-row')) continue;
 
-      /** @type {HTMLElement|null} */
-      const urlItem = rowEl.querySelector('.lh-text__url');
+      const urlItem = rowEl.querySelector('div.lh-text__url');
       if (!urlItem) continue;
 
       const datasetUrl = urlItem.dataset.url;
@@ -355,19 +392,10 @@ export default class ReportUIFeatures {
     return thirdPartyRows;
   }
 
-  /**
-   * From a table, finds and returns URL items.
-   * @param {HTMLTableElement} tableEl
-   * @return {Array<HTMLElement>}
-   */
-  _getUrlItems(tableEl) {
-    return this._dom.findAll('.lh-text__url', tableEl);
-  }
-
   _setupStickyHeaderElements() {
-    this.topbarEl = this._dom.find('.lh-topbar', this._document);
-    this.scoreScaleEl = this._dom.find('.lh-scorescale', this._document);
-    this.stickyHeaderEl = this._dom.find('.lh-sticky-header', this._document);
+    this.topbarEl = this._dom.find('div.lh-topbar', this._document);
+    this.scoreScaleEl = this._dom.find('div.lh-scorescale', this._document);
+    this.stickyHeaderEl = this._dom.find('div.lh-sticky-header', this._document);
 
     // Highlighter will be absolutely positioned at first gauge, then transformed on scroll.
     this.highlightEl = this._dom.createChildOf(this.stickyHeaderEl, 'div', 'lh-highlighter');
@@ -525,9 +553,8 @@ export default class ReportUIFeatures {
    * @param {LH.Result} json
    */
   static openTreemap(json) {
-    const treemapDebugData = /** @type {LH.Audit.Details.DebugData} */ (
-      json.audits['script-treemap-data'].details);
-    if (!treemapDebugData) {
+    const treemapData = json.audits['script-treemap-data'].details;
+    if (!treemapData) {
       throw new Error('no script treemap data found');
     }
 
@@ -573,8 +600,7 @@ export default class ReportUIFeatures {
    * open a `<details>` element.
    */
   expandAllDetails() {
-    const details = /** @type {Array<HTMLDetailsElement>} */ (this._dom.findAll(
-        '.lh-categories details', this._document));
+    const details = this._dom.findAll('.lh-categories details', this._document);
     details.map(detail => detail.open = true);
   }
 
@@ -583,8 +609,7 @@ export default class ReportUIFeatures {
    * open a `<details>` element.
    */
   collapseAllDetails() {
-    const details = /** @type {Array<HTMLDetailsElement>} */ (this._dom.findAll(
-        '.lh-categories details', this._document));
+    const details = this._dom.findAll('.lh-categories details', this._document);
     details.map(detail => detail.open = false);
   }
 
@@ -721,11 +746,11 @@ class DropDown {
    * @param {function(MouseEvent): any} menuClickHandler
    */
   setup(menuClickHandler) {
-    this._toggleEl = this._dom.find('.lh-tools__button', this._dom.document());
+    this._toggleEl = this._dom.find('button.lh-tools__button', this._dom.document());
     this._toggleEl.addEventListener('click', this.onToggleClick);
     this._toggleEl.addEventListener('keydown', this.onToggleKeydown);
 
-    this._menuEl = this._dom.find('.lh-tools__dropdown', this._dom.document());
+    this._menuEl = this._dom.find('div.lh-tools__dropdown', this._dom.document());
     this._menuEl.addEventListener('keydown', this.onMenuKeydown);
     this._menuEl.addEventListener('click', menuClickHandler);
   }
@@ -850,11 +875,11 @@ class DropDown {
 
   /**
    * @param {Array<Node>} allNodes
-   * @param {?Node=} startNode
-   * @returns {Node}
+   * @param {?HTMLElement=} startNode
+   * @returns {HTMLElement}
    */
   _getNextSelectableNode(allNodes, startNode) {
-    const nodes = allNodes.filter((node) => {
+    const nodes = allNodes.filter(/** @return {node is HTMLElement} */ (node) => {
       if (!(node instanceof HTMLElement)) {
         return false;
       }
@@ -881,21 +906,21 @@ class DropDown {
   }
 
   /**
-   * @param {?Element=} startEl
+   * @param {?HTMLElement=} startEl
    * @returns {HTMLElement}
    */
   _getNextMenuItem(startEl) {
     const nodes = Array.from(this._menuEl.childNodes);
-    return /** @type {HTMLElement} */ (this._getNextSelectableNode(nodes, startEl));
+    return this._getNextSelectableNode(nodes, startEl);
   }
 
   /**
-   * @param {?Element=} startEl
+   * @param {?HTMLElement=} startEl
    * @returns {HTMLElement}
    */
   _getPreviousMenuItem(startEl) {
     const nodes = Array.from(this._menuEl.childNodes).reverse();
-    return /** @type {HTMLElement} */ (this._getNextSelectableNode(nodes, startEl));
+    return this._getNextSelectableNode(nodes, startEl);
   }
 }
 
