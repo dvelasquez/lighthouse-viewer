@@ -20,16 +20,39 @@ jobs:
 
       - name: Cache npm cache 📦
         uses: actions/cache@v2
-        id: node_modules-cache
         with:
           path: |
             ~/.npm
-            **/node_modules
             /home/runner/.cache/Cypress
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        if: steps.node_modules-cache.outputs.cache-hit != 'true'
         run: npm ci
+
+  run_cypress:
+    runs-on: ubuntu-latest
+    needs: install_dependencies
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2.1.5
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run lerna:build
+          start: npm run demo:serve
