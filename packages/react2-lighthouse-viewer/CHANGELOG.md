@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.12 (2021-05-18)
+
+**Note:** Version bump only for package react2-lighthouse-viewer
+
+
+
+
+
 ## [0.1.11](https://github.com/dvelasquez/lighthouse-viewer/compare/react2-lighthouse-viewer@0.1.10...react2-lighthouse-viewer@0.1.11) (2021-05-09)
 
 **Note:** Version bump only for package react2-lighthouse-viewer
