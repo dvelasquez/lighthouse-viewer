@@ -54,6 +54,7 @@ const I18n = require("./i18n");
   'report-ui-features.js': `
 const DOM = require("./dom");
 const Util = require("./util");
+const TextEncoding = require("./text-encoding.js");
 
 'use strict';`,
   'snippet-renderer.js': `

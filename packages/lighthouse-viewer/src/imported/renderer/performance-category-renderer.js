@@ -115,11 +115,12 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
    * @return {string}
    */
   _getScoringCalculatorHref(auditRefs) {
-    const v5andv6metrics = auditRefs.filter(audit => audit.group === 'metrics');
+    // TODO: filter by !!acronym when dropping renderer support of v7 LHRs.
+    const metrics = auditRefs.filter(audit => audit.group === 'metrics');
     const fci = auditRefs.find(audit => audit.id === 'first-cpu-idle');
     const fmp = auditRefs.find(audit => audit.id === 'first-meaningful-paint');
-    if (fci) v5andv6metrics.push(fci);
-    if (fmp) v5andv6metrics.push(fmp);
+    if (fci) metrics.push(fci);
+    if (fmp) metrics.push(fmp);
 
     /**
      * Clamp figure to 2 decimal places
@@ -128,7 +129,7 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
      */
     const clampTo2Decimals = val => Math.round(val * 100) / 100;
 
-    const metricPairs = v5andv6metrics.map(audit => {
+    const metricPairs = metrics.map(audit => {
       let value;
       if (typeof audit.result.numericValue === 'number') {
         value = audit.id === 'cumulative-layout-shift' ?
@@ -314,17 +315,17 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
     ]);
     for (const metric of filterChoices) {
       const elemId = `metric-${metric.acronym}`;
+      const radioEl = this.dom.createChildOf(metricFilterEl, 'input', 'lh-metricfilter__radio', {
+        type: 'radio',
+        name: 'metricsfilter',
+        id: elemId,
+      });
+
       const labelEl = this.dom.createChildOf(metricFilterEl, 'label', 'lh-metricfilter__label', {
         for: elemId,
         title: metric.result && metric.result.title,
       });
       labelEl.textContent = metric.acronym || metric.id;
-      const radioEl = this.dom.createChildOf(labelEl, 'input', 'lh-metricfilter__radio', {
-        type: 'radio',
-        name: 'metricsfilter',
-        id: elemId,
-        hidden: 'true',
-      });
 
       if (metric.acronym === 'All') {
         radioEl.checked = true;
