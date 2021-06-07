@@ -125,14 +125,13 @@ import DetailsRenderer from './details-renderer';
 import PerformanceCategoryRenderer from './performance-category-renderer';`,
   },
   export: {
-    //     from: `if (typeof module !== 'undefined' && module.exports) {
-    //   module.exports = prepareLabData;
-    // } else {
-    //   self.prepareLabData = prepareLabData;
-    // }`,
-    //     to: 'export default prepareLabData;',
-    from: /function prepareLabData/,
-    to: 'export default function prepareLabData',
+        from: `if (typeof module !== 'undefined' && module.exports) {
+  module.exports = prepareLabData;
+} else {
+  self.prepareLabData = prepareLabData;
+}`,
+        to: `export default prepareLabData;
+        export { prepareLabData, getFilenamePrefix };`,
   },
 });
 
@@ -186,7 +185,8 @@ const reportUIFeatures = () => ({
     to: `
 import DOM from './dom';
 import Util from './util';
-import ElementScreenshotRenderer from './element-screenshot-renderer';`,
+import ElementScreenshotRenderer from './element-screenshot-renderer';
+import TextEncoding from './text-encoding.js';`,
   },
   export: {
     //     from: `if (typeof module !== 'undefined' && module.exports) {
@@ -256,6 +256,22 @@ import Util from './util';`,
   },
 });
 
+const textEncoding = () => ({
+  import: {
+    from: topFrom,
+    to: ``,
+  },
+  export: {
+    from: `if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {toBase64, fromBase64};
+} else {
+  self.TextEncoding = {toBase64, fromBase64};
+}`,
+    to: `const TextEncoding = {toBase64, fromBase64};
+    export default TextEncoding`,
+  },
+});
+
 const manifest = {
   'category-renderer.js': categoryRenderer(),
   'crc-details-renderer.js': crcDetailsRenderer(),
@@ -271,6 +287,7 @@ const manifest = {
   'snippet-renderer.js': snippetRenderer(),
   'util.js': utils(),
   'element-screenshot-renderer.js': elementScreenshotRenderer(),
+  'text-encoding.js': textEncoding(),
 };
 
 module.exports = manifest;
