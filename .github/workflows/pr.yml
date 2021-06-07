@@ -1,6 +1,6 @@
 name: Lint & E2E
 
-on: pull_request
+on: [push, pull_request]
 
 jobs:
   install_dependencies:
