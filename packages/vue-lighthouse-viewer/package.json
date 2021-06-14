@@ -1,6 +1,6 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -35,15 +35,15 @@
     "prebuild": "rimraf dist"
   },
   "peerDependencies": {
-    "vue": "^2.6.13"
+    "vue": "^2.6.14"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.1.14"
+    "lighthouse-viewer": "^0.1.15"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
-    "vue": "^2.6.13",
+    "vue": "^2.6.14",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-template-compiler": "^2.6.13"
+    "vue-template-compiler": "^2.6.14"
   }
 }
