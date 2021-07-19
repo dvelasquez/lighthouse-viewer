@@ -360,7 +360,7 @@ export default class DetailsRenderer {
    * @return {LH.Audit.Details.OpportunityColumnHeading['subItemsHeading']}
    */
   _getCanonicalizedsubItemsHeading(subItemsHeading, parentHeading) {
-    // Low-friction way to prevent commiting a falsy key (which is never allowed for
+    // Low-friction way to prevent committing a falsy key (which is never allowed for
     // a subItemsHeading) from passing in CI.
     if (!subItemsHeading.key) {
       // eslint-disable-next-line no-console

@@ -12,7 +12,7 @@ const filteredFiles = (file) => {
 async function copyReports() {
   try {
     const file = await fs.copy(
-      "node_modules/lighthouse/lighthouse-core/report/html",
+      "node_modules/lighthouse/report",
       "src/imported",
         {
           filter: filteredFiles

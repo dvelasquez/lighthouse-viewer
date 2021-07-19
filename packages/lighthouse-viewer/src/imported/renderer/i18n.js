@@ -99,7 +99,7 @@ export default class I18n {
   }
 
   /**
-   * Format bytes with a constant number of fractional digits, i.e for a granularity of 0.1, 10 becomes '10.0'
+   * Format bytes with a constant number of fractional digits, i.e. for a granularity of 0.1, 10 becomes '10.0'
    * @param {number} granularity Controls how coarse the displayed value is
    * @return {Intl.NumberFormat}
    */
