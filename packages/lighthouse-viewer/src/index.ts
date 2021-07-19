@@ -11,8 +11,8 @@ import ReportRenderer from './imported/renderer/report-renderer';
 import ReportUIFeatures from './imported/renderer/report-ui-features';
 import SnippetRenderer from './imported/renderer/snippet-renderer';
 import Util from './imported/renderer/util';
-import template from './imported/templates.html';
-import reportStyles from './imported/report-styles.css';
+import template from './imported/assets/templates.html';
+import reportStyles from './imported/assets/styles.css';
 
 export {
   CategoryRenderer,

@@ -376,7 +376,7 @@ export default class Util {
   /**
    * Returns a primary domain for provided hostname (e.g. www.example.com -> example.com).
    * @param {string|URL} url hostname or URL object
-   * @returns {string}
+   * @return {string}
    */
   static getRootDomain(url) {
     const hostname = Util.createOrReturnURL(url).hostname;
@@ -582,7 +582,7 @@ Util.UIStrings = {
 
   /** This label is for a checkbox above a table of items loaded by a web page. The checkbox is used to show or hide third-party (or "3rd-party") resources in the table, where "third-party resources" refers to items loaded by a web page from URLs that aren't controlled by the owner of the web page. */
   thirdPartyResourcesLabel: 'Show 3rd-party resources',
-  /** This label is for a button that opens a new tab to a webapp called "Treemap", which is a nested visual representation of a heierarchy of data releated to the reports (script bytes and coverage, resource breakdown, etc.) */
+  /** This label is for a button that opens a new tab to a webapp called "Treemap", which is a nested visual representation of a heierarchy of data related to the reports (script bytes and coverage, resource breakdown, etc.) */
   viewTreemapLabel: 'View Treemap',
 
   /** Option in a dropdown menu that opens a small, summary report in a print dialog.  */
@@ -597,7 +597,7 @@ Util.UIStrings = {
   dropdownSaveJSON: 'Save as JSON',
   /** Option in a dropdown menu that opens the current report in the Lighthouse Viewer Application. */
   dropdownViewer: 'Open in Viewer',
-  /** Option in a dropdown menu that saves the current report as a new Github Gist. */
+  /** Option in a dropdown menu that saves the current report as a new GitHub Gist. */
   dropdownSaveGist: 'Save as Gist',
   /** Option in a dropdown menu that toggles the themeing of the report between Light(default) and Dark themes. */
   dropdownDarkTheme: 'Toggle Dark Theme',
@@ -625,7 +625,7 @@ Util.UIStrings = {
   /** Label for a row in a table that shows the version of the Axe library used. Example row values: 2.1.0, 3.2.3 */
   runtimeSettingsAxeVersion: 'Axe version',
 
-  /** Label for button to create an issue against the Lighthouse Github project. */
+  /** Label for button to create an issue against the Lighthouse GitHub project. */
   footerIssue: 'File an issue',
 
   /** Descriptive explanation for emulation setting when no device emulation is set. */
@@ -642,3 +642,6 @@ Util.UIStrings = {
 };
 
 
+
+// TODO(esmodules): export these strings too, then collect-strings will work when this file is esm.
+// export const UIStrings = Util.UIStrings;
