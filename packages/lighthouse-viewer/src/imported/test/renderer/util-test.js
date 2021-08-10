@@ -5,10 +5,10 @@
  */
 'use strict';
 
-const assert = require('assert').strict;
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const sampleResult = require('../../../lighthouse-core/test/results/sample_v2.json');
+import {strict as assert} from 'assert';
+import {Util} from '../../renderer/util.js';
+import {I18n} from '../../renderer/i18n.js';
+import sampleResult from '../../../lighthouse-core/test/results/sample_v2.json';
 
 /* eslint-env jest */
 

@@ -7,20 +7,17 @@
 
 /* eslint-env jest */
 
-const assert = require('assert').strict;
-const jsdom = require('jsdom');
-const reportAssets = require('../../report-assets.js');
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const URL = require('../../../lighthouse-core/lib/url-shim.js');
-const DOM = require('../../renderer/dom.js');
-const DetailsRenderer = require('../../renderer/details-renderer.js');
-const ReportUIFeatures = require('../../renderer/report-ui-features.js');
-const CategoryRenderer = require('../../renderer/category-renderer.js');
-const ElementScreenshotRenderer = require('../../renderer/element-screenshot-renderer.js');
-const CriticalRequestChainRenderer = require('../../renderer/crc-details-renderer.js');
-const ReportRenderer = require('../../renderer/report-renderer.js');
-const sampleResultsOrig = require('../../../lighthouse-core/test/results/sample_v2.json');
+import {strict as assert} from 'assert';
+
+import jsdom from 'jsdom';
+import reportAssets from '../../report-assets.js';
+import {Util} from '../../renderer/util.js';
+import URL from '../../../lighthouse-core/lib/url-shim.js';
+import {DOM} from '../../renderer/dom.js';
+import {DetailsRenderer} from '../../renderer/details-renderer.js';
+import {CategoryRenderer} from '../../renderer/category-renderer.js';
+import {ReportRenderer} from '../../renderer/report-renderer.js';
+import sampleResultsOrig from '../../../lighthouse-core/test/results/sample_v2.json';
 
 const TIMESTAMP_REGEX = /\d+, \d{4}.*\d+:\d+/;
 
@@ -29,19 +26,6 @@ describe('ReportRenderer', () => {
   let sampleResults;
 
   beforeAll(() => {
-    global.Util = Util;
-    global.I18n = I18n;
-    global.ReportUIFeatures = ReportUIFeatures;
-    global.CriticalRequestChainRenderer = CriticalRequestChainRenderer;
-    global.DetailsRenderer = DetailsRenderer;
-    global.CategoryRenderer = CategoryRenderer;
-    global.ElementScreenshotRenderer = ElementScreenshotRenderer;
-
-    // lazy loaded because they depend on CategoryRenderer to be available globally
-    global.PerformanceCategoryRenderer =
-        require('../../renderer/performance-category-renderer.js');
-    global.PwaCategoryRenderer = require('../../renderer/pwa-category-renderer.js');
-
     // Stub out matchMedia for Node.
     global.matchMedia = function() {
       return {
@@ -61,16 +45,7 @@ describe('ReportRenderer', () => {
 
   afterAll(() => {
     global.self = undefined;
-    global.Util = undefined;
-    global.I18n = undefined;
-    global.ReportUIFeatures = undefined;
     global.matchMedia = undefined;
-    global.CriticalRequestChainRenderer = undefined;
-    global.DetailsRenderer = undefined;
-    global.CategoryRenderer = undefined;
-    global.ElementScreenshotRenderer = undefined;
-    global.PerformanceCategoryRenderer = undefined;
-    global.PwaCategoryRenderer = undefined;
   });
 
   describe('renderReport', () => {
@@ -271,15 +246,15 @@ describe('ReportRenderer', () => {
   describe('axe-core', () => {
     let axe;
 
-    beforeAll(() =>{
+    beforeAll(async () =>{
       // Needed by axe-core
       // https://github.com/dequelabs/axe-core/blob/581c441c/doc/examples/jsdom/test/a11y.js#L24
       global.window = global.self;
       global.Node = global.self.Node;
       global.Element = global.self.Element;
 
-      // axe-core must be required after the global polyfills
-      axe = require('axe-core');
+      // axe-core must be imported after the global polyfills
+      axe = (await import('axe-core')).default;
     });
 
     afterAll(() => {

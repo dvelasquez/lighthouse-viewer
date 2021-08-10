@@ -104,6 +104,7 @@ export default (
       postcss(),
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
+        preventAssignment: true,
       }),
       resolve({
         mainFields: ['main'],

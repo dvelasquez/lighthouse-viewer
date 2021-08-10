@@ -70,8 +70,8 @@ describe('ReportGenerator', () => {
 
     it('should inject the report renderer javascript', () => {
       const result = ReportGenerator.generateReportHtml({});
-      assert.ok(result.includes('ReportRenderer'), 'injects the script');
-      assert.ok(result.includes('robustness: \\u003c/script'), 'escapes HTML tags in javascript');
+      assert.ok(result.includes('configSettings.channel||"unknown"'), 'injects the script');
+      assert.ok(result.includes('robustness: <\\/script'), 'escapes HTML tags in javascript');
       assert.ok(result.includes('pre$`post'), 'does not break from String.replace');
       assert.ok(result.includes('LIGHTHOUSE_JSON'), 'cannot be tricked');
     });

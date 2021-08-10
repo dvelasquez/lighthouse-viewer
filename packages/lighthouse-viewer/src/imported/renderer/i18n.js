@@ -3,9 +3,7 @@
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
-
-
-/* globals self */
+'use strict';
 
 // Not named `NBSP` because that creates a duplicate identifier (util.js).
 const NBSP2 = '\xa0';
@@ -15,7 +13,7 @@ const MiB = KiB * KiB;
 /**
  * @template T
  */
-export default class I18n {
+export class I18n {
   /**
    * @param {LH.Locale} locale
    * @param {T} strings
@@ -72,7 +70,7 @@ export default class I18n {
    */
   formatBytesToMiB(size, granularity = 0.1) {
     const formatter = this._byteFormatterForGranularity(granularity);
-    const kbs = formatter.format(Math.round(size / 1024 ** 2 / granularity) * granularity);
+    const kbs = formatter.format(Math.round(size / (1024 ** 2) / granularity) * granularity);
     return `${kbs}${NBSP2}MiB`;
   }
 
@@ -198,5 +196,3 @@ export default class I18n {
     return parts.join(' ');
   }
 }
-
-

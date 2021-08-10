@@ -7,25 +7,23 @@
 
 /* eslint-env jest, browser */
 
-const assert = require('assert').strict;
-const jsdom = require('jsdom');
-const reportAssets = require('../../report-assets.js');
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const DOM = require('../../renderer/dom.js');
-const DetailsRenderer = require('../../renderer/details-renderer.js');
-const CriticalRequestChainRenderer = require('../../renderer/crc-details-renderer.js');
-const CategoryRenderer = require('../../renderer/category-renderer.js');
-const sampleResultsOrig = require('../../../lighthouse-core/test/results/sample_v2.json');
+import {strict as assert} from 'assert';
+
+import jsdom from 'jsdom';
+import reportAssets from '../../report-assets.js';
+import {Util} from '../../renderer/util.js';
+import {I18n} from '../../renderer/i18n.js';
+import {DOM} from '../../renderer/dom.js';
+import {DetailsRenderer} from '../../renderer/details-renderer.js';
+import {CategoryRenderer} from '../../renderer/category-renderer.js';
+import sampleResultsOrig from '../../../lighthouse-core/test/results/sample_v2.json';
 
 describe('CategoryRenderer', () => {
   let renderer;
   let sampleResults;
 
   beforeAll(() => {
-    global.Util = Util;
-    global.Util.i18n = new I18n('en', {...Util.UIStrings});
-    global.CriticalRequestChainRenderer = CriticalRequestChainRenderer;
+    Util.i18n = new I18n('en', {...Util.UIStrings});
 
     const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
     const dom = new DOM(document);
@@ -36,9 +34,7 @@ describe('CategoryRenderer', () => {
   });
 
   afterAll(() => {
-    global.Util.i18n = undefined;
-    global.Util = undefined;
-    global.CriticalRequestChainRenderer = undefined;
+    Util.i18n = undefined;
   });
 
   it('renders an audit', () => {

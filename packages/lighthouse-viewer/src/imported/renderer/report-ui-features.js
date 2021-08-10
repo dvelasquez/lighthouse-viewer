@@ -14,11 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import DOM from './dom';
-import Util from './util';
-import ElementScreenshotRenderer from './element-screenshot-renderer';
-import TextEncoding from './text-encoding.js';
+'use strict';
 
 /* eslint-env browser */
 
@@ -27,9 +23,12 @@ import TextEncoding from './text-encoding.js';
  * the report.
  */
 
-/* globals getFilenamePrefix Util TextEncoding ElementScreenshotRenderer */
+/** @typedef {import('./dom').DOM} DOM */
 
-/** @typedef {import('./dom')} DOM */
+import {getFilenamePrefix} from './file-namer.js';
+import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
+import {TextEncoding} from './text-encoding.js';
+import {Util} from './util.js';
 
 /**
  * @param {HTMLTableElement} tableEl
@@ -48,7 +47,7 @@ function getAppsOrigin() {
   return 'https://googlechrome.github.io/lighthouse';
 }
 
-export default class ReportUIFeatures {
+export class ReportUIFeatures {
   /**
    * @param {DOM} dom
    */
@@ -506,7 +505,15 @@ export default class ReportUIFeatures {
         break;
       }
       case 'open-viewer': {
-        ReportUIFeatures.openTabAndSendJsonReportToViewer(this.json);
+        // DevTools cannot send data with postMessage, and we only want to use the URL fragment
+        // approach for viewer when needed, so check the environment and choose accordingly.
+        if (this._dom.isDevTools()) {
+          ReportUIFeatures.openViewer(this.json);
+        } else {
+          const windowName = 'viewer-' + ReportUIFeatures.computeWindowNameSuffix(this.json);
+          const url = getAppsOrigin() + '/viewer/';
+          ReportUIFeatures.openTabWithUrlData({lhr: this.json}, url, windowName);
+        }
         break;
       }
       case 'save-gist': {
@@ -551,14 +558,14 @@ export default class ReportUIFeatures {
 
   /**
    * Opens a new tab to the online viewer and sends the local page's JSON results
-   * to the online viewer using postMessage.
+   * to the online viewer using URL.fragment
    * @param {LH.Result} json
    * @protected
    */
-  static openTabAndSendJsonReportToViewer(json) {
+  static openViewer(json) {
     const windowName = 'viewer-' + this.computeWindowNameSuffix(json);
     const url = getAppsOrigin() + '/viewer/';
-    ReportUIFeatures.openTabAndSendData({lhr: json}, url, windowName);
+    ReportUIFeatures.openTabWithUrlData({lhr: json}, url, windowName);
   }
 
   /**
@@ -703,17 +710,16 @@ export default class ReportUIFeatures {
     });
 
     const ext = blob.type.match('json') ? '.json' : '.html';
-    const href = URL.createObjectURL(blob);
 
     const a = this._dom.createElement('a');
     a.download = `${filename}${ext}`;
-    a.href = href;
+    this._dom.safelySetBlobHref(a, blob);
     this._document.body.appendChild(a); // Firefox requires anchor to be in the DOM.
     a.click();
 
     // cleanup.
     this._document.body.removeChild(a);
-    setTimeout(_ => URL.revokeObjectURL(href), 500);
+    setTimeout(_ => URL.revokeObjectURL(a.href), 500);
   }
 
   /**
@@ -962,5 +968,3 @@ class DropDown {
     return this._getNextSelectableNode(nodes, startEl);
   }
 }
-
-

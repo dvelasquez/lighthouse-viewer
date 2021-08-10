@@ -14,22 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import DOM from './dom';
-import Util from './util';
-import DetailsRenderer from './details-renderer';
+'use strict';
 
 /**
  * @fileoverview This file contains helpers for constructing and rendering the
  * critical request chains network tree.
  */
 
-/* globals self Util */
+/** @typedef {import('./dom.js').DOM} DOM */
+/** @typedef {import('./details-renderer.js').DetailsRenderer} DetailsRenderer */
 
-/** @typedef {import('./dom.js')} DOM */
-/** @typedef {import('./details-renderer.js')} DetailsRenderer */
+import {Util} from './util.js';
 
-export default class CriticalRequestChainRenderer {
+export class CriticalRequestChainRenderer {
   /**
    * Create render context for critical-request-chain tree display.
    * @param {LH.Audit.SimpleCriticalRequestNode} tree
@@ -195,9 +192,6 @@ export default class CriticalRequestChainRenderer {
 
 // Alias b/c the name is really long.
 const CRCRenderer = CriticalRequestChainRenderer;
-
-// Allow Node require()'ing.
-
 
 /** @typedef {{
       node: LH.Audit.SimpleCriticalRequestNode[string],

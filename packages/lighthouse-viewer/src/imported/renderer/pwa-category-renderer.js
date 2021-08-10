@@ -14,13 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+'use strict';
 
-import Util from './util';
-import CategoryRenderer from './category-renderer';
+import {Util} from './util.js';
+import {CategoryRenderer} from './category-renderer.js';
 
-/* globals self, Util, CategoryRenderer */
-
-export default class PwaCategoryRenderer extends CategoryRenderer {
+export class PwaCategoryRenderer extends CategoryRenderer {
   /**
    * @param {LH.ReportResult.Category} category
    * @param {Object<string, LH.Result.ReportGroup>} [groupDefinitions]
@@ -61,7 +60,7 @@ export default class PwaCategoryRenderer extends CategoryRenderer {
 
     const tmpl = this.dom.cloneTemplate('#tmpl-lh-gauge--pwa', this.templateContext);
     const wrapper = this.dom.find('a.lh-gauge--pwa__wrapper', tmpl);
-    wrapper.href = `#${category.id}`;
+    this.dom.safelySetHref(wrapper, `#${category.id}`);
 
     // Correct IDs in case multiple instances end up in the page.
     const svgRoot = tmpl.querySelector('svg');
@@ -186,5 +185,3 @@ export default class PwaCategoryRenderer extends CategoryRenderer {
     }
   }
 }
-
-

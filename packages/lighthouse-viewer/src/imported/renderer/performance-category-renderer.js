@@ -14,16 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+'use strict';
 
-import DOM from './dom';
-import Util from './util';
-import CategoryRenderer from './category-renderer';
+/** @typedef {import('./dom.js').DOM} DOM */
 
-/* globals self, Util, CategoryRenderer */
+import {Util} from './util.js';
+import {CategoryRenderer} from './category-renderer.js';
 
-/** @typedef {import('./dom.js')} DOM */
-
-export default class PerformanceCategoryRenderer extends CategoryRenderer {
+export class PerformanceCategoryRenderer extends CategoryRenderer {
   /**
    * @param {LH.ReportResult.AuditRef} audit
    * @return {!Element}
@@ -196,7 +194,7 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
     const calculatorLink = this.dom.createChildOf(estValuesEl, 'a', 'lh-calclink');
     calculatorLink.target = '_blank';
     calculatorLink.textContent = strings.calculatorLink;
-    calculatorLink.href = this._getScoringCalculatorHref(category.auditRefs);
+    this.dom.safelySetHref(calculatorLink, this._getScoringCalculatorHref(category.auditRefs));
 
 
     metricAuditsEl.classList.add('lh-audit-group--metrics');
@@ -313,18 +311,20 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
       ({acronym: 'All'}),
       ...filterableMetrics,
     ]);
-    for (const metric of filterChoices) {
-      const elemId = `metric-${metric.acronym}`;
-      const radioEl = this.dom.createChildOf(metricFilterEl, 'input', 'lh-metricfilter__radio', {
-        type: 'radio',
-        name: 'metricsfilter',
-        id: elemId,
-      });
 
-      const labelEl = this.dom.createChildOf(metricFilterEl, 'label', 'lh-metricfilter__label', {
-        for: elemId,
-        title: metric.result && metric.result.title,
-      });
+    // Form labels need to reference unique IDs, but multiple reports rendered in the same DOM (eg PSI)
+    // would mean ID conflict.  To address this, we 'scope' these radio inputs with a unique suffix.
+    const uniqSuffix = Util.getUniqueSuffix();
+    for (const metric of filterChoices) {
+      const elemId = `metric-${metric.acronym}-${uniqSuffix}`;
+      const radioEl = this.dom.createChildOf(metricFilterEl, 'input', 'lh-metricfilter__radio');
+      radioEl.type = 'radio';
+      radioEl.name = `metricsfilter-${uniqSuffix}`;
+      radioEl.id = elemId;
+
+      const labelEl = this.dom.createChildOf(metricFilterEl, 'label', 'lh-metricfilter__label');
+      labelEl.htmlFor = elemId;
+      labelEl.title = metric.result && metric.result.title;
       labelEl.textContent = metric.acronym || metric.id;
 
       if (metric.acronym === 'All') {
@@ -364,5 +364,3 @@ export default class PerformanceCategoryRenderer extends CategoryRenderer {
     }
   }
 }
-
-

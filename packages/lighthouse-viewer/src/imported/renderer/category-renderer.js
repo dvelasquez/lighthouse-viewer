@@ -14,20 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+'use strict';
 
-import DOM from './dom';
-import Util from './util';
-import DetailsRenderer from './details-renderer';
-
-/* globals self, Util */
-
-/** @typedef {import('./dom.js')} DOM */
-/** @typedef {import('./report-renderer.js')} ReportRenderer */
-/** @typedef {import('./details-renderer.js')} DetailsRenderer */
-/** @typedef {import('./util.js')} Util */
+/** @typedef {import('./dom.js').DOM} DOM */
+/** @typedef {import('./report-renderer.js').ReportRenderer} ReportRenderer */
+/** @typedef {import('./details-renderer.js').DetailsRenderer} DetailsRenderer */
 /** @typedef {'failed'|'warning'|'manual'|'passed'|'notApplicable'} TopLevelClumpId */
 
-export default class CategoryRenderer {
+import {Util} from './util.js';
+
+export class CategoryRenderer {
   /**
    * @param {DOM} dom
    * @param {DetailsRenderer} detailsRenderer
@@ -86,9 +82,8 @@ export default class CategoryRenderer {
     descEl.appendChild(this.dom.convertMarkdownLinkSnippets(audit.result.description));
 
     for (const relevantMetric of audit.relevantMetrics || []) {
-      const adornEl = this.dom.createChildOf(descEl, 'span', 'lh-audit__adorn', {
-        title: `Relevant to ${relevantMetric.result.title}`,
-      });
+      const adornEl = this.dom.createChildOf(descEl, 'span', 'lh-audit__adorn');
+      adornEl.title = `Relevant to ${relevantMetric.result.title}`;
       adornEl.textContent = relevantMetric.acronym || relevantMetric.id;
     }
 
@@ -336,7 +331,7 @@ export default class CategoryRenderer {
   renderScoreGauge(category, groupDefinitions) { // eslint-disable-line no-unused-vars
     const tmpl = this.dom.cloneTemplate('#tmpl-lh-gauge', this.templateContext);
     const wrapper = this.dom.find('a.lh-gauge__wrapper', tmpl);
-    wrapper.href = `#${category.id}`;
+    this.dom.safelySetHref(wrapper, `#${category.id}`);
 
     if (Util.isPluginCategory(category.id)) {
       wrapper.classList.add('lh-gauge__wrapper--plugin');
@@ -505,5 +500,3 @@ export default class CategoryRenderer {
     permalinkEl.id = id;
   }
 }
-
-

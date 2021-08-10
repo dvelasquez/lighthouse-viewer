@@ -7,20 +7,16 @@
 
 /* eslint-env jest */
 
-const assert = require('assert').strict;
-const jsdom = require('jsdom');
-const reportAssets = require('../../report-assets.js');
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const DOM = require('../../renderer/dom.js');
-const DetailsRenderer = require('../../renderer/details-renderer.js');
-const ReportUIFeatures = require('../../renderer/report-ui-features.js');
-const CategoryRenderer = require('../../renderer/category-renderer.js');
-const ElementScreenshotRenderer = require('../../renderer/element-screenshot-renderer.js');
-const RectHelpers = require('../../../lighthouse-core/lib/rect-helpers.js');
-const CriticalRequestChainRenderer = require('../../renderer/crc-details-renderer.js');
-const ReportRenderer = require('../../renderer/report-renderer.js');
-const sampleResultsOrig = require('../../../lighthouse-core/test/results/sample_v2.json');
+import {strict as assert} from 'assert';
+import jsdom from 'jsdom';
+import reportAssets from '../../report-assets.js';
+import {Util} from '../../renderer/util.js';
+import {DOM} from '../../renderer/dom.js';
+import {DetailsRenderer} from '../../renderer/details-renderer.js';
+import {ReportUIFeatures} from '../../renderer/report-ui-features.js';
+import {CategoryRenderer} from '../../renderer/category-renderer.js';
+import {ReportRenderer} from '../../renderer/report-renderer.js';
+import sampleResultsOrig from '../../../lighthouse-core/test/results/sample_v2.json';
 
 describe('ReportUIFeatures', () => {
   let sampleResults;
@@ -42,21 +38,6 @@ describe('ReportUIFeatures', () => {
   }
 
   beforeAll(() => {
-    global.Util = Util;
-    global.I18n = I18n;
-    global.ReportUIFeatures = ReportUIFeatures;
-    global.CriticalRequestChainRenderer = CriticalRequestChainRenderer;
-    global.DetailsRenderer = DetailsRenderer;
-    global.CategoryRenderer = CategoryRenderer;
-    global.ElementScreenshotRenderer = ElementScreenshotRenderer;
-    global.RectHelpers = RectHelpers;
-
-    // lazy loaded because they depend on CategoryRenderer to be available globally
-    global.PerformanceCategoryRenderer =
-        require('../../renderer/performance-category-renderer.js');
-    global.PwaCategoryRenderer =
-        require('../../renderer/pwa-category-renderer.js');
-
     // Stub out matchMedia for Node.
     global.matchMedia = function() {
       return {
@@ -91,18 +72,6 @@ describe('ReportUIFeatures', () => {
   });
 
   afterAll(() => {
-    global.self = undefined;
-    global.Util = undefined;
-    global.I18n = undefined;
-    global.ReportUIFeatures = undefined;
-    global.matchMedia = undefined;
-    global.CriticalRequestChainRenderer = undefined;
-    global.DetailsRenderer = undefined;
-    global.CategoryRenderer = undefined;
-    global.ElementScreenshotRenderer = undefined;
-    global.RectHelpers = undefined;
-    global.PerformanceCategoryRenderer = undefined;
-    global.PwaCategoryRenderer = undefined;
     global.window = undefined;
     global.HTMLElement = undefined;
     global.HTMLInputElement = undefined;

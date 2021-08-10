@@ -14,12 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+'use strict';
 
-import I18n from './i18n';
-
-/* globals self */
-
-/** @template T @typedef {import('./i18n')<T>} I18n */
+/** @template T @typedef {import('./i18n').I18n<T>} I18n */
 
 const ELLIPSIS = '\u2026';
 const NBSP = '\xa0';
@@ -41,7 +38,7 @@ const listOfTlds = [
   'web', 'spb', 'blog', 'jus', 'kiev', 'mil', 'wi', 'qc', 'ca', 'bel', 'on',
 ];
 
-export default class Util {
+export class Util {
   static get PASS_THRESHOLD() {
     return PASS_THRESHOLD;
   }
@@ -641,7 +638,4 @@ Util.UIStrings = {
   throttlingProvided: 'Provided by environment',
 };
 
-
-
-// TODO(esmodules): export these strings too, then collect-strings will work when this file is esm.
-// export const UIStrings = Util.UIStrings;
+export const UIStrings = Util.UIStrings;
