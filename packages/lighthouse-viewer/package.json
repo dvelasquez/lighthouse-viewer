@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
-    "lighthouse": "^8.1.0",
+    "lighthouse": "^8.2.0",
     "replace-in-file": "^6.2.0"
   }
 }
