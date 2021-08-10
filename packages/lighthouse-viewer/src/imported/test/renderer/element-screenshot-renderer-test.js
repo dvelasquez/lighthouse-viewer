@@ -7,13 +7,13 @@
 
 /* eslint-env jest */
 
-const jsdom = require('jsdom');
-const ElementScreenshotRenderer = require('../../renderer/element-screenshot-renderer.js');
-const RectHelpers = require('../../../lighthouse-core/lib/rect-helpers.js');
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const DOM = require('../../renderer/dom.js');
-const reportAssets = require('../../report-assets.js');
+import jsdom from 'jsdom';
+
+import {ElementScreenshotRenderer} from '../../renderer/element-screenshot-renderer.js';
+import {Util} from '../../renderer/util.js';
+import {I18n} from '../../renderer/i18n.js';
+import {DOM} from '../../renderer/dom.js';
+import reportAssets from '../../report-assets.js';
 
 /**
  * @param {{left: number, top: number, width: number, height:number}} opts
@@ -31,17 +31,14 @@ describe('ElementScreenshotRenderer', () => {
   let dom;
 
   beforeAll(() => {
-    global.RectHelpers = RectHelpers;
-    global.Util = Util;
-    global.Util.i18n = new I18n('en', {...Util.UIStrings});
+    Util.i18n = new I18n('en', {...Util.UIStrings});
+
     const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
     dom = new DOM(document);
   });
 
   afterAll(() => {
-    global.RectHelpers = undefined;
-    global.Util.i18n = undefined;
-    global.Util = undefined;
+    Util.i18n = undefined;
   });
 
   it('renders screenshot', () => {

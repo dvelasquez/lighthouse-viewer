@@ -5,15 +5,15 @@
  */
 'use strict';
 
-const assert = require('assert').strict;
-const Util = require('../../renderer/util.js');
-const I18n = require('../../renderer/i18n.js');
-const {isNode12SmallIcu} = require('../../../lighthouse-core/test/test-utils.js');
+import {strict as assert} from 'assert';
+import {Util} from '../../renderer/util.js';
+import {I18n} from '../../renderer/i18n.js';
+import {isNode12SmallIcu} from '../../../lighthouse-core/test/test-utils.js';
 
 // Require i18n to make sure Intl is polyfilled in Node without full-icu for testing.
 // When Util is run in a browser, Intl will be supplied natively (IE11+).
 // eslint-disable-next-line no-unused-vars
-const i18n = require('../../../lighthouse-core/lib/i18n/i18n.js');
+import '../../../lighthouse-core/lib/i18n/i18n.js';
 
 const NBSP = '\xa0';
 

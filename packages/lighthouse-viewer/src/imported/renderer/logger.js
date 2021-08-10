@@ -14,12 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+'use strict';
 
 /**
  * Logs messages via a UI butter.
  */
-export default class Logger {
+export class Logger {
   /**
    * @param {Element} element
    */
@@ -74,5 +74,3 @@ export default class Logger {
     this.el.classList.remove('show');
   }
 }
-
-

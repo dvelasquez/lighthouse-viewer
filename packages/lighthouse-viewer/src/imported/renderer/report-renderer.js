@@ -13,30 +13,23 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
-
-import DOM from './dom';
-import Util from './util';
-import DetailsRenderer from './details-renderer';
-import CategoryRenderer from './category-renderer';
-import PerformanceCategoryRenderer from './performance-category-renderer';
-import PwaCategoryRenderer from './pwa-category-renderer';
-import ElementScreenshotRenderer from './element-screenshot-renderer';
-import I18n from './i18n';
-
-/**
- * @fileoverview The entry point for rendering the Lighthouse report based on the JSON output.
- *    This file is injected into the report HTML along with the JSON report.
  *
  * Dummy text for ensuring report robustness: </script> pre$`post %%LIGHTHOUSE_JSON%%
+ * (this is handled by terser)
  */
+'use strict';
 
-/** @typedef {import('./category-renderer')} CategoryRenderer */
-/** @typedef {import('./dom.js')} DOM */
+/** @typedef {import('./dom.js').DOM} DOM */
 
-/* globals self, Util, DetailsRenderer, CategoryRenderer, I18n, PerformanceCategoryRenderer, PwaCategoryRenderer, ElementScreenshotRenderer */
+import {CategoryRenderer} from './category-renderer.js';
+import {DetailsRenderer} from './details-renderer.js';
+import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
+import {I18n} from './i18n.js';
+import {PerformanceCategoryRenderer} from './performance-category-renderer.js';
+import {PwaCategoryRenderer} from './pwa-category-renderer.js';
+import {Util} from './util.js';
 
-export default class ReportRenderer {
+export class ReportRenderer {
   /**
    * @param {DOM} dom
    */
@@ -79,8 +72,9 @@ export default class ReportRenderer {
   _renderReportTopbar(report) {
     const el = this._dom.cloneTemplate('#tmpl-lh-topbar', this._templateContext);
     const metadataUrl = this._dom.find('a.lh-topbar__url', el);
-    metadataUrl.href = metadataUrl.textContent = report.finalUrl;
+    metadataUrl.textContent = report.finalUrl;
     metadataUrl.title = report.finalUrl;
+    this._dom.safelySetHref(metadataUrl, report.finalUrl);
     return el;
   }
 
@@ -284,5 +278,3 @@ export default class ReportRenderer {
     return reportFragment;
   }
 }
-
-
