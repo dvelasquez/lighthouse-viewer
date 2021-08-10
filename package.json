@@ -53,7 +53,7 @@
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "start-server-and-test": "^1.12.6",
-    "svelte": "^3.38.3",
+    "svelte": "^3.42.1",
     "svelte-preprocess": "^4.7.4",
     "typescript": "^4.3.5",
     "snyk": "^1.663.0"
