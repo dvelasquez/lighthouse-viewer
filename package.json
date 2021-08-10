@@ -61,5 +61,9 @@
   "snyk": true,
   "browserslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "volta": {
+    "npm": "6.14.14",
+    "node": "16.6.1"
+  }
 }
