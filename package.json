@@ -9,7 +9,7 @@
     "lerna:build": "lerna run build",
     "lerna:bootstrap": "lerna bootstrap && lerna link --force-local",
     "lerna:release": "lerna version --conventional-commits --yes",
-    "lerna:deploy:ci": "lerna publish from-package --yes --message 'chore: release new versions'",
+    "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
     "lint": "eslint --quiet",
     "lint:fix": "npm run lint -- --fix",
