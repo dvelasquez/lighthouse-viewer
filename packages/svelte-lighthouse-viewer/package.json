@@ -42,7 +42,7 @@
     "lighthouse-viewer": "^0.1.18"
   },
   "devDependencies": {
-    "svelte": "^3.42.1",
+    "svelte": "^3.42.2",
     "svelte-preprocess": "^4.7.4"
   },
   "alias": {}
