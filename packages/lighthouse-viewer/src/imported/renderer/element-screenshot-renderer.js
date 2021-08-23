@@ -20,7 +20,6 @@
  * @property {DOM} dom
  * @property {Element} reportEl
  * @property {Element} overlayContainerEl
- * @property {ParentNode} templateContext
  * @property {LH.Artifacts.FullPageScreenshot} fullPageScreenshot
  */
 
@@ -144,7 +143,7 @@ export class ElementScreenshotRenderer {
    * @param {InstallOverlayFeatureParams} opts
    */
   static installOverlayFeature(opts) {
-    const {dom, reportEl, overlayContainerEl, templateContext, fullPageScreenshot} = opts;
+    const {dom, reportEl, overlayContainerEl, fullPageScreenshot} = opts;
     const screenshotOverlayClass = 'lh-screenshot-overlay--enabled';
     // Don't install the feature more than once.
     if (reportEl.classList.contains(screenshotOverlayClass)) return;
@@ -177,7 +176,6 @@ export class ElementScreenshotRenderer {
       };
       const screenshotElement = ElementScreenshotRenderer.render(
         dom,
-        templateContext,
         fullPageScreenshot.screenshot,
         elementRectSC,
         maxLightboxSize
@@ -216,18 +214,17 @@ export class ElementScreenshotRenderer {
    * Used to render both the thumbnail preview in details tables and the full-page screenshot in the lightbox.
    * Returns null if element rect is outside screenshot bounds.
    * @param {DOM} dom
-   * @param {ParentNode} templateContext
    * @param {LH.Artifacts.FullPageScreenshot['screenshot']} screenshot
    * @param {LH.Artifacts.Rect} elementRectSC Region of screenshot to highlight.
    * @param {Size} maxRenderSizeDC e.g. maxThumbnailSize or maxLightboxSize.
    * @return {Element|null}
    */
-  static render(dom, templateContext, screenshot, elementRectSC, maxRenderSizeDC) {
+  static render(dom, screenshot, elementRectSC, maxRenderSizeDC) {
     if (!screenshotOverlapsRect(screenshot, elementRectSC)) {
       return null;
     }
 
-    const tmpl = dom.cloneTemplate('#tmpl-lh-element-screenshot', templateContext);
+    const tmpl = dom.createComponent('elementScreenshot');
     const containerEl = dom.find('div.lh-element-screenshot', tmpl);
 
     containerEl.dataset['rectWidth'] = elementRectSC.width.toString();

@@ -7,7 +7,6 @@
 
 import {strict as assert} from 'assert';
 import jsdom from 'jsdom';
-import reportAssets from '../../report-assets.js';
 import {DOM} from '../../renderer/dom.js';
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
@@ -19,10 +18,9 @@ describe('DetailsRenderer', () => {
   let renderer;
 
   function createRenderer(options) {
-    const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
+    const {document} = new jsdom.JSDOM().window;
     const dom = new DOM(document);
     renderer = new DetailsRenderer(dom, options);
-    renderer.setTemplateContext(dom.document());
   }
 
   beforeAll(() => {

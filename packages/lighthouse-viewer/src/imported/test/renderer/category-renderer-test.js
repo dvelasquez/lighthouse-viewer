@@ -10,7 +10,6 @@
 import {strict as assert} from 'assert';
 
 import jsdom from 'jsdom';
-import reportAssets from '../../report-assets.js';
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
 import {DOM} from '../../renderer/dom.js';
@@ -25,7 +24,7 @@ describe('CategoryRenderer', () => {
   beforeAll(() => {
     Util.i18n = new I18n('en', {...Util.UIStrings});
 
-    const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
+    const {document} = new jsdom.JSDOM().window;
     const dom = new DOM(document);
     const detailsRenderer = new DetailsRenderer(dom);
     renderer = new CategoryRenderer(dom, detailsRenderer);
@@ -471,14 +470,5 @@ describe('CategoryRenderer', () => {
       assert.strictEqual(shouldBeWarning[0].id, 'passing');
       assert.ok(shouldBeWarning[0].textContent.includes(passingWarning));
     });
-  });
-
-  it('can set a custom templateContext', () => {
-    assert.equal(renderer.templateContext, renderer.dom.document());
-
-    const dom = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES);
-    const otherDocument = dom.window.document;
-    renderer.setTemplateContext(otherDocument);
-    assert.equal(renderer.templateContext, otherDocument);
   });
 });

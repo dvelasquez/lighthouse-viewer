@@ -9,7 +9,6 @@ import {strict as assert} from 'assert';
 import {jest} from '@jest/globals';
 
 import jsdom from 'jsdom';
-import reportAssets from '../../report-assets.js';
 import {DOM} from '../../renderer/dom.js';
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
@@ -17,12 +16,13 @@ import {I18n} from '../../renderer/i18n.js';
 /* eslint-env jest */
 
 describe('DOM', () => {
+  /** @type {DOM} */
   let dom;
   let window;
 
   beforeAll(() => {
     Util.i18n = new I18n('en', {...Util.UIStrings});
-    window = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
+    window = new jsdom.JSDOM().window;
 
     // Make a lame "polyfill" since JSDOM doesn't have createObjectURL: https://github.com/jsdom/jsdom/issues/1721
     const lameCOURL = jest.fn(_ => `https://fake-origin/blahblah-blobid`);
@@ -45,31 +45,33 @@ describe('DOM', () => {
       assert.equal(el.className, '');
       assert.equal(el.hasAttributes(), false);
     });
+
+    it('creates an element from parameters', () => {
+      const el = dom.createElement('div', ' class1  class2\n');
+      assert.equal(el.localName, 'div');
+      assert.equal(el.className, 'class1 class2');
+    });
+
+    it('creates an svg element from parameters', () => {
+      const el = dom.createElementNS('http://www.w3.org/2000/svg', 'svg', ' class1  class2\n');
+      assert.equal(el.localName, 'svg');
+      assert.equal(el.className.baseVal, 'class1 class2');
+    });
   });
 
-  describe('cloneTemplate', () => {
-    it('should clone a template', () => {
-      const clone = dom.cloneTemplate('#tmpl-lh-audit', dom.document());
-      assert.ok(clone.querySelector('.lh-audit'));
+  describe('createComponent', () => {
+    it('should create a component', () => {
+      const component = dom.createComponent('audit');
+      assert.ok(component.querySelector('.lh-audit'));
     });
 
-    it('should clone a template from a context scope', () => {
-      const heading = dom.cloneTemplate('#tmpl-lh-footer', dom.document());
-      const items = dom.cloneTemplate('#tmpl-lh-env__items', heading);
-      assert.ok(items.querySelector('.lh-env__item'));
-    });
-
-    it('fails when template cannot be found', () => {
-      assert.throws(() => dom.cloneTemplate('#unknown-selector', dom.document()));
-    });
-
-    it('fails when a template context isn\'t provided', () => {
-      assert.throws(() => dom.cloneTemplate('#tmpl-lh-audit'));
+    it('fails when component cannot be found', () => {
+      assert.throws(() => dom.createComponent('unknown-component'));
     });
 
     it('does not inject duplicate styles', () => {
-      const clone = dom.cloneTemplate('#tmpl-lh-snippet', dom.document());
-      const clone2 = dom.cloneTemplate('#tmpl-lh-snippet', dom.document());
+      const clone = dom.createComponent('snippet');
+      const clone2 = dom.createComponent('snippet');
       assert.ok(clone.querySelector('style'));
       assert.ok(!clone2.querySelector('style'));
     });
@@ -193,8 +195,13 @@ describe('DOM', () => {
         expect(a.getAttribute('href')).toEqual(null);
       });
     });
-  });
 
+    it('handles if url is undefined (because of proto roundtrip)', () => {
+      const a = dom.createElement('a');
+      dom.safelySetHref(a, undefined);
+      expect(a.href).toEqual('');
+    });
+  });
 
   describe('safelySetBlobHref', () => {
     it('sets href for safe blob types', () => {

@@ -10,7 +10,6 @@
 import {strict as assert} from 'assert';
 
 import jsdom from 'jsdom';
-import reportAssets from '../../report-assets.js';
 import {Util} from '../../renderer/util.js';
 import URL from '../../../lighthouse-core/lib/url-shim.js';
 import {DOM} from '../../renderer/dom.js';
@@ -33,7 +32,7 @@ describe('ReportRenderer', () => {
       };
     };
 
-    const {window} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES);
+    const {window} = new jsdom.JSDOM();
     global.self = window;
 
     const dom = new DOM(window.document);
@@ -191,15 +190,6 @@ describe('ReportRenderer', () => {
       expect(descriptionsTxt).toMatch(/\dx/);
       expect(descriptionsTxt).toContain(sampleResults.userAgent);
     });
-  });
-
-  it('can set a custom templateContext', () => {
-    assert.equal(renderer._templateContext, renderer._dom.document());
-
-    const {window} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES);
-    const otherDocument = window.document;
-    renderer.setTemplateContext(otherDocument);
-    assert.equal(renderer._templateContext, otherDocument);
   });
 
   it('should add LHR channel to doc link parameters', () => {

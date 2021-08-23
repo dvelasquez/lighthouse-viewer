@@ -40,16 +40,6 @@ export class DetailsRenderer {
   constructor(dom, options = {}) {
     this._dom = dom;
     this._fullPageScreenshot = options.fullPageScreenshot;
-
-    /** @type {ParentNode} */
-    this._templateContext; // eslint-disable-line no-unused-expressions
-  }
-
-  /**
-   * @param {ParentNode} context
-   */
-  setTemplateContext(context) {
-    this._templateContext = context;
   }
 
   /**
@@ -65,7 +55,7 @@ export class DetailsRenderer {
       case 'table':
         return this._renderTable(details);
       case 'criticalrequestchain':
-        return CriticalRequestChainRenderer.render(this._dom, this._templateContext, details, this);
+        return CriticalRequestChainRenderer.render(this._dom, details, this);
       case 'opportunity':
         return this._renderTable(details);
 
@@ -489,7 +479,7 @@ export class DetailsRenderer {
     const listContainer = this._dom.createElement('div', 'lh-list');
 
     details.items.forEach(item => {
-      const snippetEl = SnippetRenderer.render(this._dom, this._templateContext, item, this);
+      const snippetEl = SnippetRenderer.render(this._dom, item, this);
       listContainer.appendChild(snippetEl);
     });
 
@@ -528,7 +518,6 @@ export class DetailsRenderer {
     const maxThumbnailSize = {width: 147, height: 100};
     const elementScreenshot = ElementScreenshotRenderer.render(
       this._dom,
-      this._templateContext,
       this._fullPageScreenshot.screenshot,
       rect,
       maxThumbnailSize

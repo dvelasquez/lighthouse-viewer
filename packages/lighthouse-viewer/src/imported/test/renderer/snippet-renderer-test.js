@@ -10,7 +10,6 @@
 import {strict as assert} from 'assert';
 
 import jsdom from 'jsdom';
-import reportAssets from '../../report-assets.js';
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
 import {DOM} from '../../renderer/dom.js';
@@ -59,7 +58,7 @@ describe('DetailsRenderer', () => {
 
   beforeAll(() => {
     Util.i18n = new I18n('en', {...Util.UIStrings});
-    const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
+    const {document} = new jsdom.JSDOM().window;
     dom = new DOM(document);
   });
 
@@ -68,7 +67,7 @@ describe('DetailsRenderer', () => {
   });
 
   function renderSnippet(details) {
-    const el = SnippetRenderer.render(dom, dom.document(), details, {});
+    const el = SnippetRenderer.render(dom, details, {});
 
     return {
       el,
