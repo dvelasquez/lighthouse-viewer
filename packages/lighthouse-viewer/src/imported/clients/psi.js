@@ -43,10 +43,6 @@ export function prepareLabData(LHResult, document) {
     /** @type {LH.Result} */ (JSON.parse(LHResult)) : LHResult;
 
   const dom = new DOM(document);
-
-  // Assume fresh styles needed on every call, so mark all template styles as unused.
-  dom.resetTemplates();
-
   const reportLHR = Util.prepareReportResult(lhResult);
   const i18n = new I18n(reportLHR.configSettings.locale, {
     // Set missing renderer strings to default (english) values.
@@ -84,7 +80,7 @@ export function prepareLabData(LHResult, document) {
 
   const finalScreenshotDataUri = _getFinalScreenshot(perfCategory);
 
-  const clonedScoreTemplate = dom.cloneTemplate('#tmpl-lh-scorescale', dom.document());
+  const clonedScoreTemplate = dom.createComponent('scorescale');
   const scoreScaleEl = dom.find('.lh-scorescale', clonedScoreTemplate);
 
   const reportUIFeatures = new ReportUIFeatures(dom);
@@ -111,7 +107,6 @@ export function prepareLabData(LHResult, document) {
         dom,
         reportEl,
         overlayContainerEl: screenshotEl,
-        templateContext: document,
         fullPageScreenshot,
       });
       // Not part of the reportEl, so have to install the feature here too.

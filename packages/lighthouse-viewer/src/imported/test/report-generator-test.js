@@ -7,9 +7,7 @@
 
 const assert = require('assert').strict;
 const fs = require('fs');
-const jsdom = require('jsdom');
 const ReportGenerator = require('../report-generator.js');
-const reportAssets = require('../report-assets.js');
 const sampleResults = require('../../lighthouse-core/test/results/sample_v2.json');
 const csvValidator = require('csv-validator');
 
@@ -50,16 +48,6 @@ describe('ReportGenerator', () => {
       assert.ok(result.includes('"code":"hax\\u2028'), 'injects the json');
       assert.ok(result.includes('hax\\u003c/script'), 'escapes HTML tags');
       assert.ok(result.includes('LIGHTHOUSE_JAVASCRIPT'), 'cannot be tricked');
-    });
-
-    it('should inject the report templates', () => {
-      const page = new jsdom.JSDOM(ReportGenerator.generateReportHtml({}));
-      const templates = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES);
-      assert.equal(
-        page.window.document.querySelectorAll('template[id^="tmpl-"]').length,
-        templates.window.document.querySelectorAll('template[id^="tmpl-"]').length,
-        'all templates injected'
-      );
     });
 
     it('should inject the report CSS', () => {

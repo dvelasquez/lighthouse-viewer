@@ -17,7 +17,6 @@ import {DOM} from '../../renderer/dom.js';
 import {DetailsRenderer} from '../../renderer/details-renderer.js';
 import {PerformanceCategoryRenderer} from '../../renderer/performance-category-renderer.js';
 import sampleResultsOrig from '../../../lighthouse-core/test/results/sample_v2.json';
-import reportAssets from '../../report-assets.js';
 
 describe('PerfCategoryRenderer', () => {
   let category;
@@ -27,7 +26,7 @@ describe('PerfCategoryRenderer', () => {
   beforeAll(() => {
     Util.i18n = new I18n('en', {...Util.UIStrings});
 
-    const {document} = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATES).window;
+    const {document} = new jsdom.JSDOM().window;
     const dom = new DOM(document);
     const detailsRenderer = new DetailsRenderer(dom);
     renderer = new PerformanceCategoryRenderer(dom, detailsRenderer);

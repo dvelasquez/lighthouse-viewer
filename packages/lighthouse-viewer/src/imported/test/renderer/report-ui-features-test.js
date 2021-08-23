@@ -45,9 +45,7 @@ describe('ReportUIFeatures', () => {
       };
     };
 
-    const reportWithTemplates = reportAssets.REPORT_TEMPLATE
-      .replace('%%LIGHTHOUSE_TEMPLATES%%', reportAssets.REPORT_TEMPLATES);
-    const document = new jsdom.JSDOM(reportWithTemplates);
+    const document = new jsdom.JSDOM(reportAssets.REPORT_TEMPLATE);
     global.self = document.window;
     global.self.matchMedia = function() {
       return {
