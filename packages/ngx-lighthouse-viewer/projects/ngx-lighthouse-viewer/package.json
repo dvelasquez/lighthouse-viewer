@@ -6,6 +6,7 @@
     "@angular/core": "^12.2.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "lighthouse-viewer": "^0.1.19"
   }
 }
