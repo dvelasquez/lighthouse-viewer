@@ -43,7 +43,7 @@
     "lerna": "^4.0.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-analyzer": "^4.0.0",
