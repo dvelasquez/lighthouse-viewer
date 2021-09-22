@@ -1,27 +1,32 @@
-# NgxLighthouseViewer
+# ngx-lighthouse-viewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+This component is a angular wrapper for the lighthouse-viewer. 
+It depends on [lighthouse-viewer](../lighthouse-viewer), package that exports the original lighthouse-viewer from Google
+as an ES modules package.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting started
 
-## Code scaffolding
+1. Install using `npm install ngx-lighthouse-viewer` or `yarn add ngx-lighthouse-viewer`
+2. Import `NgxLighthouseViewerModule`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```ts
+// ...
+import { NgxLighthouseViewerModule } from 'ngx-lighthouse-viewer';
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  // ...
+  imports: [
+    // ...
+    NgxLighthouseViewerModule
+  ],
+})
+export class AppModule { }
+```
+3. Use component
 
-## Running unit tests
+```html
+<ngx-lighthouse-viewer [json]="data"></ngx-lighthouse-viewer>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
