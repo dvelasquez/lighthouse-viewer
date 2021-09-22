@@ -3,5 +3,6 @@
   "dest": "../../dist/ngx-lighthouse-viewer",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["lighthouse-viewer"]
 }
