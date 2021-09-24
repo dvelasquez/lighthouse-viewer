@@ -4,9 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "concurrently \"npm run build:lib\" \"npm run build:demo\"",
+    "build:lib": "ng build ngx-lighthouse-viewer && copyfiles ./README.md ./LICENSE ./dist/ngx-lighthouse-viewer",
+    "build:demo": "ng build demo",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "publish": "npm run build:lib && npm publish ./dist/ngx-lighthouse-viewer"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +32,8 @@
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "concurrently": "^6.2.1",
+    "copyfiles": "^2.4.1",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
