@@ -56,7 +56,7 @@
     "svelte": "^3.42.4",
     "svelte-preprocess": "^4.9.2",
     "typescript": "^4.3.5",
-    "snyk": "^1.697.0"
+    "snyk": "^1.722.0"
   },
   "snyk": true,
   "browserslist": [
