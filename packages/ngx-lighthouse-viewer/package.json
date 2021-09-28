@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "concurrently \"npm run build:lib\" \"npm run build:demo\"",
+    "build": "npm run build:lib && npm run build:demo",
     "build:lib": "ng build ngx-lighthouse-viewer && copyfiles ./README.md ./LICENSE ./dist/ngx-lighthouse-viewer",
     "build:demo": "ng build demo",
     "watch": "ng build --watch --configuration development",
