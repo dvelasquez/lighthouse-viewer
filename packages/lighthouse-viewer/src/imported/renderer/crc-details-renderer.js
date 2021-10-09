@@ -91,46 +91,46 @@ export class CriticalRequestChainRenderer {
     const chainEl = dom.createComponent('crcChain');
 
     // Hovering over request shows full URL.
-    dom.find('.crc-node', chainEl).setAttribute('title', segment.node.request.url);
+    dom.find('.lh-crc-node', chainEl).setAttribute('title', segment.node.request.url);
 
-    const treeMarkeEl = dom.find('.crc-node__tree-marker', chainEl);
+    const treeMarkeEl = dom.find('.lh-crc-node__tree-marker', chainEl);
 
     // Construct lines and add spacers for sub requests.
     segment.treeMarkers.forEach(separator => {
       if (separator) {
-        treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker vert'));
-        treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker'));
+        treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-vert'));
+        treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker'));
       } else {
-        treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker'));
-        treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker'));
+        treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker'));
+        treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker'));
       }
     });
 
     if (segment.isLastChild) {
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker up-right'));
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker right'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-up-right'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-right'));
     } else {
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker vert-right'));
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker right'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-vert-right'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-right'));
     }
 
     if (segment.hasChildren) {
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker horiz-down'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-horiz-down'));
     } else {
-      treeMarkeEl.appendChild(dom.createElement('span', 'tree-marker right'));
+      treeMarkeEl.appendChild(dom.createElement('span', 'lh-tree-marker lh-right'));
     }
 
     // Fill in url, host, and request size information.
     const url = segment.node.request.url;
     const linkEl = detailsRenderer.renderTextURL(url);
-    const treevalEl = dom.find('.crc-node__tree-value', chainEl);
+    const treevalEl = dom.find('.lh-crc-node__tree-value', chainEl);
     treevalEl.appendChild(linkEl);
 
     if (!segment.hasChildren) {
       const {startTime, endTime, transferSize} = segment.node.request;
-      const span = dom.createElement('span', 'crc-node__chain-duration');
+      const span = dom.createElement('span', 'lh-crc-node__chain-duration');
       span.textContent = ' - ' + Util.i18n.formatMilliseconds((endTime - startTime) * 1000) + ', ';
-      const span2 = dom.createElement('span', 'crc-node__chain-duration');
+      const span2 = dom.createElement('span', 'lh-crc-node__chain-duration');
       span2.textContent = Util.i18n.formatBytesToKiB(transferSize, 0.01);
 
       treevalEl.appendChild(span);
@@ -171,7 +171,7 @@ export class CriticalRequestChainRenderer {
     const containerEl = dom.find('.lh-crc', tmpl);
 
     // Fill in top summary.
-    dom.find('.crc-initial-nav', tmpl).textContent = Util.i18n.strings.crcInitialNavigation;
+    dom.find('.lh-crc-initial-nav', tmpl).textContent = Util.i18n.strings.crcInitialNavigation;
     dom.find('.lh-crc__longest_duration_label', tmpl).textContent =
         Util.i18n.strings.crcLongestDurationLabel;
     dom.find('.lh-crc__longest_duration', tmpl).textContent =

@@ -48,11 +48,21 @@ export class PwaCategoryRenderer extends CategoryRenderer {
   }
 
   /**
+   * Alias for backcompat.
    * @param {LH.ReportResult.Category} category
    * @param {Record<string, LH.Result.ReportGroup>} groupDefinitions
    * @return {DocumentFragment}
    */
   renderScoreGauge(category, groupDefinitions) {
+    return this.renderCategoryScore(category, groupDefinitions);
+  }
+
+  /**
+   * @param {LH.ReportResult.Category} category
+   * @param {Record<string, LH.Result.ReportGroup>} groupDefinitions
+   * @return {DocumentFragment}
+   */
+  renderCategoryScore(category, groupDefinitions) {
     // Defer to parent-gauge style if category error.
     if (category.score === null) {
       return super.renderScoreGauge(category, groupDefinitions);

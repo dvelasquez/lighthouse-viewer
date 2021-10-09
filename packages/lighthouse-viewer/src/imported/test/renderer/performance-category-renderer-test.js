@@ -5,11 +5,12 @@
  */
 'use strict';
 
-/* eslint-env jest, browser */
+/* eslint-env jest */
 
 import {strict as assert} from 'assert';
 
 import jsdom from 'jsdom';
+
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
 import URL from '../../../lighthouse-core/lib/url-shim.js';
@@ -87,9 +88,11 @@ describe('PerfCategoryRenderer', () => {
     const categoryDOM = renderer.render(category, sampleResults.categoryGroups);
 
     const oppAudits = category.auditRefs.filter(audit => audit.group === 'load-opportunities' &&
-        audit.result.score !== 1 && audit.result.scoreDisplayMode !== 'notApplicable');
-    const oppElements = categoryDOM.querySelectorAll('.lh-audit--load-opportunity');
-    assert.equal(oppElements.length, oppAudits.length);
+        !Util.showAsPassed(audit.result));
+    const oppElements = [...categoryDOM.querySelectorAll('.lh-audit--load-opportunity')];
+    expect(oppElements.map(e => e.id).sort()).toEqual(oppAudits.map(a => a.id).sort());
+    expect(oppElements.length).toBeGreaterThan(0);
+    expect(oppElements.length).toMatchInlineSnapshot('7');
 
     const oppElement = oppElements[0];
     const oppSparklineBarElement = oppElement.querySelector('.lh-sparkline__bar');
@@ -114,7 +117,7 @@ describe('PerfCategoryRenderer', () => {
 
     const fakeCategory = Object.assign({}, category, {auditRefs: [auditWithError]});
     const categoryDOM = renderer.render(fakeCategory, sampleResults.categoryGroups);
-    const tooltipEl = categoryDOM.querySelector('.lh-audit--load-opportunity .tooltip--error');
+    const tooltipEl = categoryDOM.querySelector('.lh-audit--load-opportunity .lh-tooltip--error');
     assert.ok(tooltipEl, 'did not render error message');
     assert.ok(/Yikes!!/.test(tooltipEl.textContent));
   });
@@ -239,16 +242,16 @@ describe('PerfCategoryRenderer', () => {
       const href = renderer._getScoringCalculatorHref(categoryClone.auditRefs);
       const url = new URL(href);
       expect(url.hash.split('&')).toMatchInlineSnapshot(`
-        Array [
-          "#FCP=3969",
-          "SI=4417",
-          "LCP=4927",
-          "TTI=4927",
-          "TBT=117",
-          "CLS=0",
-          "FMP=3969",
-        ]
-      `);
+Array [
+  "#FCP=6844",
+  "SI=8114",
+  "LCP=6844",
+  "TTI=8191",
+  "TBT=1221",
+  "CLS=0",
+  "FMP=6844",
+]
+`);
     });
 
     it('also appends device and version number', () => {
@@ -260,18 +263,18 @@ describe('PerfCategoryRenderer', () => {
       const url = new URL(href);
       try {
         expect(url.hash.split('&')).toMatchInlineSnapshot(`
-          Array [
-            "#FCP=3969",
-            "SI=4417",
-            "LCP=4927",
-            "TTI=4927",
-            "TBT=117",
-            "CLS=0.42",
-            "FMP=3969",
-            "device=mobile",
-            "version=6.0.0",
-          ]
-        `);
+Array [
+  "#FCP=6844",
+  "SI=8114",
+  "LCP=6844",
+  "TTI=8191",
+  "TBT=1221",
+  "CLS=0.14",
+  "FMP=6844",
+  "device=mobile",
+  "version=6.0.0",
+]
+`);
       } finally {
         Util.reportJson = null;
       }

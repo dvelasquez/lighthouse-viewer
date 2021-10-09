@@ -11,7 +11,7 @@
  * The renderer code is bundled and injected into the report HTML along with the JSON report.
  */
 
-/* global document window ga */
+/* global ga */
 
 import {DOM} from '../renderer/dom.js';
 import {Logger} from '../renderer/logger.js';

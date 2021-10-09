@@ -155,20 +155,20 @@ export class PerformanceCategoryRenderer extends CategoryRenderer {
   /**
    * @param {LH.ReportResult.Category} category
    * @param {Object<string, LH.Result.ReportGroup>} groups
-   * @param {'PSI'=} environment 'PSI' and undefined are the only valid values
+   * @param {{gatherMode: LH.Result.GatherMode, environment?: 'PSI'}=} options
    * @return {Element}
    * @override
    */
-  render(category, groups, environment) {
+  render(category, groups, options) {
     const strings = Util.i18n.strings;
     const element = this.dom.createElement('div', 'lh-category');
-    if (environment === 'PSI') {
+    if (options && options.environment === 'PSI') {
       const gaugeEl = this.dom.createElement('div', 'lh-score__gauge');
-      gaugeEl.appendChild(this.renderScoreGauge(category, groups));
+      gaugeEl.appendChild(this.renderCategoryScore(category, groups, options));
       element.appendChild(gaugeEl);
     } else {
       this.createPermalinkSpan(element, category.id);
-      element.appendChild(this.renderCategoryHeader(category, groups));
+      element.appendChild(this.renderCategoryHeader(category, groups, options));
     }
 
     // Metrics.
