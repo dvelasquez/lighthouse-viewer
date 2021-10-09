@@ -1,0 +1,24 @@
+{
+  "name": "ngx-lighthouse-viewer",
+  "version": "0.0.1",
+  "keywords": [
+    "lighthouse",
+    "devtools",
+    "angular",
+    "performance",
+    "webperf"
+  ],
+  "license": "Apache-2.0",
+  "author": "Vwings",
+  "bugs": {
+    "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "lighthouse-viewer": "^0.1.19"
+  }
+}
