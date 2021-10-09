@@ -20,9 +20,12 @@ import {DetailsRenderer} from '../renderer/details-renderer.js';
 import {DOM} from '../renderer/dom.js';
 import {ElementScreenshotRenderer} from '../renderer/element-screenshot-renderer.js';
 import {I18n} from '../renderer/i18n.js';
+import {openTreemap} from '../renderer/open-tab.js';
 import {PerformanceCategoryRenderer} from '../renderer/performance-category-renderer.js';
 import {ReportUIFeatures} from '../renderer/report-ui-features.js';
 import {Util} from '../renderer/util.js';
+
+/** @typedef {{scoreGaugeEl: Element, perfCategoryEl: Element, finalScreenshotDataUri: string|null, scoreScaleEl: Element, installFeatures: Function}} PrepareLabDataResult */
 
 /**
  * Returns all the elements that PSI needs to render the report
@@ -36,7 +39,7 @@ import {Util} from '../renderer/util.js';
  *
  * @param {LH.Result | string} LHResult The stringified version of {LH.Result}
  * @param {Document} document The host page's window.document
- * @return {{scoreGaugeEl: Element, perfCategoryEl: Element, finalScreenshotDataUri: string|null, scoreScaleEl: Element, installFeatures: Function}}
+ * @return {PrepareLabDataResult}
  */
 export function prepareLabData(LHResult, document) {
   const lhResult = (typeof LHResult === 'string') ?
@@ -69,7 +72,11 @@ export function prepareLabData(LHResult, document) {
   const detailsRenderer = new DetailsRenderer(dom, {fullPageScreenshot});
   const perfRenderer = new PerformanceCategoryRenderer(dom, detailsRenderer);
   // PSI environment string will ensure the categoryHeader and permalink elements are excluded
-  const perfCategoryEl = perfRenderer.render(perfCategory, reportLHR.categoryGroups, 'PSI');
+  const perfCategoryEl = perfRenderer.render(
+    perfCategory,
+    reportLHR.categoryGroups,
+    {environment: 'PSI', gatherMode: lhResult.gatherMode}
+  );
 
   const scoreGaugeEl = dom.find('.lh-score__gauge', perfCategoryEl);
   scoreGaugeEl.remove();
@@ -89,10 +96,11 @@ export function prepareLabData(LHResult, document) {
   /** @param {HTMLElement} reportEl */
   const installFeatures = (reportEl) => {
     if (fullPageScreenshot) {
+      // 1) Add fpss css var to reportEl parent so any thumbnails will work
       ElementScreenshotRenderer.installFullPageScreenshot(
         reportEl, fullPageScreenshot.screenshot);
 
-      // Append the overlay element to a specific part of the DOM so that
+      // 2) Append the overlay element to a specific part of the DOM so that
       // the sticky tab group element renders correctly. If put in the reportEl
       // like normal, then the sticky header would bleed through the overlay
       // element.
@@ -122,7 +130,7 @@ export function prepareLabData(LHResult, document) {
         container: buttonContainer,
         text: Util.i18n.strings.viewTreemapLabel,
         icon: 'treemap',
-        onClick: () => ReportUIFeatures.openTreemap(lhResult),
+        onClick: () => openTreemap(lhResult),
       });
     }
   };
@@ -140,4 +148,10 @@ function _getFinalScreenshot(perfCategory) {
   const details = auditRef.result.details;
   if (!details || details.type !== 'screenshot') return null;
   return details.data;
+}
+
+// TODO: remove with report API refactor.
+if (typeof window !== 'undefined') {
+  // @ts-expect-error
+  window.prepareLabData = prepareLabData;
 }

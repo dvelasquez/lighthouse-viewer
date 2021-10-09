@@ -7,7 +7,9 @@
 
 import {strict as assert} from 'assert';
 import fs from 'fs';
+
 import jsdom from 'jsdom';
+
 import testUtils from '../../../lighthouse-core/test/test-utils.js';
 import {prepareLabData} from '../../clients/psi.js';
 import {Util} from '../../renderer/util.js';
@@ -27,7 +29,7 @@ const sampleResultsStr =
 
 /* eslint-env jest */
 
-describe('DOM', () => {
+describe('PSI', () => {
   let document;
   beforeAll(() => {
     global.Util = Util;

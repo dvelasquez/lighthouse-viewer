@@ -19,10 +19,6 @@ async function copyReports() {
       }
     );
     console.log("success!", file);
-    const filesFromLighthouseCore = await fs.copy(
-      "node_modules/lighthouse/lighthouse-core/lib/file-namer.js",
-      "src/imported/renderer/file-namer.js")
-    console.log("success!", filesFromLighthouseCore)
   } catch (err) {
     console.error(err);
     throw err;
@@ -45,7 +41,7 @@ copyReports()
             to: manifest[key].import.to,
         };
         const exportOptions = {
-            files: "src/imported/renderer/" + key,
+            files: "src/imported/generator/" + key,
             from: manifest[key].export.from,
             to: manifest[key].export.to,
         };

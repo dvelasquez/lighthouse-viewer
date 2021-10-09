@@ -5,7 +5,7 @@
  */
 'use strict';
 
-/* global btoa atob window CompressionStream Response */
+/* global CompressionStream */
 
 const btoa_ = typeof btoa !== 'undefined' ?
   btoa :

@@ -16,6 +16,8 @@
  */
 'use strict';
 
+/* eslint-env browser */
+
 /** @typedef {HTMLElementTagNameMap & {[id: string]: HTMLElement}} HTMLElementByTagName */
 /** @template {string} T @typedef {import('typed-query-selector/parser').ParseSelector<T, Element>} ParseSelector */
 
@@ -105,6 +107,10 @@ export class DOM {
     this._componentCache.set(componentName, component);
     const cloned = /** @type {DocumentFragment} */ (component.cloneNode(true));
     return cloned;
+  }
+
+  clearComponentCache() {
+    this._componentCache.clear();
   }
 
   /**
@@ -253,5 +259,16 @@ export class DOM {
   findAll(query, context) {
     const elements = Array.from(context.querySelectorAll(query));
     return elements;
+  }
+
+  /**
+   * Fires a custom DOM event on target.
+   * @param {string} name Name of the event.
+   * @param {Node=} target DOM node to fire the event on.
+   * @param {*=} detail Custom data to include.
+   */
+  fireEventOn(name, target = this._document, detail) {
+    const event = new CustomEvent(name, detail ? {detail} : undefined);
+    target.dispatchEvent(event);
   }
 }

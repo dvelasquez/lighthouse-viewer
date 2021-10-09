@@ -6,6 +6,7 @@
 'use strict';
 
 import {strict as assert} from 'assert';
+
 import {Util} from '../../renderer/util.js';
 import {I18n} from '../../renderer/i18n.js';
 import {isNode12SmallIcu} from '../../../lighthouse-core/test/test-utils.js';

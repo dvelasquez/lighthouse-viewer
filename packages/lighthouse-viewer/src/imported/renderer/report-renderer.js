@@ -39,26 +39,19 @@ export class ReportRenderer {
   }
 
   /**
-   * @param {LH.Result} result
+   * @param {LH.Result} lhr
    * @param {Element} container Parent element to render the report into.
    * @return {!Element}
    */
-  renderReport(result, container) {
-    this._dom.setLighthouseChannel(result.configSettings.channel || 'unknown');
+  renderReport(lhr, container) {
+    this._dom.setLighthouseChannel(lhr.configSettings.channel || 'unknown');
 
-    const report = Util.prepareReportResult(result);
+    const report = Util.prepareReportResult(lhr);
 
     container.textContent = ''; // Remove previous report.
     container.appendChild(this._renderReport(report));
 
     return container;
-  }
-
-  /**
-   * @param {ParentNode} _
-   */
-  setTemplateContext(_) {
-    // Removed, exists until usage is removed from CDT.
   }
 
   /**
@@ -167,11 +160,15 @@ export class ReportRenderer {
 
     for (const category of Object.values(report.categories)) {
       const renderer = specificCategoryRenderers[category.id] || categoryRenderer;
-      const categoryGauge = renderer.renderScoreGauge(category, report.categoryGroups || {});
+      const categoryGauge = renderer.renderCategoryScore(
+        category,
+        report.categoryGroups || {},
+        {gatherMode: report.gatherMode}
+      );
 
       if (Util.isPluginCategory(category.id)) {
         pluginGauges.push(categoryGauge);
-      } else if (renderer.renderScoreGauge === categoryRenderer.renderScoreGauge) {
+      } else if (renderer.renderCategoryScore === categoryRenderer.renderCategoryScore) {
         // The renderer for default categories is just the default CategoryRenderer.
         // If the functions are equal, then renderer is an instance of CategoryRenderer.
         // For example, the PWA category uses PwaCategoryRenderer, which overrides
@@ -245,12 +242,17 @@ export class ReportRenderer {
     }
 
     const categories = reportSection.appendChild(this._dom.createElement('div', 'lh-categories'));
+    const categoryOptions = {gatherMode: report.gatherMode};
     for (const category of Object.values(report.categories)) {
       const renderer = specificCategoryRenderers[category.id] || categoryRenderer;
       // .lh-category-wrapper is full-width and provides horizontal rules between categories.
       // .lh-category within has the max-width: var(--report-width);
       const wrapper = renderer.dom.createChildOf(categories, 'div', 'lh-category-wrapper');
-      wrapper.appendChild(renderer.render(category, report.categoryGroups));
+      wrapper.appendChild(renderer.render(
+        category,
+        report.categoryGroups,
+        categoryOptions
+      ));
     }
 
     const reportFragment = this._dom.createFragment();

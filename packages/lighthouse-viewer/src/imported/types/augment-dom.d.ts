@@ -3,19 +3,22 @@
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
-'use strict';
 
-/* global window */
+/**
+ * @fileoverview Augment global scope with needed DOM APIs that are newer or not
+ * widely supported enough to be in tsc's lib `dom`.
+ */
 
-// TODO(esmodules): delete when treemap app is esm.
+// Import to augment querySelector/querySelectorAll with stricter type checking.
+import '../../types/query-selector';
 
-import {I18n} from '../renderer/i18n.js';
-import {Logger} from '../renderer/logger.js';
-import {TextEncoding} from '../renderer/text-encoding.js';
+declare global {
+  var CompressionStream: {
+    prototype: CompressionStream,
+    new (format: string): CompressionStream,
+  };
 
-// @ts-expect-error
-window.I18n = I18n;
-// @ts-expect-error
-window.Logger = Logger;
-// @ts-expect-error
-window.TextEncoding = TextEncoding;
+  interface CompressionStream extends GenericTransformStream {
+    readonly format: string;
+  }
+}

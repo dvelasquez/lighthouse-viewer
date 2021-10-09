@@ -110,6 +110,7 @@ limitations under the License.
 <template id="metric">
   <div class="lh-metric">
     <div class="lh-metric__innerwrap">
+      <div class="lh-metric__icon"></div>
       <span class="lh-metric__title"></span>
       <div class="lh-metric__value"></div>
       <div class="lh-metric__description"></div>
@@ -221,9 +222,9 @@ limitations under the License.
   </style>
   <div class="lh-scores-wrapper">
     <div class="lh-scores-container">
-      <div class="pyro">
-        <div class="before"></div>
-        <div class="after"></div>
+      <div class="lh-pyro">
+        <div class="lh-before"></div>
+        <div class="lh-after"></div>
       </div>
     </div>
   </div>
@@ -250,9 +251,6 @@ limitations under the License.
       height: var(--topbar-logo-size);
       user-select: none;
       flex: none;
-    }
-    .lh-topbar__logo .shape {
-      fill: var(--report-text-color);
     }
 
     .lh-topbar__url {
@@ -286,10 +284,10 @@ limitations under the License.
     .lh-tools__button svg {
       fill: var(--tools-icon-color);
     }
-    .dark .lh-tools__button svg {
+    .lh-dark .lh-tools__button svg {
       filter: invert(1);
     }
-    .lh-tools__button.active + .lh-tools__dropdown {
+    .lh-tools__button.lh-active + .lh-tools__dropdown {
       opacity: 1;
       clip: rect(-1px, 194px, 242px, -3px);
       visibility: visible;
@@ -387,14 +385,14 @@ limitations under the License.
         </svg>
       </button>
       <div id="lh-tools-dropdown" role="menu" class="lh-tools__dropdown" aria-labelledby="lh-tools-button">
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--print" data-i18n="dropdownPrintSummary" data-action="print-summary"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--print" data-i18n="dropdownPrintExpanded" data-action="print-expanded"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--copy" data-i18n="dropdownCopyJSON" data-action="copy"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--download" data-i18n="dropdownSaveHTML" data-action="save-html"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--download" data-i18n="dropdownSaveJSON" data-action="save-json"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--open" data-i18n="dropdownViewer" data-action="open-viewer"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--open" data-i18n="dropdownSaveGist" data-action="save-gist"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="report-icon report-icon--dark" data-i18n="dropdownDarkTheme" data-action="toggle-dark"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--print" data-i18n="dropdownPrintSummary" data-action="print-summary"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--print" data-i18n="dropdownPrintExpanded" data-action="print-expanded"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--copy" data-i18n="dropdownCopyJSON" data-action="copy"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--download" data-i18n="dropdownSaveHTML" data-action="save-html"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--download" data-i18n="dropdownSaveJSON" data-action="save-json"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--open" data-i18n="dropdownViewer" data-action="open-viewer"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--open" data-i18n="dropdownSaveGist" data-action="save-gist"></a>
+        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--dark" data-i18n="dropdownDarkTheme" data-action="toggle-dark"></a>
       </div>
     </div>
   </div>
@@ -406,22 +404,22 @@ limitations under the License.
     /* CSS Fireworks. Originally by Eddie Lin
        https://codepen.io/paulirish/pen/yEVMbP
     */
-    .pyro {
+    .lh-pyro {
       display: none;
       z-index: 1;
       pointer-events: none;
     }
-    .score100 .pyro {
+    .lh-score100 .lh-pyro {
       display: block;
     }
-    .score100 .lh-lighthouse stop:first-child {
+    .lh-score100 .lh-lighthouse stop:first-child {
       stop-color: hsla(200, 12%, 95%, 0);
     }
-    .score100 .lh-lighthouse stop:last-child {
+    .lh-score100 .lh-lighthouse stop:last-child {
       stop-color: hsla(65, 81%, 76%, 1);
     }
 
-    .pyro > .before, .pyro > .after {
+    .lh-pyro > .lh-pyro-before, .lh-pyro > .lh-pyro-after {
       position: absolute;
       width: 5px;
       height: 5px;
@@ -431,11 +429,11 @@ limitations under the License.
       animation-delay: 1s, 1s, 1s;
     }
 
-    .pyro > .after {
+    .lh-pyro > .lh-pyro-after {
       animation-delay: 2.25s, 2.25s, 2.25s;
       animation-duration: 1.25s, 1.25s, 6.25s;
     }
-    .fireworks-paused .pyro > div {
+    .lh-fireworks-paused .lh-pyro > div {
       animation-play-state: paused;
     }
 
@@ -565,6 +563,18 @@ limitations under the License.
   </a>
 </template>
 
+<!-- Lighthouse category fraction -->
+<template id="fraction">
+  <a href="#" class="lh-fraction__wrapper">
+    <div class="lh-fraction__content-wrapper">
+      <div class="lh-fraction__content">
+        <div class="lh-fraction__background"></div>
+      </div>
+    </div>
+    <div class="lh-fraction__label"></div>
+  </a>
+</template>
+
 
 <!-- Lighthouse PWA badge gauge -->
 <template id="gaugePwa">
@@ -588,7 +598,7 @@ limitations under the License.
     .lh-gauge--pwa__logo--secondary-color {
       fill: #3D3D3D;
     }
-    .dark .lh-gauge--pwa__logo--secondary-color {
+    .lh-dark .lh-gauge--pwa__logo--secondary-color {
       fill: #D8B6B6;
     }
 
@@ -664,48 +674,48 @@ limitations under the License.
 <template id="crc">
   <div class="lh-crc-container">
     <style>
-      .lh-crc .tree-marker {
+      .lh-crc .lh-tree-marker {
         width: 12px;
         height: 26px;
         display: block;
         float: left;
         background-position: top left;
       }
-      .lh-crc .horiz-down {
+      .lh-crc .lh-horiz-down {
         background: url('data:image/svg+xml;utf8,<svg width="16" height="26" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg"><g fill="%23D8D8D8" fill-rule="evenodd"><path d="M16 12v2H-2v-2z"/><path d="M9 12v14H7V12z"/></g></svg>');
       }
-      .lh-crc .right {
+      .lh-crc .lh-right {
         background: url('data:image/svg+xml;utf8,<svg width="16" height="26" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v2H0v-2z" fill="%23D8D8D8" fill-rule="evenodd"/></svg>');
       }
-      .lh-crc .up-right {
+      .lh-crc .lh-up-right {
         background: url('data:image/svg+xml;utf8,<svg width="16" height="26" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg"><path d="M7 0h2v14H7zm2 12h7v2H9z" fill="%23D8D8D8" fill-rule="evenodd"/></svg>');
       }
-      .lh-crc .vert-right {
+      .lh-crc .lh-vert-right {
         background: url('data:image/svg+xml;utf8,<svg width="16" height="26" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg"><path d="M7 0h2v27H7zm2 12h7v2H9z" fill="%23D8D8D8" fill-rule="evenodd"/></svg>');
       }
-      .lh-crc .vert {
+      .lh-crc .lh-vert {
         background: url('data:image/svg+xml;utf8,<svg width="16" height="26" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg"><path d="M7 0h2v26H7z" fill="%23D8D8D8" fill-rule="evenodd"/></svg>');
       }
-      .lh-crc .crc-tree {
+      .lh-crc .lh-crc-tree {
         font-size: 14px;
         width: 100%;
         overflow-x: auto;
       }
-      .lh-crc .crc-node {
+      .lh-crc .lh-crc-node {
         height: 26px;
         line-height: 26px;
         white-space: nowrap;
       }
-      .lh-crc .crc-node__tree-value {
+      .lh-crc .lh-crc-node__tree-value {
         margin-left: 10px;
       }
-      .lh-crc .crc-node__tree-value div {
+      .lh-crc .lh-crc-node__tree-value div {
         display: inline;
       }
-      .lh-crc .crc-node__chain-duration {
+      .lh-crc .lh-crc-node__chain-duration {
         font-weight: 700;
       }
-      .lh-crc .crc-initial-nav {
+      .lh-crc .lh-crc-initial-nav {
         color: #595959;
         font-style: italic;
       }
@@ -719,7 +729,7 @@ limitations under the License.
       </div>
     </div>
     <div class="lh-crc">
-      <div class="crc-initial-nav"></div>
+      <div class="lh-crc-initial-nav"></div>
       <!-- crcChain -->
     </div>
   </div>
@@ -727,9 +737,9 @@ limitations under the License.
 
 <!-- Lighthouse crtiical request chains component, single chain -->
 <template id="crcChain">
-  <div class="crc-node">
-    <span class="crc-node__tree-marker"></span>
-    <span class="crc-node__tree-value"></span>
+  <div class="lh-crc-node">
+    <span class="lh-crc-node__tree-marker"></span>
+    <span class="lh-crc-node__tree-value"></span>
   </div>
 </template>
 
