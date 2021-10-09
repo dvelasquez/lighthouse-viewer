@@ -53,12 +53,11 @@
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "snyk": "^1.722.0",
+    "snyk": "^1.730.0",
     "start-server-and-test": "^1.14.0",
     "svelte": "^3.43.0",
     "svelte-preprocess": "^4.9.8",
-    "typescript": "^4.3.5",
-    "snyk": "^1.730.0"
+    "typescript": "^4.3.5"
   },
   "snyk": true,
   "browserslist": [
