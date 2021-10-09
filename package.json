@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.5",
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-replace": "^3.0.0",
@@ -46,7 +46,7 @@
     "postcss": "^8.3.9",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.57.0",
+    "rollup": "^2.58.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-dev": "^2.0.0",
     "rollup-plugin-html": "^0.2.1",
@@ -57,7 +57,8 @@
     "start-server-and-test": "^1.14.0",
     "svelte": "^3.43.0",
     "svelte-preprocess": "^4.9.8",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "snyk": "^1.730.0"
   },
   "snyk": true,
   "browserslist": [
