@@ -18,7 +18,6 @@ import {DOM} from '../../renderer/dom.js';
 import {CategoryRenderer} from '../../renderer/category-renderer.js';
 import {PerformanceCategoryRenderer} from '../../renderer/performance-category-renderer.js';
 import {DetailsRenderer} from '../../renderer/details-renderer.js';
-import {CriticalRequestChainRenderer} from '../../renderer/crc-details-renderer.js';
 import {ElementScreenshotRenderer} from '../../renderer/element-screenshot-renderer.js';
 import {ReportUIFeatures} from '../../renderer/report-ui-features.js';
 import {LH_ROOT} from '../../../root.js';

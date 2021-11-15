@@ -1,5 +1,4 @@
 import { CategoryRenderer } from './imported/renderer/category-renderer';
-import { CriticalRequestChainRenderer } from './imported/renderer/crc-details-renderer';
 import { DetailsRenderer } from './imported/renderer/details-renderer';
 import { DOM } from './imported/renderer/dom';
 import { I18n } from './imported/renderer/i18n';
@@ -16,7 +15,6 @@ import reportStyles from './imported/assets/styles.css';
 
 export {
   CategoryRenderer,
-  CriticalRequestChainRenderer,
   DetailsRenderer,
   DOM,
   I18n,

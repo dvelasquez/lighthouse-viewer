@@ -78,50 +78,6 @@ export class ReportRenderer {
     return el;
   }
 
-  /**
-   * @param {LH.ReportResult} report
-   * @return {DocumentFragment}
-   */
-  _renderReportFooter(report) {
-    const footer = this._dom.createComponent('footer');
-
-    const env = this._dom.find('.lh-env__items', footer);
-    env.id = 'runtime-settings';
-    this._dom.find('.lh-env__title', footer).textContent = Util.i18n.strings.runtimeSettingsTitle;
-
-    const envValues = Util.getEnvironmentDisplayValues(report.configSettings || {});
-    const runtimeValues = [
-      {name: Util.i18n.strings.runtimeSettingsUrl, description: report.finalUrl},
-      {name: Util.i18n.strings.runtimeSettingsFetchTime,
-        description: Util.i18n.formatDateTime(report.fetchTime)},
-      ...envValues,
-      {name: Util.i18n.strings.runtimeSettingsChannel, description: report.configSettings.channel},
-      {name: Util.i18n.strings.runtimeSettingsUA, description: report.userAgent},
-      {name: Util.i18n.strings.runtimeSettingsUANetwork, description: report.environment &&
-        report.environment.networkUserAgent},
-      {name: Util.i18n.strings.runtimeSettingsBenchmark, description: report.environment &&
-        report.environment.benchmarkIndex.toFixed(0)},
-    ];
-    if (report.environment.credits && report.environment.credits['axe-core']) {
-      runtimeValues.push({
-        name: Util.i18n.strings.runtimeSettingsAxeVersion,
-        description: report.environment.credits['axe-core'],
-      });
-    }
-
-    for (const runtime of runtimeValues) {
-      if (!runtime.description) continue;
-
-      const item = this._dom.createComponent('envItem');
-      this._dom.find('.lh-env__name', item).textContent = runtime.name;
-      this._dom.find('.lh-env__description', item).textContent = runtime.description;
-      env.appendChild(item);
-    }
-
-    this._dom.find('.lh-footer__version_issue', footer).textContent = Util.i18n.strings.footerIssue;
-    this._dom.find('.lh-footer__version', footer).textContent = report.lighthouseVersion;
-    return footer;
-  }
 
   /**
    * Returns a div with a list of top-level warnings, or an empty div if no warnings.
@@ -262,7 +218,6 @@ export class ReportRenderer {
     reportFragment.appendChild(reportContainer);
     reportContainer.appendChild(headerContainer);
     reportContainer.appendChild(reportSection);
-    reportSection.appendChild(this._renderReportFooter(report));
 
     if (fullPageScreenshot) {
       ElementScreenshotRenderer.installFullPageScreenshot(

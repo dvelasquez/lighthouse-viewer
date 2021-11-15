@@ -186,41 +186,13 @@ export class PerformanceCategoryRenderer extends CategoryRenderer {
       metricsBoxesEl.appendChild(this._renderMetric(item));
     });
 
-    const estValuesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metrics__disclaimer');
-    const disclaimerEl = this.dom.convertMarkdownLinkSnippets(strings.varianceDisclaimer);
-    estValuesEl.appendChild(disclaimerEl);
-
-    // Add link to score calculator.
-    const calculatorLink = this.dom.createChildOf(estValuesEl, 'a', 'lh-calclink');
-    calculatorLink.target = '_blank';
-    calculatorLink.textContent = strings.calculatorLink;
-    this.dom.safelySetHref(calculatorLink, this._getScoringCalculatorHref(category.auditRefs));
-
-
     metricAuditsEl.classList.add('lh-audit-group--metrics');
     element.appendChild(metricAuditsEl);
-
-    // Filmstrip
-    const timelineEl = this.dom.createChildOf(element, 'div', 'lh-filmstrip-container');
-    const thumbnailAudit = category.auditRefs.find(audit => audit.id === 'screenshot-thumbnails');
-    const thumbnailResult = thumbnailAudit && thumbnailAudit.result;
-    if (thumbnailResult && thumbnailResult.details) {
-      timelineEl.id = thumbnailResult.id;
-      const filmstripEl = this.detailsRenderer.render(thumbnailResult.details);
-      filmstripEl && timelineEl.appendChild(filmstripEl);
-    }
 
     // Opportunities
     const opportunityAudits = category.auditRefs
         .filter(audit => audit.group === 'load-opportunities' && !Util.showAsPassed(audit.result))
         .sort((auditA, auditB) => this._getWastedMs(auditB) - this._getWastedMs(auditA));
-
-
-    const filterableMetrics = metricAudits.filter(a => !!a.relevantAudits);
-    // TODO: only add if there are opportunities & diagnostics rendered.
-    if (filterableMetrics.length) {
-      this.renderMetricAuditFilter(filterableMetrics, element);
-    }
 
     if (opportunityAudits.length) {
       // Scale the sparklines relative to savings, minimum 2s to not overstate small savings
@@ -295,72 +267,5 @@ export class PerformanceCategoryRenderer extends CategoryRenderer {
     }
 
     return element;
-  }
-
-  /**
-   * Render the control to filter the audits by metric. The filtering is done at runtime by CSS only
-   * @param {LH.ReportResult.AuditRef[]} filterableMetrics
-   * @param {HTMLDivElement} categoryEl
-   */
-  renderMetricAuditFilter(filterableMetrics, categoryEl) {
-    const metricFilterEl = this.dom.createElement('div', 'lh-metricfilter');
-    const textEl = this.dom.createChildOf(metricFilterEl, 'span', 'lh-metricfilter__text');
-    textEl.textContent = Util.i18n.strings.showRelevantAudits;
-
-    const filterChoices = /** @type {LH.ReportResult.AuditRef[]} */ ([
-      ({acronym: 'All'}),
-      ...filterableMetrics,
-    ]);
-
-    // Form labels need to reference unique IDs, but multiple reports rendered in the same DOM (eg PSI)
-    // would mean ID conflict.  To address this, we 'scope' these radio inputs with a unique suffix.
-    const uniqSuffix = Util.getUniqueSuffix();
-    for (const metric of filterChoices) {
-      const elemId = `metric-${metric.acronym}-${uniqSuffix}`;
-      const radioEl = this.dom.createChildOf(metricFilterEl, 'input', 'lh-metricfilter__radio');
-      radioEl.type = 'radio';
-      radioEl.name = `metricsfilter-${uniqSuffix}`;
-      radioEl.id = elemId;
-
-      const labelEl = this.dom.createChildOf(metricFilterEl, 'label', 'lh-metricfilter__label');
-      labelEl.htmlFor = elemId;
-      labelEl.title = metric.result && metric.result.title;
-      labelEl.textContent = metric.acronym || metric.id;
-
-      if (metric.acronym === 'All') {
-        radioEl.checked = true;
-        labelEl.classList.add('lh-metricfilter__label--active');
-      }
-      categoryEl.append(metricFilterEl);
-
-      // Toggle class/hidden state based on filter choice.
-      radioEl.addEventListener('input', _ => {
-        for (const elem of categoryEl.querySelectorAll('label.lh-metricfilter__label')) {
-          elem.classList.toggle('lh-metricfilter__label--active', elem.htmlFor === elemId);
-        }
-        categoryEl.classList.toggle('lh-category--filtered', metric.acronym !== 'All');
-
-        for (const perfAuditEl of categoryEl.querySelectorAll('div.lh-audit')) {
-          if (metric.acronym === 'All') {
-            perfAuditEl.hidden = false;
-            continue;
-          }
-
-          perfAuditEl.hidden = true;
-          if (metric.relevantAudits && metric.relevantAudits.includes(perfAuditEl.id)) {
-            perfAuditEl.hidden = false;
-          }
-        }
-
-        // Hide groups/clumps if all child audits are also hidden.
-        const groupEls = categoryEl.querySelectorAll('div.lh-audit-group, details.lh-audit-group');
-        for (const groupEl of groupEls) {
-          groupEl.hidden = false;
-          const childEls = Array.from(groupEl.querySelectorAll('div.lh-audit'));
-          const areAllHidden = !!childEls.length && childEls.every(auditEl => auditEl.hidden);
-          groupEl.hidden = areAllHidden;
-        }
-      });
-    }
   }
 }

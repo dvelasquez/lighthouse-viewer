@@ -1,6 +1,6 @@
 {
-  "name": "react2-lighthouse-viewer",
-  "version": "0.1.24",
+  "name": "@ampify/lighthouse-viewer",
+  "version": "1.0.7",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -9,16 +9,6 @@
     "/dist"
   ],
   "license": "Apache-2.0",
-  "author": {
-    "name": "Danilo Velasquez",
-    "email": "danilo.velasquez@gmail.com",
-    "url": "https://d13z.dev"
-  },
-  "bugs": {
-    "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
-  },
-  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/react2-lighthouse-viewer/demo/index.html",
-  "repository": "https://github.com/dvelasquez/lighthouse-viewer",
   "keywords": [
     "lighthouse",
     "devtools",

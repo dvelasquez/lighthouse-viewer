@@ -37,13 +37,6 @@ export class PwaCategoryRenderer extends CategoryRenderer {
     const regularAuditRefs = auditRefs.filter(ref => ref.result.scoreDisplayMode !== 'manual');
     const auditsElem = this._renderAudits(regularAuditRefs, groupDefinitions);
     categoryElem.appendChild(auditsElem);
-
-    // Manual audits are still in a manual clump.
-    const manualAuditRefs = auditRefs.filter(ref => ref.result.scoreDisplayMode === 'manual');
-    const manualElem = this.renderClump('manual',
-      {auditRefs: manualAuditRefs, description: category.manualDescription});
-    categoryElem.appendChild(manualElem);
-
     return categoryElem;
   }
 

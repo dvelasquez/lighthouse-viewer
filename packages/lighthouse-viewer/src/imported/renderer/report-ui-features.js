@@ -25,7 +25,6 @@
 
 import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
 import {toggleDarkTheme} from './features-util.js';
-import {openTreemap} from './open-tab.js';
 import {TopbarFeatures} from './topbar-features.js';
 import {Util} from './util.js';
 import {getFilenamePrefix} from '../generator/file-namer.js';
@@ -64,7 +63,6 @@ export class ReportUIFeatures {
     this._topbar.enable(lhr);
     this._topbar.resetUIState();
     this._setupMediaQueryListeners();
-    this._setupThirdPartyFilter();
     this._setupElementScreenshotOverlay(this._dom.find('.lh-container', this._document));
 
     let turnOffTheLights = false;
@@ -96,16 +94,6 @@ export class ReportUIFeatures {
     if (hasMetricError) {
       const toggleInputEl = this._dom.find('input.lh-metrics-toggle__input', this._document);
       toggleInputEl.checked = true;
-    }
-
-    const showTreemapApp =
-      this.json.audits['script-treemap-data'] && this.json.audits['script-treemap-data'].details;
-    if (showTreemapApp) {
-      this.addButton({
-        text: Util.i18n.strings.viewTreemapLabel,
-        icon: 'treemap',
-        onClick: () => openTreemap(this.json),
-      });
     }
 
     // Fill in all i18n data.
@@ -193,86 +181,6 @@ export class ReportUIFeatures {
   onMediaQueryChange(mql) {
     const root = this._dom.find('.lh-root', this._document);
     root.classList.toggle('lh-narrow', mql.matches);
-  }
-
-  _setupThirdPartyFilter() {
-    // Some audits should not display the third party filter option.
-    const thirdPartyFilterAuditExclusions = [
-      // These audits deal explicitly with third party resources.
-      'uses-rel-preconnect',
-      'third-party-facades',
-    ];
-    // Some audits should hide third party by default.
-    const thirdPartyFilterAuditHideByDefault = [
-      // Only first party resources are actionable.
-      'legacy-javascript',
-    ];
-
-    // Get all tables with a text url column.
-    const tables = Array.from(this._document.querySelectorAll('table.lh-table'));
-    const tablesWithUrls = tables
-      .filter(el =>
-        el.querySelector('td.lh-table-column--url, td.lh-table-column--source-location'))
-      .filter(el => {
-        const containingAudit = el.closest('.lh-audit');
-        if (!containingAudit) throw new Error('.lh-table not within audit');
-        return !thirdPartyFilterAuditExclusions.includes(containingAudit.id);
-      });
-
-    tablesWithUrls.forEach((tableEl) => {
-      const rowEls = getTableRows(tableEl);
-      const thirdPartyRows = this._getThirdPartyRows(rowEls, this.json.finalUrl);
-
-      // create input box
-      const filterTemplate = this._dom.createComponent('3pFilter');
-      const filterInput = this._dom.find('input', filterTemplate);
-
-      filterInput.addEventListener('change', e => {
-        const shouldHideThirdParty = e.target instanceof HTMLInputElement && !e.target.checked;
-        let even = true;
-        let rowEl = rowEls[0];
-        while (rowEl) {
-          const shouldHide = shouldHideThirdParty && thirdPartyRows.includes(rowEl);
-
-          // Iterate subsequent associated sub item rows.
-          do {
-            rowEl.classList.toggle('lh-row--hidden', shouldHide);
-            // Adjust for zebra styling.
-            rowEl.classList.toggle('lh-row--even', !shouldHide && even);
-            rowEl.classList.toggle('lh-row--odd', !shouldHide && !even);
-
-            rowEl = /** @type {HTMLElement} */ (rowEl.nextElementSibling);
-          } while (rowEl && rowEl.classList.contains('lh-sub-item-row'));
-
-          if (!shouldHide) even = !even;
-        }
-      });
-
-      this._dom.find('.lh-3p-filter-count', filterTemplate).textContent =
-          `${thirdPartyRows.length}`;
-      this._dom.find('.lh-3p-ui-string', filterTemplate).textContent =
-          Util.i18n.strings.thirdPartyResourcesLabel;
-
-      const allThirdParty = thirdPartyRows.length === rowEls.length;
-      const allFirstParty = !thirdPartyRows.length;
-
-      // If all or none of the rows are 3rd party, disable the checkbox.
-      if (allThirdParty || allFirstParty) {
-        filterInput.disabled = true;
-        filterInput.checked = allThirdParty;
-      }
-
-      // Add checkbox to the DOM.
-      if (!tableEl.parentNode) return; // Keep tsc happy.
-      tableEl.parentNode.insertBefore(filterTemplate, tableEl);
-
-      // Hide third-party rows for some audits by default.
-      const containingAudit = tableEl.closest('.lh-audit');
-      if (!containingAudit) throw new Error('.lh-table not within audit');
-      if (thirdPartyFilterAuditHideByDefault.includes(containingAudit.id) && !allThirdParty) {
-        filterInput.click();
-      }
-    });
   }
 
   /**

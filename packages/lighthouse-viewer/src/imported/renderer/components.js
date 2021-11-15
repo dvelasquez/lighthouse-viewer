@@ -128,18 +128,6 @@ function createCrcComponent(dom) {
   return el0;
 }
 
-/**
- * @param {DOM} dom
- */
-function createCrcChainComponent(dom) {
-  const el0 = dom.document().createDocumentFragment();
-  const el1 = dom.createElement('div', 'lh-crc-node');
-  const el2 = dom.createElement('span', 'lh-crc-node__tree-marker');
-  const el3 = dom.createElement('span', 'lh-crc-node__tree-value');
-  el1.append(' ', el2, ' ', el3, ' ');
-  el0.append(el1);
-  return el0;
-}
 
 /**
  * @param {DOM} dom
@@ -771,7 +759,7 @@ function createWarningsToplevelComponent(dom) {
 }
 
 
-/** @typedef {'3pFilter'|'audit'|'categoryHeader'|'chevron'|'clump'|'crc'|'crcChain'|'elementScreenshot'|'envItem'|'footer'|'fraction'|'gauge'|'gaugePwa'|'heading'|'metric'|'metricsToggle'|'opportunity'|'opportunityHeader'|'scorescale'|'scoresWrapper'|'snippet'|'snippetContent'|'snippetHeader'|'snippetLine'|'topbar'|'warningsToplevel'} ComponentName */
+/** @typedef {'3pFilter'|'audit'|'categoryHeader'|'chevron'|'clump'|'crc'|'elementScreenshot'|'envItem'|'footer'|'fraction'|'gauge'|'gaugePwa'|'heading'|'metric'|'metricsToggle'|'opportunity'|'opportunityHeader'|'scorescale'|'scoresWrapper'|'snippet'|'snippetContent'|'snippetHeader'|'snippetLine'|'topbar'|'warningsToplevel'} ComponentName */
 /**
  * @param {DOM} dom
  * @param {ComponentName} componentName
@@ -779,17 +767,16 @@ function createWarningsToplevelComponent(dom) {
  */
 export function createComponent(dom, componentName) {
   switch (componentName) {
-    case '3pFilter': return create3pFilterComponent(dom);
     case 'audit': return createAuditComponent(dom);
     case 'categoryHeader': return createCategoryHeaderComponent(dom);
-    case 'chevron': return createChevronComponent(dom);
+    case 'chevron': break;
     case 'clump': return createClumpComponent(dom);
-    case 'crc': return createCrcComponent(dom);
-    case 'crcChain': return createCrcChainComponent(dom);
-    case 'elementScreenshot': return createElementScreenshotComponent(dom);
-    case 'envItem': return createEnvItemComponent(dom);
-    case 'footer': return createFooterComponent(dom);
-    case 'fraction': return createFractionComponent(dom);
+    case 'crc': break;
+    // case 'crc': return createCrcComponent(dom);
+    case 'elementScreenshot': break;
+    case 'envItem': break;
+    case 'footer': break;
+    case 'fraction': break;
     case 'gauge': return createGaugeComponent(dom);
     case 'gaugePwa': return createGaugePwaComponent(dom);
     case 'heading': return createHeadingComponent(dom);

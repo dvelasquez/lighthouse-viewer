@@ -581,51 +581,6 @@
   display: block;
 }
 
-
-.lh-metricfilter {
-  text-align: right;
-  margin-top: var(--default-padding);
-}
-
-.lh-metricfilter__radio {
-  position: absolute;
-  left: -9999px;
-}
-.lh-metricfilter input[type='radio']:focus-visible + label {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.lh-metricfilter__label {
-  border: solid 1px var(--color-gray-400);
-  align-items: center;
-  justify-content: center;
-  padding: 2px 5px;
-  width: 50%;
-  height: 28px;
-  cursor: pointer;
-  font-size: 90%;
-}
-
-.lh-metricfilter__label:first-of-type {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  margin-left: 5px;
-}
-.lh-metricfilter__label:last-of-type {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.lh-metricfilter__label--active {
-  background: var(--color-blue-A700);
-  color: var(--color-white);
-}
-/* Give the 'All' choice a more muted display */
-.lh-metricfilter__label--active[for="metric-All"] {
-  background-color: var(--color-blue-200) !important;
-  color: black !important;
-}
-
 /* If audits are filtered, hide the itemcount for Passed Audits… */
 .lh-category--filtered .lh-audit-group .lh-audit-group__itemcount {
   display: none;
@@ -679,8 +634,8 @@
 
 .lh-metric__innerwrap {
   display: grid;
-  /** 
-   * Icon -- Metric Name 
+  /**
+   * Icon -- Metric Name
    *      -- Metric Value
    */
   grid-template-columns: calc(var(--score-icon-size) + var(--score-icon-margin-left) + var(--score-icon-margin-right)) 1fr;
@@ -724,7 +679,7 @@
 /* Change the grid to 3 columns for narrow viewport. */
 @media screen and (max-width: 535px) {
   .lh-metric__innerwrap {
-  /** 
+  /**
    * Icon -- Metric Name -- Metric Value
    */
     grid-template-columns: calc(var(--score-icon-size) + var(--score-icon-margin-left) + var(--score-icon-margin-right)) 2fr 1fr;

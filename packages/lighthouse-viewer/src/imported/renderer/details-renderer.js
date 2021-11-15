@@ -26,9 +26,7 @@
 /** @typedef {LH.FormattedIcu<LH.Audit.Details.ItemValue>} TableItemValue */
 
 import {Util} from './util.js';
-import {CriticalRequestChainRenderer} from './crc-details-renderer.js';
 import {SnippetRenderer} from './snippet-renderer.js';
-import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
 
 const URL_PREFIXES = ['http://', 'https://', 'data:'];
 
@@ -48,14 +46,12 @@ export class DetailsRenderer {
    */
   render(details) {
     switch (details.type) {
-      case 'filmstrip':
-        return this._renderFilmstrip(details);
       case 'list':
         return this._renderList(details);
       case 'table':
         return this._renderTable(details);
       case 'criticalrequestchain':
-        return CriticalRequestChainRenderer.render(this._dom, details, this);
+        return null;
       case 'opportunity':
         return this._renderTable(details);
 
@@ -572,22 +568,6 @@ export class DetailsRenderer {
     element.setAttribute('data-source-column', String(item.column));
 
     return element;
-  }
-
-  /**
-   * @param {LH.Audit.Details.Filmstrip} details
-   * @return {Element}
-   */
-  _renderFilmstrip(details) {
-    const filmstripEl = this._dom.createElement('div', 'lh-filmstrip');
-
-    for (const thumbnail of details.items) {
-      const frameEl = this._dom.createChildOf(filmstripEl, 'div', 'lh-filmstrip__frame');
-      const imgEl = this._dom.createChildOf(frameEl, 'img', 'lh-filmstrip__thumbnail');
-      imgEl.src = thumbnail.data;
-      imgEl.alt = `Screenshot`;
-    }
-    return filmstripEl;
   }
 
   /**
