@@ -167,38 +167,40 @@ export class PerformanceCategoryRenderer extends CategoryRenderer {
       gaugeEl.appendChild(this.renderCategoryScore(category, groups, options));
       element.appendChild(gaugeEl);
     } else {
-      this.createPermalinkSpan(element, category.id);
+      element.id = category.id;
       element.appendChild(this.renderCategoryHeader(category, groups, options));
     }
 
     // Metrics.
-    const metricAuditsEl = this.renderAuditGroup(groups.metrics);
-
-    // Metric descriptions toggle.
-    const toggleTmpl = this.dom.createComponent('metricsToggle');
-    const _toggleEl = this.dom.find('.lh-metrics-toggle', toggleTmpl);
-    metricAuditsEl.append(..._toggleEl.childNodes);
-
     const metricAudits = category.auditRefs.filter(audit => audit.group === 'metrics');
-    const metricsBoxesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metrics-container');
+    if (metricAudits.length) {
+      const metricAuditsEl = this.renderAuditGroup(groups.metrics);
 
-    metricAudits.forEach(item => {
-      metricsBoxesEl.appendChild(this._renderMetric(item));
-    });
+      // Metric descriptions toggle.
+      const toggleTmpl = this.dom.createComponent('metricsToggle');
+      const _toggleEl = this.dom.find('.lh-metrics-toggle', toggleTmpl);
+      metricAuditsEl.append(..._toggleEl.childNodes);
 
-    const estValuesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metrics__disclaimer');
-    const disclaimerEl = this.dom.convertMarkdownLinkSnippets(strings.varianceDisclaimer);
-    estValuesEl.appendChild(disclaimerEl);
+      const metricsBoxesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metrics-container');
 
-    // Add link to score calculator.
-    const calculatorLink = this.dom.createChildOf(estValuesEl, 'a', 'lh-calclink');
-    calculatorLink.target = '_blank';
-    calculatorLink.textContent = strings.calculatorLink;
-    this.dom.safelySetHref(calculatorLink, this._getScoringCalculatorHref(category.auditRefs));
+      metricAudits.forEach(item => {
+        metricsBoxesEl.appendChild(this._renderMetric(item));
+      });
+
+      const estValuesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metrics__disclaimer');
+      const disclaimerEl = this.dom.convertMarkdownLinkSnippets(strings.varianceDisclaimer);
+      estValuesEl.appendChild(disclaimerEl);
+
+      // Add link to score calculator.
+      const calculatorLink = this.dom.createChildOf(estValuesEl, 'a', 'lh-calclink');
+      calculatorLink.target = '_blank';
+      calculatorLink.textContent = strings.calculatorLink;
+      this.dom.safelySetHref(calculatorLink, this._getScoringCalculatorHref(category.auditRefs));
 
 
-    metricAuditsEl.classList.add('lh-audit-group--metrics');
-    element.appendChild(metricAuditsEl);
+      metricAuditsEl.classList.add('lh-audit-group--metrics');
+      element.appendChild(metricAuditsEl);
+    }
 
     // Filmstrip
     const timelineEl = this.dom.createChildOf(element, 'div', 'lh-filmstrip-container');

@@ -92,6 +92,7 @@
   --footer-padding-vertical: 16px;
   --gauge-circle-size-big: 112px;
   --gauge-circle-size: 80px;
+  --gauge-circle-size-sm: 36px;
   --gauge-label-font-size-big: 28px;
   --gauge-label-font-size: 20px;
   --gauge-label-line-height-big: 36px;
@@ -103,6 +104,7 @@
   --highlighter-background-color: var(--report-text-color);
   --icon-square-size: calc(var(--score-icon-size) * 0.88);
   --image-preview-size: 48px;
+  --locale-selector-background-color: var(--color-white);
   --metric-toggle-lines-fill: #7F7F7F;
   --metric-value-font-size: 28px;
   --metrics-toggle-background-color: var(--color-gray-200);
@@ -168,6 +170,8 @@
 
   --pwa-installable-color-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><circle fill="%230CCE6B" cx="12" cy="12" r="12"/><path d="M12 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm3.5 7.7h-2.8v2.8h-1.4v-2.8H8.5v-1.4h2.8V8.5h1.4v2.8h2.8v1.4z" fill="%23FFF"/></g></svg>');
   --pwa-optimized-color-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="%230CCE6B" width="24" height="24" rx="12"/><path d="M5 5h14v14H5z"/><path fill="%23FFF" d="M12 15.07l3.6 2.18-.95-4.1 3.18-2.76-4.2-.36L12 6.17l-1.64 3.86-4.2.36 3.2 2.76-.96 4.1z"/></g></svg>');
+
+  --swap-locale-icon-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>');
 }
 
 @media not print {
@@ -190,6 +194,7 @@
 
     /* Component variables */
     --env-item-background-color: var(--color-gray);
+    --locale-selector-background-color: var(--color-gray-200);
     --plugin-badge-background-color: var(--color-gray-800);
     --report-background-color: var(--color-gray-900);
     --report-border-color-secondary: var(--color-gray-200);
@@ -310,7 +315,6 @@
   margin: 0;
   line-height: var(--report-line-height);
   background: var(--report-background-color);
-  scroll-behavior: smooth;
   color: var(--report-text-color);
 }
 
@@ -332,6 +336,10 @@
 
 .lh-root details > summary {
   cursor: pointer;
+}
+
+.lh-hidden {
+  display: none !important;
 }
 
 .lh-container {
@@ -679,8 +687,8 @@
 
 .lh-metric__innerwrap {
   display: grid;
-  /** 
-   * Icon -- Metric Name 
+  /**
+   * Icon -- Metric Name
    *      -- Metric Value
    */
   grid-template-columns: calc(var(--score-icon-size) + var(--score-icon-margin-left) + var(--score-icon-margin-right)) 1fr;
@@ -724,7 +732,7 @@
 /* Change the grid to 3 columns for narrow viewport. */
 @media screen and (max-width: 535px) {
   .lh-metric__innerwrap {
-  /** 
+  /**
    * Icon -- Metric Name -- Metric Value
    */
     grid-template-columns: calc(var(--score-icon-size) + var(--score-icon-margin-left) + var(--score-icon-margin-right)) 2fr 1fr;
@@ -1402,6 +1410,10 @@
   padding: var(--category-padding);
   max-width: var(--report-width);
   margin: 0 auto;
+
+  --sticky-header-height: calc(var(--gauge-circle-size-sm) + var(--score-container-padding) * 2);
+  --topbar-plus-sticky-header: calc(var(--topbar-height) + var(--sticky-header-height));
+  scroll-margin-top: var(--topbar-plus-sticky-header);
 }
 
 .lh-category-wrapper {
@@ -1410,18 +1422,6 @@
 
 .lh-category-wrapper:first-of-type {
   border-top: 1px solid var(--color-gray-200);
-}
-
-/* section hash link jump should preserve fixed header
-   https://css-tricks.com/hash-tag-links-padding/
-*/
-.lh-category > .lh-permalink {
-  --sticky-header-height: calc(var(--gauge-circle-size) + var(--score-container-padding) * 2);
-  --topbar-plus-header: calc(var(--topbar-height) + var(--sticky-header-height));
-  margin-top: calc(var(--topbar-plus-header) * -1);
-  padding-bottom: var(--topbar-plus-header);
-  display: block;
-  visibility: hidden;
 }
 
 .lh-category-header {
@@ -1439,31 +1439,6 @@
 .lh-category-header .lh-audit__title {
   font-size: var(--category-header-font-size);
   line-height: var(--header-line-height);
-}
-
-#lh-log {
-  position: fixed;
-  background-color: #323232;
-  color: #fff;
-  min-height: 48px;
-  min-width: 288px;
-  padding: 16px 24px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  border-radius: 2px;
-  margin: 12px;
-  font-size: 14px;
-  cursor: default;
-  transition: transform 0.3s, opacity 0.3s;
-  transform: translateY(100px);
-  opacity: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-
-#lh-log.lh-show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* 964 fits the min-width of the filmstrip */

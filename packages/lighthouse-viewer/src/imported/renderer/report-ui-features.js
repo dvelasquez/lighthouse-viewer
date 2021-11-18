@@ -28,7 +28,7 @@ import {toggleDarkTheme} from './features-util.js';
 import {openTreemap} from './open-tab.js';
 import {TopbarFeatures} from './topbar-features.js';
 import {Util} from './util.js';
-import {getFilenamePrefix} from '../generator/file-namer.js';
+import {getLhrFilenamePrefix} from '../generator/file-namer.js';
 
 /**
  * @param {HTMLTableElement} tableEl
@@ -324,25 +324,13 @@ export class ReportUIFeatures {
   }
 
   /**
-   * Downloads a file (blob) using a[download].
-   * @param {Blob|File} blob The file to save.
+   * DevTools uses its own file manager to download files, so it redefines this function.
+   * Wrapper is necessary so DevTools can still override this function.
+   *
+   * @param {Blob|File} blob
    */
   _saveFile(blob) {
-    const filename = getFilenamePrefix({
-      finalUrl: this.json.finalUrl,
-      fetchTime: this.json.fetchTime,
-    });
-
-    const ext = blob.type.match('json') ? '.json' : '.html';
-
-    const a = this._dom.createElement('a');
-    a.download = `${filename}${ext}`;
-    this._dom.safelySetBlobHref(a, blob);
-    this._document.body.appendChild(a); // Firefox requires anchor to be in the DOM.
-    a.click();
-
-    // cleanup.
-    this._document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(a.href), 500);
+    const filename = getLhrFilenamePrefix(this.json);
+    this._dom.saveFile(blob, filename);
   }
 }

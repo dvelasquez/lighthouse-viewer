@@ -166,6 +166,26 @@ export class ReportRenderer {
         {gatherMode: report.gatherMode}
       );
 
+      const gaugeWrapperEl = this._dom.find('a.lh-gauge__wrapper, a.lh-fraction__wrapper',
+        categoryGauge);
+      if (gaugeWrapperEl) {
+        this._dom.safelySetHref(gaugeWrapperEl, `#${category.id}`);
+        // Handle navigation clicks by scrolling to target without changing the page's URL.
+        // Why? Some report embedding clients have their own routing and updating the location.hash
+        // can introduce problems. Others may have an unpredictable `<base>` URL which ensures
+        // navigation to `${baseURL}#categoryid` will be unintended.
+        gaugeWrapperEl.addEventListener('click', e => {
+          if (!gaugeWrapperEl.matches('[href^="#"]')) return;
+          const selector = gaugeWrapperEl.getAttribute('href');
+          const reportRoot = gaugeWrapperEl.closest('.lh-vars');
+          if (!selector || !reportRoot) return;
+          const destEl = this._dom.find(selector, reportRoot);
+          e.preventDefault();
+          destEl.scrollIntoView();
+        });
+      }
+
+
       if (Util.isPluginCategory(category.id)) {
         pluginGauges.push(categoryGauge);
       } else if (renderer.renderCategoryScore === categoryRenderer.renderCategoryScore) {
@@ -256,6 +276,7 @@ export class ReportRenderer {
     }
 
     const reportFragment = this._dom.createFragment();
+    reportFragment.append(this._dom.createComponent('styles'));
     const topbarDocumentFragment = this._renderReportTopbar(report);
 
     reportFragment.appendChild(topbarDocumentFragment);

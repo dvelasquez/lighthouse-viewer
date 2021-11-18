@@ -165,7 +165,7 @@ limitations under the License.
     }
 
     .lh-sticky-header {
-      --gauge-circle-size: 36px;
+      --gauge-circle-size: var(--gauge-circle-size-sm);
       --plugin-badge-size: 18px;
       --plugin-icon-size: 75%;
       --gauge-wrapper-width: 60px;
@@ -263,12 +263,15 @@ limitations under the License.
     }
 
     .lh-tools {
+      display: flex;
+      align-items: center;
       margin-left: auto;
       will-change: transform;
       min-width: var(--report-icon-size);
     }
     .lh-tools__button {
       width: var(--report-icon-size);
+      min-width: 24px;
       height: var(--report-icon-size);
       cursor: pointer;
       margin-right: 5px;
@@ -325,6 +328,32 @@ limitations under the License.
       display: none;
     }
 
+    .lh-locale-selector {
+      width: 100%;
+      color: var(--report-text-color);
+      background-color: var(--locale-selector-background-color);
+      padding: 2px;
+    }
+    .lh-tools-locale {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    .lh-tools-locale__selector-wrapper {
+      transition: opacity 0.15s;
+      opacity: 0;
+      max-width: 200px;
+    }
+    .lh-button.lh-tool-locale__button {
+      height: unset;
+      color: var(--tools-icon-color);
+    }
+    .lh-tool-locale__button.lh-active + .lh-tools-locale__selector-wrapper {
+      opacity: 1;
+      clip: rect(-1px, 194px, 242px, -3px);
+      visibility: visible;
+    }
+
     @media screen and (max-width: 964px) {
       .lh-tools__dropdown {
         right: 0;
@@ -378,6 +407,15 @@ limitations under the License.
     <a href="" class="lh-topbar__url" target="_blank" rel="noopener"></a>
 
     <div class="lh-tools">
+      <div class="lh-tools-locale lh-hidden">
+        <button id="lh-button__swap-locales" class="lh-button lh-tool-locale__button" title="Show Language Picker" aria-label="Toggle language picker" aria-haspopup="menu" aria-expanded="false" aria-controls="lh-tools-locale__selector-wrapper">
+          <svg width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+        </button>
+        <div id="lh-tools-locale__selector-wrapper" class="lh-tools-locale__selector-wrapper" role="menu" aria-labelledby="lh-button__swap-locales" aria-hidden="true">
+          <!-- Select element created by ReportUIFeatures._enableSwapLocale: .lh-locale-selector -->
+        </div>
+      </div>
+
       <button id="lh-tools-button" class="lh-tools__button" title="Tools menu" aria-label="Toggle report tools menu" aria-haspopup="menu" aria-expanded="false" aria-controls="lh-tools-dropdown">
         <svg width="100%" height="100%" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none"/>
@@ -549,7 +587,7 @@ limitations under the License.
 
 <!-- Lighthouse score gauge -->
 <template id="gauge">
-  <a href="#" class="lh-gauge__wrapper">
+  <a class="lh-gauge__wrapper">
     <!-- Wrapper exists for the ::before plugin icon. Cannot create pseudo-elements on svgs. -->
     <div class="lh-gauge__svg-wrapper">
       <svg viewBox="0 0 120 120" class="lh-gauge">
@@ -565,7 +603,7 @@ limitations under the License.
 
 <!-- Lighthouse category fraction -->
 <template id="fraction">
-  <a href="#" class="lh-fraction__wrapper">
+  <a class="lh-fraction__wrapper">
     <div class="lh-fraction__content-wrapper">
       <div class="lh-fraction__content">
         <div class="lh-fraction__background"></div>
@@ -622,7 +660,7 @@ limitations under the License.
     }
   </style>
 
-  <a href="#" class="lh-gauge__wrapper lh-gauge--pwa__wrapper">
+  <a class="lh-gauge__wrapper lh-gauge--pwa__wrapper">
     <svg viewBox="0 0 60 60" class="lh-gauge lh-gauge--pwa">
       <defs>
         <linearGradient id="lh-gauge--pwa__check-circle__gradient" x1="50%" y1="0%" x2="50%" y2="100%">
