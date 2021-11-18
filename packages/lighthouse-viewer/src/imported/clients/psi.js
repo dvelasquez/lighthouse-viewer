@@ -77,6 +77,7 @@ export function prepareLabData(LHResult, document) {
     reportLHR.categoryGroups,
     {environment: 'PSI', gatherMode: lhResult.gatherMode}
   );
+  perfCategoryEl.append(dom.createComponent('styles'));
 
   const scoreGaugeEl = dom.find('.lh-score__gauge', perfCategoryEl);
   scoreGaugeEl.remove();

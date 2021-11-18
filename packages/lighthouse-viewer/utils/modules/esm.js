@@ -6,8 +6,8 @@ const fileNamer = () => ({
     to: ``,
   },
   export: {
-    from: `module.exports = {getFilenamePrefix};`,
-    to: `export {getFilenamePrefix};`,
+    from: `module.exports = {getLhrFilenamePrefix, getFilenamePrefix};`,
+    to: `export {getLhrFilenamePrefix,getFilenamePrefix};`,
   },
 });
 

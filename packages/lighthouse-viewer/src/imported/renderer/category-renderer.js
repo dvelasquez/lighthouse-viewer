@@ -333,7 +333,6 @@ export class CategoryRenderer {
   renderScoreGauge(category, groupDefinitions) { // eslint-disable-line no-unused-vars
     const tmpl = this.dom.createComponent('gauge');
     const wrapper = this.dom.find('a.lh-gauge__wrapper', tmpl);
-    this.dom.safelySetHref(wrapper, `#${category.id}`);
 
     if (Util.isPluginCategory(category.id)) {
       wrapper.classList.add('lh-gauge__wrapper--plugin');
@@ -374,14 +373,13 @@ export class CategoryRenderer {
   renderCategoryFraction(category) {
     const tmpl = this.dom.createComponent('fraction');
     const wrapper = this.dom.find('a.lh-fraction__wrapper', tmpl);
-    this.dom.safelySetHref(wrapper, `#${category.id}`);
 
-    const {numPassed, numAudits, totalWeight} = Util.calculateCategoryFraction(category);
+    const {numPassed, numPassableAudits, totalWeight} = Util.calculateCategoryFraction(category);
 
-    const fraction = numPassed / numAudits;
+    const fraction = numPassed / numPassableAudits;
     const content = this.dom.find('.lh-fraction__content', tmpl);
     const text = this.dom.createElement('span');
-    text.textContent = `${numPassed}/${numAudits}`;
+    text.textContent = `${numPassed}/${numPassableAudits}`;
     content.appendChild(text);
 
     let rating = Util.calculateRating(fraction);
@@ -485,7 +483,7 @@ export class CategoryRenderer {
    */
   render(category, groupDefinitions = {}, options) {
     const element = this.dom.createElement('div', 'lh-category');
-    this.createPermalinkSpan(element, category.id);
+    element.id = category.id;
     element.appendChild(this.renderCategoryHeader(category, groupDefinitions, options));
 
     // Top level clumps for audits, in order they will appear in the report.
@@ -522,15 +520,5 @@ export class CategoryRenderer {
     }
 
     return element;
-  }
-
-  /**
-   * Create a non-semantic span used for hash navigation of categories
-   * @param {Element} element
-   * @param {string} id
-   */
-  createPermalinkSpan(element, id) {
-    const permalinkEl = this.dom.createChildOf(element, 'span', 'lh-permalink');
-    permalinkEl.id = id;
   }
 }

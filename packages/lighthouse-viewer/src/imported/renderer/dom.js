@@ -271,4 +271,23 @@ export class DOM {
     const event = new CustomEvent(name, detail ? {detail} : undefined);
     target.dispatchEvent(event);
   }
+
+  /**
+   * Downloads a file (blob) using a[download].
+   * @param {Blob|File} blob The file to save.
+   * @param {string} filename
+   */
+  saveFile(blob, filename) {
+    const ext = blob.type.match('json') ? '.json' : '.html';
+
+    const a = this.createElement('a');
+    a.download = `${filename}${ext}`;
+    this.safelySetBlobHref(a, blob);
+    this._document.body.appendChild(a); // Firefox requires anchor to be in the DOM.
+    a.click();
+
+    // cleanup.
+    this._document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(a.href), 500);
+  }
 }

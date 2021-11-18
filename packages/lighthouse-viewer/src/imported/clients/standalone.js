@@ -40,8 +40,7 @@ function __initLighthouseReport__() {
   });
 
   document.addEventListener('lh-log', /** @param {Event} e */ e => {
-    const el = document.querySelector('#lh-log');
-    if (!el) return;
+    const el = dom.find('div#lh-log', document);
 
     const logger = new Logger(el);
     // @ts-expect-error

@@ -69,6 +69,18 @@ describe('PerfCategoryRenderer', () => {
     assert.equal(timelineElements.length + nontimelineElements.length, metricAudits.length);
   });
 
+  it('does not render metrics section if no metric group audits', () => {
+    // Remove metrics from category
+    const newCategory = JSON.parse(JSON.stringify(category));
+    newCategory.auditRefs = category.auditRefs.filter(audit => audit.group !== 'metrics');
+
+    const categoryDOM = renderer.render(newCategory, sampleResults.categoryGroups);
+    const sections = categoryDOM.querySelectorAll('.lh-category > .lh-audit-group');
+    const metricSection = categoryDOM.querySelector('.lh-audit-group--metrics');
+    assert.ok(!metricSection);
+    assert.equal(sections.length, 4);
+  });
+
   it('renders the metrics variance disclaimer as markdown', () => {
     const categoryDOM = renderer.render(category, sampleResults.categoryGroups);
     const disclaimerEl =

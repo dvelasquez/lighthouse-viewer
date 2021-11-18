@@ -27,7 +27,7 @@ export class PwaCategoryRenderer extends CategoryRenderer {
    */
   render(category, groupDefinitions = {}) {
     const categoryElem = this.dom.createElement('div', 'lh-category');
-    this.createPermalinkSpan(categoryElem, category.id);
+    categoryElem.id = category.id;
     categoryElem.appendChild(this.renderCategoryHeader(category, groupDefinitions));
 
     const auditRefs = category.auditRefs;
@@ -70,7 +70,6 @@ export class PwaCategoryRenderer extends CategoryRenderer {
 
     const tmpl = this.dom.createComponent('gaugePwa');
     const wrapper = this.dom.find('a.lh-gauge--pwa__wrapper', tmpl);
-    this.dom.safelySetHref(wrapper, `#${category.id}`);
 
     // Correct IDs in case multiple instances end up in the page.
     const svgRoot = tmpl.querySelector('svg');

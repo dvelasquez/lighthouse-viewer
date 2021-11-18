@@ -55,7 +55,6 @@ class ReportGenerator {
     return ReportGenerator.replaceStrings(htmlReportAssets.REPORT_TEMPLATE, [
       {search: '%%LIGHTHOUSE_JSON%%', replacement: sanitizedJson},
       {search: '%%LIGHTHOUSE_JAVASCRIPT%%', replacement: sanitizedJavascript},
-      {search: '/*%%LIGHTHOUSE_CSS%%*/', replacement: htmlReportAssets.REPORT_CSS},
     ]);
   }
 
