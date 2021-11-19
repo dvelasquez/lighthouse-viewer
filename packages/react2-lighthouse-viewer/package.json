@@ -1,6 +1,6 @@
 {
   "name": "@ampify/lighthouse-viewer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
