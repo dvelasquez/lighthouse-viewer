@@ -5,7 +5,6 @@ import { DOM } from './imported/renderer/dom';
 import { I18n } from './imported/renderer/i18n';
 import { Logger } from './imported/renderer/logger';
 import { PerformanceCategoryRenderer } from './imported/renderer/performance-category-renderer';
-import { prepareLabData } from './imported/clients/psi';
 import { PwaCategoryRenderer } from './imported/renderer/pwa-category-renderer';
 import { ReportRenderer } from './imported/renderer/report-renderer';
 import { ReportUIFeatures } from './imported/renderer/report-ui-features';
@@ -22,7 +21,6 @@ export {
   I18n,
   Logger,
   PerformanceCategoryRenderer,
-  prepareLabData,
   PwaCategoryRenderer,
   ReportRenderer,
   ReportUIFeatures,

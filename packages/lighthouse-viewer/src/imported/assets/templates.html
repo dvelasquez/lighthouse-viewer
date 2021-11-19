@@ -52,8 +52,9 @@ limitations under the License.
 
 <!-- Lighthouse clump -->
 <template id="clump">
+  <div class="lh-audit-group">
   <!-- TODO: group classes shouldn't be reused for clumps. -->
-  <details class="lh-clump lh-audit-group">
+  <details class="lh-clump">
     <summary>
       <div class="lh-audit-group__summary">
         <div class="lh-audit-group__header">
@@ -62,27 +63,13 @@ limitations under the License.
           <!-- .lh-audit-group__description will be added here -->
           <!-- .lh-metrics-toggle will be added here -->
         </div>
+        <div class="lh-clump-toggle">
+          <span class="lh-clump-toggletext--show"></span>
+          <span class="lh-clump-toggletext--hide"></span>
+        </div>
       </div>
     </summary>
   </details>
-</template>
-
-<!-- Lighthouse metrics toggle -->
-<template id="metricsToggle">
-  <div class="lh-metrics-toggle">
-    <input class="lh-metrics-toggle__input" type="checkbox" id="toggle-metric-descriptions" aria-label="Toggle the display of metric descriptions">
-    <label class="lh-metrics-toggle__label" for="toggle-metric-descriptions">
-      <div class="lh-metrics-toggle__icon lh-metrics-toggle__icon--less" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path class="lh-metrics-toggle__lines" d="M4 9h16v2H4zm0 4h10v2H4z" />
-        </svg>
-      </div>
-      <div class="lh-metrics-toggle__icon lh-metrics-toggle__icon--more" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path class="lh-metrics-toggle__lines" d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z" />
-        </svg>
-      </div>
-    </label>
   </div>
 </template>
 
@@ -123,7 +110,7 @@ limitations under the License.
   <div class="lh-audit lh-audit--load-opportunity">
     <details class="lh-expandable-details">
         <summary>
-          <div class="lh-audit__header lh-expandable-details__summary">
+          <div class="lh-audit__header">
             <div class="lh-load-opportunity__cols">
               <div class="lh-load-opportunity__col lh-load-opportunity__col--one">
                 <span class="lh-audit__score-icon"></span>
@@ -159,14 +146,14 @@ limitations under the License.
     .lh-scores-container {
       display: flex;
       flex-direction: column;
-      padding: var(--scores-container-padding);
+      padding: var(--default-padding) 0;
       position: relative;
       width: 100%;
     }
 
     .lh-sticky-header {
       --gauge-circle-size: var(--gauge-circle-size-sm);
-      --plugin-badge-size: 18px;
+      --plugin-badge-size: 16px;
       --plugin-icon-size: 75%;
       --gauge-wrapper-width: 60px;
       --gauge-percentage-font-size: 13px;
@@ -174,7 +161,7 @@ limitations under the License.
       left: 0;
       right: 0;
       top: var(--topbar-height);
-      font-weight: 700;
+      font-weight: 500;
       display: none;
       justify-content: center;
       background-color: var(--sticky-header-background-color);
@@ -242,8 +229,10 @@ limitations under the License.
       display: flex;
       align-items: center;
       height: var(--topbar-height);
-      background-color: var(--topbar-background-color);
       padding: var(--topbar-padding);
+      font-size: var(--report-font-size-secondary);
+      background-color: var(--topbar-background-color);
+      border-bottom: 1px solid var(--color-gray-200);
     }
 
     .lh-topbar__logo {
@@ -315,7 +304,7 @@ limitations under the License.
       color: currentColor;
       text-decoration: none;
       white-space: nowrap;
-      padding: 0 12px;
+      padding: 0 6px;
       line-height: 2;
     }
     .lh-tools__dropdown a:hover,
@@ -345,13 +334,15 @@ limitations under the License.
       max-width: 200px;
     }
     .lh-button.lh-tool-locale__button {
-      height: unset;
+      height: var(--topbar-height);
       color: var(--tools-icon-color);
+      padding: calc(var(--default-padding) / 2);
     }
     .lh-tool-locale__button.lh-active + .lh-tools-locale__selector-wrapper {
       opacity: 1;
       clip: rect(-1px, 194px, 242px, -3px);
       visibility: visible;
+      margin: 0 4px;
     }
 
     @media screen and (max-width: 964px) {
@@ -521,53 +512,16 @@ limitations under the License.
   <style>
     .lh-footer {
       padding: var(--footer-padding-vertical) calc(var(--default-padding) * 2);
-      max-width: var(--report-width);
+      max-width: var(--report-content-width);
       margin: 0 auto;
     }
     .lh-footer .lh-generated {
       text-align: center;
     }
-    .lh-env__title {
-      font-size: var(--env-item-font-size-big);
-      line-height: var(--env-item-line-height-big);
-      text-align: center;
-      padding: var(--score-container-padding);
-    }
-    .lh-env {
-      padding: var(--default-padding) 0;
-    }
-    .lh-env__items {
-      padding-left: 16px;
-      margin: 0 0 var(--audits-margin-bottom);
-      padding: 0;
-    }
-    .lh-env__items .lh-env__item:nth-child(2n) {
-      background-color: var(--env-item-background-color);
-    }
-    .lh-env__item {
-      display: flex;
-      padding: var(--env-item-padding);
-      position: relative;
-    }
-    span.lh-env__name {
-      font-weight: bold;
-      min-width: var(--env-name-min-width);
-      flex: 0.5;
-      padding: 0 8px;
-    }
-    span.lh-env__description {
-      text-align: left;
-      flex: 1;
-    }
   </style>
   <footer class="lh-footer">
-    <!-- TODO(i18n): localize runtime settings -->
-    <div class="lh-env">
-      <div class="lh-env__title">Runtime Settings</div>
-      <ul class="lh-env__items">
-        <!-- envItem -->
-      </ul>
-    </div>
+    <ul class="lh-meta__items">
+    </ul>
 
     <div class="lh-generated">
       <!-- TODO(i18n): use ICU replacement to replace version w/o concatenation. -->
@@ -575,14 +529,6 @@ limitations under the License.
       <a href="https://github.com/GoogleChrome/Lighthouse/issues" target="_blank" rel="noopener" class="lh-footer__version_issue">File an issue</a>
     </div>
   </footer>
-</template>
-
-<!-- Lighthouse footer env item -->
-<template id="envItem">
-  <li class="lh-env__item">
-    <span class="lh-env__name"></span>
-    <span class="lh-env__description"></span>
-  </li>
 </template>
 
 <!-- Lighthouse score gauge -->
@@ -784,10 +730,9 @@ limitations under the License.
 <template id="3pFilter">
   <style>
     .lh-3p-filter {
-      background-color: var(--table-higlight-background-color);
       color: var(--color-gray-600);
       float: right;
-      padding: 6px;
+      padding: 6px var(--stackpack-padding-horizontal);
     }
     .lh-3p-filter-label, .lh-3p-filter-input {
       vertical-align: middle;

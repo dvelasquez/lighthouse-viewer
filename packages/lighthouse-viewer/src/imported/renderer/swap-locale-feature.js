@@ -33,17 +33,17 @@ export class SwapLocaleFeature {
       throw new Error('missing icuMessagePaths');
     }
 
-    this._dom.find('.lh-tools-locale', this._dom.document()).classList.remove('lh-hidden');
+    this._dom.find('.lh-tools-locale', this._dom.rootEl).classList.remove('lh-hidden');
 
     const currentLocale = this._reportUIFeatures.json.configSettings.locale;
 
-    const containerEl = this._dom.find('.lh-tools-locale__selector-wrapper', this._dom.document());
+    const containerEl = this._dom.find('.lh-tools-locale__selector-wrapper', this._dom.rootEl);
     containerEl.removeAttribute('aria-hidden');
     const selectEl = this._dom.createChildOf(containerEl, 'select', 'lh-locale-selector');
     selectEl.name = 'lh-locale-list';
     selectEl.setAttribute('role', 'menuitem');
 
-    const toggleEl = this._dom.find('.lh-tool-locale__button', this._dom.document());
+    const toggleEl = this._dom.find('.lh-tool-locale__button', this._dom.rootEl);
     toggleEl.addEventListener('click', () => {
       toggleEl.classList.toggle('lh-active');
     });
