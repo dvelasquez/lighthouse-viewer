@@ -61,3 +61,4 @@ jobs:
         with:
           build: npm run lerna:build
           start: npm run demo:serve
+          wait-on: 'http://localhost:8080/packages/ngx-lighthouse-viewer/dist/demo/index.html'
