@@ -35,7 +35,8 @@
     "start": "rollup -c -w",
     "prebuild": "rimraf dist",
     "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer"
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/svelte",
+    "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/svelte"
   },
   "peerDependencies": {
     "svelte": "^3.23.2"

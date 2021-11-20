@@ -59,6 +59,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm run lerna:build
-          start: npm run demo:serve
-          wait-on: 'http://localhost:8080/packages/ngx-lighthouse-viewer/dist/demo/index.html'
+          build: npm run lerna:build && npm run lerna:demo:build
+          start: http-server
+          wait-on: 'http://localhost:8080/lighthouse-viewer'

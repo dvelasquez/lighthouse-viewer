@@ -1,6 +1,6 @@
 describe('Svelte Component', () => {
   before(() => {
-    cy.visit('/packages/svelte-lighthouse-viewer/demo/lh-demo.html');
+    cy.visit('/lighthouse-viewer/svelte/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('Svelte APP');

@@ -1,6 +1,6 @@
 describe('Vanilla Component', () => {
   before(() => {
-    cy.visit('/packages/lighthouse-viewer/demo/lh-demo.html');
+    cy.visit('/lighthouse-viewer/vanillajs/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('VANILLA APP');
