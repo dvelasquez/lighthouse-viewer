@@ -46,6 +46,6 @@ describe('Vanilla Component', () => {
     cy.get('.lh-report-icon--samples-one').contains('Single page load');
     cy.get('.lh-report-icon--stopwatch').contains('Initial page load');
     cy.get('.lh-report-icon--networkspeed').contains('Slow 4G throttling');
-    cy.get('.lh-report-icon--chrome').contains('Using Chromium 93.0.4534.0 with cli')
+    cy.get('.lh-report-icon--chrome').contains('Using Chromium 93.0.4534.0 with cli');
   });
 });
