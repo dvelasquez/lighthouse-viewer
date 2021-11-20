@@ -1,5 +1,5 @@
 {
-  "name": "viewer-root",
+  "name": "lighthouse-viewer-root",
   "version": "1.0.0",
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",

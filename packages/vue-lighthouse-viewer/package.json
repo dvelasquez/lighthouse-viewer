@@ -52,5 +52,8 @@
   },
   "browserslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "volta": {
+    "extends": "../../package.json"
+  }
 }
