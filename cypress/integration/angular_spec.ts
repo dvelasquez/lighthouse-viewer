@@ -1,6 +1,6 @@
 describe('Angular Component', () => {
   before(() => {
-    cy.visit('/packages/ngx-lighthouse-viewer/dist/demo/index.html');
+    cy.visit('/lighthouse-viewer/ngx/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('ANGULAR APP');
