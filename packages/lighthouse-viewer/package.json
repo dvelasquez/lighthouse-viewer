@@ -30,11 +30,17 @@
   "scripts": {
     "prebuild": "rimraf src/imported/* && node utils/copy-deps.js",
     "build": "rollup -c && npm run copy:types",
-    "copy:types": "cpx \"src/types/**/*\" dist/types"
+    "copy:types": "cpx \"src/types/**/*\" dist/types",
+    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer"
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
     "lighthouse": "^9.0.0",
+    "parcel-bundler": "^1.12.5",
     "replace-in-file": "^6.3.2"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }

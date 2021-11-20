@@ -19,7 +19,8 @@
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
     "demo:serve": "rimraf demo && parcel index.html --port 8080 -d demo --open",
-    "demo:build": "rimraf demo && parcel build index.html -d demo --public-url /lighthouse-viewer"
+    "demo:build": "rimraf demo && parcel build index.html -d demo --no-source-maps --public-url /lighthouse-viewer",
+    "lerna:demo:build": "lerna run demo:build"
   },
   "keywords": [],
   "author": "",

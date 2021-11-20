@@ -33,7 +33,9 @@
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "start": "rollup -c -w",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer"
   },
   "peerDependencies": {
     "svelte": "^3.23.2"
@@ -42,8 +44,13 @@
     "lighthouse-viewer": "^0.1.20"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-svelte": "^4.0.9",
     "svelte": "^3.44.1",
     "svelte-preprocess": "^4.9.8"
   },
-  "alias": {}
+  "alias": {},
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }

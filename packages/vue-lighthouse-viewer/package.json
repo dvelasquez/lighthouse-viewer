@@ -32,7 +32,9 @@
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "start": "rollup -c -w",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer"
   },
   "peerDependencies": {
     "vue": "^2.6.14"
@@ -41,9 +43,13 @@
     "lighthouse-viewer": "^0.1.20"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
     "@vue/component-compiler-utils": "^3.3.0",
     "vue": "^2.6.14",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.14"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
