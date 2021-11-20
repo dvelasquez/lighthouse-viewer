@@ -56,9 +56,12 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm ci
 
+      - name: Build library
+        run: npm run lerna:build
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm run lerna:build && npm run lerna:demo:build
+          build: npm run lerna:demo:build
           start: http-server
           wait-on: 'http://localhost:8080/lighthouse-viewer'
