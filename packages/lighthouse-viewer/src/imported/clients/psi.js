@@ -18,13 +18,12 @@
 
 import {DetailsRenderer} from '../renderer/details-renderer.js';
 import {DOM} from '../renderer/dom.js';
-import {ElementScreenshotRenderer} from '../renderer/element-screenshot-renderer.js';
 import {I18n} from '../renderer/i18n.js';
 import {PerformanceCategoryRenderer} from '../renderer/performance-category-renderer.js';
 import {ReportUIFeatures} from '../renderer/report-ui-features.js';
 import {Util} from '../renderer/util.js';
 
-/** @typedef {{scoreGaugeEl: Element, perfCategoryEl: Element, finalScreenshotDataUri: string|null, scoreScaleEl: Element, installFeatures: Function}} PrepareLabDataResult */
+/** @typedef {{scoreGaugeEl: Element, perfCategoryEl: Element, scoreScaleEl: Element}} PrepareLabDataResult */
 
 /**
  * Returns all the elements that PSI needs to render the report
@@ -63,12 +62,9 @@ export function prepareLabData(LHResult, document) {
   reportLHR.categoryGroups.metrics.description =
       Util.i18n.strings.lsPerformanceCategoryDescription;
 
-  const fullPageScreenshot =
-    reportLHR.audits['full-page-screenshot'] && reportLHR.audits['full-page-screenshot'].details &&
-    reportLHR.audits['full-page-screenshot'].details.type === 'full-page-screenshot' ?
-    reportLHR.audits['full-page-screenshot'].details : undefined;
 
-  const detailsRenderer = new DetailsRenderer(dom, {fullPageScreenshot});
+
+  const detailsRenderer = new DetailsRenderer(dom);
   const perfRenderer = new PerformanceCategoryRenderer(dom, detailsRenderer);
   // PSI environment string will ensure the categoryHeader and permalink elements are excluded
   const perfCategoryEl = perfRenderer.render(
@@ -84,7 +80,6 @@ export function prepareLabData(LHResult, document) {
   // Remove navigation link on gauge
   scoreGaugeWrapperEl.removeAttribute('href');
 
-  const finalScreenshotDataUri = _getFinalScreenshot(perfCategory);
 
   const clonedScoreTemplate = dom.createComponent('scorescale');
   const scoreScaleEl = dom.find('.lh-scorescale', clonedScoreTemplate);
@@ -92,61 +87,7 @@ export function prepareLabData(LHResult, document) {
   const reportUIFeatures = new ReportUIFeatures(dom);
   reportUIFeatures.json = lhResult;
 
-  /** @param {HTMLElement} reportEl */
-  const installFeatures = (reportEl) => {
-    if (fullPageScreenshot) {
-      // 1) Add fpss css var to reportEl parent so any thumbnails will work
-      ElementScreenshotRenderer.installFullPageScreenshot(
-        reportEl, fullPageScreenshot.screenshot);
-
-      // 2) Append the overlay element to a specific part of the DOM so that
-      // the sticky tab group element renders correctly. If put in the reportEl
-      // like normal, then the sticky header would bleed through the overlay
-      // element.
-      const screenshotsContainer = document.querySelector('.element-screenshots-container');
-      if (!screenshotsContainer) {
-        throw new Error('missing .element-screenshots-container');
-      }
-
-      const screenshotEl = document.createElement('div');
-      screenshotsContainer.append(screenshotEl);
-      ElementScreenshotRenderer.installOverlayFeature({
-        dom,
-        reportEl,
-        overlayContainerEl: screenshotEl,
-        fullPageScreenshot,
-      });
-      // Not part of the reportEl, so have to install the feature here too.
-      ElementScreenshotRenderer.installFullPageScreenshot(
-        screenshotEl, fullPageScreenshot.screenshot);
-    }
-
-    const showTreemapApp =
-      lhResult.audits['script-treemap-data'] && lhResult.audits['script-treemap-data'].details;
-    const buttonContainer = reportEl.querySelector('.lh-audit-group--metrics');
-    if (showTreemapApp && buttonContainer) {
-      reportUIFeatures.addButton({
-        container: buttonContainer,
-        text: Util.i18n.strings.viewTreemapLabel,
-        icon: 'treemap',
-        onClick: () => openTreemap(lhResult),
-      });
-    }
-  };
-
-  return {scoreGaugeEl, perfCategoryEl, finalScreenshotDataUri, scoreScaleEl, installFeatures};
-}
-
-/**
- * @param {LH.ReportResult.Category} perfCategory
- * @return {null|string}
- */
-function _getFinalScreenshot(perfCategory) {
-  const auditRef = perfCategory.auditRefs.find(audit => audit.id === 'final-screenshot');
-  if (!auditRef || !auditRef.result || auditRef.result.scoreDisplayMode === 'error') return null;
-  const details = auditRef.result.details;
-  if (!details || details.type !== 'screenshot') return null;
-  return details.data;
+  return {scoreGaugeEl, perfCategoryEl, scoreScaleEl};
 }
 
 // TODO: remove with report API refactor.

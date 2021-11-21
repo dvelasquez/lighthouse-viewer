@@ -603,8 +603,6 @@ Util.UIStrings = {
   dropdownViewer: 'Open in Viewer',
   /** Option in a dropdown menu that saves the current report as a new GitHub Gist. */
   dropdownSaveGist: 'Save as Gist',
-  /** Option in a dropdown menu that toggles the themeing of the report between Light(default) and Dark themes. */
-  dropdownDarkTheme: 'Toggle Dark Theme',
 
   /** Title of the Runtime settings table in a Lighthouse report.  Runtime settings are the environment configurations that a specific report used at auditing time. */
   runtimeSettingsTitle: 'Runtime Settings',

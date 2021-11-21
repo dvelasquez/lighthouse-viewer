@@ -11,7 +11,6 @@
 /** @typedef {import('./report-ui-features').ReportUIFeatures} ReportUIFeatures */
 
 import {DropDownMenu} from './drop-down-menu.js';
-import {toggleDarkTheme} from './features-util.js';
 import {openViewer, openViewerAndSendData} from './open-tab.js';
 
 export class TopbarFeatures {
@@ -52,9 +51,6 @@ export class TopbarFeatures {
     this._document.addEventListener('copy', this.onCopy);
     this._dropDownMenu.setup(this.onDropDownMenuClick);
     this._setUpCollapseDetailsAfterPrinting();
-
-    const topbarLogo = this._dom.find('.lh-topbar__logo', this._document);
-    topbarLogo.addEventListener('click', () => toggleDarkTheme(this._dom));
 
     // There is only a sticky header when at least 2 categories are present.
     if (Object.keys(this.lhr.categories).length >= 2) {
@@ -130,10 +126,6 @@ export class TopbarFeatures {
       }
       case 'save-gist': {
         this._reportUIFeatures.saveAsGist();
-        break;
-      }
-      case 'toggle-dark': {
-        toggleDarkTheme(this._dom);
         break;
       }
     }

@@ -23,19 +23,8 @@
 
 /** @typedef {import('./dom').DOM} DOM */
 
-import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
-import {toggleDarkTheme} from './features-util.js';
-import {TopbarFeatures} from './topbar-features.js';
 import {Util} from './util.js';
-import {getFilenamePrefix} from '../generator/file-namer.js';
 
-/**
- * @param {HTMLTableElement} tableEl
- * @return {Array<HTMLElement>}
- */
-function getTableRows(tableEl) {
-  return Array.from(tableEl.tBodies[0].rows);
-}
 export class ReportUIFeatures {
   /**
    * @param {DOM} dom
@@ -47,7 +36,6 @@ export class ReportUIFeatures {
     this._dom = dom;
     /** @type {Document} */
     this._document = this._dom.document();
-    this._topbar = new TopbarFeatures(this, dom);
 
     this.onMediaQueryChange = this.onMediaQueryChange.bind(this);
   }
@@ -63,30 +51,6 @@ export class ReportUIFeatures {
     this._topbar.enable(lhr);
     this._topbar.resetUIState();
     this._setupMediaQueryListeners();
-    this._setupElementScreenshotOverlay(this._dom.find('.lh-container', this._document));
-
-    let turnOffTheLights = false;
-    // Do not query the system preferences for DevTools - DevTools should only apply dark theme
-    // if dark is selected in the settings panel.
-    if (!this._dom.isDevTools() && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      turnOffTheLights = true;
-    }
-
-    // Fireworks!
-    // To get fireworks you need 100 scores in all core categories, except PWA (because going the PWA route is discretionary).
-    const fireworksRequiredCategoryIds = ['performance', 'accessibility', 'best-practices', 'seo'];
-    const scoresAll100 = fireworksRequiredCategoryIds.every(id => {
-      const cat = lhr.categories[id];
-      return cat && cat.score === 1;
-    });
-    if (scoresAll100) {
-      turnOffTheLights = true;
-      this._enableFireworks();
-    }
-
-    if (turnOffTheLights) {
-      toggleDarkTheme(this._dom, true);
-    }
 
     // Show the metric descriptions by default when there is an error.
     const hasMetricError = lhr.categories.performance && lhr.categories.performance.auditRefs
@@ -150,14 +114,6 @@ export class ReportUIFeatures {
     throw new Error('Cannot save as gist from base report');
   }
 
-  _enableFireworks() {
-    const scoresContainer = this._dom.find('.lh-scores-container', this._document);
-    scoresContainer.classList.add('lh-score100');
-    scoresContainer.addEventListener('click', _ => {
-      scoresContainer.classList.toggle('lh-fireworks-paused');
-    });
-  }
-
   _setupMediaQueryListeners() {
     const mediaQuery = self.matchMedia('(max-width: 500px)');
     mediaQuery.addListener(this.onMediaQueryChange);
@@ -181,76 +137,5 @@ export class ReportUIFeatures {
   onMediaQueryChange(mql) {
     const root = this._dom.find('.lh-root', this._document);
     root.classList.toggle('lh-narrow', mql.matches);
-  }
-
-  /**
-   * @param {Element} el
-   */
-  _setupElementScreenshotOverlay(el) {
-    const fullPageScreenshot =
-      this.json.audits['full-page-screenshot'] &&
-      this.json.audits['full-page-screenshot'].details &&
-      this.json.audits['full-page-screenshot'].details.type === 'full-page-screenshot' &&
-      this.json.audits['full-page-screenshot'].details;
-    if (!fullPageScreenshot) return;
-
-    ElementScreenshotRenderer.installOverlayFeature({
-      dom: this._dom,
-      reportEl: el,
-      overlayContainerEl: el,
-      fullPageScreenshot,
-    });
-  }
-
-  /**
-   * From a table with URL entries, finds the rows containing third-party URLs
-   * and returns them.
-   * @param {HTMLElement[]} rowEls
-   * @param {string} finalUrl
-   * @return {Array<HTMLElement>}
-   */
-  _getThirdPartyRows(rowEls, finalUrl) {
-    /** @type {Array<HTMLElement>} */
-    const thirdPartyRows = [];
-    const finalUrlRootDomain = Util.getRootDomain(finalUrl);
-
-    for (const rowEl of rowEls) {
-      if (rowEl.classList.contains('lh-sub-item-row')) continue;
-
-      const urlItem = rowEl.querySelector('div.lh-text__url');
-      if (!urlItem) continue;
-
-      const datasetUrl = urlItem.dataset.url;
-      if (!datasetUrl) continue;
-      const isThirdParty = Util.getRootDomain(datasetUrl) !== finalUrlRootDomain;
-      if (!isThirdParty) continue;
-
-      thirdPartyRows.push(rowEl);
-    }
-
-    return thirdPartyRows;
-  }
-
-  /**
-   * Downloads a file (blob) using a[download].
-   * @param {Blob|File} blob The file to save.
-   */
-  _saveFile(blob) {
-    const filename = getFilenamePrefix({
-      finalUrl: this.json.finalUrl,
-      fetchTime: this.json.fetchTime,
-    });
-
-    const ext = blob.type.match('json') ? '.json' : '.html';
-
-    const a = this._dom.createElement('a');
-    a.download = `${filename}${ext}`;
-    this._dom.safelySetBlobHref(a, blob);
-    this._document.body.appendChild(a); // Firefox requires anchor to be in the DOM.
-    a.click();
-
-    // cleanup.
-    this._document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(a.href), 500);
   }
 }

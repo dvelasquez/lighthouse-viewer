@@ -284,9 +284,6 @@ limitations under the License.
     .lh-tools__button svg {
       fill: var(--tools-icon-color);
     }
-    .lh-dark .lh-tools__button svg {
-      filter: invert(1);
-    }
     .lh-tools__button.lh-active + .lh-tools__dropdown {
       opacity: 1;
       clip: rect(-1px, 194px, 242px, -3px);
@@ -392,7 +389,6 @@ limitations under the License.
         <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--download" data-i18n="dropdownSaveJSON" data-action="save-json"></a>
         <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--open" data-i18n="dropdownViewer" data-action="open-viewer"></a>
         <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--open" data-i18n="dropdownSaveGist" data-action="save-gist"></a>
-        <a role="menuitem" tabindex="-1" href="#" class="lh-report-icon lh-report-icon--dark" data-i18n="dropdownDarkTheme" data-action="toggle-dark"></a>
       </div>
     </div>
   </div>
@@ -597,9 +593,6 @@ limitations under the License.
 
     .lh-gauge--pwa__logo--secondary-color {
       fill: #3D3D3D;
-    }
-    .lh-dark .lh-gauge--pwa__logo--secondary-color {
-      fill: #D8B6B6;
     }
 
     /* No passing groups. */

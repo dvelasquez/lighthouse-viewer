@@ -25,7 +25,8 @@ import {Util} from './util.js';
 import {createComponent} from './components.js';
 
 export class DOM {
-  /**
+
+      /**
    * @param {Document} document
    */
   constructor(document) {
@@ -137,8 +138,11 @@ export class DOM {
       }
 
       const a = this.createElement('a');
-      a.rel = 'noopener';
-      a.target = '_blank';
+      const AMPIFY = ['http://0.0.0.0:3000','http://localhost:3000', 'https://psi.ampify.io'];
+      if (!AMPIFY.includes(url.origin)) {
+        a.rel = 'noopener';
+        a.target = '_blank';
+      }
       a.textContent = segment.text;
       this.safelySetHref(a, url.href);
       element.appendChild(a);

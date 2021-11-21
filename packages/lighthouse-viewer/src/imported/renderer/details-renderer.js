@@ -33,11 +33,9 @@ const URL_PREFIXES = ['http://', 'https://', 'data:'];
 export class DetailsRenderer {
   /**
    * @param {DOM} dom
-   * @param {{fullPageScreenshot?: LH.Audit.Details.FullPageScreenshot}} [options]
    */
-  constructor(dom, options = {}) {
+  constructor(dom) {
     this._dom = dom;
-    this._fullPageScreenshot = options.fullPageScreenshot;
   }
 
   /**

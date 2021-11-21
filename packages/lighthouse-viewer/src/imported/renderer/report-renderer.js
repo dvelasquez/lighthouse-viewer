@@ -23,7 +23,6 @@
 
 import {CategoryRenderer} from './category-renderer.js';
 import {DetailsRenderer} from './details-renderer.js';
-import {ElementScreenshotRenderer} from './element-screenshot-renderer.js';
 import {I18n} from './i18n.js';
 import {PerformanceCategoryRenderer} from './performance-category-renderer.js';
 import {PwaCategoryRenderer} from './pwa-category-renderer.js';
@@ -218,12 +217,6 @@ export class ReportRenderer {
     reportFragment.appendChild(reportContainer);
     reportContainer.appendChild(headerContainer);
     reportContainer.appendChild(reportSection);
-
-    if (fullPageScreenshot) {
-      ElementScreenshotRenderer.installFullPageScreenshot(
-        reportContainer, fullPageScreenshot.screenshot);
-    }
-
     return reportFragment;
   }
 }
