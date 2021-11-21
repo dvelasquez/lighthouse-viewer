@@ -1,6 +1,6 @@
 describe('Vue Component', () => {
   before(() => {
-    cy.visit('/lighthouse-viewer/vue/index.html');
+    cy.visit('http://127.0.0.1:8080/lighthouse-viewer/vue/index.html');
   });
   it('Check heading categories results', () => {
     cy.get('h1').contains('Vue 2 APP');

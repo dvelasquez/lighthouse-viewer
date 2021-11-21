@@ -63,5 +63,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: http-server
-          wait-on: 'http://localhost:8080/lighthouse-viewer'
+          start: npm run demo:http-server
+          wait-on: 'http://127.0.0.1:8080/lighthouse-viewer'

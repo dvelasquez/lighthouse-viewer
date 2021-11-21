@@ -20,6 +20,7 @@
     "prepare": "npm run snyk-protect",
     "demo:serve": "rimraf lighthouse-viewer && parcel index.html --port 8080 -d lighthouse-viewer --open",
     "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer",
+    "demo:http-server": "http-server",
     "lerna:demo:build": "npm run demo:build && lerna run demo:build && lerna run demo:copy"
   },
   "keywords": [],
