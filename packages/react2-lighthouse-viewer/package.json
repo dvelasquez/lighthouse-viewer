@@ -32,7 +32,10 @@
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "start": "rollup -c -w",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/react",
+    "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/react"
   },
   "dependencies": {
     "lighthouse-viewer": "^0.1.20"
@@ -40,7 +43,14 @@
   "devDependencies": {
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
+    "parcel-bundler": "^1.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "volta": {
+    "extends": "../../package.json"
   }
 }

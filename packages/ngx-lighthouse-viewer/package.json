@@ -1,5 +1,5 @@
 {
-  "name": "ngx-lighthouse-viewer",
+  "name": "ngx-lighthouse-viewer-workspace",
   "version": "0.0.2",
   "scripts": {
     "ng": "ng",
@@ -8,6 +8,7 @@
     "build:lib": "ng build ngx-lighthouse-viewer && copyfiles ./README.md ./LICENSE ./dist/ngx-lighthouse-viewer",
     "build:demo": "ng build demo",
     "watch": "ng build --watch --configuration development",
+    "demo:copy": "cpx \"dist/demo/**/*\" ../../lighthouse-viewer/ngx",
     "test": "ng test",
     "publish": "npm run build:lib && npm publish ./dist/ngx-lighthouse-viewer"
   },
@@ -42,5 +43,8 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^12.2.4",
     "typescript": "~4.3.5"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

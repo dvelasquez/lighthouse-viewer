@@ -16,9 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 14
+        uses: volta-cli/action@v1
 
       - name: Cache npm cache 📦
         uses: actions/cache@v2
@@ -32,6 +30,7 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: npm ci
+      
       - name: Lint
         run: npm run lint
 
@@ -53,11 +52,28 @@ jobs:
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
             ${{ runner.os }}-node-
 
+      - name: Setup node env 🏗
+        uses: volta-cli/action@v1
+      
       - name: Install dependencies 👨🏻‍💻
         run: npm ci
+
+      - name: Build library
+        run: npm run lerna:build
+      
+      - name: Build Demo
+        run: npm run lerna:demo:build
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm run lerna:build
-          start: npm run demo:serve
+          install: false
+          record: true
+          start: npm run demo:http-server
+          wait-on: 'http://127.0.0.1:8080/lighthouse-viewer'
+          command: npm run cypress:run
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

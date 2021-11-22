@@ -15,9 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 14
+        uses: volta-cli/action@v1
 
       - name: Cache npm cache 📦
         uses: actions/cache@v2

@@ -1,6 +1,6 @@
 {
-  "name": "viewer-root",
-  "version": "1.0.0",
+  "name": "lighthouse-viewer-root",
+  "version": "2.0.0",
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,10 @@
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
-    "demo:serve": "rimraf demo && parcel index.html --port 8080 -d demo --open",
-    "demo:build": "rimraf demo && parcel build index.html -d demo --public-url /lighthouse-viewer"
+    "demo:serve": "rimraf lighthouse-viewer && parcel index.html --port 8080 -d lighthouse-viewer --open",
+    "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer",
+    "demo:http-server": "http-server",
+    "lerna:demo:build": "npm run demo:build && lerna run demo:build && lerna run demo:copy"
   },
   "keywords": [],
   "author": "",
@@ -32,14 +34,15 @@
     "@rollup/plugin-replace": "^3.0.0",
     "@rollup/plugin-run": "^2.1.0",
     "@rollup/plugin-typescript": "^8.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
     "cypress": "^9.0.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "http-server": "^14.0.0",
     "lerna": "^4.0.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
@@ -53,11 +56,11 @@
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "snyk": "^1.760.0",
+    "snyk": "^1.767.0",
     "start-server-and-test": "^1.14.0",
-    "svelte": "^3.44.1",
+    "svelte": "^3.44.2",
     "svelte-preprocess": "^4.9.8",
-    "typescript": "^4.3.5"
+    "typescript": "^4.5.2"
   },
   "snyk": true,
   "browserslist": [
@@ -66,5 +69,6 @@
   "volta": {
     "npm": "6.14.14",
     "node": "16.6.1"
-  }
+  },
+  "dependencies": {}
 }
