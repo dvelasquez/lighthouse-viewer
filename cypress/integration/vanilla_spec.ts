@@ -41,7 +41,6 @@ describe('Vanilla Component', () => {
   });
   it('Runtime Settings', () => {
     cy.get('.lh-topbar__url').contains('https://d13z.dev');
-    cy.get('.lh-report-icon--date').contains('Captured at Jun 7, 2021, 7:45 AM GMT+2');
     cy.get('.lh-report-icon--devices').contains('Emulated Moto G4 with Lighthouse 8.0.0');
     cy.get('.lh-report-icon--samples-one').contains('Single page load');
     cy.get('.lh-report-icon--stopwatch').contains('Initial page load');
