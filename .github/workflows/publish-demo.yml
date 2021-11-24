@@ -1,0 +1,57 @@
+name: Publish Demo
+
+on:
+  push:
+    branches:
+      - main
+      - chore-demo
+
+jobs:
+  release:
+    name: Update demo pages
+    runs-on: ubuntu-latest
+    env:
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node env 🏗
+        uses: volta-cli/action@v1
+
+      - name: Cache npm cache 📦
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm ci
+
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'Danilo Velasquez'
+          git config --global user.email 'danilo.velasquez@gmail.com'
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/dvelasquez/lighthouse-viewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build libraries
+        run: npm run lerna:build
+
+      - name: Bootstrap dependencies
+        run: npm run lerna:bootstrap
+
+      - name: Build demo
+        run: npm run lerna:demo:build
+
+      - name: Updating Demo Site
+        run: | 
+          git push origin --delete gh-pages
+          git checkout -b gh-pages
+          git add .
+          git commit -m "docs(demo): updated demo version" --no-verify
+          git subtree push --prefix lighthouse-viewer origin gh-pages
