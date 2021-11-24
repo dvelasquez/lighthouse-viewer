@@ -67,8 +67,15 @@
     "last 1 Chrome version"
   ],
   "volta": {
-    "npm": "6.14.14",
+    "npm": "8.1.0",
     "node": "16.10.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "workspaces":[
+    "packages/lighthouse-viewer",
+    "packages/react2-lighthouse-viewer",
+    "packages/svelte-lighthouse-viewer",
+    "packages/vue-lighthouse-viewer",
+    "packages/ngx-lighthouse-viewer"
+  ]
 }

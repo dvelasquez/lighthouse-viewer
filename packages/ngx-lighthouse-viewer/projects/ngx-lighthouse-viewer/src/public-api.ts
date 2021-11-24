@@ -4,4 +4,3 @@
 
 export * from './lib/ngx-lighthouse-viewer.component';
 export * from './lib/ngx-lighthouse-viewer.module';
-
