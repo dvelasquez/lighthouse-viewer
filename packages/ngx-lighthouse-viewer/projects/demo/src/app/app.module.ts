@@ -4,13 +4,9 @@ import { NgxLighthouseViewerModule } from '../../../ngx-lighthouse-viewer/src/li
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule, NgxLighthouseViewerModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, NgxLighthouseViewerModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

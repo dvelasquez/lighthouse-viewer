@@ -1,48 +1,26 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { DOM, ReportRenderer, ReportUIFeatures, Logger, template } from '..';
+import { renderReport } from '..';
 import reportJson from './report-v8.0.0.json';
+// import reportJson7 from './report-v7.5.0.json';
+// import reportJson6 from './report.json';
 
 const generateReport = (lighthouseReport: any) => {
-  const dom = new DOM(document);
-  const renderer = new ReportRenderer(dom);
-  const container = document.querySelector('main.lighthouse-viewer');
-  renderer.renderReport(lighthouseReport, container);
-  const features = new ReportUIFeatures(dom);
-  features.initFeatures(lighthouseReport);
+  const renderedReport = renderReport(lighthouseReport);
+  return renderedReport;
 };
 
-const mountViewer = () => {
-  const htmlTemplate = document.createElement('div');
-  htmlTemplate.innerHTML = template;
-  const htmlTemplateElement = document.getElementById('html-template');
-  if (htmlTemplateElement) {
-    htmlTemplateElement.appendChild(htmlTemplate);
-
-    document.addEventListener('lh-log', (e: any) => {
-      const lhLogElement = document.querySelector('#lh-log');
-      if (lhLogElement) {
-        const logger = new Logger(lhLogElement);
-        switch (e.detail.cmd) {
-          case 'log':
-            logger.log(e.detail.msg);
-            break;
-          case 'warn':
-            logger.warn(e.detail.msg);
-            break;
-          case 'error':
-            logger.error(e.detail.msg);
-            break;
-          case 'hide':
-            logger.hide();
-            break;
-          default:
-        }
-      }
-    });
-  }
-
-  generateReport(reportJson);
+const mountViewer = (report: any) => {
+  const renderedReport = generateReport(report);
+  const container = document.getElementById('lighthouse-viewer-element');
+  container.innerHTML = null;
+  container.appendChild(renderedReport);
 };
 
-mountViewer();
+mountViewer(reportJson);
+// let index = 0;
+// const reports = [reportJson, reportJson7, reportJson6];
+// setInterval(() => {
+//   mountViewer(reports[index]);
+//   index = (index + 1) % reports.length;
+// }, 5000);

@@ -1,22 +1,15 @@
-import React, { useEffect } from 'react';
-import React2ReportTemplate from './React2ReportTemplate';
-import { generateReport, lhLogEventListener } from '../helpers/lighthouse-methods';
+import React, { useEffect, useRef, useState } from 'react';
+import { renderReport } from 'lighthouse-viewer';
 
 export type React2LighthouseViewerProps = {
   json: any;
 };
 
-export default (props: React2LighthouseViewerProps): JSX.Element => {
+export default ({ json }: React2LighthouseViewerProps): JSX.Element => {
+  const [template, setTemplate] = useState('');
   useEffect(() => {
-    lhLogEventListener();
-    generateReport(props.json);
-  });
+    setTemplate(renderReport(json).outerHTML);
+  }, [json]);
 
-  return (
-    <div className="lh-root lh-vars">
-      <React2ReportTemplate />
-      <main className="react2-lighthouse-viewer">{/* report populated here */}</main>
-      <div id="lh-log" />
-    </div>
-  );
+  return <div dangerouslySetInnerHTML={{ __html: template }} />;
 };

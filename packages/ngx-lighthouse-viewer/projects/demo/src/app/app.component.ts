@@ -5,11 +5,11 @@ import reportJson3 from '../assets/report.json';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
   title = 'Lighthouse Viewer / Reporter Angular';
-  
+
   data: any;
 
   private _reports: any[] = [];
@@ -22,5 +22,4 @@ export class AppComponent implements OnInit {
   renderReport(index: number) {
     this.data = this._reports[index];
   }
-  
 }
