@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - chore-demo
+      - refactor/publish-gh-pages
 
 jobs:
   release:
@@ -48,10 +48,8 @@ jobs:
       - name: Build demo
         run: npm run lerna:demo:build
 
-      - name: Updating Demo Site
-        run: | 
-          git push origin --delete gh-pages
-          git checkout -b gh-pages
-          git add .
-          git commit -m "docs(demo): updated demo version" --no-verify
-          git subtree push --prefix lighthouse-viewer origin gh-pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: lighthouse-viewer # The folder the action should deploy.
