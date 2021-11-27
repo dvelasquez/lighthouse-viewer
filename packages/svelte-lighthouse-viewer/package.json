@@ -28,7 +28,7 @@
     "webperf"
   ],
   "scripts": {
-    "build": "npm run build:dist && npm run build:types && npm run copy:types",
+    "build": "pnpm build:dist && pnpm build:types && pnpm copy:types",
     "build:dist": "rollup -c",
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",

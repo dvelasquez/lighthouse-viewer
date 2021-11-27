@@ -76,9 +76,9 @@ describe('ReportRendererAxe', () => {
       const axeResults = await axe.run(output, config);
       expect(axeResults.violations).toEqual([]);
     },
-    // This test takes 40s on fast hardware, and 50-60s on GHA.
+    // This test takes 40s on fast hardware, and 50-60s on GHA (but can take longer).
     // https://github.com/dequelabs/axe-core/tree/b573b1c1/doc/examples/jest_react#timeout-issues
-    /* timeout= */ 100 * 1000
+    /* timeout= */ process.env.CI ? 200_000 : 60_000
     );
   });
 });

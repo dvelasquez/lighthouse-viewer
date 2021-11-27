@@ -4,24 +4,22 @@
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run lerna:bootstrap",
     "lerna:start": "lerna run start --stream",
-    "lerna:build": "lerna run build",
-    "lerna:bootstrap": "lerna bootstrap && lerna link --force-local",
+    "lerna:build": "pnpm run build --recursive",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
     "lint": "eslint --quiet",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "pnpm lint -- --fix",
     "test": "snyk test && start-server-and-test demo:serve http://localhost:8080 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
+    "prepare": "pnpm snyk-protect",
     "demo:serve": "rimraf lighthouse-viewer && parcel index.html --port 8080 -d lighthouse-viewer --open",
     "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer",
     "demo:http-server": "http-server",
-    "lerna:demo:build": "npm run demo:build && lerna run demo:build && lerna run demo:copy"
+    "lerna:demo:build": "pnpm demo:build && pnpm run demo:build --recursive && pnpm run demo:copy --recursive"
   },
   "keywords": [],
   "author": "",
@@ -68,7 +66,7 @@
   ],
   "volta": {
     "npm": "8.1.0",
-    "node": "16.10.0"
+    "node": "16.13.0"
   },
   "dependencies": {},
   "workspaces":[

@@ -43,4 +43,15 @@ function getLhrFilenamePrefix(lhr) {
   return getFilenamePrefix(hostname, lhr.fetchTime);
 }
 
-export {getLhrFilenamePrefix,getFilenamePrefix};
+/**
+ * Generate a filenamePrefix of name_YYYY-MM-DD_HH-MM-SS.
+ * @param {{name: string, steps: Array<{lhr: {fetchTime: string}}>}} flowResult
+ * @return {string}
+ */
+function getFlowResultFilenamePrefix(flowResult) {
+  const lhr = flowResult.steps[0].lhr;
+  const name = flowResult.name.replace(/\s/g, '-');
+  return getFilenamePrefix(name, lhr.fetchTime);
+}
+
+export {getLhrFilenamePrefix,getFilenamePrefix,getFlowResultFilenamePrefix};

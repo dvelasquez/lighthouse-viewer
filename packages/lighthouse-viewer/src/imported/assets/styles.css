@@ -943,7 +943,7 @@
 
 
 .lh-audit--error .lh-audit__display-text {
-  color: var(--color-fail);
+  color: var(--color-fail-secondary);
 }
 
 /* Audit Group */
@@ -1055,7 +1055,7 @@
 }
 
 .lh-audit--fail .lh-audit-explanation {
-  color: var(--color-fail);
+  color: var(--color-fail-secondary);
 }
 
 /* Report */
