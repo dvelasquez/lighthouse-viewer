@@ -31,10 +31,11 @@
     "build": "rimraf src/imported/* && node utils/copy-deps.js && rollup -c && pnpm copy:types",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/vanillajs",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/vanillajs --no-autoinstall",
     "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/vanillajs"
   },
   "devDependencies": {
+    "cssnano": "5",
     "fs-extra": "^10.0.0",
     "lighthouse": "^9.1.0",
     "parcel-bundler": "^1.12.5",

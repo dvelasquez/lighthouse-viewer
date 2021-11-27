@@ -17,7 +17,7 @@
     "snyk-protect": "snyk protect",
     "prepare": "pnpm snyk-protect",
     "demo:serve": "rimraf lighthouse-viewer && parcel index.html --port 8080 -d lighthouse-viewer --open",
-    "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer",
+    "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer --no-autoinstall --no-minify",
     "demo:http-server": "http-server",
     "lerna:demo:build": "pnpm demo:build && pnpm run demo:build --recursive && pnpm run demo:copy --recursive"
   },
@@ -36,6 +36,7 @@
     "@typescript-eslint/parser": "^5.4.0",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
+    "cssnano": "5",
     "cypress": "^9.0.0",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
@@ -58,6 +59,7 @@
     "start-server-and-test": "^1.14.0",
     "svelte": "^3.44.2",
     "svelte-preprocess": "^4.9.8",
+    "tslib": "2.3.1",
     "typescript": "^4.5.2"
   },
   "snyk": true,
@@ -68,8 +70,7 @@
     "npm": "8.1.0",
     "node": "16.13.0"
   },
-  "dependencies": {},
-  "workspaces":[
+  "workspaces": [
     "packages/lighthouse-viewer",
     "packages/react2-lighthouse-viewer",
     "packages/svelte-lighthouse-viewer",

@@ -15,6 +15,7 @@ importers:
       '@typescript-eslint/parser': ^5.4.0
       cpx: ^1.5.0
       cross-env: ^7.0.3
+      cssnano: '5'
       cypress: ^9.0.0
       eslint: ^8.3.0
       eslint-config-prettier: ^8.3.0
@@ -37,6 +38,7 @@ importers:
       start-server-and-test: ^1.14.0
       svelte: ^3.44.2
       svelte-preprocess: ^4.9.8
+      tslib: 2.3.1
       typescript: ^4.5.2
     devDependencies:
       '@rollup/plugin-alias': 3.1.8_rollup@2.60.1
@@ -45,11 +47,12 @@ importers:
       '@rollup/plugin-node-resolve': 13.0.6_rollup@2.60.1
       '@rollup/plugin-replace': 3.0.0_rollup@2.60.1
       '@rollup/plugin-run': 2.1.0_rollup@2.60.1
-      '@rollup/plugin-typescript': 8.3.0_rollup@2.60.1+typescript@4.5.2
+      '@rollup/plugin-typescript': 8.3.0_b13ef2726f6c50b174fe2dc72f675942
       '@typescript-eslint/eslint-plugin': 5.4.0_5c8ff4cecd5a55e744866c0654edac32
       '@typescript-eslint/parser': 5.4.0_eslint@8.3.0+typescript@4.5.2
       cpx: 1.5.0
       cross-env: 7.0.3
+      cssnano: 5.0.11_postcss@8.4.3
       cypress: 9.1.0
       eslint: 8.3.0
       eslint-config-prettier: 8.3.0_eslint@8.3.0
@@ -72,15 +75,18 @@ importers:
       start-server-and-test: 1.14.0
       svelte: 3.44.2
       svelte-preprocess: 4.9.8_6e193631f0eaecc7ad168d34b3e5bba0
+      tslib: 2.3.1
       typescript: 4.5.2
 
   packages/lighthouse-viewer:
     specifiers:
+      cssnano: '5'
       fs-extra: ^10.0.0
       lighthouse: ^9.1.0
       parcel-bundler: ^1.12.5
       replace-in-file: ^6.3.2
     devDependencies:
+      cssnano: 5.0.11_postcss@8.4.3
       fs-extra: 10.0.0
       lighthouse: 9.1.0
       parcel-bundler: 1.12.5
@@ -112,6 +118,7 @@ importers:
       '@types/node': ^16.11.9
       concurrently: ^6.4.0
       copyfiles: ^2.4.1
+      cssnano: '5'
       jasmine-core: ~3.10.1
       karma: ~6.3.9
       karma-chrome-launcher: ~3.1.0
@@ -145,6 +152,7 @@ importers:
       '@types/node': 16.11.10
       concurrently: 6.4.0
       copyfiles: 2.4.1
+      cssnano: 5.0.11_postcss@8.4.3
       jasmine-core: 3.10.1
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
@@ -154,7 +162,7 @@ importers:
       ng-packagr: 13.0.8_949ffe5c5dc26429e22a2e7f2b078dec
       typescript: 4.4.4
 
-  packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
+  packages/ngx-lighthouse-viewer/dist/ngx-lighthouse-viewer:
     specifiers:
       lighthouse-viewer: ^0.1.19
       tslib: ^2.3.0
@@ -162,10 +170,22 @@ importers:
       lighthouse-viewer: link:../../../lighthouse-viewer
       tslib: 2.3.1
 
+  packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
+    specifiers:
+      cssnano: '5'
+      lighthouse-viewer: ^0.1.19
+      tslib: ^2.3.0
+    dependencies:
+      lighthouse-viewer: link:../../../lighthouse-viewer
+      tslib: 2.3.1
+    devDependencies:
+      cssnano: 5.0.11_postcss@8.4.3
+
   packages/react2-lighthouse-viewer:
     specifiers:
       '@types/react': ^17.0.36
       '@types/react-dom': ^17.0.11
+      cssnano: '5'
       lighthouse-viewer: ^0.1.24
       parcel-bundler: ^1.12.5
       react: ^17.0.2
@@ -175,12 +195,14 @@ importers:
     devDependencies:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
+      cssnano: 5.0.11_postcss@8.4.3
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
   packages/svelte-lighthouse-viewer:
     specifiers:
+      cssnano: '5'
       lighthouse-viewer: ^0.1.24
       parcel-bundler: ^1.12.5
       parcel-plugin-svelte: ^4.0.9
@@ -189,6 +211,7 @@ importers:
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
+      cssnano: 5.0.11_postcss@8.4.3
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_2b52d64d6d60106e86d8972e9599feb7
       svelte: 3.44.2
@@ -197,6 +220,7 @@ importers:
   packages/vue-lighthouse-viewer:
     specifiers:
       '@vue/component-compiler-utils': ^3.3.0
+      cssnano: '5'
       lighthouse-viewer: ^0.1.24
       parcel-bundler: ^1.12.5
       vue: ^2.6.14
@@ -206,6 +230,7 @@ importers:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       '@vue/component-compiler-utils': 3.3.0
+      cssnano: 5.0.11_postcss@8.4.3
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -3766,7 +3791,7 @@ packages:
       rollup: 2.60.1
     dev: true
 
-  /@rollup/plugin-typescript/8.3.0_rollup@2.60.1+typescript@4.5.2:
+  /@rollup/plugin-typescript/8.3.0_b13ef2726f6c50b174fe2dc72f675942:
     resolution: {integrity: sha512-I5FpSvLbtAdwJ+naznv+B4sjXZUcIvLLceYpITAn7wAP8W0wqc5noLdGIp9HGVntNhRWXctwPYrSSFQxtl0FPA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -3777,6 +3802,7 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.60.1
       resolve: 1.20.0
       rollup: 2.60.1
+      tslib: 2.3.1
       typescript: 4.5.2
     dev: true
 
