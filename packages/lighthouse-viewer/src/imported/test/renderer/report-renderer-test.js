@@ -122,6 +122,35 @@ describe('ReportRenderer', () => {
       }
     });
 
+    it('renders score gauges with custom callback', () => {
+      const sampleResultsCopy = JSON.parse(JSON.stringify(sampleResults));
+
+      const opts = {
+        onPageAnchorRendered: link => {
+          const id = link.hash.substring(1);
+          link.hash = `#index=0&anchor=${id}`;
+        },
+      };
+      const container = renderer._dom.document().body;
+      const output = renderer.renderReport(sampleResultsCopy, container, opts);
+      const anchors = output.querySelectorAll('a.lh-gauge__wrapper, a.lh-fraction__wrapper');
+      const hashes = Array.from(anchors).map(anchor => anchor.hash).filter(hash => hash);
+
+      // One set for the sticky header, on set for the gauges at the top.
+      assert.deepStrictEqual(hashes, [
+        '#index=0&anchor=performance',
+        '#index=0&anchor=accessibility',
+        '#index=0&anchor=best-practices',
+        '#index=0&anchor=seo',
+        '#index=0&anchor=pwa',
+        '#index=0&anchor=performance',
+        '#index=0&anchor=accessibility',
+        '#index=0&anchor=best-practices',
+        '#index=0&anchor=seo',
+        '#index=0&anchor=pwa',
+      ]);
+    });
+
     it('renders plugin score gauge', () => {
       const sampleResultsCopy = JSON.parse(JSON.stringify(sampleResults));
       sampleResultsCopy.categories['lighthouse-plugin-someplugin'] = {

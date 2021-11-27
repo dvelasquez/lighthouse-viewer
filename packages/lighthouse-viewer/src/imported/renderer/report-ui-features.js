@@ -154,7 +154,7 @@ export class ReportUIFeatures {
     if (this._topbar) {
       this._topbar.resetUIState();
     }
-    return `<!doctype html><body>${this._dom.rootEl.outerHTML}`;
+    return `<!doctype html><body style="margin: 0">${this._dom.rootEl.outerHTML}`;
   }
 
   /**

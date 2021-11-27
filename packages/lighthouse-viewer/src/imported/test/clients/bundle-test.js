@@ -30,6 +30,7 @@ describe('lighthouseRenderer bundle', () => {
 
     global.window = global.self = window;
     global.window.requestAnimationFrame = fn => fn();
+    global.HTMLInputElement = window.HTMLInputElement;
     // Stub out matchMedia for Node.
     global.self.matchMedia = function() {
       return {
@@ -44,8 +45,8 @@ describe('lighthouseRenderer bundle', () => {
 
   afterAll(() => {
     global.window = global.self = undefined;
+    global.HTMLInputElement = undefined;
   });
-
 
   it('renders an LHR to DOM', () => {
     const lhr = /** @type {LH.Result} */ JSON.parse(sampleResultsStr);
@@ -57,7 +58,6 @@ describe('lighthouseRenderer bundle', () => {
     renderer.renderReport(lhr, reportContainer);
     const features = new lighthouseRenderer.ReportUIFeatures(renderer._dom);
     features.initFeatures(lhr);
-
 
     // Check that the report exists and has some content.
     expect(reportContainer instanceof document.defaultView.Element).toBeTruthy();

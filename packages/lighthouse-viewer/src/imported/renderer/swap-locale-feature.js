@@ -53,13 +53,8 @@ export class SwapLocaleFeature {
       optionEl.value = locale;
       if (locale === currentLocale) optionEl.selected = true;
 
-      // @ts-expect-error: waiting for typescript 4.5. Might need to add "ES2020.Intl"
-      // to tsconfig libs.
-      // https://github.com/microsoft/TypeScript/pull/44022#issuecomment-915087098
       if (window.Intl && Intl.DisplayNames) {
-        // @ts-expect-error
         const currentLocaleDisplay = new Intl.DisplayNames([currentLocale], {type: 'language'});
-        // @ts-expect-error
         const optionLocaleDisplay = new Intl.DisplayNames([locale], {type: 'language'});
 
         const optionLocaleName = optionLocaleDisplay.of(locale);

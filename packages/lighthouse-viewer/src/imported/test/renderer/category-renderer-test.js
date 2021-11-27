@@ -500,6 +500,34 @@ describe('CategoryRenderer', () => {
     });
   });
 
+  describe('renderCategoryScore', () => {
+    it('removes label if omitLabel is true', () => {
+      const options = {omitLabel: true};
+      const categoryScore = renderer.renderCategoryScore(
+        sampleResults.categories.performance,
+        {},
+        options
+      );
+      const label = categoryScore.querySelector('.lh-gauge__label,.lh-fraction__label');
+      assert.ok(!label);
+    });
+
+    it('uses custom callback if present', () => {
+      const options = {
+        onPageAnchorRendered: link => {
+          link.href = '#index=0&anchor=performance';
+        },
+      };
+      const categoryScore = renderer.renderCategoryScore(
+        sampleResults.categories.performance,
+        {},
+        options
+      );
+      const link = categoryScore.querySelector('a');
+      assert.equal(link.hash, '#index=0&anchor=performance');
+    });
+  });
+
   it('renders audits by weight', () => {
     const defaultAuditRef = {
       title: '',

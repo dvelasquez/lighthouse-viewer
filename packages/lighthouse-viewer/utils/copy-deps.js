@@ -5,7 +5,7 @@ const {exec} = require("child_process");
 const manifest = require("./modules/esm");
 
 const filteredFiles = (file) => {
-  return !file.includes('html-report-assets.js')
+  return !file.includes('html-report-assets.js') || !file.includes('test');
 }
 
 // With async/await:

@@ -28,14 +28,14 @@
     "webperf"
   ],
   "scripts": {
-    "build": "npm run build:dist && npm run build:types && npm run copy:types",
+    "build": "pnpm build:dist && pnpm build:types && pnpm copy:types",
     "build:dist": "rollup -c",
     "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
     "copy:types": "cpx \"src/types/**/*\" dist/types",
     "start": "rollup -c -w",
     "prebuild": "rimraf dist",
     "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/svelte",
+    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/svelte --no-autoinstall",
     "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/svelte"
   },
   "peerDependencies": {
@@ -45,6 +45,7 @@
     "lighthouse-viewer": "^0.1.24"
   },
   "devDependencies": {
+    "cssnano": "5",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
     "svelte": "^3.44.1",
