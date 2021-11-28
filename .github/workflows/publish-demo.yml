@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - refactor/publish-gh-pages
+      - fix/pnpm-github-actions
 
 jobs:
   release:
@@ -15,31 +15,36 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node env 🏗
-        uses: volta-cli/action@v1
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.20.3
+      
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.13.0
+          cache: 'pnpm'
 
       - name: Cache npm cache 📦
         uses: actions/cache@v2
         with:
           path: |
             ~/.npm
-            ~/.cache
+            ~/.pnpm-store
+            **/node_modules
             /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci      
+        run: pnpm i --frozen-lockfile --shamefully-hoist
 
       - name: Build libraries
-        run: npm run lerna:build
-
-      - name: Bootstrap dependencies
-        run: npm run lerna:bootstrap
+        run: pnpm lerna:build
 
       - name: Build demo
-        run: npm run lerna:demo:build
+        run: pnpm lerna:demo:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
