@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm i --frozen-lockfile --shamefully-hoist
+        run: pnpm i  --shamefully-hoist
 
       - name: Lint 
         run: pnpm lint
@@ -74,7 +74,7 @@ jobs:
           cache: 'pnpm'
       
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm i --frozen-lockfile --shamefully-hoist
+        run: pnpm i  --shamefully-hoist
 
       - name: Build library
         run: pnpm lerna:build
@@ -128,7 +128,7 @@ jobs:
           cache: 'pnpm'
       
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm i --frozen-lockfile --shamefully-hoist
+        run: pnpm i  --shamefully-hoist
 
       - name: Build library
         run: pnpm lerna:build

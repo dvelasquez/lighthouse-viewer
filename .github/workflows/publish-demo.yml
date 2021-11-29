@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm i --frozen-lockfile --shamefully-hoist
+        run: pnpm i  --shamefully-hoist
 
       - name: Build libraries
         run: pnpm lerna:build
