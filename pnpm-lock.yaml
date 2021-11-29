@@ -34,7 +34,7 @@ importers:
       rollup-plugin-postcss: 4.0.2
       rollup-plugin-svelte: 7.1.0
       rollup-plugin-terser: 7.0.2
-      snyk: 1.775.0
+      snyk: 1.777.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
       svelte-preprocess: 4.9.8
@@ -71,7 +71,7 @@ importers:
       rollup-plugin-postcss: 4.0.2_postcss@8.4.4
       rollup-plugin-svelte: 7.1.0_rollup@2.60.1+svelte@3.44.2
       rollup-plugin-terser: 7.0.2_rollup@2.60.1
-      snyk: 1.775.0
+      snyk: 1.777.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
       svelte-preprocess: 4.9.8_42056288c7d2ba2ab730c08af9463bca
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.31
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: link:../../../lighthouse-viewer
+      lighthouse-viewer: 0.1.31
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -10443,6 +10443,10 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
+  /lighthouse-viewer/0.1.31:
+    resolution: {integrity: sha512-sGS34wehfXQi2uYDoBkQ20pGBBz2eJwg3PFmLYuieKoCqYyb6OO4zXWz6DUY6bICwGNVZxxT/eyzFwgMdCdZdQ==}
+    dev: false
+
   /lighthouse/9.1.0:
     resolution: {integrity: sha512-KUrEKP3KBo1c0Ao7GvWtUqQgJjblALQslOd9d0c9/rONLNM1X17+rZZv8bRS7FVmicdqlIIwGTxk1CjPTH3Vyw==}
     engines: {node: '>=14.15'}
@@ -14853,8 +14857,8 @@ packages:
       use: 3.1.1
     dev: true
 
-  /snyk/1.775.0:
-    resolution: {integrity: sha512-+LVwS0RePl+mKTnF6J+HWZNY0SkvwbytDs76n0be1TxiY3vhe/H+N+pbhvmv0smAK3ZnsRTOKiVrqkzLqhAWsg==}
+  /snyk/1.777.0:
+    resolution: {integrity: sha512-V18/cZxdETC/FBEb2HmweSo8C/3duFbk4TWmoKx/30Ih5U5NP8w4isqABj6NMseKjO3KWyENA+S5PUr0c18bHg==}
     engines: {node: '>=10'}
     hasBin: true
     dev: true
