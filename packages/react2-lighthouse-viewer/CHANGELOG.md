@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.38 (2021-11-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lighthouse-viewer to v0.1.31 ([#647](https://github.com/dvelasquez/lighthouse-viewer/issues/647)) ([ac53aba](https://github.com/dvelasquez/lighthouse-viewer/commit/ac53abaa1620456fc875def014a57c662d81be2d))
+
+
+
+
+
 ## 0.1.37 (2021-11-29)
 
 
