@@ -18,7 +18,7 @@
     "@angular/core": "^12.2.0 || ^13.0.0"
   },
   "dependencies": {
-    "lighthouse-viewer": "0.1.31",
+    "lighthouse-viewer": "0.1.32",
     "tslib": "2.3.1"
   },
   "devDependencies": {

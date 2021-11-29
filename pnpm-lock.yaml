@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -165,7 +165,7 @@ importers:
   packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: 0.1.31
+      lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     dependencies:
       lighthouse-viewer: link:../../../lighthouse-viewer
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.31
+      lighthouse-viewer: ^0.1.32
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
