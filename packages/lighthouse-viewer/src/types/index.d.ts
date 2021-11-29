@@ -8,4 +8,6 @@ declare module '*.css' {
   export default value;
 }
 
-declare module 'lighthouse-viewer';
+declare module 'lighthouse-viewer' {
+  export function renderReport(json: any): HTMLElement;
+}
