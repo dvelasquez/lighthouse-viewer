@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.28
+      lighthouse-viewer: 0.1.28
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -162,13 +162,21 @@ importers:
       ng-packagr: 13.0.8_949ffe5c5dc26429e22a2e7f2b078dec
       typescript: 4.4.4
 
-  packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
+  packages/ngx-lighthouse-viewer/dist/ngx-lighthouse-viewer:
     specifiers:
-      cssnano: 5.0.12
       lighthouse-viewer: 0.1.19
       tslib: 2.3.1
     dependencies:
       lighthouse-viewer: 0.1.19
+      tslib: 2.3.1
+
+  packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
+    specifiers:
+      cssnano: 5.0.12
+      lighthouse-viewer: 0.1.28
+      tslib: 2.3.1
+    dependencies:
+      lighthouse-viewer: link:../../../lighthouse-viewer
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -8276,16 +8284,6 @@ packages:
     deprecated: flatten is deprecated in favor of utility frameworks such as lodash.
     dev: true
 
-  /follow-redirects/1.14.5:
-    resolution: {integrity: sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: true
-
   /follow-redirects/1.14.5_debug@4.3.2:
     resolution: {integrity: sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==}
     engines: {node: '>=4.0'}
@@ -9084,7 +9082,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.5
+      follow-redirects: 1.14.5_debug@4.3.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
