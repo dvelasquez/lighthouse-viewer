@@ -45,7 +45,7 @@
     "lerna": "^4.0.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.4",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.60.0",
