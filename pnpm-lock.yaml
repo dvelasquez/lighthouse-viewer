@@ -122,10 +122,10 @@ importers:
       jasmine-core: 3.10.1
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
-      karma-coverage: 2.0.3
+      karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -156,7 +156,7 @@ importers:
       jasmine-core: 3.10.1
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
-      karma-coverage: 2.0.3
+      karma-coverage: 2.1.0
       karma-jasmine: 4.0.1_karma@6.3.9
       karma-jasmine-html-reporter: 1.7.0_eca4d63fdda006caef36f18ee3c5d751
       ng-packagr: 13.0.8_949ffe5c5dc26429e22a2e7f2b078dec
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: 0.1.31
+      lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -10187,8 +10187,8 @@ packages:
       which: 1.3.1
     dev: true
 
-  /karma-coverage/2.0.3:
-    resolution: {integrity: sha512-atDvLQqvPcLxhED0cmXYdsPMCQuh6Asa9FMZW1bhNqlVEhJoB9qyZ2BY1gu7D/rr5GLGb5QzYO4siQskxaWP/g==}
+  /karma-coverage/2.1.0:
+    resolution: {integrity: sha512-uIejpnArNFQIovB6EPsKO/T4XofELdJWXcA2ADXztFlKhHbr0Ws6ba7wKTMVWsIhEs4iJxdhQkCQrkkhFJSZCw==}
     engines: {node: '>=10.0.0'}
     dependencies:
       istanbul-lib-coverage: 3.2.0
@@ -10443,8 +10443,8 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
-  /lighthouse-viewer/0.1.31:
-    resolution: {integrity: sha512-sGS34wehfXQi2uYDoBkQ20pGBBz2eJwg3PFmLYuieKoCqYyb6OO4zXWz6DUY6bICwGNVZxxT/eyzFwgMdCdZdQ==}
+  /lighthouse-viewer/0.1.32:
+    resolution: {integrity: sha512-dIkpuJL3C4AY0zlphRklFfwlfnV7gTEB3A+DibZAHlWoKSzT3fEGCRGvjtTn8kCQG2lus57ChR2YH09YxpA69g==}
     dev: false
 
   /lighthouse/9.1.0:
