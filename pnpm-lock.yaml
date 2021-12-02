@@ -103,9 +103,9 @@ importers:
 
   packages/ngx-lighthouse-viewer:
     specifiers:
-      '@angular-devkit/build-angular': 13.0.3
+      '@angular-devkit/build-angular': 13.0.4
       '@angular/animations': 13.0.2
-      '@angular/cli': 13.0.3
+      '@angular/cli': 13.0.4
       '@angular/common': 13.0.2
       '@angular/compiler': 13.0.2
       '@angular/compiler-cli': 13.0.2
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -145,8 +145,8 @@ importers:
       tslib: 2.3.1
       zone.js: 0.11.4
     devDependencies:
-      '@angular-devkit/build-angular': 13.0.3_f668c95643e401813df49899686c5d7f
-      '@angular/cli': 13.0.3
+      '@angular-devkit/build-angular': 13.0.4_f668c95643e401813df49899686c5d7f
+      '@angular/cli': 13.0.4
       '@angular/compiler-cli': 13.0.2_8287cab54374b1dd528c4690bdaed3c9
       '@types/jasmine': 3.10.2
       '@types/node': 16.11.10
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: 0.1.31
+      lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -238,18 +238,18 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /@angular-devkit/architect/0.1300.3:
-    resolution: {integrity: sha512-XY3sjRLk06Q+uAU0BePuIWcK1n3Jr0ksNV0ACNAct+MnI3QFfPPaYA/Tdhp9uWobuZ4lUrL0drc2uppNu0wKmA==}
+  /@angular-devkit/architect/0.1300.4:
+    resolution: {integrity: sha512-COW2W6rI9D69QEXGc/MyTbJY9gT+u8yMTpONpIjopd+KoSK/q2wGr0RleUf7XSCunZCs0SRI7z3Pw1EAdQCP7Q==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     dependencies:
-      '@angular-devkit/core': 13.0.3
+      '@angular-devkit/core': 13.0.4
       rxjs: 6.6.7
     transitivePeerDependencies:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/13.0.3_f668c95643e401813df49899686c5d7f:
-    resolution: {integrity: sha512-5KFsknpnq3mc0KwcIDjvmqB3trz5cMt48dB0nrc23zkFI9v4hkpalc/OEg/H3G93K0c9g6dcyxmHkNfsU1+CHw==}
+  /@angular-devkit/build-angular/13.0.4_f668c95643e401813df49899686c5d7f:
+    resolution: {integrity: sha512-GYAxQTI0YkjVKciepwliMugUDjgXlmePG80LL2FCVQYnSM6r2uAI3dF8vX8fREZIRpBpDuTtUIohCRr1X5Oysg==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
       '@angular/compiler-cli': ^13.0.0
@@ -275,9 +275,9 @@ packages:
         optional: true
     dependencies:
       '@ampproject/remapping': 1.0.1
-      '@angular-devkit/architect': 0.1300.3
-      '@angular-devkit/build-webpack': 0.1300.3_6ca2eccc9eae8e6fb2811a99524c0ecc
-      '@angular-devkit/core': 13.0.3
+      '@angular-devkit/architect': 0.1300.4
+      '@angular-devkit/build-webpack': 0.1300.4_6ca2eccc9eae8e6fb2811a99524c0ecc
+      '@angular-devkit/core': 13.0.4
       '@angular/compiler-cli': 13.0.2_8287cab54374b1dd528c4690bdaed3c9
       '@babel/core': 7.15.8
       '@babel/generator': 7.15.8
@@ -289,7 +289,7 @@ packages:
       '@babel/runtime': 7.15.4
       '@babel/template': 7.15.4
       '@discoveryjs/json-ext': 0.5.5
-      '@ngtools/webpack': 13.0.3_11b81a06fa8d091f6200e4386c5957d2
+      '@ngtools/webpack': 13.0.4_11b81a06fa8d091f6200e4386c5957d2
       ansi-colors: 4.1.1
       babel-loader: 8.2.3_da7f51b79f1da844ca72b070e73249ca
       babel-plugin-istanbul: 6.1.1
@@ -360,14 +360,14 @@ packages:
       - webpack-cli
     dev: true
 
-  /@angular-devkit/build-webpack/0.1300.3_6ca2eccc9eae8e6fb2811a99524c0ecc:
-    resolution: {integrity: sha512-3DNo8575FFPMqJaVMXxrIduWkrcKm5zYSCvkMOmzHLp+gx+RXQiwnoXfVJpukcE/jwK/4SWyRE8Tw75sfPJ71A==}
+  /@angular-devkit/build-webpack/0.1300.4_6ca2eccc9eae8e6fb2811a99524c0ecc:
+    resolution: {integrity: sha512-6h4ecyGefj0Fdn8+wYV0QhQgtNQOw83Jw/cM+LeIR28VX7A6ZEEnYf2P5YrCmZFGxznXFYQZNiu8E0mPgBOh3A==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
       webpack: ^5.30.0
       webpack-dev-server: ^4.0.0
     dependencies:
-      '@angular-devkit/architect': 0.1300.3
+      '@angular-devkit/architect': 0.1300.4
       rxjs: 6.6.7
       webpack: 5.64.1_esbuild@0.13.12
       webpack-dev-server: 4.4.0_webpack@5.64.1
@@ -375,8 +375,8 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/core/13.0.3:
-    resolution: {integrity: sha512-5yTYW6m4pkDPSYNxThm+47h+UZ6XVEfdfsXR3o+WlRG0hc18EuQ+sXZkzhvZrk5KMLlXFex4eO40RPq2vvWS/w==}
+  /@angular-devkit/core/13.0.4:
+    resolution: {integrity: sha512-AzgLvERLC6qzY5aZWUpkz5nx+pZChrq3DSt6azMPALwzzoABrwiO6XqzRnj17mXtANXLH2oe9FuHr9jzgFbF1g==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
       chokidar: ^3.5.2
@@ -392,11 +392,11 @@ packages:
       source-map: 0.7.3
     dev: true
 
-  /@angular-devkit/schematics/13.0.3:
-    resolution: {integrity: sha512-+Va1E0zJBCg5jqSfITusghoMJgPAwlU+WUs49fuGVCzfJPwfSjTKSrsbhanahMd27+Ys3rovGZq0F2JUdL801A==}
+  /@angular-devkit/schematics/13.0.4:
+    resolution: {integrity: sha512-3LsmpfAEOxwPyachrktCHtGUYBzQCCzD0++CUjhK8W99v8/IAplkm4dgovFb1RiRkUm44l+HIS7387AbvEIf5A==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     dependencies:
-      '@angular-devkit/core': 13.0.3
+      '@angular-devkit/core': 13.0.4
       jsonc-parser: 3.0.0
       magic-string: 0.25.7
       ora: 5.4.1
@@ -415,16 +415,16 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@angular/cli/13.0.3:
-    resolution: {integrity: sha512-LDXDXDbQ1MBHVUstu4aNjFbyg5f9hLP52gEKB8Z6fQlf5CB1X5zD6UPcR4IvoYt03EFxg3DHco+ueJQ20oZUWQ==}
+  /@angular/cli/13.0.4:
+    resolution: {integrity: sha512-0QMJXFNn57LVg7ZwZFPO90g6aZHDnoe5yCB7fo3nskOhDw1AW/rnbbaNVMVX/SvP30hOOTLsfVJ1Y3I6eKDgRA==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@angular-devkit/architect': 0.1300.3
-      '@angular-devkit/core': 13.0.3
-      '@angular-devkit/schematics': 13.0.3
-      '@schematics/angular': 13.0.3
+      '@angular-devkit/architect': 0.1300.4
+      '@angular-devkit/core': 13.0.4
+      '@angular-devkit/schematics': 13.0.4
+      '@schematics/angular': 13.0.4
       '@yarnpkg/lockfile': 1.1.0
       ansi-colors: 4.1.1
       debug: 4.3.2
@@ -3479,8 +3479,8 @@ packages:
       glob-to-regexp: 0.3.0
     dev: true
 
-  /@ngtools/webpack/13.0.3_11b81a06fa8d091f6200e4386c5957d2:
-    resolution: {integrity: sha512-sVi1Xk8pyy6Y6JODySucYfvuxb5k3IIX/oIWy8QxlFVzpeB2UMqEOevrgvtmiEbQNB1W+aYSTph6oeV+PRX5YA==}
+  /@ngtools/webpack/13.0.4_11b81a06fa8d091f6200e4386c5957d2:
+    resolution: {integrity: sha512-kH0kYOQvbv6SnVdcdi21AbJo17H1HSGlCy/8C1ujLdgtT6enKMnx9onYIoZSmb5U98GqYc+DV/W0HwpHwRcOoQ==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
       '@angular/compiler-cli': ^13.0.0
@@ -3838,12 +3838,12 @@ packages:
       rollup: 2.60.1
     dev: true
 
-  /@schematics/angular/13.0.3:
-    resolution: {integrity: sha512-qH6mnmGaDCuG1FM3vLdvSFDG394TeZO0ZvRDrw3iCYlX5Nkbz0Kvt0MPtWNZmlohwFhGlbXKVQiR++1dxa6eEA==}
+  /@schematics/angular/13.0.4:
+    resolution: {integrity: sha512-P9F5c8ApLbEyfNO4TZNsTyAdrtOjwIhrM/P+eEC4/x6nklWlEFE6TGMYTNjiK/RRhkbX1tBs8gcdJLYxtEqPSg==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     dependencies:
-      '@angular-devkit/core': 13.0.3
-      '@angular-devkit/schematics': 13.0.3
+      '@angular-devkit/core': 13.0.4
+      '@angular-devkit/schematics': 13.0.4
       jsonc-parser: 3.0.0
     transitivePeerDependencies:
       - chokidar
@@ -8276,16 +8276,6 @@ packages:
     deprecated: flatten is deprecated in favor of utility frameworks such as lodash.
     dev: true
 
-  /follow-redirects/1.14.5:
-    resolution: {integrity: sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: true
-
   /follow-redirects/1.14.5_debug@4.3.2:
     resolution: {integrity: sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==}
     engines: {node: '>=4.0'}
@@ -9084,7 +9074,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.5
+      follow-redirects: 1.14.5_debug@4.3.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -10443,8 +10433,8 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
-  /lighthouse-viewer/0.1.31:
-    resolution: {integrity: sha512-sGS34wehfXQi2uYDoBkQ20pGBBz2eJwg3PFmLYuieKoCqYyb6OO4zXWz6DUY6bICwGNVZxxT/eyzFwgMdCdZdQ==}
+  /lighthouse-viewer/0.1.32:
+    resolution: {integrity: sha512-dIkpuJL3C4AY0zlphRklFfwlfnV7gTEB3A+DibZAHlWoKSzT3fEGCRGvjtTn8kCQG2lus57ChR2YH09YxpA69g==}
     dev: false
 
   /lighthouse/9.1.0:
