@@ -25,7 +25,7 @@ importers:
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       postcss: 8.4.4
-      prettier: 2.5.0
+      prettier: 2.5.1
       rimraf: 3.0.2
       rollup: 2.60.1
       rollup-plugin-analyzer: 4.0.0
@@ -56,13 +56,13 @@ importers:
       cypress: 9.1.0
       eslint: 8.3.0
       eslint-config-prettier: 8.3.0_eslint@8.3.0
-      eslint-plugin-prettier: 4.0.0_d8c6a2a4ba8850181fffb74d8e835cec
+      eslint-plugin-prettier: 4.0.0_6f438f3450fc1ceebe036a521fece809
       http-server: 14.0.0
       lerna: 4.0.0
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_2b52d64d6d60106e86d8972e9599feb7
       postcss: 8.4.4
-      prettier: 2.5.0
+      prettier: 2.5.1
       rimraf: 3.0.2
       rollup: 2.60.1
       rollup-plugin-analyzer: 4.0.0
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: 0.1.31
+      lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -7589,7 +7589,7 @@ packages:
       eslint: 8.3.0
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_d8c6a2a4ba8850181fffb74d8e835cec:
+  /eslint-plugin-prettier/4.0.0_6f438f3450fc1ceebe036a521fece809:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -7602,7 +7602,7 @@ packages:
     dependencies:
       eslint: 8.3.0
       eslint-config-prettier: 8.3.0_eslint@8.3.0
-      prettier: 2.5.0
+      prettier: 2.5.1
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -10443,8 +10443,8 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
-  /lighthouse-viewer/0.1.31:
-    resolution: {integrity: sha512-sGS34wehfXQi2uYDoBkQ20pGBBz2eJwg3PFmLYuieKoCqYyb6OO4zXWz6DUY6bICwGNVZxxT/eyzFwgMdCdZdQ==}
+  /lighthouse-viewer/0.1.32:
+    resolution: {integrity: sha512-dIkpuJL3C4AY0zlphRklFfwlfnV7gTEB3A+DibZAHlWoKSzT3fEGCRGvjtTn8kCQG2lus57ChR2YH09YxpA69g==}
     dev: false
 
   /lighthouse/9.1.0:
@@ -13545,6 +13545,14 @@ packages:
 
   /prettier/2.5.0:
     resolution: {integrity: sha512-FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
