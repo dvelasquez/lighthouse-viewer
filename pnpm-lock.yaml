@@ -16,7 +16,7 @@ importers:
       cpx: 1.5.0
       cross-env: 7.0.3
       cssnano: 5.0.12
-      cypress: 9.1.0
+      cypress: 9.1.1
       eslint: 8.3.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-prettier: 4.0.0
@@ -53,7 +53,7 @@ importers:
       cpx: 1.5.0
       cross-env: 7.0.3
       cssnano: 5.0.12_postcss@8.4.4
-      cypress: 9.1.0
+      cypress: 9.1.1
       eslint: 8.3.0
       eslint-config-prettier: 8.3.0_eslint@8.3.0
       eslint-plugin-prettier: 4.0.0_d8c6a2a4ba8850181fffb74d8e835cec
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.0.3
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       ng-packagr: 13.0.8
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: 0.1.31
+      lighthouse-viewer: 0.1.32
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.32
+      lighthouse-viewer: ^0.1.33
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -2671,8 +2671,8 @@ packages:
     engines: {node: '>=4.0.0'}
     dev: true
 
-  /@cypress/request/2.88.9:
-    resolution: {integrity: sha512-6md3dtAd3DXfTEXFb2Yde3TSaqpYsSBw3a1VFwAC9Fscu2B0DtY2Venu35csZyJj09XNkPMGRoE4ZXUdtkI+zg==}
+  /@cypress/request/2.88.10:
+    resolution: {integrity: sha512-Zp7F+R93N0yZyG34GutyTNr+okam7s/Fzc1+i3kcqOP8vk6OuajuE9qZJ6Rs+10/1JFtXFYMdyarnU1rZuJesg==}
     engines: {node: '>= 6'}
     dependencies:
       aws-sign2: 0.7.0
@@ -2682,7 +2682,6 @@ packages:
       extend: 3.0.2
       forever-agent: 0.6.1
       form-data: 2.3.3
-      har-validator: 5.1.5
       http-signature: 1.3.6
       is-typedarray: 1.0.0
       isstream: 0.1.2
@@ -6525,13 +6524,13 @@ packages:
     resolution: {integrity: sha1-XQKkaFCt8bSjF5RqOSj8y1v9BCU=}
     dev: true
 
-  /cypress/9.1.0:
-    resolution: {integrity: sha512-fyXcCN51vixkPrz/vO/Qy6WL3hKYJzCQFeWofOpGOFewVVXrGfmfSOGFntXpzWBXsIwPn3wzW0HOFw51jZajNQ==}
+  /cypress/9.1.1:
+    resolution: {integrity: sha512-yWcYD8SEQ8F3okFbRPqSDj5V0xhrZBT5QRIH+P1J2vYvtEmZ4KGciHE7LCcZZLILOrs7pg4WNCqkj/XRvReQlQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@cypress/request': 2.88.9
+      '@cypress/request': 2.88.10
       '@cypress/xvfb': 1.2.4
       '@types/node': 14.17.34
       '@types/sinonjs__fake-timers': 6.0.4
@@ -10443,8 +10442,8 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
-  /lighthouse-viewer/0.1.31:
-    resolution: {integrity: sha512-sGS34wehfXQi2uYDoBkQ20pGBBz2eJwg3PFmLYuieKoCqYyb6OO4zXWz6DUY6bICwGNVZxxT/eyzFwgMdCdZdQ==}
+  /lighthouse-viewer/0.1.32:
+    resolution: {integrity: sha512-dIkpuJL3C4AY0zlphRklFfwlfnV7gTEB3A+DibZAHlWoKSzT3fEGCRGvjtTn8kCQG2lus57ChR2YH09YxpA69g==}
     dev: false
 
   /lighthouse/9.1.0:
