@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.18 (2021-12-08)
+
+
+### Bug Fixes
+
+* **deps:** update angular monorepo to v13.0.3 ([#655](https://github.com/dvelasquez/lighthouse-viewer/issues/655)) ([679591b](https://github.com/dvelasquez/lighthouse-viewer/commit/679591bfe46485e2b351bbcaab01385aec57433f))
+
+
+
+
+
 ## 0.0.17 (2021-12-06)
 
 **Note:** Version bump only for package ngx-lighthouse-viewer-workspace
