@@ -165,10 +165,10 @@ importers:
   packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: 0.1.32
+      lighthouse-viewer: 0.1.36
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: 0.1.32
+      lighthouse-viewer: link:../../../lighthouse-viewer
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -10445,10 +10445,6 @@ packages:
   /lighthouse-stack-packs/1.6.0:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
-
-  /lighthouse-viewer/0.1.32:
-    resolution: {integrity: sha512-dIkpuJL3C4AY0zlphRklFfwlfnV7gTEB3A+DibZAHlWoKSzT3fEGCRGvjtTn8kCQG2lus57ChR2YH09YxpA69g==}
-    dev: false
 
   /lighthouse/9.1.0:
     resolution: {integrity: sha512-KUrEKP3KBo1c0Ao7GvWtUqQgJjblALQslOd9d0c9/rONLNM1X17+rZZv8bRS7FVmicdqlIIwGTxk1CjPTH3Vyw==}
