@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.36
+      lighthouse-viewer: ^0.1.37
       ng-packagr: 13.1.1
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -168,7 +168,7 @@ importers:
       lighthouse-viewer: 0.1.36
       tslib: 2.3.1
     dependencies:
-      lighthouse-viewer: link:../../../lighthouse-viewer
+      lighthouse-viewer: 0.1.36
       tslib: 2.3.1
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.4
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.36
+      lighthouse-viewer: ^0.1.37
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.36
+      lighthouse-viewer: ^0.1.37
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.36
+      lighthouse-viewer: ^0.1.37
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -10445,6 +10445,10 @@ packages:
   /lighthouse-stack-packs/1.6.0:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
+
+  /lighthouse-viewer/0.1.36:
+    resolution: {integrity: sha512-PC+g1HV8NrF62O493HJHG4yVCfgRqoqr93rbRS4aOfe1YNEjmy7zntEhaYxQfoLbkqS46ioOByVb716J894Dkw==}
+    dev: false
 
   /lighthouse/9.1.0:
     resolution: {integrity: sha512-KUrEKP3KBo1c0Ao7GvWtUqQgJjblALQslOd9d0c9/rONLNM1X17+rZZv8bRS7FVmicdqlIIwGTxk1CjPTH3Vyw==}
