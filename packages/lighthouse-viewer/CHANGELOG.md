@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.38 (2021-12-11)
+
+
+### Bug Fixes
+
+* **deps:** update angular monorepo to v13.1.0 ([#679](https://github.com/dvelasquez/vue-lighthouse-viewer/issues/679)) ([03b4414](https://github.com/dvelasquez/vue-lighthouse-viewer/commit/03b441490cb6b9fc893844923033f82b01c5aaee))
+
+
+
+
+
 ## 0.1.37 (2021-12-09)
 
 **Note:** Version bump only for package lighthouse-viewer
