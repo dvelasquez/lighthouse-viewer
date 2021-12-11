@@ -69,12 +69,5 @@
   "volta": {
     "npm": "8.3.0",
     "node": "16.13.1"
-  },
-  "workspaces": [
-    "packages/lighthouse-viewer",
-    "packages/react2-lighthouse-viewer",
-    "packages/svelte-lighthouse-viewer",
-    "packages/vue-lighthouse-viewer",
-    "packages/ngx-lighthouse-viewer"
-  ]
+  }
 }

@@ -1,4 +1,8 @@
 packages:
-  - 'packages/**'
+  - 'packages/lighthouse-viewer'
+  - 'packages/ngx-lighthouse-viewer'
+  - 'packages/react2-lighthouse-viewer'
+  - 'packages/svelte-lighthouse-viewer'
+  - 'packages/vue-lighthouse-viewer'
 link-workspace-packages: true
 shared-workspace-lockfile: true
