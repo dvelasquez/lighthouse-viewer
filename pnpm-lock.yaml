@@ -140,7 +140,7 @@ importers:
       '@angular/platform-browser': 13.1.0_c9e48258c56445dd190cc2a07fd70b29
       '@angular/platform-browser-dynamic': 13.1.0_3b79e2b742b1e19e442677b1f097499e
       '@angular/router': 13.1.0_3a603c5d19fdb4a491507d1568bbdc1d
-      lighthouse-viewer: link:../lighthouse-viewer
+      lighthouse-viewer: 0.1.38
       rxjs: 7.4.0
       tslib: 2.3.1
       zone.js: 0.11.4
@@ -161,6 +161,14 @@ importers:
       karma-jasmine-html-reporter: 1.7.0_eca4d63fdda006caef36f18ee3c5d751
       ng-packagr: 13.1.1_7c9e2a4fa475970821230a28dc0810bc
       typescript: 4.5.3
+
+  packages/ngx-lighthouse-viewer/dist/ngx-lighthouse-viewer:
+    specifiers:
+      lighthouse-viewer: 0.1.28
+      tslib: 2.3.1
+    dependencies:
+      lighthouse-viewer: 0.1.28
+      tslib: 2.3.1
 
   packages/ngx-lighthouse-viewer/projects/ngx-lighthouse-viewer:
     specifiers:
@@ -183,7 +191,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2
     dependencies:
-      lighthouse-viewer: link:../lighthouse-viewer
+      lighthouse-viewer: 0.1.38
     devDependencies:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
@@ -201,7 +209,7 @@ importers:
       svelte: 3.44.2
       svelte-preprocess: 4.10.0
     dependencies:
-      lighthouse-viewer: link:../lighthouse-viewer
+      lighthouse-viewer: 0.1.38
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.5
       parcel-bundler: 1.12.5
@@ -219,7 +227,7 @@ importers:
       vue-hot-reload-api: 2.3.4
       vue-template-compiler: 2.6.14
     dependencies:
-      lighthouse-viewer: link:../lighthouse-viewer
+      lighthouse-viewer: 0.1.38
     devDependencies:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12_postcss@8.4.5
@@ -9365,8 +9373,16 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
+  /lighthouse-viewer/0.1.28:
+    resolution: {integrity: sha512-3s9o27IYDRiTBKYJf95MX4pyyROi2PIoKZ/2kZWixX1ezVJcnrOuPCHKYuFJgh01+MpiRDewl1Peel9WUTCvCw==}
+    dev: false
+
   /lighthouse-viewer/0.1.36:
     resolution: {integrity: sha512-PC+g1HV8NrF62O493HJHG4yVCfgRqoqr93rbRS4aOfe1YNEjmy7zntEhaYxQfoLbkqS46ioOByVb716J894Dkw==}
+    dev: false
+
+  /lighthouse-viewer/0.1.38:
+    resolution: {integrity: sha512-Zcp9RfdmK5Df5yas7G6DSgN6aHyTEuesFCswLSUyPG3suyRdfolmLmgfcssvdsPmRUZBoPJQ8Jfj280DRIHafg==}
     dev: false
 
   /lighthouse/9.1.0:
