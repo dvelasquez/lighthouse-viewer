@@ -34,7 +34,7 @@ importers:
       rollup-plugin-postcss: 4.0.2
       rollup-plugin-svelte: 7.1.0
       rollup-plugin-terser: 7.0.2
-      snyk: 1.787.0
+      snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
       svelte-preprocess: 4.9.8
@@ -71,7 +71,7 @@ importers:
       rollup-plugin-postcss: 4.0.2_postcss@8.4.4
       rollup-plugin-svelte: 7.1.0_rollup@2.61.1+svelte@3.44.2
       rollup-plugin-terser: 7.0.2_rollup@2.61.1
-      snyk: 1.787.0
+      snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
       svelte-preprocess: 4.9.8_42056288c7d2ba2ab730c08af9463bca
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.37
+      lighthouse-viewer: ^0.1.38
       ng-packagr: 13.1.1
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.37
+      lighthouse-viewer: ^0.1.38
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.37
+      lighthouse-viewer: ^0.1.38
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.37
+      lighthouse-viewer: ^0.1.38
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -13777,8 +13777,8 @@ packages:
       use: 3.1.1
     dev: true
 
-  /snyk/1.787.0:
-    resolution: {integrity: sha512-bBOmHyNL+VJt7VCH7K9hfidbkU/AIpbaZpsXPVa+RltJ9QZqdlD6hBTDotyeuHhzygeNmetpxvjwiG9RkN7SAg==}
+  /snyk/1.790.0:
+    resolution: {integrity: sha512-1PPhRiiO5nPY3GvgU1mUXyjKTtVhenBylNszIQZzXddPxs9ayioNzyZ4Uv5DkPKzzo7TT4Aexaa0nvT0HTffdA==}
     engines: {node: '>=10'}
     hasBin: true
     dev: true
