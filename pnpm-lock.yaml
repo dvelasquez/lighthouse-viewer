@@ -7,7 +7,7 @@ importers:
       '@rollup/plugin-alias': 3.1.8
       '@rollup/plugin-commonjs': 21.0.1
       '@rollup/plugin-html': 0.2.4
-      '@rollup/plugin-node-resolve': 13.0.6
+      '@rollup/plugin-node-resolve': 13.1.1
       '@rollup/plugin-replace': 3.0.0
       '@rollup/plugin-run': 2.1.0
       '@rollup/plugin-typescript': 8.3.0
@@ -44,7 +44,7 @@ importers:
       '@rollup/plugin-alias': 3.1.8_rollup@2.61.1
       '@rollup/plugin-commonjs': 21.0.1_rollup@2.61.1
       '@rollup/plugin-html': 0.2.4_rollup@2.61.1
-      '@rollup/plugin-node-resolve': 13.0.6_rollup@2.61.1
+      '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
       '@rollup/plugin-replace': 3.0.0_rollup@2.61.1
       '@rollup/plugin-run': 2.1.0_rollup@2.61.1
       '@rollup/plugin-typescript': 8.3.0_facdb14bbf6fd00e0f9643921b6d79d2
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.39
+      lighthouse-viewer: ^0.1.40
       ng-packagr: 13.1.1
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.39
+      lighthouse-viewer: ^0.1.40
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,7 +195,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.39
+      lighthouse-viewer: ^0.1.40
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
@@ -213,7 +213,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.39
+      lighthouse-viewer: ^0.1.40
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -2870,8 +2870,8 @@ packages:
       rollup: 2.61.0
     dev: true
 
-  /@rollup/plugin-node-resolve/13.0.6_rollup@2.61.1:
-    resolution: {integrity: sha512-sFsPDMPd4gMqnh2gS0uIxELnoRUp5kBl5knxD2EO0778G1oOJv4G1vyT2cpWz75OU2jDVcXhjVUuTAczGyFNKA==}
+  /@rollup/plugin-node-resolve/13.1.1_rollup@2.61.1:
+    resolution: {integrity: sha512-6QKtRevXLrmEig9UiMYt2fSvee9TyltGRfw+qSs6xjUnxwjOzTOqy+/Lpxsgjb8mJn1EQNbCDAvt89O4uzL5kw==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
       rollup: ^2.42.0
@@ -3100,7 +3100,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 16.11.10
+      '@types/node': 16.11.12
     dev: true
 
   /@types/retry/0.12.1:
@@ -3129,7 +3129,7 @@ packages:
     resolution: {integrity: sha512-8uALY5LTvSuHgloDVUvWP3pIauILm+8/0pDMokuDYIoNsOkSwd5AiHBTSEJjKTDcZr5z8UpgOWZkxBF4iJftoA==}
     requiresBuild: true
     dependencies:
-      '@types/node': 16.11.10
+      '@types/node': 16.11.12
     dev: true
     optional: true
 
@@ -8911,7 +8911,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 16.11.10
+      '@types/node': 16.11.12
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
