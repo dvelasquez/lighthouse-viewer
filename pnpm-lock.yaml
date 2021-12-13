@@ -37,7 +37,7 @@ importers:
       snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
-      svelte-preprocess: 4.9.8
+      svelte-preprocess: 4.10.0
       tslib: 2.3.1
       typescript: 4.5.3
     devDependencies:
@@ -74,7 +74,7 @@ importers:
       snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.2
-      svelte-preprocess: 4.9.8_cf70f91045ad2078a72a7d7db9332420
+      svelte-preprocess: 4.10.0_cf70f91045ad2078a72a7d7db9332420
       tslib: 2.3.1
       typescript: 4.5.3
 
@@ -125,7 +125,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.38
+      lighthouse-viewer: ^0.1.39
       ng-packagr: 13.1.1
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -178,7 +178,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.38
+      lighthouse-viewer: ^0.1.39
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -195,11 +195,11 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.38
+      lighthouse-viewer: ^0.1.39
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.2
-      svelte-preprocess: 4.9.8
+      svelte-preprocess: 4.10.0
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
@@ -207,13 +207,13 @@ importers:
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_2b52d64d6d60106e86d8972e9599feb7
       svelte: 3.44.2
-      svelte-preprocess: 4.9.8_cf70f91045ad2078a72a7d7db9332420
+      svelte-preprocess: 4.10.0_cf70f91045ad2078a72a7d7db9332420
 
   packages/vue-lighthouse-viewer:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.38
+      lighthouse-viewer: ^0.1.39
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -3110,7 +3110,7 @@ packages:
   /@types/sass/1.43.1:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
-      '@types/node': 16.11.10
+      '@types/node': 16.11.12
     dev: true
 
   /@types/scheduler/0.16.2:
@@ -14405,8 +14405,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-preprocess/4.9.8_cf70f91045ad2078a72a7d7db9332420:
-    resolution: {integrity: sha512-EQS/oRZzMtYdAprppZxY3HcysKh11w54MgA63ybtL+TAZ4hVqYOnhw41JVJjWN9dhPnNjjLzvbZ2tMhTsla1Og==}
+  /svelte-preprocess/4.10.0_cf70f91045ad2078a72a7d7db9332420:
+    resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
@@ -14421,7 +14421,7 @@ packages:
       stylus: ^0.54.7
       sugarss: ^2.0.0
       svelte: ^3.23.0
-      typescript: ^3.9.5 || ^4.0.0
+      typescript: ^4.5.2
     peerDependenciesMeta:
       '@babel/core':
         optional: true
