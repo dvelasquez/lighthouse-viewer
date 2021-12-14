@@ -17,7 +17,7 @@ jobs:
 
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.20.3
+          version: 6.23.6
       
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
@@ -33,7 +33,7 @@ jobs:
             ~/.pnpm-store
             **/node_modules
             /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
