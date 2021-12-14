@@ -14,31 +14,29 @@ jobs:
       CI: 'true'
     steps:
       - uses: actions/checkout@v2
-
-      - uses: pnpm/action-setup@v2.0.1
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2.1.7
         with:
-          version: 6.20.3
+          path: |
+            ~/.pnpm-store
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
       
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
           node-version: 16.13.0
-          cache: 'pnpm'
-
-      - name: Cache npm cache 📦
-        uses: actions/cache@v2
+      
+      - uses: pnpm/action-setup@v2.0.1
+        name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          path: |
-            ~/.npm
-            ~/.pnpm-store
-            **/node_modules
-            /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies 👨🏻‍💻
-        run: pnpm i  --shamefully-hoist
+          version: 6.23.6
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --shamefully-hoist]
 
       - name: Build libraries
         run: pnpm lerna:build

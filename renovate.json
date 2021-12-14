@@ -1,5 +1,13 @@
 {
   "extends": [
     "config:base"
+  ],
+  "schedule": ["after 10pm and before 5am every sunday"],
+  "stabilityDays": 3,
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    }
   ]
 }
