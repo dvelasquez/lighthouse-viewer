@@ -14,16 +14,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.23.6
       
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
           node-version: 16.13.0
-          cache: 'pnpm'
 
       - name: Cache npm cache 📦
         uses: actions/cache@v2
@@ -35,8 +30,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
-      - name: Install dependencies 👨🏻‍💻
-        run: pnpm i --shamefully-hoist
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --shamefully-hoist]
       
       - name: Lint
         run: pnpm lint
@@ -58,19 +57,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
             ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.23.6
       
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
           node-version: 16.13.0
-          cache: 'pnpm'
       
-      - name: Install dependencies 👨🏻‍💻
-        run: pnpm i  --shamefully-hoist
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --shamefully-hoist]
 
       - name: Build library
         run: pnpm lerna:build
