@@ -1,13 +1,4 @@
-declare module '*.html' {
-  const value: string;
-  export default value;
-}
-
-declare module '*.css' {
-  const value: string;
-  export default value;
-}
-
 declare module 'lighthouse-viewer' {
-  export function renderReport(json: any): HTMLElement;
+  import ReportResult from 'lighthouse/report/types/report-result.d';
+  export function renderReport(json: ReportResult): HTMLElement;
 }
