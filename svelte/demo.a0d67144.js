@@ -2845,9 +2845,9 @@ class a {
             l.append(" ", s, " ", c, " ");
             const d = e.createElement("div", "lh-chevron-container");
             i.append(" ", a, " ", l, " ", d, " "), o.append(" ", i, " ");
-            const p = e.createElement("div", "lh-audit__description"),
-                  h = e.createElement("div", "lh-audit__stackpacks");
-            return r.append(" ", o, " ", p, " ", h, " "), n.append(" ", r, " "), t.append(n), t;
+            const h = e.createElement("div", "lh-audit__description"),
+                  p = e.createElement("div", "lh-audit__stackpacks");
+            return r.append(" ", o, " ", h, " ", p, " "), n.append(" ", r, " "), t.append(n), t;
           }(e);
 
         case "categoryHeader":
@@ -2885,8 +2885,8 @@ class a {
             a.append(" ", l, " ", s, " ", " ", " ");
             const c = e.createElement("div", "lh-clump-toggle"),
                   d = e.createElement("span", "lh-clump-toggletext--show"),
-                  p = e.createElement("span", "lh-clump-toggletext--hide");
-            return c.append(" ", d, " ", p, " "), i.append(" ", a, " ", c, " "), o.append(" ", i, " "), r.append(" ", o, " "), n.append(" ", " ", r, " "), t.append(n), t;
+                  h = e.createElement("span", "lh-clump-toggletext--hide");
+            return c.append(" ", d, " ", h, " "), i.append(" ", a, " ", c, " "), o.append(" ", i, " "), r.append(" ", o, " "), n.append(" ", " ", r, " "), t.append(n), t;
           }(e);
 
         case "crc":
@@ -2993,14 +2993,14 @@ class a {
             c.setAttribute("id", "lh-gauge--pwa__installable__shadow-gradient"), c.setAttribute("x1", "76.056%"), c.setAttribute("x2", "24.111%"), c.setAttribute("y1", "82.995%"), c.setAttribute("y2", "24.735%");
             const d = e.createElementNS("http://www.w3.org/2000/svg", "stop");
             d.setAttribute("stop-color", "#A5D6A7"), d.setAttribute("offset", "0%");
-            const p = e.createElementNS("http://www.w3.org/2000/svg", "stop");
-            p.setAttribute("stop-color", "#80CBC4"), p.setAttribute("offset", "100%"), c.append(" ", d, " ", p, " ");
-            const h = e.createElementNS("http://www.w3.org/2000/svg", "g");
-            h.setAttribute("id", "lh-gauge--pwa__installable-badge");
+            const h = e.createElementNS("http://www.w3.org/2000/svg", "stop");
+            h.setAttribute("stop-color", "#80CBC4"), h.setAttribute("offset", "100%"), c.append(" ", d, " ", h, " ");
+            const p = e.createElementNS("http://www.w3.org/2000/svg", "g");
+            p.setAttribute("id", "lh-gauge--pwa__installable-badge");
             const u = e.createElementNS("http://www.w3.org/2000/svg", "circle");
             u.setAttribute("fill", "#FFFFFF"), u.setAttribute("cx", "10"), u.setAttribute("cy", "10"), u.setAttribute("r", "10");
             const g = e.createElementNS("http://www.w3.org/2000/svg", "path");
-            g.setAttribute("fill", "#009688"), g.setAttribute("d", "M10 4.167A5.835 5.835 0 0 0 4.167 10 5.835 5.835 0 0 0 10 15.833 5.835 5.835 0 0 0 15.833 10 5.835 5.835 0 0 0 10 4.167zm2.917 6.416h-2.334v2.334H9.417v-2.334H7.083V9.417h2.334V7.083h1.166v2.334h2.334v1.166z"), h.append(" ", u, " ", g, " "), i.append(" ", a, " ", c, " ", h, " ");
+            g.setAttribute("fill", "#009688"), g.setAttribute("d", "M10 4.167A5.835 5.835 0 0 0 4.167 10 5.835 5.835 0 0 0 10 15.833 5.835 5.835 0 0 0 15.833 10 5.835 5.835 0 0 0 10 4.167zm2.917 6.416h-2.334v2.334H9.417v-2.334H7.083V9.417h2.334V7.083h1.166v2.334h2.334v1.166z"), p.append(" ", u, " ", g, " "), i.append(" ", a, " ", c, " ", p, " ");
             const m = e.createElementNS("http://www.w3.org/2000/svg", "g");
             m.setAttribute("stroke", "none"), m.setAttribute("fill-rule", "nonzero");
             const f = e.createElementNS("http://www.w3.org/2000/svg", "circle", "lh-gauge--pwa__disc");
@@ -3068,13 +3068,13 @@ class a {
                   c = e.createElement("div", "lh-audit__title");
             l.append(" ", s, " ", c, " ");
             const d = e.createElement("div", "lh-load-opportunity__col lh-load-opportunity__col--two"),
-                  p = e.createElement("div", "lh-load-opportunity__sparkline"),
-                  h = e.createElement("div", "lh-sparkline"),
+                  h = e.createElement("div", "lh-load-opportunity__sparkline"),
+                  p = e.createElement("div", "lh-sparkline"),
                   u = e.createElement("div", "lh-sparkline__bar");
-            h.append(u), p.append(" ", h, " ");
+            p.append(u), h.append(" ", p, " ");
             const g = e.createElement("div", "lh-audit__display-text"),
                   m = e.createElement("div", "lh-chevron-container");
-            d.append(" ", p, " ", g, " ", m, " "), a.append(" ", l, " ", d, " "), i.append(" ", a, " "), o.append(" ", i, " ");
+            d.append(" ", h, " ", g, " ", m, " "), a.append(" ", l, " ", d, " "), i.append(" ", a, " "), o.append(" ", i, " ");
             const f = e.createElement("div", "lh-audit__description"),
                   v = e.createElement("div", "lh-audit__stackpacks");
             return r.append(" ", o, " ", f, " ", v, " "), n.append(" ", r, " "), t.append(n), t;
@@ -3178,20 +3178,20 @@ class a {
             c.setAttribute("x1", "100%"), c.setAttribute("y1", "50%"), c.setAttribute("x2", "0%"), c.setAttribute("y2", "50%"), c.setAttribute("id", "lh-topbar__logo--b");
             const d = e.createElementNS("http://www.w3.org/2000/svg", "stop");
             d.setAttribute("stop-color", "#262626"), d.setAttribute("stop-opacity", ".1"), d.setAttribute("offset", "0%");
-            const p = e.createElementNS("http://www.w3.org/2000/svg", "stop");
-            p.setAttribute("stop-color", "#262626"), p.setAttribute("stop-opacity", "0"), p.setAttribute("offset", "100%"), c.append(" ", d, " ", p, " ");
-            const h = e.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
-            h.setAttribute("x1", "58.764%"), h.setAttribute("y1", "65.756%"), h.setAttribute("x2", "36.939%"), h.setAttribute("y2", "50.14%"), h.setAttribute("id", "lh-topbar__logo--c");
+            const h = e.createElementNS("http://www.w3.org/2000/svg", "stop");
+            h.setAttribute("stop-color", "#262626"), h.setAttribute("stop-opacity", "0"), h.setAttribute("offset", "100%"), c.append(" ", d, " ", h, " ");
+            const p = e.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
+            p.setAttribute("x1", "58.764%"), p.setAttribute("y1", "65.756%"), p.setAttribute("x2", "36.939%"), p.setAttribute("y2", "50.14%"), p.setAttribute("id", "lh-topbar__logo--c");
             const u = e.createElementNS("http://www.w3.org/2000/svg", "stop");
             u.setAttribute("stop-color", "#262626"), u.setAttribute("stop-opacity", ".1"), u.setAttribute("offset", "0%");
             const g = e.createElementNS("http://www.w3.org/2000/svg", "stop");
-            g.setAttribute("stop-color", "#262626"), g.setAttribute("stop-opacity", "0"), g.setAttribute("offset", "100%"), h.append(" ", u, " ", g, " ");
+            g.setAttribute("stop-color", "#262626"), g.setAttribute("stop-opacity", "0"), g.setAttribute("offset", "100%"), p.append(" ", u, " ", g, " ");
             const m = e.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
             m.setAttribute("x1", "41.635%"), m.setAttribute("y1", "20.358%"), m.setAttribute("x2", "72.863%"), m.setAttribute("y2", "85.424%"), m.setAttribute("id", "lh-topbar__logo--d");
             const f = e.createElementNS("http://www.w3.org/2000/svg", "stop");
             f.setAttribute("stop-color", "#FFF"), f.setAttribute("stop-opacity", ".1"), f.setAttribute("offset", "0%");
             const v = e.createElementNS("http://www.w3.org/2000/svg", "stop");
-            v.setAttribute("stop-color", "#FFF"), v.setAttribute("stop-opacity", "0"), v.setAttribute("offset", "100%"), m.append(" ", f, " ", v, " "), i.append(" ", a, " ", c, " ", h, " ", m, " ");
+            v.setAttribute("stop-color", "#FFF"), v.setAttribute("stop-opacity", "0"), v.setAttribute("offset", "100%"), m.append(" ", f, " ", v, " "), i.append(" ", a, " ", c, " ", p, " ", m, " ");
             const b = e.createElementNS("http://www.w3.org/2000/svg", "g");
             b.setAttribute("fill", "none"), b.setAttribute("fill-rule", "evenodd");
 
@@ -3414,9 +3414,9 @@ class l {
     const c = e.result.warnings;
     if (!c || 0 === c.length) return r;
     const d = this.dom.find("summary", s),
-          p = this.dom.createChildOf(d, "div", "lh-warnings");
-    if (this.dom.createChildOf(p, "span").textContent = n.warningHeader, 1 === c.length) p.appendChild(this.dom.createTextNode(c.join("")));else {
-      const e = this.dom.createChildOf(p, "ul");
+          h = this.dom.createChildOf(d, "div", "lh-warnings");
+    if (this.dom.createChildOf(h, "span").textContent = n.warningHeader, 1 === c.length) h.appendChild(this.dom.createTextNode(c.join("")));else {
+      const e = this.dom.createChildOf(h, "ul");
 
       for (const t of c) {
         this.dom.createChildOf(e, "li").textContent = t;
@@ -3715,8 +3715,8 @@ class s {
 
 const c = s,
       d = 0,
-      p = 1,
-      h = 2,
+      h = 1,
+      p = 2,
       u = 0,
       g = 1,
       m = 2,
@@ -3774,7 +3774,7 @@ class y {
           {
       classList: c
     } = s;
-    v[i].forEach(e => c.add(e)), a === p ? c.add("lh-snippet__show-if-collapsed") : a === h && c.add("lh-snippet__show-if-expanded");
+    v[i].forEach(e => c.add(e)), a === h ? c.add("lh-snippet__show-if-collapsed") : a === p && c.add("lh-snippet__show-if-expanded");
     const d = n + (o ? "…" : ""),
           u = e.find(".lh-snippet__line code", s);
     return i === f ? u.appendChild(e.convertMarkdownLinkSnippets(d)) : u.textContent = d, e.find(".lh-snippet__line-number", s).textContent = r.toString(), s;
@@ -3825,12 +3825,12 @@ class y {
         previousLine: v
       } = b(l, n),
             w = !!f;
-      !!v && !w && (m = !0), w && m && (c.append(y.renderOmittedLinesPlaceholder(e, t, p)), m = !1);
+      !!v && !w && (m = !0), w && m && (c.append(y.renderOmittedLinesPlaceholder(e, t, h)), m = !1);
       const x = !o && 1 === n;
 
       if (!o && !!i || x) {
         const r = !l.some(e => e.lineNumber > n) || 1 === n;
-        c.append(y.renderOmittedLinesPlaceholder(e, t, r ? h : d)), m = !1;
+        c.append(y.renderOmittedLinesPlaceholder(e, t, r ? p : d)), m = !1;
       }
 
       if (!o) continue;
@@ -3839,7 +3839,7 @@ class y {
             E = k.length > 0 || s,
             A = Object.assign({}, o, {
         contentType: E ? g : u,
-        visibility: f ? d : h
+        visibility: f ? d : p
       });
 
       c.append(y.renderSnippetLine(e, t, A)), k.forEach(n => {
@@ -3892,10 +3892,10 @@ class k {
     const s = n.top / o.height,
           c = s + r.height / o.height,
           d = n.left / o.width,
-          p = d + r.width / o.width,
-          h = [`0,0             1,0            1,${s}          0,${s}`, `0,${c}     1,${c}    1,1               0,1`, `0,${s}        ${d},${s} ${d},${c} 0,${c}`, `${p},${s} 1,${s}       1,${c}       ${p},${c}`];
+          h = d + r.width / o.width,
+          p = [`0,0             1,0            1,${s}          0,${s}`, `0,${c}     1,${c}    1,1               0,1`, `0,${s}        ${d},${s} ${d},${c} 0,${c}`, `${h},${s} 1,${s}       1,${c}       ${h},${c}`];
 
-    for (const t of h) {
+    for (const t of p) {
       const n = e.createElementNS("http://www.w3.org/2000/svg", "polygon");
       n.setAttribute("points", t), a.append(n);
     }
@@ -3968,10 +3968,10 @@ class k {
       height: t.height
     });
     e.find("div.lh-element-screenshot__content", i).style.top = `-${c}px`;
-    const p = e.find("div.lh-element-screenshot__image", i);
-    p.style.width = s + "px", p.style.height = c + "px", p.style.backgroundPositionY = -d.screenshot.top * a + "px", p.style.backgroundPositionX = -d.screenshot.left * a + "px", p.style.backgroundSize = `${t.width * a}px ${t.height * a}px`;
-    const h = e.find("div.lh-element-screenshot__element-marker", i);
-    h.style.width = n.width * a + "px", h.style.height = n.height * a + "px", h.style.left = d.clip.left * a + "px", h.style.top = d.clip.top * a + "px";
+    const h = e.find("div.lh-element-screenshot__image", i);
+    h.style.width = s + "px", h.style.height = c + "px", h.style.backgroundPositionY = -d.screenshot.top * a + "px", h.style.backgroundPositionX = -d.screenshot.left * a + "px", h.style.backgroundSize = `${t.width * a}px ${t.height * a}px`;
+    const p = e.find("div.lh-element-screenshot__element-marker", i);
+    p.style.width = n.width * a + "px", p.style.height = n.height * a + "px", p.style.left = d.clip.left * a + "px", p.style.top = d.clip.top * a + "px";
     const u = e.find("div.lh-element-screenshot__mask", i);
     return u.style.width = s + "px", u.style.height = c + "px", k.renderClipPathInScreenshot(e, u, d.clip, n, l), i;
   }
@@ -4531,11 +4531,11 @@ class z extends l {
             c = `lh-metrics-toggle${i.getUniqueSuffix()}`;
       s.setAttribute("aria-label", "Toggle the display of metric descriptions"), s.type = "checkbox", s.id = c, n.prepend(s);
       const d = this.dom.find(".lh-audit-group__header", n),
-            p = this.dom.createChildOf(d, "label", "lh-metrics-toggle__label");
-      p.htmlFor = c;
-      const h = this.dom.createChildOf(p, "span", "lh-metrics-toggle__labeltext--show"),
-            u = this.dom.createChildOf(p, "span", "lh-metrics-toggle__labeltext--hide");
-      h.textContent = i.i18n.strings.expandView, u.textContent = i.i18n.strings.collapseView;
+            h = this.dom.createChildOf(d, "label", "lh-metrics-toggle__label");
+      h.htmlFor = c;
+      const p = this.dom.createChildOf(h, "span", "lh-metrics-toggle__labeltext--show"),
+            u = this.dom.createChildOf(h, "span", "lh-metrics-toggle__labeltext--hide");
+      p.textContent = i.i18n.strings.expandView, u.textContent = i.i18n.strings.collapseView;
       const g = this.dom.createElement("div", "lh-metrics-container");
       n.insertBefore(g, l), a.forEach(e => {
         g.appendChild(this._renderMetric(e));
@@ -4559,9 +4559,9 @@ class z extends l {
     }
 
     const d = e.auditRefs.filter(e => "load-opportunity" === this._classifyPerformanceAudit(e)).filter(e => !i.showAsPassed(e.result)).sort((e, t) => this._getWastedMs(t) - this._getWastedMs(e)),
-          p = a.filter(e => !!e.relevantAudits);
+          h = a.filter(e => !!e.relevantAudits);
 
-    if (p.length && this.renderMetricAuditFilter(p, o), d.length) {
+    if (h.length && this.renderMetricAuditFilter(h, o), d.length) {
       const e = 2e3,
             n = d.map(e => this._getWastedMs(e)),
             i = Math.max(...n),
@@ -4569,15 +4569,15 @@ class z extends l {
             [l, s] = this.renderAuditGroup(t["load-opportunities"]),
             c = this.dom.createComponent("opportunityHeader");
       this.dom.find(".lh-load-opportunity__col--one", c).textContent = r.opportunityResourceColumnLabel, this.dom.find(".lh-load-opportunity__col--two", c).textContent = r.opportunitySavingsColumnLabel;
-      const p = this.dom.find(".lh-load-opportunity__header", c);
-      l.insertBefore(p, s), d.forEach(e => l.insertBefore(this._renderOpportunity(e, a), s)), l.classList.add("lh-audit-group--load-opportunities"), o.appendChild(l);
+      const h = this.dom.find(".lh-load-opportunity__header", c);
+      l.insertBefore(h, s), d.forEach(e => l.insertBefore(this._renderOpportunity(e, a), s)), l.classList.add("lh-audit-group--load-opportunities"), o.appendChild(l);
     }
 
-    const h = e.auditRefs.filter(e => "diagnostic" === this._classifyPerformanceAudit(e)).filter(e => !i.showAsPassed(e.result)).sort((e, t) => ("informative" === e.result.scoreDisplayMode ? 100 : Number(e.result.score)) - ("informative" === t.result.scoreDisplayMode ? 100 : Number(t.result.score)));
+    const p = e.auditRefs.filter(e => "diagnostic" === this._classifyPerformanceAudit(e)).filter(e => !i.showAsPassed(e.result)).sort((e, t) => ("informative" === e.result.scoreDisplayMode ? 100 : Number(e.result.score)) - ("informative" === t.result.scoreDisplayMode ? 100 : Number(t.result.score)));
 
-    if (h.length) {
+    if (p.length) {
       const [e, n] = this.renderAuditGroup(t.diagnostics);
-      h.forEach(t => e.insertBefore(this.renderAudit(t), n)), e.classList.add("lh-audit-group--diagnostics"), o.appendChild(e);
+      p.forEach(t => e.insertBefore(this.renderAudit(t), n)), e.classList.add("lh-audit-group--diagnostics"), o.appendChild(e);
     }
 
     const u = e.auditRefs.filter(e => this._classifyPerformanceAudit(e) && i.showAsPassed(e.result));
@@ -4858,16 +4858,16 @@ class L {
     const c = this._dom.createElement("div", "lh-container"),
           d = this._dom.createElement("div", "lh-report");
 
-    let p;
+    let h;
     d.appendChild(this._renderReportWarnings(e));
-    1 === Object.keys(e.categories).length ? s.classList.add("lh-header--solo-category") : p = this._dom.createElement("div", "lh-scores-header");
+    1 === Object.keys(e.categories).length ? s.classList.add("lh-header--solo-category") : h = this._dom.createElement("div", "lh-scores-header");
 
-    const h = this._dom.createElement("div");
+    const p = this._dom.createElement("div");
 
-    if (h.classList.add("lh-scorescale-wrap"), h.append(this._dom.createComponent("scorescale")), p) {
+    if (p.classList.add("lh-scorescale-wrap"), p.append(this._dom.createComponent("scorescale")), h) {
       const t = this._dom.find(".lh-scores-container", s);
 
-      p.append(...this._renderScoreGauges(e, o, a)), t.appendChild(p), t.appendChild(h);
+      h.append(...this._renderScoreGauges(e, o, a)), t.appendChild(h), t.appendChild(p);
 
       const n = this._dom.createElement("div", "lh-sticky-header");
 
@@ -4884,7 +4884,7 @@ class L {
       n.dom.createChildOf(u, "div", "lh-category-wrapper").appendChild(n.render(t, e.categoryGroups, g));
     }
 
-    o.injectFinalScreenshot(u, e.audits, h);
+    o.injectFinalScreenshot(u, e.audits, p);
 
     const m = this._dom.createFragment();
 
@@ -5226,22 +5226,32 @@ class U {
 
 }
 
-function B(e) {
-  return function (e, t) {
-    const n = t ? new Date(t) : new Date(),
-          r = n.toLocaleTimeString("en-US", {
-      hour12: !1
-    }),
-          o = n.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit"
-    }).split("/");
-    return o.unshift(o.pop()), `${e}_${o.join("-")}_${r}`.replace(/[/?<>\\:*|"]/g, "-");
-  }(new URL(e.finalUrl).hostname, e.fetchTime);
+function B(e, t) {
+  const n = t ? new Date(t) : new Date(),
+        r = n.toLocaleTimeString("en-US", {
+    hour12: !1
+  }),
+        o = n.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).split("/");
+  o.unshift(o.pop());
+  return `${e}_${o.join("-")}_${r}`.replace(/[/?<>\\:*|"]/g, "-");
 }
 
-class O {
+var O = {
+  getLhrFilenamePrefix: function (e) {
+    return B(new URL(e.finalUrl).hostname, e.fetchTime);
+  },
+  getFilenamePrefix: B,
+  getFlowResultFilenamePrefix: function (e) {
+    const t = e.steps[0].lhr;
+    return B(e.name.replace(/\s/g, "-"), t.fetchTime);
+  }
+};
+
+class I {
   constructor(e, t = {}) {
     this.json, this._dom = e, this._opts = t, this._topbar = t.omitTopbar ? null : new U(this, e), this.onMediaQueryChange = this.onMediaQueryChange.bind(this);
   }
@@ -5395,19 +5405,19 @@ class O {
   }
 
   _saveFile(e) {
-    const t = B(this.json);
+    const t = O.getLhrFilenamePrefix(this.json);
 
     this._dom.saveFile(e, t);
   }
 
 }
 
-function I(e, t = {}) {
+function V(e, t = {}) {
   const n = document.createElement("article");
   n.classList.add("lh-root", "lh-vars");
   const r = new a(n.ownerDocument, n);
   new L(r).renderReport(e, n, t);
-  return new O(r, t).initFeatures(e), n;
+  return new I(r, t).initFeatures(e), n;
 }
 /* src/components/SvelteLighthouseViewer.svelte generated by Svelte v3.44.2 */
 
@@ -5446,7 +5456,7 @@ function instance($$self, $$props, $$invalidate) {
   } = $$props;
   let container;
   onMount(() => {
-    const renderedReport = I(json);
+    const renderedReport = V(json);
     container.appendChild(renderedReport);
   });
 
