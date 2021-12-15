@@ -1,2 +1,2 @@
-import { renderReport } from './imported/renderer/api';
+import { renderReport } from 'lighthouse/dist/report/bundle.esm';
 export { renderReport };
