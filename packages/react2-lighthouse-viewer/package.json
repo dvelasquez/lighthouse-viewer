@@ -1,6 +1,6 @@
 {
   "name": "react2-lighthouse-viewer",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -38,7 +38,7 @@
     "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/react"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.1.43"
+    "lighthouse-viewer": "^0.1.44"
   },
   "devDependencies": {
     "@types/react": "17.0.37",

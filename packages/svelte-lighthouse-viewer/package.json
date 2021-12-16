@@ -1,6 +1,6 @@
 {
   "name": "svelte-lighthouse-viewer",
-  "version": "0.1.54",
+  "version": "0.1.55",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -42,7 +42,7 @@
     "svelte": "^3.23.2"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.1.43"
+    "lighthouse-viewer": "^0.1.44"
   },
   "devDependencies": {
     "cssnano": "5.0.12",
