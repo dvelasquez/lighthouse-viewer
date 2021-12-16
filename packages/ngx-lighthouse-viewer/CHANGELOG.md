@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.26 (2021-12-16)
+
+**Note:** Version bump only for package ngx-lighthouse-viewer-workspace
+
+
+
+
+
 ## 0.0.25 (2021-12-15)
 
 **Note:** Version bump only for package ngx-lighthouse-viewer-workspace
