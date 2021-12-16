@@ -36,7 +36,7 @@ importers:
       rollup-plugin-terser: 7.0.2
       snyk: 1.790.0
       start-server-and-test: 1.14.0
-      svelte: 3.44.2
+      svelte: 3.44.3
       svelte-preprocess: 4.10.0
       tslib: 2.3.1
       typescript: 4.5.3
@@ -60,7 +60,7 @@ importers:
       http-server: 14.0.0
       lerna: 4.0.0
       parcel-bundler: 1.12.5
-      parcel-plugin-svelte: 4.0.9_2b52d64d6d60106e86d8972e9599feb7
+      parcel-plugin-svelte: 4.0.9_78c19445bf130014d217f5c69af019d3
       postcss: 8.4.5
       prettier: 2.5.1
       rimraf: 3.0.2
@@ -69,12 +69,12 @@ importers:
       rollup-plugin-dev: 2.0.1
       rollup-plugin-html: 0.2.1
       rollup-plugin-postcss: 4.0.2_postcss@8.4.5
-      rollup-plugin-svelte: 7.1.0_rollup@2.61.1+svelte@3.44.2
+      rollup-plugin-svelte: 7.1.0_rollup@2.61.1+svelte@3.44.3
       rollup-plugin-terser: 7.0.2_rollup@2.61.1
       snyk: 1.790.0
       start-server-and-test: 1.14.0
-      svelte: 3.44.2
-      svelte-preprocess: 4.10.0_b5e2b2c30c1e778ed53a605cab2d3d25
+      svelte: 3.44.3
+      svelte-preprocess: 4.10.0_7a48bf92c3f685184fac5f658b02abd9
       tslib: 2.3.1
       typescript: 4.5.3
 
@@ -116,7 +116,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.42
+      lighthouse-viewer: ^0.1.43
       ng-packagr: 13.1.1
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -158,7 +158,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.42
+      lighthouse-viewer: ^0.1.43
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -175,25 +175,25 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.42
+      lighthouse-viewer: ^0.1.43
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
-      svelte: 3.44.2
+      svelte: 3.44.3
       svelte-preprocess: 4.10.0
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       cssnano: 5.0.12_postcss@8.4.5
       parcel-bundler: 1.12.5
-      parcel-plugin-svelte: 4.0.9_2b52d64d6d60106e86d8972e9599feb7
-      svelte: 3.44.2
-      svelte-preprocess: 4.10.0_b5e2b2c30c1e778ed53a605cab2d3d25
+      parcel-plugin-svelte: 4.0.9_78c19445bf130014d217f5c69af019d3
+      svelte: 3.44.3
+      svelte-preprocess: 4.10.0_7a48bf92c3f685184fac5f658b02abd9
 
   packages/vue-lighthouse-viewer:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.12
-      lighthouse-viewer: ^0.1.42
+      lighthouse-viewer: ^0.1.43
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -11071,7 +11071,7 @@ packages:
       - supports-color
     dev: true
 
-  /parcel-plugin-svelte/4.0.9_2b52d64d6d60106e86d8972e9599feb7:
+  /parcel-plugin-svelte/4.0.9_78c19445bf130014d217f5c69af019d3:
     resolution: {integrity: sha512-ZMAvd3FS/J+4apTJTZhrQ3gl/37sVSBgMPgjzPuWcIhzvk69zFiUa0vSv8heyGSPVCRwrzr/V3UQQX1uap2uwQ==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -11079,7 +11079,7 @@ packages:
       svelte: ^3.0.0
     dependencies:
       parcel-bundler: 1.12.5
-      svelte: 3.44.2
+      svelte: 3.44.3
     dev: true
 
   /parent-module/1.0.1:
@@ -13347,7 +13347,7 @@ packages:
       source-map-resolve: 0.6.0
     dev: true
 
-  /rollup-plugin-svelte/7.1.0_rollup@2.61.1+svelte@3.44.2:
+  /rollup-plugin-svelte/7.1.0_rollup@2.61.1+svelte@3.44.3:
     resolution: {integrity: sha512-vopCUq3G+25sKjwF5VilIbiY6KCuMNHP1PFvx2Vr3REBNMDllKHFZN2B9jwwC+MqNc3UPKkjXnceLPEjTjXGXg==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -13357,7 +13357,7 @@ packages:
       require-relative: 0.8.7
       rollup: 2.61.1
       rollup-pluginutils: 2.8.2
-      svelte: 3.44.2
+      svelte: 3.44.3
     dev: true
 
   /rollup-plugin-terser/7.0.2_rollup@2.61.1:
@@ -14453,7 +14453,7 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-preprocess/4.10.0_b5e2b2c30c1e778ed53a605cab2d3d25:
+  /svelte-preprocess/4.10.0_7a48bf92c3f685184fac5f658b02abd9:
     resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -14501,12 +14501,12 @@ packages:
       postcss: 8.4.5
       sorcery: 0.10.0
       strip-indent: 3.0.0
-      svelte: 3.44.2
+      svelte: 3.44.3
       typescript: 4.5.3
     dev: true
 
-  /svelte/3.44.2:
-    resolution: {integrity: sha512-jrZhZtmH3ZMweXg1Q15onb8QlWD+a5T5Oca4C1jYvSURp2oD35h4A5TV6t6MEa93K4LlX6BkafZPdQoFjw/ylA==}
+  /svelte/3.44.3:
+    resolution: {integrity: sha512-aGgrNCip5PQFNfq9e9tmm7EYxWLVHoFsEsmKrtOeRD8dmoGDdyTQ+21xd7qgFd8MNdKGSYvg7F9dr+Tc0yDymg==}
     engines: {node: '>= 8'}
     dev: true
 
