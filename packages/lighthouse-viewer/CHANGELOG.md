@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.46 (2021-12-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lighthouse-viewer to v0.1.45 ([#678](https://github.com/dvelasquez/vue-lighthouse-viewer/issues/678)) ([d988cbc](https://github.com/dvelasquez/vue-lighthouse-viewer/commit/d988cbc58b445eef6f449d2df5f5ebc4f2ca2e47))
+
+
+
+
+
 ## 0.1.45 (2021-12-16)
 
 **Note:** Version bump only for package lighthouse-viewer

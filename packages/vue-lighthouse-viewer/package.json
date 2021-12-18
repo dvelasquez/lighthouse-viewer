@@ -1,6 +1,6 @@
 {
   "name": "vue-lighthouse-viewer",
-  "version": "0.1.45",
+  "version": "0.1.46",
   "private": false,
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
@@ -41,7 +41,7 @@
     "vue": "^2.6.14"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.1.45"
+    "lighthouse-viewer": "^0.1.46"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "3.3.0",
