@@ -35,7 +35,7 @@
     "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/vanillajs"
   },
   "devDependencies": {
-    "cssnano": "5.0.12",
+    "cssnano": "5.0.13",
     "fs-extra": "10.0.0",
     "lighthouse": "9.1.0",
     "parcel-bundler": "1.12.5",
