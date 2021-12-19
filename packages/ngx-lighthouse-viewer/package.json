@@ -32,7 +32,7 @@
     "@angular/cli": "13.1.2",
     "@angular/compiler-cli": "13.1.0",
     "@types/jasmine": "3.10.2",
-    "@types/node": "16.11.12",
+    "@types/node": "16.11.14",
     "concurrently": "6.4.0",
     "copyfiles": "2.4.1",
     "cssnano": "5.0.12",
