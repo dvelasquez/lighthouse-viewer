@@ -116,8 +116,8 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.48
-      ng-packagr: 13.1.1
+      lighthouse-viewer: ^0.1.49
+      ng-packagr: 13.1.2
       rxjs: 7.4.0
       tslib: 2.3.1
       typescript: 4.5.4
@@ -136,7 +136,7 @@ importers:
       tslib: 2.3.1
       zone.js: 0.11.4
     devDependencies:
-      '@angular-devkit/build-angular': 13.1.2_c850b4e3f9b8e3e0a1694f720025c516
+      '@angular-devkit/build-angular': 13.1.2_1d0a29c49e339745258dfdb400585c1f
       '@angular/cli': 13.1.2
       '@angular/compiler-cli': 13.1.0_6ca78f2cd0b6fba34d642577e28e341f
       '@types/jasmine': 3.10.2
@@ -150,7 +150,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1_karma@6.3.9
       karma-jasmine-html-reporter: 1.7.0_eca4d63fdda006caef36f18ee3c5d751
-      ng-packagr: 13.1.1_2df055499441f2c6348c070462416e2f
+      ng-packagr: 13.1.2_2df055499441f2c6348c070462416e2f
       typescript: 4.5.4
 
   packages/react2-lighthouse-viewer:
@@ -158,7 +158,7 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.48
+      lighthouse-viewer: ^0.1.49
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -175,7 +175,7 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.48
+      lighthouse-viewer: ^0.1.49
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.3
@@ -193,7 +193,7 @@ importers:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.48
+      lighthouse-viewer: ^0.1.49
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -228,7 +228,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/13.1.2_c850b4e3f9b8e3e0a1694f720025c516:
+  /@angular-devkit/build-angular/13.1.2_1d0a29c49e339745258dfdb400585c1f:
     resolution: {integrity: sha512-0FeDqfjWJjgIU42T3136RNYb7Yv2as6Z8rAnfUlX6RjRGZf98+6ZQZ80yREgrLkm7L8G1qWJc1sn3NyVMDwf9A==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -293,7 +293,7 @@ packages:
       loader-utils: 3.2.0
       mini-css-extract-plugin: 2.4.5_webpack@5.65.0
       minimatch: 3.0.4
-      ng-packagr: 13.1.1_2df055499441f2c6348c070462416e2f
+      ng-packagr: 13.1.2_2df055499441f2c6348c070462416e2f
       open: 8.4.0
       ora: 5.4.1
       parse5-html-rewriting-stream: 6.0.1
@@ -2826,28 +2826,13 @@ packages:
       rollup: 2.61.1
     dev: true
 
-  /@rollup/plugin-json/4.1.0_rollup@2.61.0:
+  /@rollup/plugin-json/4.1.0_rollup@2.61.1:
     resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.61.0
-      rollup: 2.61.0
-    dev: true
-
-  /@rollup/plugin-node-resolve/13.0.6_rollup@2.61.0:
-    resolution: {integrity: sha512-sFsPDMPd4gMqnh2gS0uIxELnoRUp5kBl5knxD2EO0778G1oOJv4G1vyT2cpWz75OU2jDVcXhjVUuTAczGyFNKA==}
-    engines: {node: '>= 10.0.0'}
-    peerDependencies:
-      rollup: ^2.42.0
-    dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.61.0
-      '@types/resolve': 1.17.1
-      builtin-modules: 3.2.0
-      deepmerge: 4.2.2
-      is-module: 1.0.0
-      resolve: 1.20.0
-      rollup: 2.61.0
+      '@rollup/pluginutils': 3.1.0_rollup@2.61.1
+      rollup: 2.61.1
     dev: true
 
   /@rollup/plugin-node-resolve/13.1.1_rollup@2.61.1:
@@ -2898,18 +2883,6 @@ packages:
       rollup: 2.61.1
       tslib: 2.3.1
       typescript: 4.5.4
-    dev: true
-
-  /@rollup/pluginutils/3.1.0_rollup@2.61.0:
-    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
-    engines: {node: '>= 8.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0
-    dependencies:
-      '@types/estree': 0.0.39
-      estree-walker: 1.0.1
-      picomatch: 2.3.0
-      rollup: 2.61.0
     dev: true
 
   /@rollup/pluginutils/3.1.0_rollup@2.61.1:
@@ -10177,8 +10150,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /ng-packagr/13.1.1_2df055499441f2c6348c070462416e2f:
-    resolution: {integrity: sha512-7g1+jHggC8yHrQdxY4XCCSPQo+wLL04jCB1IFn6xKy0Vzb9VsOHUJb4Vn1TtWCWYzz9kBb8GM+aK8ch7rIqFwg==}
+  /ng-packagr/13.1.2_2df055499441f2c6348c070462416e2f:
+    resolution: {integrity: sha512-SYa+BWdcHI63Jp2V5mvck3sDOAwYDvgGCxl7qpnu3r8P9W0rbblzE3c4cQzsa26icpytCxshRRY6fSdRIsa/zw==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0}
     hasBin: true
     peerDependencies:
@@ -10187,8 +10160,8 @@ packages:
       typescript: '>=4.4.0 <4.6'
     dependencies:
       '@angular/compiler-cli': 13.1.0_6ca78f2cd0b6fba34d642577e28e341f
-      '@rollup/plugin-json': 4.1.0_rollup@2.61.0
-      '@rollup/plugin-node-resolve': 13.0.6_rollup@2.61.0
+      '@rollup/plugin-json': 4.1.0_rollup@2.61.1
+      '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
       ajv: 8.8.2
       ansi-colors: 4.1.1
       browserslist: 4.18.1
@@ -10203,13 +10176,13 @@ packages:
       jsonc-parser: 3.0.0
       less: 4.1.2
       ora: 5.4.1
-      postcss: 8.4.4
+      postcss: 8.4.5
       postcss-preset-env: 6.7.0
-      postcss-url: 10.1.3_postcss@8.4.4
-      rollup: 2.61.0
-      rollup-plugin-sourcemaps: 0.6.3_59d1dc86b681db3b49e74d1f97d0273a
+      postcss-url: 10.1.3_postcss@8.4.5
+      rollup: 2.61.1
+      rollup-plugin-sourcemaps: 0.6.3_e98b20648233d6d496d0a211fc04afee
       rxjs: 6.6.7
-      sass: 1.43.5
+      sass: 1.44.0
       stylus: 0.55.0
       tslib: 2.3.1
       typescript: 4.5.4
@@ -12304,7 +12277,7 @@ packages:
       postcss-selector-parser: 6.0.6
     dev: true
 
-  /postcss-url/10.1.3_postcss@8.4.4:
+  /postcss-url/10.1.3_postcss@8.4.5:
     resolution: {integrity: sha512-FUzyxfI5l2tKmXdYc6VTu3TWZsInayEKPbiyW+P6vmmIrrb4I6CGX0BFoewgYHLK+oIL5FECEK02REYRpBvUCw==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -12313,7 +12286,7 @@ packages:
       make-dir: 3.1.0
       mime: 2.5.2
       minimatch: 3.0.4
-      postcss: 8.4.4
+      postcss: 8.4.5
       xxhashjs: 0.2.2
     dev: true
 
@@ -13288,7 +13261,7 @@ packages:
       - ts-node
     dev: true
 
-  /rollup-plugin-sourcemaps/0.6.3_59d1dc86b681db3b49e74d1f97d0273a:
+  /rollup-plugin-sourcemaps/0.6.3_e98b20648233d6d496d0a211fc04afee:
     resolution: {integrity: sha512-paFu+nT1xvuO1tPFYXGe+XnQvg4Hjqv/eIhG8i5EspfYYPBKL57X7iVbfv55aNVASg3dzWvES9dmWsL2KhfByw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -13298,9 +13271,9 @@ packages:
       '@types/node':
         optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.61.0
+      '@rollup/pluginutils': 3.1.0_rollup@2.61.1
       '@types/node': 16.11.14
-      rollup: 2.61.0
+      rollup: 2.61.1
       source-map-resolve: 0.6.0
     dev: true
 
@@ -13342,14 +13315,6 @@ packages:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
       estree-walker: 0.6.1
-    dev: true
-
-  /rollup/2.61.0:
-    resolution: {integrity: sha512-teQ+T1mUYbyvGyUavCodiyA9hD4DxwYZJwr/qehZGhs1Z49vsmzelMVYMxGU4ZhGRKxYPupHuz5yzm/wj7VpWA==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: true
 
   /rollup/2.61.1:
@@ -13440,14 +13405,6 @@ packages:
       neo-async: 2.6.2
       sass: 1.44.0
       webpack: 5.65.0_esbuild@0.14.2
-    dev: true
-
-  /sass/1.43.5:
-    resolution: {integrity: sha512-WuNm+eAryMgQluL7Mbq9M4EruyGGMyal7Lu58FfnRMVWxgUzIvI7aSn60iNt3kn5yZBMR7G84fAGDcwqOF5JOg==}
-    engines: {node: '>=8.9.0'}
-    hasBin: true
-    dependencies:
-      chokidar: 3.5.2
     dev: true
 
   /sass/1.44.0:
