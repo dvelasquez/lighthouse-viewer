@@ -1,6 +1,6 @@
 {
   "name": "ngx-lighthouse-viewer-workspace",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,7 +22,7 @@
     "@angular/platform-browser": "13.1.0",
     "@angular/platform-browser-dynamic": "13.1.0",
     "@angular/router": "13.1.0",
-    "lighthouse-viewer": "^0.1.47",
+    "lighthouse-viewer": "^0.1.48",
     "rxjs": "7.4.0",
     "tslib": "2.3.1",
     "zone.js": "0.11.4"
