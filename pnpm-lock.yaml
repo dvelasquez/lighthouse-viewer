@@ -37,7 +37,7 @@ importers:
       snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.3
-      svelte-preprocess: 4.10.0
+      svelte-preprocess: 4.10.1
       tslib: 2.3.1
       typescript: 4.5.4
     devDependencies:
@@ -74,7 +74,7 @@ importers:
       snyk: 1.790.0
       start-server-and-test: 1.14.0
       svelte: 3.44.3
-      svelte-preprocess: 4.10.0_a77feb17e2d98801e15b65bd7ff1b1f2
+      svelte-preprocess: 4.10.1_a77feb17e2d98801e15b65bd7ff1b1f2
       tslib: 2.3.1
       typescript: 4.5.4
 
@@ -116,7 +116,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.50
+      lighthouse-viewer: ^0.1.51
       ng-packagr: 13.1.2
       rxjs: 7.4.0
       tslib: 2.3.1
@@ -131,7 +131,7 @@ importers:
       '@angular/platform-browser': 13.1.1_ba78c0245ba37c1eb9e40fba17f0c0db
       '@angular/platform-browser-dynamic': 13.1.1_53ae741ee19166964f64e7b56404e938
       '@angular/router': 13.1.1_b57cfce72efcce1bdc2391be51a25b4d
-      lighthouse-viewer: 0.1.51
+      lighthouse-viewer: link:../lighthouse-viewer
       rxjs: 7.4.0
       tslib: 2.3.1
       zone.js: 0.11.4
@@ -158,12 +158,12 @@ importers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.50
+      lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2
     dependencies:
-      lighthouse-viewer: 0.1.51
+      lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
@@ -175,31 +175,31 @@ importers:
   packages/svelte-lighthouse-viewer:
     specifiers:
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.50
+      lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.44.3
-      svelte-preprocess: 4.10.0
+      svelte-preprocess: 4.10.1
     dependencies:
-      lighthouse-viewer: 0.1.51
+      lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       cssnano: 5.0.13_postcss@8.4.5
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_78c19445bf130014d217f5c69af019d3
       svelte: 3.44.3
-      svelte-preprocess: 4.10.0_a77feb17e2d98801e15b65bd7ff1b1f2
+      svelte-preprocess: 4.10.1_a77feb17e2d98801e15b65bd7ff1b1f2
 
   packages/vue-lighthouse-viewer:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.13
-      lighthouse-viewer: ^0.1.50
+      lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
       vue-template-compiler: 2.6.14
     dependencies:
-      lighthouse-viewer: 0.1.51
+      lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       '@vue/component-compiler-utils': 3.3.0
       cssnano: 5.0.13_postcss@8.4.5
@@ -10391,10 +10391,6 @@ packages:
     resolution: {integrity: sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==}
     dev: true
 
-  /lighthouse-viewer/0.1.51:
-    resolution: {integrity: sha512-wI+NeCnJMH5PkKlGNOH+OPGi538505VukScjRvlZ5ipSfcTyfn974kENTsml8+LZ8nA0UtLJXZgXaEQLfdPeLw==}
-    dev: false
-
   /lighthouse/9.2.0:
     resolution: {integrity: sha512-lkD0soCiFFh1diZ1xL2R+aDO4WvSUwEF/ajNRDWWEobE9ta7Qm2EwhCMmA2v39WCI4QIBxJQ1OBNStNKaLfGCw==}
     engines: {node: '>=14.15'}
@@ -15474,8 +15470,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-preprocess/4.10.0_a77feb17e2d98801e15b65bd7ff1b1f2:
-    resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
+  /svelte-preprocess/4.10.1_a77feb17e2d98801e15b65bd7ff1b1f2:
+    resolution: {integrity: sha512-NSNloaylf+o9UeyUR2KvpdxrAyMdHl3U7rMnoP06/sG0iwJvlUM4TpMno13RaNqovh4AAoGsx1jeYcIyuGUXMw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
