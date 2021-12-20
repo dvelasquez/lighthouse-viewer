@@ -37,7 +37,7 @@
   "devDependencies": {
     "cssnano": "5.0.13",
     "fs-extra": "10.0.0",
-    "lighthouse": "9.1.0",
+    "lighthouse": "9.2.0",
     "parcel-bundler": "1.12.5",
     "replace-in-file": "6.3.2"
   },

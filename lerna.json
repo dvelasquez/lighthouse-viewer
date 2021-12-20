@@ -12,5 +12,6 @@
     "packages/vue-lighthouse-viewer",
     "packages/ngx-lighthouse-viewer"
   ],
-  "version": "independent"
+  "version": "independent",
+  "useWorkspaces": true
 }
