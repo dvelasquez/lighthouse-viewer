@@ -155,7 +155,7 @@ importers:
 
   packages/react2-lighthouse-viewer:
     specifiers:
-      '@types/react': 17.0.37
+      '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       cssnano: 5.0.14
       lighthouse-viewer: ^0.1.51
@@ -165,7 +165,7 @@ importers:
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
-      '@types/react': 17.0.37
+      '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       cssnano: 5.0.14_postcss@8.4.5
       parcel-bundler: 1.12.5
@@ -3941,11 +3941,11 @@ packages:
   /@types/react-dom/17.0.11:
     resolution: {integrity: sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==}
     dependencies:
-      '@types/react': 17.0.37
+      '@types/react': 17.0.38
     dev: true
 
-  /@types/react/17.0.37:
-    resolution: {integrity: sha512-2FS1oTqBGcH/s0E+CjrCCR9+JMpsu9b69RTFO+40ua43ZqP5MmQ4iUde/dMjWR909KxZwmOQIFq6AV6NjEG5xg==}
+  /@types/react/17.0.38:
+    resolution: {integrity: sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
