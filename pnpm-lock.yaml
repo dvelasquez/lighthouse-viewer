@@ -15,7 +15,7 @@ importers:
       '@typescript-eslint/parser': 5.7.0
       cpx: 1.5.0
       cross-env: 7.0.3
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       cypress: 9.1.1
       eslint: 8.4.1
       eslint-config-prettier: 8.3.0
@@ -52,7 +52,7 @@ importers:
       '@typescript-eslint/parser': 5.7.0_eslint@8.4.1+typescript@4.5.4
       cpx: 1.5.0
       cross-env: 7.0.3
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       cypress: 9.1.1
       eslint: 8.4.1
       eslint-config-prettier: 8.3.0_eslint@8.4.1
@@ -80,13 +80,13 @@ importers:
 
   packages/lighthouse-viewer:
     specifiers:
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       fs-extra: 10.0.0
       lighthouse: 9.2.0
       parcel-bundler: 1.12.5
       replace-in-file: 6.3.2
     devDependencies:
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       fs-extra: 10.0.0
       lighthouse: 9.2.0
       parcel-bundler: 1.12.5
@@ -109,7 +109,7 @@ importers:
       '@types/node': 16.11.14
       concurrently: 6.4.0
       copyfiles: 2.4.1
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       jasmine-core: 3.10.1
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
@@ -143,7 +143,7 @@ importers:
       '@types/node': 16.11.14
       concurrently: 6.4.0
       copyfiles: 2.4.1
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       jasmine-core: 3.10.1
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
@@ -157,7 +157,7 @@ importers:
     specifiers:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       react: 17.0.2
@@ -167,14 +167,14 @@ importers:
     devDependencies:
       '@types/react': 17.0.37
       '@types/react-dom': 17.0.11
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       parcel-bundler: 1.12.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
   packages/svelte-lighthouse-viewer:
     specifiers:
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
@@ -183,7 +183,7 @@ importers:
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_78c19445bf130014d217f5c69af019d3
       svelte: 3.44.3
@@ -192,7 +192,7 @@ importers:
   packages/vue-lighthouse-viewer:
     specifiers:
       '@vue/component-compiler-utils': 3.3.0
-      cssnano: 5.0.13
+      cssnano: 5.0.14
       lighthouse-viewer: ^0.1.51
       parcel-bundler: 1.12.5
       vue: 2.6.14
@@ -202,7 +202,7 @@ importers:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
       '@vue/component-compiler-utils': 3.3.0
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       parcel-bundler: 1.12.5
       vue: 2.6.14
       vue-hot-reload-api: 2.3.4
@@ -6437,14 +6437,13 @@ packages:
       postcss: 7.0.39
     dev: true
 
-  /cssnano/5.0.13_postcss@8.4.5:
-    resolution: {integrity: sha512-cAmLruIF28a7vKIOieXCTrllaLwbouxV1PPi8Z4M+XloXbmeooWAu4KhJgASo4vQUwbs2pqDgAlnZ1ZKJZKtuw==}
+  /cssnano/5.0.14_postcss@8.4.5:
+    resolution: {integrity: sha512-qzhRkFvBhv08tbyKCIfWbxBXmkIpLl1uNblt8SpTHkgLfON5OCPX/CCnkdNmEosvo8bANQYmTTMEgcVBlisHaw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
       cssnano-preset-default: 5.1.9_postcss@8.4.5
-      is-resolvable: 1.1.0
       lilconfig: 2.0.4
       postcss: 8.4.5
       yaml: 1.10.2
@@ -14342,7 +14341,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       concat-with-sourcemaps: 1.1.0
-      cssnano: 5.0.13_postcss@8.4.5
+      cssnano: 5.0.14_postcss@8.4.5
       import-cwd: 3.0.0
       p-queue: 6.6.2
       pify: 5.0.0

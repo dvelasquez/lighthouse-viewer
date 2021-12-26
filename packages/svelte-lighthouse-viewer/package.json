@@ -45,7 +45,7 @@
     "lighthouse-viewer": "^0.1.51"
   },
   "devDependencies": {
-    "cssnano": "5.0.13",
+    "cssnano": "5.0.14",
     "parcel-bundler": "1.12.5",
     "parcel-plugin-svelte": "4.0.9",
     "svelte": "3.44.3",
