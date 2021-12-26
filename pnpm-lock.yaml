@@ -116,7 +116,7 @@ importers:
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1
       karma-jasmine-html-reporter: 1.7.0
-      lighthouse-viewer: ^0.1.51
+      lighthouse-viewer: 0.1.51
       ng-packagr: 13.1.2
       rxjs: 7.4.0
       tslib: 2.3.1
