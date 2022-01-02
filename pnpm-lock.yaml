@@ -29,7 +29,7 @@ importers:
       rimraf: 3.0.2
       rollup: 2.61.1
       rollup-plugin-analyzer: 4.0.0
-      rollup-plugin-dev: 2.0.1
+      rollup-plugin-dev: 2.0.2
       rollup-plugin-html: 0.2.1
       rollup-plugin-postcss: 4.0.2
       rollup-plugin-svelte: 7.1.0
@@ -66,7 +66,7 @@ importers:
       rimraf: 3.0.2
       rollup: 2.61.1
       rollup-plugin-analyzer: 4.0.0
-      rollup-plugin-dev: 2.0.1
+      rollup-plugin-dev: 2.0.2
       rollup-plugin-html: 0.2.1
       rollup-plugin-postcss: 4.0.2_postcss@8.4.5
       rollup-plugin-svelte: 7.1.0_rollup@2.61.1+svelte@3.44.3
@@ -14307,8 +14307,8 @@ packages:
     engines: {node: '>=8.0.0'}
     dev: true
 
-  /rollup-plugin-dev/2.0.1:
-    resolution: {integrity: sha512-pDXfL9qHglavbtGzFllAl95zbbrnFpxb5W4kKyVBAowm3mwFIAGP1VDrXkUvKKAyEviWnWJLwj63jOB+dT5pZA==}
+  /rollup-plugin-dev/2.0.2:
+    resolution: {integrity: sha512-a1Ex131Me6dsqYGS5lEeLFQJycrQYfnJdv4VW9X5KM4WIIOOMcDvKxbkyJHETtlzTUCh9evAD9aHx54CFkaZyg==}
     dependencies:
       date-time: 4.0.0
       fastify: 3.25.0
