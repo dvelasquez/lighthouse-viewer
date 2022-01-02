@@ -8,7 +8,7 @@ importers:
       '@rollup/plugin-commonjs': 21.0.1
       '@rollup/plugin-html': 0.2.4
       '@rollup/plugin-node-resolve': 13.1.1
-      '@rollup/plugin-replace': 3.0.0
+      '@rollup/plugin-replace': 3.0.1
       '@rollup/plugin-run': 2.1.0
       '@rollup/plugin-typescript': 8.3.0
       '@typescript-eslint/eslint-plugin': 5.7.0
@@ -45,7 +45,7 @@ importers:
       '@rollup/plugin-commonjs': 21.0.1_rollup@2.61.1
       '@rollup/plugin-html': 0.2.4_rollup@2.61.1
       '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
-      '@rollup/plugin-replace': 3.0.0_rollup@2.61.1
+      '@rollup/plugin-replace': 3.0.1_rollup@2.61.1
       '@rollup/plugin-run': 2.1.0_rollup@2.61.1
       '@rollup/plugin-typescript': 8.3.0_3bb347879280457c0420527ae9f527b5
       '@typescript-eslint/eslint-plugin': 5.7.0_915acdfead96f701b1277a1a723fc8d4
@@ -3752,8 +3752,8 @@ packages:
       rollup: 2.61.1
     dev: true
 
-  /@rollup/plugin-replace/3.0.0_rollup@2.61.1:
-    resolution: {integrity: sha512-3c7JCbMuYXM4PbPWT4+m/4Y6U60SgsnDT/cCyAyUKwFHg7pTSfsSQzIpETha3a3ig6OdOKzZz87D9ZXIK3qsDg==}
+  /@rollup/plugin-replace/3.0.1_rollup@2.61.1:
+    resolution: {integrity: sha512-989J5oRzf3mm0pO/0djTijdfEh9U3n63BIXN5X7T4U9BP+fN4oxQ6DvDuBvFaHA6scaHQRclqmKQEkBhB7k7Hg==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
