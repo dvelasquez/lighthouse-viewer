@@ -7,7 +7,7 @@ importers:
       '@rollup/plugin-alias': 3.1.9
       '@rollup/plugin-commonjs': 21.0.1
       '@rollup/plugin-html': 0.2.4
-      '@rollup/plugin-node-resolve': 13.1.1
+      '@rollup/plugin-node-resolve': 13.1.2
       '@rollup/plugin-replace': 3.0.1
       '@rollup/plugin-run': 2.1.0
       '@rollup/plugin-typescript': 8.3.0
@@ -44,7 +44,7 @@ importers:
       '@rollup/plugin-alias': 3.1.9_rollup@2.61.1
       '@rollup/plugin-commonjs': 21.0.1_rollup@2.61.1
       '@rollup/plugin-html': 0.2.4_rollup@2.61.1
-      '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
+      '@rollup/plugin-node-resolve': 13.1.2_rollup@2.61.1
       '@rollup/plugin-replace': 3.0.1_rollup@2.61.1
       '@rollup/plugin-run': 2.1.0_rollup@2.61.1
       '@rollup/plugin-typescript': 8.3.0_3bb347879280457c0420527ae9f527b5
@@ -3739,6 +3739,21 @@ packages:
 
   /@rollup/plugin-node-resolve/13.1.1_rollup@2.61.1:
     resolution: {integrity: sha512-6QKtRevXLrmEig9UiMYt2fSvee9TyltGRfw+qSs6xjUnxwjOzTOqy+/Lpxsgjb8mJn1EQNbCDAvt89O4uzL5kw==}
+    engines: {node: '>= 10.0.0'}
+    peerDependencies:
+      rollup: ^2.42.0
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.61.1
+      '@types/resolve': 1.17.1
+      builtin-modules: 3.2.0
+      deepmerge: 4.2.2
+      is-module: 1.0.0
+      resolve: 1.20.0
+      rollup: 2.61.1
+    dev: true
+
+  /@rollup/plugin-node-resolve/13.1.2_rollup@2.61.1:
+    resolution: {integrity: sha512-xyqbuf1vyOPC60jEKhx3DBHunymnCJswzjNTKfX4Jz7zCPar1UqbRZCNY1u5QaXh97beaFTWdoUUWiV4qX8o/g==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
       rollup: ^2.42.0
