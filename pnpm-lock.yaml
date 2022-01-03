@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@rollup/plugin-alias': 3.1.8
+      '@rollup/plugin-alias': 3.1.9
       '@rollup/plugin-commonjs': 21.0.1
       '@rollup/plugin-html': 0.2.4
       '@rollup/plugin-node-resolve': 13.1.1
@@ -41,7 +41,7 @@ importers:
       tslib: 2.3.1
       typescript: 4.5.4
     devDependencies:
-      '@rollup/plugin-alias': 3.1.8_rollup@2.61.1
+      '@rollup/plugin-alias': 3.1.9_rollup@2.61.1
       '@rollup/plugin-commonjs': 21.0.1_rollup@2.61.1
       '@rollup/plugin-html': 0.2.4_rollup@2.61.1
       '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
@@ -3693,8 +3693,8 @@ packages:
       physical-cpu-count: 2.0.0
     dev: true
 
-  /@rollup/plugin-alias/3.1.8_rollup@2.61.1:
-    resolution: {integrity: sha512-tf7HeSs/06wO2LPqKNY3Ckbvy0JRe7Jyn98bXnt/gfrxbe+AJucoNJlsEVi9sdgbQtXemjbakCpO/76JVgnHpA==}
+  /@rollup/plugin-alias/3.1.9_rollup@2.61.1:
+    resolution: {integrity: sha512-QI5fsEvm9bDzt32k39wpOwZhVzRcL5ydcffUHMyLVaVaLeC70I8TJZ17F1z1eMoLu4E/UOcH9BWVkKpIKdrfiw==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0
@@ -8125,6 +8125,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
 
   /filename-regex/2.0.1:
