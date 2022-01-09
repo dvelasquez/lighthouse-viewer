@@ -48,7 +48,7 @@
     "cssnano": "5.0.14",
     "parcel-bundler": "1.12.5",
     "parcel-plugin-svelte": "4.0.9",
-    "svelte": "3.44.3",
+    "svelte": "3.45.0",
     "svelte-preprocess": "4.10.1"
   },
   "alias": {},
