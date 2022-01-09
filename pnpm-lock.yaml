@@ -110,7 +110,7 @@ importers:
       concurrently: 6.5.1
       copyfiles: 2.4.1
       cssnano: 5.0.14
-      jasmine-core: 3.10.1
+      jasmine-core: 3.99.0
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
       karma-coverage: 2.1.0
@@ -144,12 +144,12 @@ importers:
       concurrently: 6.5.1
       copyfiles: 2.4.1
       cssnano: 5.0.14_postcss@8.4.5
-      jasmine-core: 3.10.1
+      jasmine-core: 3.99.0
       karma: 6.3.9
       karma-chrome-launcher: 3.1.0
       karma-coverage: 2.1.0
       karma-jasmine: 4.0.1_karma@6.3.9
-      karma-jasmine-html-reporter: 1.7.0_eca4d63fdda006caef36f18ee3c5d751
+      karma-jasmine-html-reporter: 1.7.0_5b077d99e0b470201eaa2c1ea10b073d
       ng-packagr: 13.1.2_69c45ba37ea38f1b071a1c50af7e1b4e
       typescript: 4.5.4
 
@@ -9954,8 +9954,8 @@ packages:
       istanbul-lib-report: 3.0.0
     dev: true
 
-  /jasmine-core/3.10.1:
-    resolution: {integrity: sha512-ooZWSDVAdh79Rrj4/nnfklL3NQVra0BcuhcuWoAwwi+znLDoUeH87AFfeX8s+YeYi6xlv5nveRyaA1v7CintfA==}
+  /jasmine-core/3.99.0:
+    resolution: {integrity: sha512-+ZDaJlEfRopINQqgE+hvzRyDIQDeKfqqTvF8RzXsvU1yE3pBDRud2+Qfh9WvGgRpuzqxyQJVI6Amy5XQ11r/3w==}
     dev: true
 
   /jest-worker/26.6.2:
@@ -10170,14 +10170,14 @@ packages:
       - supports-color
     dev: true
 
-  /karma-jasmine-html-reporter/1.7.0_eca4d63fdda006caef36f18ee3c5d751:
+  /karma-jasmine-html-reporter/1.7.0_5b077d99e0b470201eaa2c1ea10b073d:
     resolution: {integrity: sha512-pzum1TL7j90DTE86eFt48/s12hqwQuiD+e5aXx2Dc9wDEn2LfGq6RoAxEZZjFiN0RDSCOnosEKRZWxbQ+iMpQQ==}
     peerDependencies:
       jasmine-core: '>=3.8'
       karma: '>=0.9'
       karma-jasmine: '>=1.1'
     dependencies:
-      jasmine-core: 3.10.1
+      jasmine-core: 3.99.0
       karma: 6.3.9
       karma-jasmine: 4.0.1_karma@6.3.9
     dev: true
@@ -10188,7 +10188,7 @@ packages:
     peerDependencies:
       karma: '*'
     dependencies:
-      jasmine-core: 3.10.1
+      jasmine-core: 3.99.0
       karma: 6.3.9
     dev: true
 
