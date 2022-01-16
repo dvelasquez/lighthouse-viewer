@@ -55,7 +55,7 @@
     "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-svelte": "7.1.0",
     "rollup-plugin-terser": "7.0.2",
-    "snyk": "1.790.0",
+    "snyk": "1.827.0",
     "start-server-and-test": "1.14.0",
     "svelte": "3.45.0",
     "svelte-preprocess": "4.10.1",
