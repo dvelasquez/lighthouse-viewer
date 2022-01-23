@@ -1,3 +1,4 @@
-import VueLighthouseViewer from './components/VueLighthouseViewer';
+import VueLighthouseViewer from './VueLighthouseViewer';
+
 export { VueLighthouseViewer };
 export default VueLighthouseViewer;

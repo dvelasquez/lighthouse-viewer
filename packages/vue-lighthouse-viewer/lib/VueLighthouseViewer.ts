@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { renderReport } from 'lighthouse-viewer';
-// import VueReportTemplate from './VueReportTemplate';
 
 export default Vue.extend<any, any, any, any>({
   name: 'VueLighthouseViewer',
@@ -24,7 +23,7 @@ export default Vue.extend<any, any, any, any>({
   },
   methods: {
     generateReport: function () {
-      const renderedReport = renderReport(this.json);
+      const renderedReport = renderReport(this.json, {});
       this.$el.innerHTML = '';
       this.$el.appendChild(renderedReport);
     },
