@@ -27,6 +27,7 @@
           <li><a id="vue-lighthouse-viewer-link" href="#">VueJS Demo</a></li>
           <li><a id="react2-lighthouse-viewer-link" href="#">React Demo</a></li>
           <li><a id="svelte-lighthouse-viewer-link" href="#">Svelte Demo</a></li>
+          <li><a id="ngx-lighthouse-viewer-link" href="#">Angular Demo</a></li>
         </ul>
       </nav>
       <h1>Vanilla JS Implementation</h1>
@@ -57,7 +58,7 @@
     <main>
       <h1>VANILLA APP</h1>
       <div id="lighthouse-viewer-element"></div>
-      <script src="./index.ts"></script>
+      <script type="module" src="/src/main.ts"></script>
     </main>
     <footer>
       <p>
@@ -94,7 +95,11 @@
         {
           id: 'svelte-lighthouse-viewer-link',
           link: '/lighthouse-viewer/svelte/index.html',
-        }
+        },
+        {
+          id: 'ngx-lighthouse-viewer-link',
+          link: '/lighthouse-viewer/ngx/index.html',
+        },
       ];
       lighthouseLinks.forEach(({ id, link }) => {
         const linkElement = document.getElementById(id);
