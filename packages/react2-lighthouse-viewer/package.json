@@ -2,12 +2,18 @@
   "name": "react2-lighthouse-viewer",
   "version": "0.1.57",
   "private": false,
-  "module": "./dist/index.esm.js",
-  "main": "./dist/index.umd.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/react-lighthouse-viewer.umd.js",
+  "module": "./dist/react-lighthouse-viewer.es.js",
+  "types": "./types/types.d.ts",
   "files": [
     "/dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/react-lighthouse-viewer.es.js",
+      "require": "./dist/react-lighthouse-viewer.umd.js"
+    }
+  },
   "license": "Apache-2.0",
   "author": {
     "name": "Danilo Velasquez",
@@ -27,26 +33,23 @@
     "webperf"
   ],
   "scripts": {
-    "build": "pnpm build:dist && pnpm build:types && pnpm copy:types",
-    "build:dist": "rollup -c",
-    "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
-    "copy:types": "cpx \"src/types/**/*\" dist/types",
-    "start": "rollup -c -w",
-    "prebuild": "rimraf dist",
-    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/react --no-autoinstall",
-    "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/react"
+    "dev": "vite",
+    "build:demo": "tsc && vite build",
+    "build:lib": "BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
+    "build": "npm run build:demo && npm run build:lib",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "lighthouse-viewer": "^0.1.51"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "lighthouse-viewer": "0.1.51"
   },
   "devDependencies": {
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
-    "cssnano": "5.0.15",
-    "parcel-bundler": "1.12.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@vitejs/plugin-react": "1.0.7",
+    "typescript": "4.4.4",
+    "vite": "^2.7.2"
   },
   "browserslist": [
     "last 1 Chrome version"
