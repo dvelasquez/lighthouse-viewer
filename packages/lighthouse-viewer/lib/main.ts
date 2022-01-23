@@ -1,3 +1,3 @@
-import { renderReport } from 'lighthouse/dist/report/bundle.esm'
+import { renderReport } from 'lighthouse/dist/report/bundle.esm';
 
-export { renderReport }
+export { renderReport };
