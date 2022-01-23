@@ -37,7 +37,7 @@ importers:
       snyk: 1.827.0
       start-server-and-test: 1.14.0
       svelte: 3.45.0
-      svelte-preprocess: 4.10.1
+      svelte-preprocess: 4.10.2
       tslib: 2.3.1
       typescript: 4.5.4
     devDependencies:
@@ -74,7 +74,7 @@ importers:
       snyk: 1.827.0
       start-server-and-test: 1.14.0
       svelte: 3.45.0
-      svelte-preprocess: 4.10.1_7d26d512ee43b574dfdeb4d1115515df
+      svelte-preprocess: 4.10.2_7d26d512ee43b574dfdeb4d1115515df
       tslib: 2.3.1
       typescript: 4.5.4
 
@@ -179,7 +179,7 @@ importers:
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9
       svelte: 3.45.0
-      svelte-preprocess: 4.10.1
+      svelte-preprocess: 4.10.2
     dependencies:
       lighthouse-viewer: link:../lighthouse-viewer
     devDependencies:
@@ -187,7 +187,7 @@ importers:
       parcel-bundler: 1.12.5
       parcel-plugin-svelte: 4.0.9_5f28ddee2754216abcadeb46ada954f7
       svelte: 3.45.0
-      svelte-preprocess: 4.10.1_7d26d512ee43b574dfdeb4d1115515df
+      svelte-preprocess: 4.10.2_7d26d512ee43b574dfdeb4d1115515df
 
   packages/vue-lighthouse-viewer:
     specifiers:
@@ -15652,20 +15652,20 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-preprocess/4.10.1_7d26d512ee43b574dfdeb4d1115515df:
-    resolution: {integrity: sha512-NSNloaylf+o9UeyUR2KvpdxrAyMdHl3U7rMnoP06/sG0iwJvlUM4TpMno13RaNqovh4AAoGsx1jeYcIyuGUXMw==}
+  /svelte-preprocess/4.10.2_7d26d512ee43b574dfdeb4d1115515df:
+    resolution: {integrity: sha512-aPpkCreSo8EL/y8kJSa1trhiX0oyAtTjlNNM7BNjRAsMJ8Yy2LtqHt0zyd4pQPXt+D4PzbO3qTjjio3kwOxDlA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
       '@babel/core': ^7.10.2
       coffeescript: ^2.5.1
-      less: ^3.11.3
+      less: ^3.11.3 || ^4.0.0
       node-sass: '*'
       postcss: ^7 || ^8
       postcss-load-config: ^2.1.0 || ^3.0.0
       pug: ^3.0.0
       sass: ^1.26.8
-      stylus: ^0.54.7
+      stylus: ^0.55.0
       sugarss: ^2.0.0
       svelte: ^3.23.0
       typescript: ^4.5.2
