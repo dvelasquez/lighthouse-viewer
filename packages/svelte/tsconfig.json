@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte",
+    "lib/**/*.d.ts", "lib/**/*.ts", "lib/**/*.js", "lib/**/*.svelte",
+    "./types"],
+}
