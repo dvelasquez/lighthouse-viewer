@@ -16,15 +16,16 @@
       gtag('config', 'UA-105846650-1');
     </script>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <base href="/lighthouse-vierwer">
   </head>
   <body>
     <header>
       <nav style="margin-bottom: 3rem">
         <ul>
-          <li><a id="lighthouse-viewer-link" href="#">Vanilla JS Demo</a></li>
-          <li><a id="vue-lighthouse-viewer-link" href="#">VueJS Demo</a></li>
-          <li><a id="react2-lighthouse-viewer-link" href="#">React Demo</a></li>
-          <li><a id="svelte-lighthouse-viewer-link" href="#">Svelte Demo</a></li>
+          <li><a id="lighthouse-viewer-link" href="/lighthouse-viewer/vanillajs/index.html">Vanilla JS Demo</a></li>
+          <li><a id="vue-lighthouse-viewer-link" href="/lighthouse-viewer/vue/index.html">VueJS Demo</a></li>
+          <li><a id="react2-lighthouse-viewer-link" href="/lighthouse-viewer/react/index.html">React Demo</a></li>
+          <li><a id="svelte-lighthouse-viewer-link" href="/lighthouse-viewer/svelte/index.html">Svelte Demo</a></li>
         </ul>
       </nav>
       <h1>Lighthouse Viewer / Reporter</h1>
@@ -64,31 +65,5 @@
         <small>Made by <a href="https://d13z.dev" title="D13Z">Danilo Velásquez</a></small>
       </p>
     </footer>
-    <script>
-      const lighthouseLinks = [
-        {
-          id: 'lighthouse-viewer-link',
-          link: '/lighthouse-viewer/vanillajs/index.html',
-        },
-        {
-          id: 'vue-lighthouse-viewer-link',
-          link: '/lighthouse-viewer/vue/index.html',
-        },
-        {
-          id: 'react2-lighthouse-viewer-link',
-          link: '/lighthouse-viewer/react/index.html',
-        },
-        {
-          id: 'svelte-lighthouse-viewer-link',
-          link: '/lighthouse-viewer/svelte/index.html',
-        }
-      ];
-      lighthouseLinks.forEach(({ id, link }) => {
-        const linkElement = document.getElementById(id);
-        if (link) {
-          linkElement.href = link;
-        }
-      });
-    </script>
   </body>
 </html>
