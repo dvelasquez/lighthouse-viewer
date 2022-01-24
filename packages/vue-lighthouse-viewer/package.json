@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "3.3.0",
-    "cssnano": "5.0.15",
+    "cssnano": "5.0.16",
     "parcel-bundler": "1.12.5",
     "vue": "2.6.14",
     "vue-hot-reload-api": "2.3.4",
