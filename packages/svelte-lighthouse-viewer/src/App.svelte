@@ -1,6 +1,6 @@
 <script lang="ts">
   import SvelteLighthouseViewer from "../lib/SvelteLighthouseViewer.svelte";
-  import reportJson from './assets/report-v8.0.0.json';
+  import reportJson from './assets/report.json';
 
 </script>
 

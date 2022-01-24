@@ -16,10 +16,8 @@
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
     "prepare": "pnpm snyk-protect",
-    "demo:serve": "rimraf lighthouse-viewer && parcel index.html --port 8080 -d lighthouse-viewer --open",
-    "demo:build": "rimraf lighthouse-viewer && parcel build index.html -d lighthouse-viewer --no-source-maps --public-url /lighthouse-viewer --no-autoinstall --no-minify",
-    "demo:http-server": "http-server",
-    "lerna:demo:build": "pnpm demo:build && pnpm run demo:build --recursive && pnpm run demo:copy --recursive"
+    "demo:build": "pnpm --filter ./web build",
+    "demo:http-server": "http-server web/lighthouse-viewer/dist"
   },
   "keywords": [],
   "author": "",

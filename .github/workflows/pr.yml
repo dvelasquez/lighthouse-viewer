@@ -38,7 +38,7 @@ jobs:
           version: 6.23.6
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --shamefully-hoist]
+              args: [--frozen-lockfile]
       
       - name: Lint
         run: pnpm lint
@@ -72,7 +72,7 @@ jobs:
           version: 6.23.6
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --shamefully-hoist]
+              args: [--frozen-lockfile]
 
       - name: Build library
         run: pnpm lerna:build
@@ -86,7 +86,7 @@ jobs:
           install: false
           record: true
           start: pnpm demo:http-server
-          wait-on: 'http://127.0.0.1:8080/lighthouse-viewer'
+          wait-on: 'http://127.0.0.1:8080/lighthouse-viewer/'
           command: pnpm cypress:run
         env:
           # pass the Dashboard record key as an environment variable

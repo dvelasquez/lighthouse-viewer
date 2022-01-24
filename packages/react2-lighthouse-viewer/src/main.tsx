@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import reportJson from './assets/report-v8.0.0.json';
+import reportJson from './assets/report.json';
 import React2LighthouseViewer from '../lib/main';
 import React, { FC, useEffect, useState } from 'react';
 
