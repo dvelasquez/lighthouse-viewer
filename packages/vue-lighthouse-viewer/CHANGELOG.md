@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.52 (2022-01-24)
+
+
+### Bug Fixes
+
+* removed tracked file ([bea4b0d](https://github.com/dvelasquez/lighthouse-viewer/commit/bea4b0d4665355a6768976f0eba296a899b714e2))
+
+
+
+
+
 ## 0.1.51 (2021-12-20)
 
 **Note:** Version bump only for package vue-lighthouse-viewer

@@ -1,6 +1,6 @@
 {
   "name": "react2-lighthouse-viewer",
-  "version": "0.1.57",
+  "version": "0.1.58",
   "private": false,
   "main": "./dist/react-lighthouse-viewer.umd.js",
   "module": "./dist/react-lighthouse-viewer.es.js",
@@ -47,11 +47,11 @@
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "@vitejs/plugin-react": "1.0.7",
-    "typescript": "4.4.4",
-    "vite": "2.7.2",
+    "lighthouse-viewer": "^0.1.52",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "lighthouse-viewer": "0.1.51"
+    "typescript": "4.4.4",
+    "vite": "2.7.2"
   },
   "browserslist": [
     "last 1 Chrome version"

@@ -1,7 +1,7 @@
 {
   "name": "lighthouse-viewer",
   "description": "Package with the lighthouse-viewer files from the official repositories of Lighthouse",
-  "version": "0.1.51",
+  "version": "0.1.52",
   "private": false,
   "main": "./dist/lighthouse-viewer.umd.js",
   "module": "./dist/lighthouse-viewer.es.js",
@@ -41,10 +41,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "lighthouse": "9.2.0",
     "typed-query-selector": "2.6.1",
     "typescript": "4.4.4",
-    "vite": "2.7.2",
-    "lighthouse": "9.2.0"
+    "vite": "2.7.2"
   },
   "browserslist": [
     "last 1 Chrome version"
