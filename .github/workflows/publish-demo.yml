@@ -36,16 +36,16 @@ jobs:
           version: 6.23.6
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --shamefully-hoist]
+              args: [--frozen-lockfile]
 
       - name: Build libraries
         run: pnpm lerna:build
 
       - name: Build demo
-        run: pnpm lerna:demo:build
+        run: pnpm demo:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: lighthouse-viewer # The folder the action should deploy.
+          folder: web/lighthouse-viewer/dist/lighthouse-viewer # The folder the action should deploy.

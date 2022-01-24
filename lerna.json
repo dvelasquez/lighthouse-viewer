@@ -6,10 +6,7 @@
     }
   },
   "packages": [
-    "packages/lighthouse-viewer",
-    "packages/react2-lighthouse-viewer",
-    "packages/svelte-lighthouse-viewer",
-    "packages/vue-lighthouse-viewer"
+    "packages/**"
   ],
   "version": "independent",
   "useWorkspaces": true

@@ -1,0 +1,24 @@
+{
+  "name": "lighthouse-viewer-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run copy:demo",
+    "preview": "vite preview",
+    "copy:vanilla": "cpx \"../../packages/lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/vanillajs",
+    "copy:react": "cpx \"../../packages/react2-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/react",
+    "copy:svelte": "cpx \"../../packages/svelte-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/svelte",
+    "copy:vue": "cpx \"../../packages/vue-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/vue",
+    "copy:home": "cpx \"./dist/index.html\" ./dist/lighthouse-viewer/",
+    "copy:demo": "npm run copy:vanilla && npm run copy:react && npm run copy:svelte && npm run copy:vue && npm run copy:home"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "cpx": "1.5.0"
+  },
+  "volta":{
+    "extends": "../../package.json"
+  }
+}

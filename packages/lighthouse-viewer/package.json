@@ -4,11 +4,17 @@
   "version": "0.1.51",
   "private": false,
   "main": "./dist/lighthouse-viewer.umd.js",
-  "module": "./dist/lighthouse-viewer.esm.js",
-  "types": "./dist/types/index.d.ts",
+  "module": "./dist/lighthouse-viewer.es.js",
+  "types": "./types/types.d.ts",
   "files": [
     "/dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/lighthouse-viewer.es.js",
+      "require": "./dist/lighthouse-viewer.umd.js"
+    }
+  },
   "license": "Apache-2.0",
   "author": {
     "name": "Danilo Velasquez",
@@ -28,18 +34,17 @@
     "webperf"
   ],
   "scripts": {
-    "build": "rollup -c && pnpm copy:types",
-    "copy:types": "cpx \"src/types/**/*\" dist/types",
-    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-minify --no-source-maps --public-url /lighthouse-viewer/vanillajs --no-autoinstall",
-    "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/vanillajs"
+    "dev": "vite",
+    "build:demo": "tsc && vite build",
+    "build:lib": "BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
+    "build": "npm run build:demo && npm run build:lib",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "cssnano": "5.0.15",
-    "fs-extra": "10.0.0",
-    "lighthouse": "9.2.0",
-    "parcel-bundler": "1.12.5",
-    "replace-in-file": "6.3.2"
+    "typed-query-selector": "2.6.1",
+    "typescript": "4.4.4",
+    "vite": "2.7.2",
+    "lighthouse": "9.2.0"
   },
   "browserslist": [
     "last 1 Chrome version"

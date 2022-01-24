@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "useDefineForClassFields": true,
+      "module": "ESNext",
+      "lib": ["ESNext", "DOM"],
+      "moduleResolution": "Node",
+      "strict": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true
+    },
+    "references": [
+      {"path": "node_modules/lighthouse/types/lhr/"},
+      {"path": "node_modules/lighthouse/report/generator/"},
+      {"path": "node_modules/lighthouse/shared/"}
+    ],
+  }

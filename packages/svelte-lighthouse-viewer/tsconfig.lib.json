@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+  },
+  "include": [
+    "lib/**/*.d.ts", "lib/**/*.ts", "lib/**/*.js", "lib/**/*.svelte",
+     "./types"
+    ],
+}

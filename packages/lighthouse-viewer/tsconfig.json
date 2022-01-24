@@ -1,13 +1,7 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "strict": false,
-        "baseUrl": "src/",
-        "declaration": false,
-        "resolveJsonModule": true
-    },
-    "include": [
-        "./src/**/*",
-        "./demo/**/*"
-    ]
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["./src", "./lib", "./types"],
 }
