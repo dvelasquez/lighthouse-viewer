@@ -42,7 +42,7 @@ jobs:
         run: pnpm lerna:build
 
       - name: Build demo
-        run: pnpm lerna:demo:build
+        run: pnpm demo:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.8

@@ -74,7 +74,7 @@ jobs:
         run: pnpm lerna:build
       
       - name: Build Demo
-        run: pnpm lerna:demo:build
+        run: pnpm demo:build
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
