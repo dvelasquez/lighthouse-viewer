@@ -2,13 +2,19 @@
   "name": "svelte-lighthouse-viewer",
   "version": "0.1.62",
   "private": false,
-  "module": "./dist/index.esm.js",
-  "main": "./dist/index.umd.js",
-  "types": "./dist/index.d.ts",
-  "svelte": "./src/components/SvelteLighthouseViewer.svelte",
+  "module": "./dist/svelte-lighthouse-viewer.es.js",
+  "main": "./dist/svelte-lighthouse-viewer.umd.js",
+  "types": "./dist/main.d.ts",
+  "svelte": "./lib/SvelteLighthouseViewer.svelte",
   "files": [
     "/dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/svelte-lighthouse-viewer.es.js",
+      "require": "./dist/svelte-lighthouse-viewer.umd.js"
+    }
+  },
   "license": "Apache-2.0",
   "author": {
     "name": "Danilo Velasquez",
@@ -27,29 +33,28 @@
     "performance",
     "webperf"
   ],
+  "type": "module",
   "scripts": {
-    "build": "pnpm build:dist && pnpm build:types && pnpm copy:types",
-    "build:dist": "rollup -c",
-    "build:types": "cross-env NODE_ENV=production tsc --project tsconfig.d.json",
-    "copy:types": "cpx \"src/types/**/*\" dist/types",
-    "start": "rollup -c -w",
-    "prebuild": "rimraf dist",
-    "demo:serve": "rimraf demo/dist && parcel ./demo/index.html --port 8080 -d demo/dist --open",
-    "demo:build": "rimraf demo/dist && parcel build ./demo/index.html -d demo/dist --no-source-maps --no-minify --public-url /lighthouse-viewer/svelte --no-autoinstall",
-    "demo:copy": "cpx \"demo/dist/**/*\" ../../lighthouse-viewer/svelte"
+    "dev": "vite",
+    "build:demo": "tsc && vite build",
+    "build:lib": "BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
+    "build": "npm run build:demo && npm run build:lib",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "peerDependencies": {
     "svelte": "^3.23.2"
   },
-  "dependencies": {
-    "lighthouse-viewer": "^0.1.51"
-  },
   "devDependencies": {
-    "cssnano": "5.0.15",
-    "parcel-bundler": "1.12.5",
-    "parcel-plugin-svelte": "4.0.9",
-    "svelte": "3.45.0",
-    "svelte-preprocess": "4.10.2"
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "lighthouse-viewer": "0.1.51"
   },
   "alias": {},
   "browserslist": [

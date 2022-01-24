@@ -110,7 +110,7 @@ importers:
       typescript: 4.4.4
       vite: 2.7.2
 
-  packages/svelte:
+  packages/svelte-lighthouse-viewer:
     specifiers:
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.30
       '@tsconfig/svelte': ^2.0.1
@@ -131,23 +131,6 @@ importers:
       tslib: 2.3.1
       typescript: 4.5.5
       vite: 2.7.2
-
-  packages/svelte-lighthouse-viewer:
-    specifiers:
-      cssnano: 5.0.15
-      lighthouse-viewer: ^0.1.51
-      parcel-bundler: 1.12.5
-      parcel-plugin-svelte: 4.0.9
-      svelte: 3.45.0
-      svelte-preprocess: 4.10.2
-    dependencies:
-      lighthouse-viewer: link:../lighthouse-viewer
-    devDependencies:
-      cssnano: 5.0.15_postcss@8.4.5
-      parcel-bundler: 1.12.5
-      parcel-plugin-svelte: 4.0.9_5f28ddee2754216abcadeb46ada954f7
-      svelte: 3.45.0
-      svelte-preprocess: 4.10.2_819aeeec555a9a27c4d95cda9c17843a
 
   packages/vue-lighthouse-viewer:
     specifiers:

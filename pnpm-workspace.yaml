@@ -2,7 +2,6 @@ packages:
   - 'packages/lighthouse-viewer'
   - 'packages/react2-lighthouse-viewer'
   - 'packages/svelte-lighthouse-viewer'
-  - 'packages/svelte'
   - 'packages/vue-lighthouse-viewer'
 
 link-workspace-packages: true

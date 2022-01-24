@@ -8,9 +8,9 @@ const libraryOptions = {
 
   build: {
     minify: 'esbuild',
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: './dist',
     lib: {
-      entry: path.resolve(__dirname, 'lib/main.ts'),
+      entry: './lib/main.ts',
       name: 'SvelteLighthouseViewer',
       fileName: (format) => `svelte-lighthouse-viewer.${format}.js`,
     },
@@ -28,9 +28,8 @@ const libraryOptions = {
 };
 const demoOptions = {
   plugins: [svelte()],
-
   build: {
-    outDir: path.resolve(__dirname, 'demo'),
+    outDir: './demo',
   },
 };
 
@@ -41,4 +40,4 @@ const returnConfig = () => {
   return demoOptions;
 };
 
-module.exports = defineConfig(returnConfig());
+export default defineConfig(returnConfig());

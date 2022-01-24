@@ -7,7 +7,7 @@
 	let container: HTMLDivElement;
 
 	onMount(() => {
-		const renderedReport = renderReport(json);
+		const renderedReport = renderReport(json, {});
 		container.appendChild(renderedReport);	
 	})
 </script>

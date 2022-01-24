@@ -1,6 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const sveltePreprocess = require('svelte-preprocess');
+import sveltePreprocess from 'svelte-preprocess';
 
-module.exports = {
+export default {
+  // Consult https://github.com/sveltejs/svelte-preprocess
+  // for more information about preprocessors
   preprocess: sveltePreprocess(),
 };
