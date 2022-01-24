@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.60 (2022-01-24)
+
+
+### Bug Fixes
+
+* yarn login ([d786b71](https://github.com/dvelasquez/lighthouse-viewer/commit/d786b716df547e4d04b28335b1b6b2504b302221))
+
+
+
+
+
 ## 0.1.59 (2022-01-24)
 
 **Note:** Version bump only for package react2-lighthouse-viewer

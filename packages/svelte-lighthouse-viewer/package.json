@@ -1,6 +1,6 @@
 {
   "name": "svelte-lighthouse-viewer",
-  "version": "0.1.64",
+  "version": "0.1.65",
   "private": false,
   "module": "./dist/svelte-lighthouse-viewer.es.js",
   "main": "./dist/svelte-lighthouse-viewer.umd.js",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
-    "lighthouse-viewer": "^0.1.53",
+    "lighthouse-viewer": "^0.1.54",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.7",
     "svelte-preprocess": "^4.9.8",
