@@ -119,7 +119,6 @@ jobs:
         with:
           version: 6.23.6
           run_install: |
-            - recursive: true
               args: [--frozen-lockfile]
 
       - name: Build library
@@ -135,10 +134,9 @@ jobs:
 
       - name: NPM Auth
         run: |
-          yarn logout
           echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> .npmrc 2> /dev/null
-          pnpm whoami
-          pnpm config set access public
+          npm whoami
+          npm config set access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       
