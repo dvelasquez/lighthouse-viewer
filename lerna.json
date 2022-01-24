@@ -2,7 +2,7 @@
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md", "**/packages/**/demo/**"],
-      "message": "chore(release): publish"
+      "message": "chore(release): publish [skip ci]"
     }
   },
   "packages": [
