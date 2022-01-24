@@ -31,6 +31,7 @@ const libraryOptions = {
 };
 const demoOptions = {
   plugins: [createVuePlugin()],
+  base: '/lighthouse-viewer/vue/',
   build: {
     outDir: path.resolve(__dirname, 'demo'),
   },

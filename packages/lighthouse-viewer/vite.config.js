@@ -26,6 +26,7 @@ const libraryOptions = {
   },
 };
 const demoOptions = {
+  base: '/lighthouse-viewer/vanillajs/',
   build: {
     outDir: path.resolve(__dirname, 'demo'),
   },

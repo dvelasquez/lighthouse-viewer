@@ -28,6 +28,7 @@ const libraryOptions = {
 };
 const demoOptions = {
   plugins: [svelte()],
+  base: '/lighthouse-viewer/svelte/',
   build: {
     outDir: './demo',
   },

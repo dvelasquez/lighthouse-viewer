@@ -28,6 +28,7 @@ const libraryOptions = {
 };
 const demoOptions = {
   plugins: [react()],
+  base: '/lighthouse-viewer/react/',
   build: {
     outDir: path.resolve(__dirname, 'demo'),
   },

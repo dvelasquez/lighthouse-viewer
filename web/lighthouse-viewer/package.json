@@ -10,7 +10,8 @@
     "copy:react": "cpx \"../../packages/react2-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/react",
     "copy:svelte": "cpx \"../../packages/svelte-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/svelte",
     "copy:vue": "cpx \"../../packages/vue-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/vue",
-    "copy:demo": "npm run copy:vanilla && npm run copy:react && npm run copy:svelte && npm run copy:vue"
+    "copy:home": "cpx \"./dist/index.html\" ./dist/lighthouse-viewer/",
+    "copy:demo": "npm run copy:vanilla && npm run copy:react && npm run copy:svelte && npm run copy:vue && npm run copy:home"
   },
   "devDependencies": {
     "typescript": "^4.4.4",
