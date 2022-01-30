@@ -14,8 +14,8 @@
     "copy:demo": "npm run copy:vanilla && npm run copy:react && npm run copy:svelte && npm run copy:vue && npm run copy:home"
   },
   "devDependencies": {
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2",
+    "typescript": "4.5.5",
+    "vite": "2.7.13",
     "cpx": "1.5.0"
   },
   "volta":{
