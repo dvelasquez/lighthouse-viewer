@@ -90,7 +90,7 @@ jobs:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  release_canary:
+  release:
     name: Build & Canary Release
     runs-on: ubuntu-latest
     needs: run_cypress

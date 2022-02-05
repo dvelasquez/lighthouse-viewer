@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "vite",
     "build:demo": "tsc && vite build",
-    "build:lib": "BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
+    "build:lib": "cross-env BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
     "build": "npm run build:demo && npm run build:lib",
     "preview": "vite preview"
   },
