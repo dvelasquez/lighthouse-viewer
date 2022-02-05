@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.74](https://github.com/dvelasquez/lighthouse-viewer/compare/svelte-lighthouse-viewer@0.1.73...svelte-lighthouse-viewer@0.1.74) (2022-02-05)
+
+**Note:** Version bump only for package svelte-lighthouse-viewer
+
+
+
+
+
 ## 0.1.73 (2022-02-05)
 
 **Note:** Version bump only for package svelte-lighthouse-viewer
