@@ -50,7 +50,7 @@ importers:
 
   packages/react2-lighthouse-viewer:
     specifiers:
-      '@types/react': 17.0.38
+      '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.1.4
       lighthouse-viewer: ^0.1.63
@@ -59,7 +59,7 @@ importers:
       typescript: 4.5.5
       vite: 2.7.13
     devDependencies:
-      '@types/react': 17.0.38
+      '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.1.4
       lighthouse-viewer: link:../lighthouse-viewer
@@ -1524,11 +1524,11 @@ packages:
   /@types/react-dom/17.0.11:
     resolution: {integrity: sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==}
     dependencies:
-      '@types/react': 17.0.38
+      '@types/react': 17.0.39
     dev: true
 
-  /@types/react/17.0.38:
-    resolution: {integrity: sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==}
+  /@types/react/17.0.39:
+    resolution: {integrity: sha512-UVavlfAxDd/AgAacMa60Azl7ygyQNRwC/DsHZmKgNvPmRR5p70AJ5Q9EAmL2NWOJmeV+vVUI4IAP7GZrN8h8Ug==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
