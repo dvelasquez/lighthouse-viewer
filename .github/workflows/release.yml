@@ -91,7 +91,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   release:
-    name: Build & Canary Release
+    name: Build & Release
     runs-on: ubuntu-latest
     needs: run_cypress
     env:

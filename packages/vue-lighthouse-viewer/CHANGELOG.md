@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.65 (2022-02-06)
+
+
+### Bug Fixes
+
+* deleted versioned dist file ([a463c21](https://github.com/dvelasquez/lighthouse-viewer/commit/a463c21769b9eb0a079943063e6bac9f61b19340))
+
+
+
+
+
 ## [0.1.64](https://github.com/dvelasquez/lighthouse-viewer/compare/vue-lighthouse-viewer@0.1.63...vue-lighthouse-viewer@0.1.64) (2022-02-06)
 
 **Note:** Version bump only for package vue-lighthouse-viewer
