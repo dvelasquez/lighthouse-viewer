@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.77 (2022-02-11)
+
+
+### Bug Fixes
+
+* fixed types not being exported in lighthouse-viewer ([#768](https://github.com/dvelasquez/lighthouse-viewer/issues/768)) ([7a3eacd](https://github.com/dvelasquez/lighthouse-viewer/commit/7a3eacd8a6d60c501d45c9ef7238c969b6c9c540))
+
+
+
+
+
 ## 0.1.76 (2022-02-06)
 
 
