@@ -7,7 +7,8 @@
   "module": "./dist/lighthouse-viewer.es.js",
   "types": "./types/types.d.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "/types"
   ],
   "exports": {
     ".": {
