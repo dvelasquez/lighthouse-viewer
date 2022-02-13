@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.1.4
-      lighthouse-viewer: ^0.1.65
+      lighthouse-viewer: ^0.1.66
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.5.5
@@ -72,9 +72,9 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.37
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.65
+      lighthouse-viewer: ^0.1.66
       svelte: 3.46.4
-      svelte-check: 2.4.2
+      svelte-check: 2.4.3
       svelte-preprocess: 4.10.2
       tslib: 2.3.1
       typescript: 4.5.5
@@ -84,7 +84,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.65
+      lighthouse-viewer: ^0.1.66
       typed-query-selector: 2.6.1
       typescript: 4.5.5
       vite: 2.7.13
@@ -107,12 +107,6 @@ importers:
       vite-plugin-vue2: 1.9.3_e3c37c0cfaae1b9f72ab6085139b0afb
       vue: 2.6.14
       vue-template-compiler: 2.6.14
-
-  test:
-    specifiers:
-      lighthouse-viewer: workspace:^0.1.65
-    dependencies:
-      lighthouse-viewer: link:../packages/lighthouse-viewer
 
   web/lighthouse-viewer:
     specifiers:
@@ -7235,8 +7229,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check/2.4.2_svelte@3.46.4:
-    resolution: {integrity: sha512-QUS3YXEfJf9RdNOPdztzxUxB2XCSNG+0AtkRuZwe/OvOXMv9WKqrmGOny0PW1DtflyWiGIVgYoUIqS/zlBMJFQ==}
+  /svelte-check/2.4.3_svelte@3.46.4:
+    resolution: {integrity: sha512-0zJMMgqYHoP7QEG3tfc5DekpHAOqoy4QOL8scWMSdHIpVVDVC0MuYK57nFyj3XVTW8Zfm85FlgnAdQYsVmST2Q==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
