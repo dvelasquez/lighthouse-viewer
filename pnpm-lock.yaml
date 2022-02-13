@@ -52,8 +52,8 @@ importers:
     specifiers:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
-      '@vitejs/plugin-react': 1.1.4
-      lighthouse-viewer: ^0.1.66
+      '@vitejs/plugin-react': 1.2.0
+      lighthouse-viewer: ^0.1.67
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.5.5
@@ -61,7 +61,7 @@ importers:
     devDependencies:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
-      '@vitejs/plugin-react': 1.1.4
+      '@vitejs/plugin-react': 1.2.0
       lighthouse-viewer: link:../lighthouse-viewer
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.37
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.66
+      lighthouse-viewer: ^0.1.67
       svelte: 3.46.4
       svelte-check: 2.4.3
       svelte-preprocess: 4.10.3
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.66
+      lighthouse-viewer: ^0.1.67
       typed-query-selector: 2.6.1
       typescript: 4.5.5
       vite: 2.7.13
@@ -1687,8 +1687,8 @@ packages:
       eslint-visitor-keys: 3.2.0
     dev: true
 
-  /@vitejs/plugin-react/1.1.4:
-    resolution: {integrity: sha512-cMUBDonNY8PPeHWjIrYKbRn6bLSunh/Ixo2XLLBd3DM0uYBZft+c+04zkGhhN1lAwvoRKJ2FdtvhGhPgViHc6w==}
+  /@vitejs/plugin-react/1.2.0:
+    resolution: {integrity: sha512-Rywwt0IXXg6yQ0hv3cMT3mtdDcGIw31mGaa+MMMAT651LhoXLF2yFy4LrakiTs7UKs7RPBo9eNgaS8pgl2A6Qw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@babel/core': 7.16.12
@@ -1698,7 +1698,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.16.7_@babel+core@7.16.12
       '@rollup/pluginutils': 4.1.2
       react-refresh: 0.11.0
-      resolve: 1.20.0
+      resolve: 1.22.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4494,6 +4494,12 @@ packages:
       has: 1.0.3
     dev: true
 
+  /is-core-module/2.8.1:
+    resolution: {integrity: sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==}
+    dependencies:
+      has: 1.0.3
+    dev: true
+
   /is-data-descriptor/0.1.4:
     resolution: {integrity: sha1-C17mSDiOLIYCgueT8YVv7D8wG1Y=}
     engines: {node: '>=0.10.0'}
@@ -6660,6 +6666,15 @@ packages:
       path-parse: 1.0.7
     dev: true
 
+  /resolve/1.22.0:
+    resolution: {integrity: sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.8.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
+    dev: true
+
   /restore-cursor/3.1.0:
     resolution: {integrity: sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA==}
     engines: {node: '>=8'}
@@ -7227,6 +7242,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       has-flag: 4.0.0
+    dev: true
+
+  /supports-preserve-symlinks-flag/1.0.0:
+    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
+    engines: {node: '>= 0.4'}
     dev: true
 
   /svelte-check/2.4.3_svelte@3.46.4:
