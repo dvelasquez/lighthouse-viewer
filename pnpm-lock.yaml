@@ -8,7 +8,7 @@ importers:
       '@typescript-eslint/parser': 5.10.2
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 9.4.1
+      cypress: 9.5.0
       eslint: 8.9.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-prettier: 4.0.0
@@ -24,7 +24,7 @@ importers:
       '@typescript-eslint/parser': 5.10.2_eslint@8.9.0+typescript@4.5.5
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 9.4.1
+      cypress: 9.5.0
       eslint: 8.9.0
       eslint-config-prettier: 8.3.0_eslint@8.9.0
       eslint-plugin-prettier: 4.0.0_07b422646bb75d3db791621d4fdbc992
@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.2.0
-      lighthouse-viewer: ^0.1.71
+      lighthouse-viewer: ^0.1.72
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.5.5
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.37
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.71
+      lighthouse-viewer: ^0.1.72
       svelte: 3.46.4
       svelte-check: 2.4.5
       svelte-preprocess: 4.10.3
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.71
+      lighthouse-viewer: ^0.1.72
       typed-query-selector: 2.6.1
       typescript: 4.5.5
       vite: 2.7.13
@@ -2797,8 +2797,8 @@ packages:
     resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
     dev: true
 
-  /cypress/9.4.1:
-    resolution: {integrity: sha512-+JgMG9uT+QFx97JU9kOHE3jO3+0UdkQ9H1oCBiC7A74qme7Jkdy2sYDBCPjjGczutnWnGUTMRlwiNMP/Uq6LrQ==}
+  /cypress/9.5.0:
+    resolution: {integrity: sha512-rC5QPolKsVjJ8QJZ7IeZ6HlKM4gswBGZc0XvoAJNL8urQCSL8zTX0A/ai/h35WfF47NQ0iSZnwIXBlHX3MOUIQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
