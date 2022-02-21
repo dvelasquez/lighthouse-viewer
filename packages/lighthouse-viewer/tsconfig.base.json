@@ -11,7 +11,8 @@
       "esModuleInterop": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
-      "noImplicitReturns": true
+      "noImplicitReturns": true,
+      "noImplicitAny": false,
     },
     "references": [
       {"path": "node_modules/lighthouse/types/lhr/"},
