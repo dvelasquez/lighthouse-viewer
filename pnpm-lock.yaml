@@ -51,7 +51,7 @@ importers:
   packages/react2-lighthouse-viewer:
     specifiers:
       '@types/react': 17.0.39
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
       lighthouse-viewer: ^0.1.79
       react: 17.0.2
@@ -60,7 +60,7 @@ importers:
       vite: 2.8.4
     devDependencies:
       '@types/react': 17.0.39
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
       lighthouse-viewer: link:../lighthouse-viewer
       react: 17.0.2
@@ -1591,8 +1591,8 @@ packages:
     resolution: {integrity: sha512-LOnASQoeNZMkzexRuyqcBBDZ6rS+rQxUMkmj5A0PkhhiSZivLIuz6Hxyr1mkGoEZEkk66faROmpMi4fFkrKsBA==}
     dev: true
 
-  /@types/react-dom/17.0.11:
-    resolution: {integrity: sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==}
+  /@types/react-dom/17.0.13:
+    resolution: {integrity: sha512-wEP+B8hzvy6ORDv1QBhcQia4j6ea4SFIBttHYpXKPFZRviBvknq0FRh3VrIxeXUmsPkwuXVZrVGG7KUVONmXCQ==}
     dependencies:
       '@types/react': 17.0.39
     dev: true
