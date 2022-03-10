@@ -16,7 +16,7 @@ importers:
       lerna: 4.0.0
       prettier: 2.5.1
       rimraf: 3.0.2
-      snyk: 1.858.0
+      snyk: 1.866.0
       tslib: 2.3.1
       typescript: 4.6.2
     devDependencies:
@@ -32,7 +32,7 @@ importers:
       lerna: 4.0.0
       prettier: 2.5.1
       rimraf: 3.0.2
-      snyk: 1.858.0
+      snyk: 1.866.0
       tslib: 2.3.1
       typescript: 4.6.2
 
@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
-      lighthouse-viewer: ^0.1.82
+      lighthouse-viewer: ^0.1.83
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.6.2
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.39
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.82
+      lighthouse-viewer: ^0.1.83
       svelte: 3.46.4
       svelte-check: 2.4.5
       svelte-preprocess: 4.10.4
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.82
+      lighthouse-viewer: ^0.1.83
       typed-query-selector: 2.6.1
       typescript: 4.6.2
       vite: 2.8.6
@@ -7012,8 +7012,8 @@ packages:
       use: 3.1.1
     dev: true
 
-  /snyk/1.858.0:
-    resolution: {integrity: sha512-0qws95M19TAnZ9IORUBYnwhH4IYqQNE8/+EnWv4Q+9nDUqxFA52xawadq0jlBNDkcxt4zjTdfJcGy/qcMCkN+A==}
+  /snyk/1.866.0:
+    resolution: {integrity: sha512-bV0yXm1iJtHKtV2OHA5eBYa6S/1p0bRe1cqDPTO2zzsfnhPJqpvIM6fDjCxSISYMqv00eGFoaNa0MPM25KmUoQ==}
     engines: {node: '>=10'}
     hasBin: true
     dev: true
