@@ -38,12 +38,12 @@ importers:
 
   packages/lighthouse-viewer:
     specifiers:
-      lighthouse: 9.4.0
+      lighthouse: 9.5.0
       typed-query-selector: 2.6.1
       typescript: 4.6.2
       vite: 2.8.6
     devDependencies:
-      lighthouse: 9.4.0
+      lighthouse: 9.5.0
       typed-query-selector: 2.6.1
       typescript: 4.6.2
       vite: 2.8.6
@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
-      lighthouse-viewer: ^0.1.83
+      lighthouse-viewer: ^0.1.84
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.6.2
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.39
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.83
+      lighthouse-viewer: ^0.1.84
       svelte: 3.46.4
       svelte-check: 2.4.5
       svelte-preprocess: 4.10.4
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.83
+      lighthouse-viewer: ^0.1.84
       typed-query-selector: 2.6.1
       typescript: 4.6.2
       vite: 2.8.6
@@ -5089,8 +5089,8 @@ packages:
     resolution: {integrity: sha512-ggLg9V6Hs31Qcn29L2fwKsaQq8L5t+mIv3lNqwd85bc7zFxpMVybK71b4w2OeBLpa0H8gATIi9fxPlP+9moMDA==}
     dev: true
 
-  /lighthouse/9.4.0:
-    resolution: {integrity: sha512-1c1EPBoZaaNslZ1EH0ABFB44OyUbsHydUsy4cp6WCSQYy79ziSFVNrxw9aNxoELDUd1fEXN2BLGZOpzuhyjZow==}
+  /lighthouse/9.5.0:
+    resolution: {integrity: sha512-MBXBwemN8AI0NRSNgcPojIQt8AlTokz1lUGbnxr6ioDoODjFEdxil3gC3yQx2RrFTJA8NpqiA9XqZ/+zJgjIhQ==}
     engines: {node: '>=14.15'}
     hasBin: true
     dependencies:
@@ -5107,10 +5107,7 @@ packages:
       js-library-detector: 6.4.0
       lighthouse-logger: 1.3.0
       lighthouse-stack-packs: 1.7.0
-      lodash.clonedeep: 4.5.0
-      lodash.get: 4.4.2
-      lodash.isequal: 4.5.0
-      lodash.set: 4.3.2
+      lodash: 4.17.21
       lookup-closest-locale: 6.2.0
       metaviewport-parser: 0.2.0
       open: 8.4.0
@@ -5192,18 +5189,6 @@ packages:
     resolution: {integrity: sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=}
     dev: true
 
-  /lodash.clonedeep/4.5.0:
-    resolution: {integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=}
-    dev: true
-
-  /lodash.get/4.4.2:
-    resolution: {integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=}
-    dev: true
-
-  /lodash.isequal/4.5.0:
-    resolution: {integrity: sha1-QVxEePK8wwEgwizhDtMib30+GOA=}
-    dev: true
-
   /lodash.ismatch/4.4.0:
     resolution: {integrity: sha1-dWy1FQyjum8RCFp4hJZF8Yj4Xzc=}
     dev: true
@@ -5218,10 +5203,6 @@ packages:
 
   /lodash.once/4.1.1:
     resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}
-    dev: true
-
-  /lodash.set/4.3.2:
-    resolution: {integrity: sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM=}
     dev: true
 
   /lodash.template/4.5.0:
