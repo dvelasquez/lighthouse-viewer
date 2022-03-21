@@ -46,7 +46,7 @@
     "svelte": "^3.23.2"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "1.0.0-next.39",
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.40",
     "@tsconfig/svelte": "3.0.0",
     "lighthouse-viewer": "^0.1.89",
     "svelte": "3.46.4",
