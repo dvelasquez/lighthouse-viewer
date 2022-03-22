@@ -32,13 +32,11 @@ jobs:
         with:
           node-version: 16.13.0
       
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.1
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          version: 6.23.6
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile]
+          version: 6.32.3
+          run_install: true
       
       - name: Lint
         run: pnpm lint
@@ -66,13 +64,11 @@ jobs:
         with:
           node-version: 16.13.0
       
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.1
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          version: 6.23.6
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile]
+          version: 6.32.3
+          run_install: true
 
       - name: Build library
         run: pnpm lerna:build
