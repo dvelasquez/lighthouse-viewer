@@ -8,7 +8,7 @@ importers:
       '@typescript-eslint/parser': 5.16.0
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 9.5.2
+      cypress: 9.5.3
       eslint: 8.12.0
       eslint-config-prettier: 8.5.0
       eslint-plugin-prettier: 4.0.0
@@ -24,7 +24,7 @@ importers:
       '@typescript-eslint/parser': 5.16.0_eslint@8.12.0+typescript@4.6.3
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 9.5.2
+      cypress: 9.5.3
       eslint: 8.12.0
       eslint-config-prettier: 8.5.0_eslint@8.12.0
       eslint-plugin-prettier: 4.0.0_b253a92c95b42c3296c682f11cccb3bd
@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.43
       '@types/react-dom': 17.0.14
       '@vitejs/plugin-react': 1.2.0
-      lighthouse-viewer: ^0.1.97
+      lighthouse-viewer: ^0.1.98
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.6.3
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.40
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.97
+      lighthouse-viewer: ^0.1.98
       svelte: 3.46.4
       svelte-check: 2.4.6
       svelte-preprocess: 4.10.4
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.97
+      lighthouse-viewer: ^0.1.98
       typed-query-selector: 2.6.1
       typescript: 4.6.3
       vite: 2.8.6
@@ -2867,8 +2867,8 @@ packages:
     resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
     dev: true
 
-  /cypress/9.5.2:
-    resolution: {integrity: sha512-gYiQYvJozMzDOriUV1rCt6CeRM/pRK4nhwGJj3nJQyX2BoUdTCVwp30xDMKc771HiNVhBtgj5o5/iBdVDVXQUg==}
+  /cypress/9.5.3:
+    resolution: {integrity: sha512-ItelIVmqMTnKYbo1JrErhsGgQGjWOxCpHT1TfMvwnIXKXN/OSlPjEK7rbCLYDZhejQL99PmUqul7XORI24Ik0A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
@@ -2905,7 +2905,7 @@ packages:
       listr2: 3.13.5_enquirer@2.3.6
       lodash: 4.17.21
       log-symbols: 4.1.0
-      minimist: 1.2.5
+      minimist: 1.2.6
       ospath: 1.2.2
       pretty-bytes: 5.6.0
       proxy-from-env: 1.0.0
@@ -4155,7 +4155,7 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
     dependencies:
-      minimist: 1.2.5
+      minimist: 1.2.6
       neo-async: 2.6.2
       source-map: 0.6.1
       wordwrap: 1.0.0
@@ -5504,6 +5504,10 @@ packages:
 
   /minimist/1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
+    dev: true
+
+  /minimist/1.2.6:
+    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
 
   /minipass-collect/1.0.2:
@@ -7291,7 +7295,7 @@ packages:
     hasBin: true
     dependencies:
       duplexer: 0.1.2
-      minimist: 1.2.5
+      minimist: 1.2.6
       through: 2.3.8
     dev: true
 
