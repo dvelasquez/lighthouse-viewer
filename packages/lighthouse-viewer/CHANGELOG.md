@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.102 (2022-04-05)
+
+
+### Bug Fixes
+
+* lockfile ([96ef904](https://github.com/dvelasquez/vue-lighthouse-viewer/commit/96ef904038457ad298cc8bc884ae11db8845111b))
+
+
+
+
+
 ## 0.1.101 (2022-04-03)
 
 **Note:** Version bump only for package lighthouse-viewer
