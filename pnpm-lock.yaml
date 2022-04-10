@@ -53,7 +53,7 @@ importers:
       '@types/react': 17.0.43
       '@types/react-dom': 17.0.14
       '@vitejs/plugin-react': 1.3.0
-      lighthouse-viewer: ^0.1.102
+      lighthouse-viewer: ^0.1.103
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.6.3
@@ -70,9 +70,9 @@ importers:
 
   packages/svelte-lighthouse-viewer:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.40
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.41
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.102
+      lighthouse-viewer: ^0.1.103
       svelte: 3.46.6
       svelte-check: 2.4.6
       svelte-preprocess: 4.10.4
@@ -80,7 +80,7 @@ importers:
       typescript: 4.6.3
       vite: 2.8.6
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.40_svelte@3.46.6+vite@2.8.6
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.41_svelte@3.46.6+vite@2.8.6
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.46.6
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.102
+      lighthouse-viewer: ^0.1.103
       typed-query-selector: 2.6.1
       typescript: 4.6.3
       vite: 2.8.6
@@ -1681,19 +1681,19 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.40_svelte@3.46.6+vite@2.8.6:
-    resolution: {integrity: sha512-DtXF01fYGEJkbC7GntU/7jaq9M1SwyyNCkbDA+cfQSXRpm3H7zbu0M80wSQBSpntdd+hgSdxKCxv4GgX6/zI6w==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.41_svelte@3.46.6+vite@2.8.6:
+    resolution: {integrity: sha512-2kZ49mpi/YW1PIPvKaJNSSwIFgmw9QUf1+yaNa4U8yJD6AsfSHXAU3goscWbi1jfWnSg2PhvwAf+bvLCdp2F9g==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
       svelte: ^3.44.0
-      vite: ^2.7.0
+      vite: ^2.9.0
     peerDependenciesMeta:
       diff-match-patch:
         optional: true
     dependencies:
       '@rollup/pluginutils': 4.2.0
-      debug: 4.3.3
+      debug: 4.3.4
       kleur: 4.1.4
       magic-string: 0.26.1
       svelte: 3.46.6
@@ -3125,6 +3125,18 @@ packages:
     dependencies:
       ms: 2.1.2
       supports-color: 8.1.1
+    dev: true
+
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
     dev: true
 
   /debuglog/1.0.1:
