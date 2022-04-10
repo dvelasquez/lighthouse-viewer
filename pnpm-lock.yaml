@@ -51,16 +51,16 @@ importers:
   packages/react2-lighthouse-viewer:
     specifiers:
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.14
+      '@types/react-dom': 17.0.15
       '@vitejs/plugin-react': 1.3.0
-      lighthouse-viewer: ^0.1.105
+      lighthouse-viewer: ^0.1.106
       react: 17.0.2
       react-dom: 17.0.2
       typescript: 4.6.3
       vite: 2.8.6
     devDependencies:
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.14
+      '@types/react-dom': 17.0.15
       '@vitejs/plugin-react': 1.3.0
       lighthouse-viewer: link:../lighthouse-viewer
       react: 17.0.2
@@ -72,7 +72,7 @@ importers:
     specifiers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.41
       '@tsconfig/svelte': 3.0.0
-      lighthouse-viewer: ^0.1.105
+      lighthouse-viewer: ^0.1.106
       svelte: 3.46.6
       svelte-check: 2.4.6
       svelte-preprocess: 4.10.5
@@ -92,7 +92,7 @@ importers:
 
   packages/vue-lighthouse-viewer:
     specifiers:
-      lighthouse-viewer: ^0.1.105
+      lighthouse-viewer: ^0.1.106
       typed-query-selector: 2.6.1
       typescript: 4.6.3
       vite: 2.8.6
@@ -1748,8 +1748,8 @@ packages:
     resolution: {integrity: sha512-LOnASQoeNZMkzexRuyqcBBDZ6rS+rQxUMkmj5A0PkhhiSZivLIuz6Hxyr1mkGoEZEkk66faROmpMi4fFkrKsBA==}
     dev: true
 
-  /@types/react-dom/17.0.14:
-    resolution: {integrity: sha512-H03xwEP1oXmSfl3iobtmQ/2dHF5aBHr8aUMwyGZya6OW45G+xtdzmq6HkncefiBt5JU8DVyaWl/nWZbjZCnzAQ==}
+  /@types/react-dom/17.0.15:
+    resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
     dependencies:
       '@types/react': 17.0.44
     dev: true
