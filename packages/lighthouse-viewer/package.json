@@ -1,7 +1,7 @@
 {
   "name": "lighthouse-viewer",
   "description": "Package with the lighthouse-viewer files from the official repositories of Lighthouse",
-  "version": "0.1.116",
+  "version": "0.1.117",
   "private": false,
   "main": "./dist/lighthouse-viewer.umd.js",
   "module": "./dist/lighthouse-viewer.es.js",
