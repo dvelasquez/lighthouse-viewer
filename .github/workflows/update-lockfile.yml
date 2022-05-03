@@ -35,3 +35,17 @@ jobs:
           run_install: |
             - recursive: true
               args: [--lockfile-only]
+
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'Danilo Velasquez'
+          git config --global user.email 'danilo.velasquez@gmail.com'
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/dvelasquez/lighthouse-viewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update lockfile
+        run: |
+          git add pnpm-lock.yaml
+          git commit -m "chore: update lockfile [skip ci]"
+          git push
