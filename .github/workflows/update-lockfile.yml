@@ -44,7 +44,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Check for uncommitted changes
+        id: check-changes
+        uses: mskri/check-uncommitted-changes-action@v1.0.1
+
       - name: Update lockfile
+        if: steps.check-changes.outputs.outcome == failure()
         run: |
           git add pnpm-lock.yaml
           git commit -m "chore: update lockfile [skip ci]"
