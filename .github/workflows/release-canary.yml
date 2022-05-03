@@ -154,10 +154,3 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Update lockfile after publishing
-        run: |
-          pnpm install --lockfile-only
-          git add pnpm-lock.yaml
-          git commit -m "chore: update pnpm-lock.yaml [skip ci]"
-          git push
