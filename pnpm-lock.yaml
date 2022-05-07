@@ -70,7 +70,7 @@ importers:
 
   packages/svelte-lighthouse-viewer:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.41
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.42
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: ^0.1.120
       svelte: 3.48.0
@@ -80,7 +80,7 @@ importers:
       typescript: 4.6.3
       vite: 2.8.6
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.41_svelte@3.48.0+vite@2.8.6
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.42_svelte@3.48.0+vite@2.8.6
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.48.0
@@ -1619,6 +1619,14 @@ packages:
       picomatch: 2.3.0
     dev: true
 
+  /@rollup/pluginutils/4.2.1:
+    resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.0
+    dev: true
+
   /@sentry/core/6.17.9:
     resolution: {integrity: sha512-14KalmTholGUtgdh9TklO+jUpyQ/D3OGkhlH1rnGQGoJgFy2eYm+s+MnUEMxFdGIUCz5kOteuNqYZxaDmFagpQ==}
     engines: {node: '>=6'}
@@ -1689,8 +1697,8 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.41_svelte@3.48.0+vite@2.8.6:
-    resolution: {integrity: sha512-2kZ49mpi/YW1PIPvKaJNSSwIFgmw9QUf1+yaNa4U8yJD6AsfSHXAU3goscWbi1jfWnSg2PhvwAf+bvLCdp2F9g==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.42_svelte@3.48.0+vite@2.8.6:
+    resolution: {integrity: sha512-I8ILzfjVQuOkl6eDHif6/QJhOEBnsA40u6/0RDWK0mujwOr+MfWCWEZEnrTKqa6YIVMO+uktfoknu61chbAIeg==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -1700,7 +1708,7 @@ packages:
       diff-match-patch:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 4.2.0
+      '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
       kleur: 4.1.4
       magic-string: 0.26.1
