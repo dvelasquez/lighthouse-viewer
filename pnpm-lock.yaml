@@ -74,7 +74,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: ^0.1.123
       svelte: 3.48.0
-      svelte-check: 2.7.0
+      svelte-check: 2.7.1
       svelte-preprocess: 4.10.6
       tslib: 2.4.0
       typescript: 4.6.4
@@ -84,7 +84,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.48.0
-      svelte-check: 2.7.0_svelte@3.48.0
+      svelte-check: 2.7.1_svelte@3.48.0
       svelte-preprocess: 4.10.6_svelte@3.48.0+typescript@4.6.4
       tslib: 2.4.0
       typescript: 4.6.4
@@ -753,6 +753,13 @@ packages:
 
   /@jridgewell/sourcemap-codec/1.4.11:
     resolution: {integrity: sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg==}
+    dev: true
+
+  /@jridgewell/trace-mapping/0.3.13:
+    resolution: {integrity: sha512-o1xbKhp9qnIAoHJSWd6KlCZfqslL4valSF81H8ImioOAxluWYWOpWkpyktY2vnt4tbrX9XYaxovq6cgowaJp2w==}
+    dependencies:
+      '@jridgewell/resolve-uri': 3.0.5
+      '@jridgewell/sourcemap-codec': 1.4.11
     dev: true
 
   /@jridgewell/trace-mapping/0.3.4:
@@ -7577,18 +7584,18 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.7.0_svelte@3.48.0:
-    resolution: {integrity: sha512-GrvG24j0+i8AOm0k0KyJ6Dqc+TAR2yzB7rtS4nljHStunVxCTr/1KYlv4EsOeoqtHLzeWMOd5D2O6nDdP/yw4A==}
+  /svelte-check/2.7.1_svelte@3.48.0:
+    resolution: {integrity: sha512-vHVu2+SQ6ibt77iTQaq2oiOjBgGL48qqcg0ZdEOsP5pPOjgeyR9QbnaEdzdBs9nsVYBc/42haKtzb2uFqS8GVw==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
     dependencies:
+      '@jridgewell/trace-mapping': 0.3.13
       chokidar: 3.5.3
       fast-glob: 3.2.7
       import-fresh: 3.3.0
       picocolors: 1.0.0
       sade: 1.8.1
-      source-map: 0.7.3
       svelte: 3.48.0
       svelte-preprocess: 4.10.6_svelte@3.48.0+typescript@4.6.4
       typescript: 4.6.4
