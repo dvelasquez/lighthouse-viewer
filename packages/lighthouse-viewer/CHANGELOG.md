@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.123 (2022-05-16)
+
+**Note:** Version bump only for package lighthouse-viewer
+
+
+
+
+
 ## 0.1.122 (2022-05-09)
 
 **Note:** Version bump only for package lighthouse-viewer
