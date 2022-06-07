@@ -51,7 +51,7 @@
     "lighthouse-viewer": "^0.1.128",
     "svelte": "3.48.0",
     "svelte-check": "2.7.2",
-    "svelte-preprocess": "4.10.6",
+    "svelte-preprocess": "4.10.7",
     "tslib": "2.4.0",
     "typescript": "4.7.3",
     "vite": "2.9.9"
