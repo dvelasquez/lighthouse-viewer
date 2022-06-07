@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 16.13.0
       
-      - uses: pnpm/action-setup@v2.2.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 6.23.6
