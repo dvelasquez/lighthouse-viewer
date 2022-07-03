@@ -30,7 +30,7 @@
     "cypress": "9.7.0",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
     "http-server": "14.1.1",
     "lerna": "5.1.6",
     "prettier": "2.7.1",
