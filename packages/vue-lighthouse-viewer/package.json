@@ -46,8 +46,8 @@
     "typescript": "4.7.4",
     "vite": "3.0.7",
     "vite-plugin-vue2": "2.0.2",
-    "vue": "2.7.8",
-    "vue-template-compiler": "2.7.8"
+    "vue": "2.7.9",
+    "vue-template-compiler": "2.7.9"
   },
   "browserslist": [
     "last 1 Chrome version"
