@@ -41,12 +41,12 @@ importers:
       lighthouse: 9.6.6
       typed-query-selector: 2.6.1
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
     devDependencies:
       lighthouse: 9.6.6
       typed-query-selector: 2.6.1
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
 
   packages/react2-lighthouse-viewer:
     specifiers:
@@ -57,16 +57,16 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
     devDependencies:
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
-      '@vitejs/plugin-react': 2.0.1_vite@3.0.7
+      '@vitejs/plugin-react': 2.0.1_vite@3.0.9
       lighthouse-viewer: link:../lighthouse-viewer
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
 
   packages/svelte-lighthouse-viewer:
     specifiers:
@@ -78,9 +78,9 @@ importers:
       svelte-preprocess: 4.10.7
       tslib: 2.4.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.7
+      '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.9
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.49.0
@@ -88,14 +88,14 @@ importers:
       svelte-preprocess: 4.10.7_svelte@3.49.0+typescript@4.7.4
       tslib: 2.4.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
 
   packages/vue-lighthouse-viewer:
     specifiers:
       lighthouse-viewer: ^0.1.143
       typed-query-selector: 2.6.1
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
       vite-plugin-vue2: 2.0.2
       vue: 2.7.9
       vue-template-compiler: 2.7.9
@@ -103,8 +103,8 @@ importers:
       lighthouse-viewer: link:../lighthouse-viewer
       typed-query-selector: 2.6.1
       typescript: 4.7.4
-      vite: 3.0.7
-      vite-plugin-vue2: 2.0.2_ef310085a073026dc1de652160ebd15d
+      vite: 3.0.9
+      vite-plugin-vue2: 2.0.2_b29c476f03078136641438ffda8c32d0
       vue: 2.7.9
       vue-template-compiler: 2.7.9
 
@@ -112,11 +112,11 @@ importers:
     specifiers:
       cpx: 1.5.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
     devDependencies:
       cpx: 1.5.0
       typescript: 4.7.4
-      vite: 3.0.7
+      vite: 3.0.9
 
 packages:
 
@@ -2096,7 +2096,7 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.1_svelte@3.49.0+vite@3.0.7:
+  /@sveltejs/vite-plugin-svelte/1.0.1_svelte@3.49.0+vite@3.0.9:
     resolution: {integrity: sha512-PorCgUounn0VXcpeJu+hOweZODKmGuLHsLomwqSj+p26IwjjGffmYQfVHtiTWq+NqaUuuHWWG7vPge6UFw4Aeg==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -2114,7 +2114,7 @@ packages:
       magic-string: 0.26.2
       svelte: 3.49.0
       svelte-hmr: 0.14.12_svelte@3.49.0
-      vite: 3.0.7
+      vite: 3.0.9
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2334,7 +2334,7 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-react/2.0.1_vite@3.0.7:
+  /@vitejs/plugin-react/2.0.1_vite@3.0.9:
     resolution: {integrity: sha512-uINzNHmjrbunlFtyVkST6lY1ewSfz/XwLufG0PIqvLGnpk2nOIOa/1CACTDNcKi1/RwaCzJLmsXwm1NsUVV/NA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2347,7 +2347,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.18.6_@babel+core@7.18.10
       magic-string: 0.26.2
       react-refresh: 0.14.0
-      vite: 3.0.7
+      vite: 3.0.9
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8799,7 +8799,7 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite-plugin-vue2/2.0.2_ef310085a073026dc1de652160ebd15d:
+  /vite-plugin-vue2/2.0.2_b29c476f03078136641438ffda8c32d0:
     resolution: {integrity: sha512-Oo1iwc5Zo376s3MYXqS7j+KXs26EjiyWV8/dmI23SoorO3zaAgnBefR45Zme+QtM407tJ2MVq0mqfI10qA5+LQ==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0
@@ -8833,7 +8833,7 @@ packages:
       rollup: 2.75.7
       slash: 3.0.0
       source-map: 0.7.3
-      vite: 3.0.7
+      vite: 3.0.9
       vue-template-babel-compiler: 1.2.0_vue-template-compiler@2.7.9
       vue-template-compiler: 2.7.9
     transitivePeerDependencies:
@@ -8893,8 +8893,8 @@ packages:
       - whiskers
     dev: true
 
-  /vite/3.0.7:
-    resolution: {integrity: sha512-dILhvKba1mbP1wCezVQx/qhEK7/+jVn9ciadEcyKMMhZpsuAi/eWZfJRMkmYlkSFG7Qq9NvJbgFq4XOBxugJsA==}
+  /vite/3.0.9:
+    resolution: {integrity: sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
