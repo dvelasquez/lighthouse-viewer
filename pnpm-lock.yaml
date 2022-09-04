@@ -38,12 +38,12 @@ importers:
 
   packages/lighthouse-viewer:
     specifiers:
-      lighthouse: 9.6.6
+      lighthouse: 9.6.7
       typed-query-selector: 2.6.1
       typescript: 4.8.2
       vite: 3.0.9
     devDependencies:
-      lighthouse: 9.6.6
+      lighthouse: 9.6.7
       typed-query-selector: 2.6.1
       typescript: 4.8.2
       vite: 3.0.9
@@ -5699,8 +5699,8 @@ packages:
     resolution: {integrity: sha512-vlCUxxQAB8Nu6LQHqPpDRiMi06Du593/my/6JbMttQeEfJ7pf4OS8obSTh5xSOS80U/O7fq59Q8rQGAUxQatUQ==}
     dev: true
 
-  /lighthouse/9.6.6:
-    resolution: {integrity: sha512-oeuuUNm7FCbWvzzkSwsfNSEbzMd/02z5Tn9MjwdjDz8X3lj3p8r8J2hel0oRAxjtg73sommj/oPrYInRNPKszg==}
+  /lighthouse/9.6.7:
+    resolution: {integrity: sha512-5ve7eVnDjZPzdK4XG+fZPO3JG6xdyL6yvuMRawYYVLvBqafZel9fXeETtw1qsMg5cKP96lMQCaVP/OtuTHJmRw==}
     engines: {node: '>=14.15'}
     hasBin: true
     dependencies:
