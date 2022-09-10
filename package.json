@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lerna:start": "lerna run start --stream",
-    "lerna:build": "pnpm run build --recursive --filter ./packages",
+    "lerna:build": "nx run-many --target=build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
@@ -23,6 +23,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@nrwl/nx-cloud": "latest",
     "@typescript-eslint/eslint-plugin": "5.32.0",
     "@typescript-eslint/parser": "5.32.0",
     "cpx": "1.5.0",
@@ -33,7 +34,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "http-server": "14.1.1",
     "lerna": "5.4.3",
-    "nx": "^14.7.3",
+    "nx": "14.7.3",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "snyk": "1.992.0",
