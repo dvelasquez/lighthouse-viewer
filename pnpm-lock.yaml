@@ -14,6 +14,7 @@ importers:
       eslint-plugin-prettier: 4.2.1
       http-server: 14.1.1
       lerna: 5.4.3
+      nx: ^14.7.3
       prettier: 2.7.1
       rimraf: 3.0.2
       snyk: 1.992.0
@@ -30,6 +31,7 @@ importers:
       eslint-plugin-prettier: 4.2.1_99a8c9fa965e983db7d4834c61fad511
       http-server: 14.1.1
       lerna: 5.4.3
+      nx: 14.7.3
       prettier: 2.7.1
       rimraf: 3.0.2
       snyk: 1.992.0
@@ -1859,20 +1861,20 @@ packages:
       - supports-color
     dev: true
 
-  /@nrwl/cli/14.5.6:
-    resolution: {integrity: sha512-twTR2nzA8xtTQHgMOUxNCXutRQ4OWT9eeJID3H6C5Ev5Mhi25fZheodVOQu72MpMWHhdtH7/7kHzULJaRsTjHw==}
+  /@nrwl/cli/14.7.3:
+    resolution: {integrity: sha512-mWZ0XidXp7YDJmVLWXQ/MRKwFhV75hQUk9VX+ysCRwptx+vuBVZYUfwuD/Jt8x1EkVYNhPjKwUPVteU8LzA/GA==}
     dependencies:
-      nx: 14.5.6
+      nx: 14.7.3
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
     dev: true
 
-  /@nrwl/tao/14.5.6:
-    resolution: {integrity: sha512-EIbYLhSU85SaYd95t3Mwcy09KVPyPd3DlE7sZBaS3TzFEgOi0o9DLrpHRiZWfUJYgY9ltZHPCQn2hKpd7h7auw==}
+  /@nrwl/tao/14.7.3:
+    resolution: {integrity: sha512-QnfYgtEwJ1Q+8vMHKYcLNfhkMGlbx2JbEMni41GXOE8hRn+ZEe2UWORJ8p+eUjdjaqtaU24SlNrbju1hh9XpUQ==}
     hasBin: true
     dependencies:
-      nx: 14.5.6
+      nx: 14.7.3
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -4544,7 +4546,7 @@ packages:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
     engines: {node: '>=12'}
     dependencies:
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.10
       jsonfile: 6.1.0
       universalify: 2.0.0
     dev: true
@@ -5647,7 +5649,7 @@ packages:
       '@lerna/version': 5.4.3
       import-local: 3.1.0
       npmlog: 6.0.2
-      nx: 14.5.6
+      nx: 14.7.3
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -6471,8 +6473,8 @@ packages:
       set-blocking: 2.0.0
     dev: true
 
-  /nx/14.5.6:
-    resolution: {integrity: sha512-HqOCRKBFPyyauZVTHyF7l5x97xYGukTjeQXxZD5LdVxiL1lSyaOtBCTNUmOge/jCPH3crvSeV2Wt58ZF4u0yaw==}
+  /nx/14.7.3:
+    resolution: {integrity: sha512-+MreZAg9M/9Z2QW3tkWj2tokDZTNxlUDp//ECPOPCW8Auk5re3IEyhSMgQLHVNtIxcCy/bPXldd0KIpdusCYJA==}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -6484,8 +6486,8 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@nrwl/cli': 14.5.6
-      '@nrwl/tao': 14.5.6
+      '@nrwl/cli': 14.7.3
+      '@nrwl/tao': 14.7.3
       '@parcel/watcher': 2.0.4
       chalk: 4.1.0
       chokidar: 3.5.3
