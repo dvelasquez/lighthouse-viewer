@@ -16,7 +16,7 @@
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
     "prepare": "pnpm snyk-protect",
-    "demo:build": "pnpm --filter ./web build",
+    "demo:build": "nx run lighthouse-viewer-web:build",
     "demo:http-server": "http-server web/lighthouse-viewer/dist"
   },
   "keywords": [],
@@ -48,8 +48,5 @@
   "volta": {
     "npm": "8.19.1",
     "node": "16.17.0"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }

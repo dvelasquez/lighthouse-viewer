@@ -17,7 +17,7 @@
           "copy:vue",
           "copy:home",
           "copy:demo",
-          "cypress:run"
+          "demo:build"
         ],
         "accessToken": "NjUyYmVmNjItYzI1YS00OGUxLTkxZmYtYmE4MmMxMmU5OWFhfHJlYWQtd3JpdGU="
       }

@@ -37,7 +37,7 @@
     "dev": "vite",
     "build:demo": "tsc && vite build",
     "build:lib": "cross-env BUILD_TYPE=library vite build && tsc --project tsconfig.lib.json",
-    "build": "pnpm build:demo && pnpm build:lib",
+    "build": "pnpm build:lib && pnpm build:demo",
     "preview": "vite preview"
   },
   "devDependencies": {
