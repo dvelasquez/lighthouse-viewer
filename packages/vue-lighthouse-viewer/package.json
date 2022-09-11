@@ -43,7 +43,7 @@
   "devDependencies": {
     "lighthouse-viewer": "^0.1.143",
     "typed-query-selector": "2.6.1",
-    "typescript": "4.8.2",
+    "typescript": "4.8.3",
     "vite": "3.0.9",
     "vite-plugin-vue2": "2.0.2",
     "vue": "2.7.10",
