@@ -39,12 +39,12 @@ importers:
   packages/lighthouse-viewer:
     specifiers:
       lighthouse: 9.6.7
-      typed-query-selector: 2.6.1
+      typed-query-selector: 2.7.0
       typescript: 4.8.3
       vite: 3.0.9
     devDependencies:
       lighthouse: 9.6.7
-      typed-query-selector: 2.6.1
+      typed-query-selector: 2.7.0
       typescript: 4.8.3
       vite: 3.0.9
 
@@ -93,7 +93,7 @@ importers:
   packages/vue-lighthouse-viewer:
     specifiers:
       lighthouse-viewer: ^0.1.145
-      typed-query-selector: 2.6.1
+      typed-query-selector: 2.7.0
       typescript: 4.8.3
       vite: 3.0.9
       vite-plugin-vue2: 2.0.2
@@ -101,7 +101,7 @@ importers:
       vue-template-compiler: 2.7.10
     devDependencies:
       lighthouse-viewer: link:../lighthouse-viewer
-      typed-query-selector: 2.6.1
+      typed-query-selector: 2.7.0
       typescript: 4.8.3
       vite: 3.0.9
       vite-plugin-vue2: 2.0.2_fce8b1ba6e3a6c17ddec8afde9597bf8
@@ -8202,8 +8202,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /typed-query-selector/2.6.1:
-    resolution: {integrity: sha512-nzzcDrI0nncM5XTNyqeG7MrcXTx8lelUtNlTP+NvpnOfRzApyr+ZW4H/FoOaPfzmjn++Tf0ZxXpBN7Q3FN3ERw==}
+  /typed-query-selector/2.7.0:
+    resolution: {integrity: sha512-as41ht96B9wCJflTJtuNL8LueDlkhctp+p8Rn+WBkEZZ+Rakpycr7cQMbBsOND9iHY5/7pv6DVv/aojfQedDnQ==}
     dev: true
 
   /typedarray-to-buffer/3.1.5:
