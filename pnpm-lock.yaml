@@ -70,7 +70,7 @@ importers:
 
   packages/svelte-lighthouse-viewer:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': 1.0.5
+      '@sveltejs/vite-plugin-svelte': 1.0.8
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: ^0.1.146
       svelte: 3.50.1
@@ -80,7 +80,7 @@ importers:
       typescript: 4.8.3
       vite: 3.0.9
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.5_svelte@3.50.1+vite@3.0.9
+      '@sveltejs/vite-plugin-svelte': 1.0.8_svelte@3.50.1+vite@3.0.9
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.50.1
@@ -2103,8 +2103,8 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.5_svelte@3.50.1+vite@3.0.9:
-    resolution: {integrity: sha512-CmSdSow0Dr5ua1A11BQMtreWnE0JZmkVIcRU/yG3PKbycKUpXjNdgYTWFSbStLB0vdlGnBbm2+Y4sBVj+C+TIw==}
+  /@sveltejs/vite-plugin-svelte/1.0.8_svelte@3.50.1+vite@3.0.9:
+    resolution: {integrity: sha512-1xkVTB4pm6zuign858FzVYE9Fdw9MQBOlxrdd85STV0NvTDmcofcRpcrK+zcIyT8SZ2dseHLu8hvDwzssF6RfA==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -2120,7 +2120,7 @@ packages:
       kleur: 4.1.5
       magic-string: 0.26.3
       svelte: 3.50.1
-      svelte-hmr: 0.14.12_svelte@3.50.1
+      svelte-hmr: 0.15.0_svelte@3.50.1
       vite: 3.0.9
     transitivePeerDependencies:
       - supports-color
@@ -7908,8 +7908,8 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-hmr/0.14.12_svelte@3.50.1:
-    resolution: {integrity: sha512-4QSW/VvXuqVcFZ+RhxiR8/newmwOCTlbYIezvkeN6302YFRE8cXy0naamHcjz8Y9Ce3ITTZtrHrIL0AGfyo61w==}
+  /svelte-hmr/0.15.0_svelte@3.50.1:
+    resolution: {integrity: sha512-Aw21SsyoohyVn4yiKXWPNCSW2DQNH/76kvUnE9kpt4h9hcg9tfyQc6xshx9hzgMfGF0kVx0EGD8oBMWSnATeOg==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: '>=3.19.0'
