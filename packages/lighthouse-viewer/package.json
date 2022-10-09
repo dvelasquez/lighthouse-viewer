@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "lighthouse": "9.6.7",
-    "typed-query-selector": "2.7.0",
+    "typed-query-selector": "2.8.0",
     "typescript": "4.8.4",
     "vite": "3.0.9"
   },
