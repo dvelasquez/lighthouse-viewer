@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.2"
+    "react-dom": "^18.3.0-next-fecc288b7-20221025"
   },
   "devDependencies": {
     "@types/react": "18.0.21",
