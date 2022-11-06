@@ -54,7 +54,7 @@
     "svelte-preprocess": "4.10.7",
     "tslib": "2.4.1",
     "typescript": "4.8.4",
-    "vite": "3.1.8"
+    "vite": "3.2.2"
   },
   "alias": {},
   "browserslist": [
