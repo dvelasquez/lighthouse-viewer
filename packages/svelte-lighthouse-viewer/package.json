@@ -49,7 +49,7 @@
     "@sveltejs/vite-plugin-svelte": "1.1.0",
     "@tsconfig/svelte": "3.0.0",
     "lighthouse-viewer": "^0.1.165",
-    "svelte": "3.53.0",
+    "svelte": "3.53.1",
     "svelte-check": "2.9.2",
     "svelte-preprocess": "4.10.7",
     "tslib": "2.4.1",
