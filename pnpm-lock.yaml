@@ -74,7 +74,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: ^0.1.170
       svelte: 3.53.1
-      svelte-check: 2.9.2
+      svelte-check: 2.10.0
       svelte-preprocess: 4.10.7
       tslib: 2.4.1
       typescript: 4.8.4
@@ -84,7 +84,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.53.1
-      svelte-check: 2.9.2_svelte@3.53.1
+      svelte-check: 2.10.0_svelte@3.53.1
       svelte-preprocess: 4.10.7_svelte@3.53.1+typescript@4.8.4
       tslib: 2.4.1
       typescript: 4.8.4
@@ -8480,8 +8480,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.9.2_svelte@3.53.1:
-    resolution: {integrity: sha512-DRi8HhnCiqiGR2YF9ervPGvtoYrheE09cXieCTEqeTPOTJzfoa54Py8rovIBv4bH4n5HgZYIyTQ3DDLHQLl2uQ==}
+  /svelte-check/2.10.0_svelte@3.53.1:
+    resolution: {integrity: sha512-5iLCoja/WsithyRkNtIeDQ0euJlgWj3Zzo2IA6iuHMuuX9D9OrRYZj2WlA5ACnAFQnN5L9mxWcwUW9VxDNEoGg==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
