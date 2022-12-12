@@ -70,7 +70,7 @@ importers:
 
   packages/svelte-lighthouse-viewer:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': 1.3.1
+      '@sveltejs/vite-plugin-svelte': 1.4.0
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: ^0.1.174
       svelte: 3.53.1
@@ -80,7 +80,7 @@ importers:
       typescript: 4.8.4
       vite: 3.2.5
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.3.1_svelte@3.53.1+vite@3.2.5
+      '@sveltejs/vite-plugin-svelte': 1.4.0_svelte@3.53.1+vite@3.2.5
       '@tsconfig/svelte': 3.0.0
       lighthouse-viewer: link:../lighthouse-viewer
       svelte: 3.53.1
@@ -2150,16 +2150,12 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.3.1_svelte@3.53.1+vite@3.2.5:
-    resolution: {integrity: sha512-2Uu2sDdIR+XQWF7QWOVSF2jR9EU6Ciw1yWfYnfLYj8HIgnNxkh/8g22Fw2pBUI8QNyW/KxtqJUWBI+8ypamSrQ==}
+  /@sveltejs/vite-plugin-svelte/1.4.0_svelte@3.53.1+vite@3.2.5:
+    resolution: {integrity: sha512-6QupI/jemMfK+yI2pMtJcu5iO2gtgTfcBdGwMZZt+lgbFELhszbDl6Qjh000HgAV8+XUA+8EY8DusOFk8WhOIg==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
-      diff-match-patch: ^1.0.5
       svelte: ^3.44.0
       vite: ^3.0.0
-    peerDependenciesMeta:
-      diff-match-patch:
-        optional: true
     dependencies:
       debug: 4.3.4
       deepmerge: 4.2.2
