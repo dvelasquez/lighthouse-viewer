@@ -16,7 +16,7 @@ importers:
       lerna: 6.1.0
       prettier: 2.8.1
       rimraf: 3.0.2
-      snyk: 1.1065.0
+      snyk: 1.1071.0
       tslib: 2.4.1
       typescript: 4.8.4
     devDependencies:
@@ -32,7 +32,7 @@ importers:
       lerna: 6.1.0
       prettier: 2.8.1
       rimraf: 3.0.2
-      snyk: 1.1065.0
+      snyk: 1.1071.0
       tslib: 2.4.1
       typescript: 4.8.4
 
@@ -7775,8 +7775,8 @@ packages:
       use: 3.1.1
     dev: true
 
-  /snyk/1.1065.0:
-    resolution: {integrity: sha512-fLtwucSdl3A6DzCbFn20HS8pDlOqkfRQyJ01blGOQVze2BIKiHcacMiSfQeAx9zH4fl4p/Dm8ZnR0olNdfkA9w==}
+  /snyk/1.1071.0:
+    resolution: {integrity: sha512-SAJbLaREe/PE2VrOhv4s9KBFMki7oLU/phu0LgB3E3YjgkpJGPExSmeqqSGhKIl2Wj9e2+OLtXPnJye8uyuMIA==}
     engines: {node: '>=12'}
     hasBin: true
     dev: true
