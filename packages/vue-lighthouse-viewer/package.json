@@ -45,7 +45,7 @@
     "typed-query-selector": "2.8.0",
     "typescript": "4.8.4",
     "vite": "3.2.5",
-    "vite-plugin-vue2": "2.0.2",
+    "vite-plugin-vue2": "2.0.3",
     "vue": "2.7.14",
     "vue-template-compiler": "2.7.14"
   },
