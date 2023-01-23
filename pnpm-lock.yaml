@@ -15,7 +15,7 @@ importers:
       http-server: 14.1.1
       lerna: 6.4.1
       prettier: 2.8.3
-      rimraf: 3.0.2
+      rimraf: 4.1.1
       snyk: 1.1087.0
       tslib: 2.4.1
       typescript: 4.8.4
@@ -31,7 +31,7 @@ importers:
       http-server: 14.1.1
       lerna: 6.4.1
       prettier: 2.8.3
-      rimraf: 3.0.2
+      rimraf: 4.1.1
       snyk: 1.1087.0
       tslib: 2.4.1
       typescript: 4.8.4
@@ -7412,6 +7412,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.1.1:
+    resolution: {integrity: sha512-Z4Y81w8atcvaJuJuBB88VpADRH66okZAuEm+Jtaufa+s7rZmIz+Hik2G53kGaNytE7lsfXyWktTmfVz0H9xuDg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /robots-parser/3.0.0:
