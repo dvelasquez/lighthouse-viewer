@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "typescript": "4.8.4",
-    "vite": "3.2.5",
+    "vite": "4.1.1",
     "cpx": "1.5.0"
   },
   "volta":{
