@@ -16,7 +16,6 @@
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
     "prepare": "pnpm snyk-protect",
-    "demo:build": "pnpm --filter ./web build",
     "demo:http-server": "http-server web/lighthouse-viewer/dist"
   },
   "keywords": [],

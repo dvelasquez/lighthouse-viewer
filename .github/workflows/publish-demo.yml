@@ -41,9 +41,6 @@ jobs:
       - name: Build libraries
         run: pnpm lerna:build
 
-      - name: Build demo
-        run: pnpm demo:build
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
