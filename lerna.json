@@ -8,6 +8,5 @@
   "packages": ["packages/**", "web/**"],
   "version": "independent",
   "useWorkspaces": true,
-  "npmClient": "pnpm",
-  "useNx": false
+  "npmClient": "pnpm"
 }

@@ -1,0 +1,76 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build:demo",
+          "build:lib",
+          "build",
+          "copy:vanilla",
+          "copy:react",
+          "copy:svelte",
+          "copy:vue",
+          "copy:home",
+          "copy:demo"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build:demo": {
+      "dependsOn": [
+        "^build:demo"
+      ],
+      "outputs": [
+        "{projectRoot}/demo"
+      ]
+    },
+    "build:lib": {
+      "dependsOn": [
+        "^build:lib"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "copy:vanilla": {
+      "dependsOn": [
+        "^copy:vanilla"
+      ]
+    },
+    "copy:react": {
+      "dependsOn": [
+        "^copy:react"
+      ]
+    },
+    "copy:svelte": {
+      "dependsOn": [
+        "^copy:svelte"
+      ]
+    },
+    "copy:vue": {
+      "dependsOn": [
+        "^copy:vue"
+      ]
+    },
+    "copy:home": {
+      "dependsOn": [
+        "^copy:home"
+      ]
+    },
+    "copy:demo": {
+      "dependsOn": [
+        "^copy:demo"
+      ]
+    }
+  }
+}
