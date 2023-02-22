@@ -8,5 +8,6 @@
   "packages": ["packages/**"],
   "version": "independent",
   "useWorkspaces": true,
+  "npmClient": "pnpm",
   "useNx": false
 }
