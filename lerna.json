@@ -5,9 +5,8 @@
       "message": "chore(release): publish [skip ci]"
     }
   },
-  "packages": [
-    "packages/**"
-  ],
+  "packages": ["packages/**"],
   "version": "independent",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "useNx": false
 }

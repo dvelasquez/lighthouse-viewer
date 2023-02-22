@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lerna:start": "lerna run start --stream",
-    "lerna:build": "pnpm run build --recursive --filter ./packages",
+    "lerna:build": "lerna run build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
