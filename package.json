@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lerna:start": "lerna run start --stream",
-    "lerna:build": "pnpm run build --recursive --filter ./packages",
+    "lerna:build": "lerna run build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
@@ -16,13 +16,13 @@
     "cypress:run": "cypress run",
     "snyk-protect": "snyk protect",
     "prepare": "pnpm snyk-protect",
-    "demo:build": "pnpm --filter ./web build",
     "demo:http-server": "http-server web/lighthouse-viewer/dist"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "18",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
     "cpx": "1.5.0",
@@ -33,11 +33,12 @@
     "eslint-plugin-prettier": "4.2.1",
     "http-server": "14.1.1",
     "lerna": "6.4.1",
+    "nx": "15.7.2",
     "prettier": "2.8.4",
     "rimraf": "4.1.2",
     "snyk": "1.1100.0",
     "tslib": "2.5.0",
-    "typescript": "4.8.4"
+    "typescript": "4.9.5"
   },
   "snyk": true,
   "browserslist": [

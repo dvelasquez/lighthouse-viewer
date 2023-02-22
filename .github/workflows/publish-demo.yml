@@ -25,24 +25,21 @@ jobs:
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
             ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
       
-      - name: Use Node.js 16.x
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.13.0
+          node-version: 18.14.2
       
       - uses: pnpm/action-setup@v2.2.4
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          version: 6.23.6
+          version: 7.2.1
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
 
       - name: Build libraries
         run: pnpm lerna:build
-
-      - name: Build demo
-        run: pnpm demo:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
