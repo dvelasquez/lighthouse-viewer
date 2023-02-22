@@ -23,6 +23,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "16",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
     "cpx": "1.5.0",
