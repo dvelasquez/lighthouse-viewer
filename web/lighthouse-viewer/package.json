@@ -16,7 +16,10 @@
   "devDependencies": {
     "typescript": "4.9.5",
     "vite": "4.1.1",
-    "cpx": "1.5.0"
+    "cpx": "1.5.0",
+    "react2-lighthouse-viewer": "workspace:^0.1.201",
+    "vue-lighthouse-viewer": "workspace:^0.1.195",
+    "svelte-lighthouse-viewer": "workspace:^0.1.206"
   },
   "volta": {
     "extends": "../../package.json"
