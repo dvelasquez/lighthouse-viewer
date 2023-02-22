@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Cache node_modules 📦
-        uses: actions/cache@v3.0.8
+        uses: actions/cache@v3.2.5
         with:
           path: |
             ~/.pnpm-store
@@ -102,7 +102,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Cache node_modules 📦
-        uses: actions/cache@v3.0.8
+        uses: actions/cache@v3.2.5
         with:
           path: |
             ~/.pnpm-store
