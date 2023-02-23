@@ -1,5 +1,5 @@
 describe('React Component', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('http://127.0.0.1:8080/lighthouse-viewer/react/index.html');
   });
   it('Check heading categories results', () => {
