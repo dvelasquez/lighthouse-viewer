@@ -1,5 +1,5 @@
 describe('Vanilla Component', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('http://127.0.0.1:8080/lighthouse-viewer/vanillajs/index.html');
   });
   it('Check heading categories results', () => {
