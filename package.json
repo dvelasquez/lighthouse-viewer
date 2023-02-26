@@ -4,8 +4,8 @@
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",
   "scripts": {
-    "lerna:start": "lerna run start --stream",
-    "lerna:build": "lerna run build",
+    "lerna:start": "nx run-many --target=dev",
+    "lerna:build": "nx run-many --target=build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
@@ -22,6 +22,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@nrwl/nx-cloud": "latest",
     "@types/node": "18",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",

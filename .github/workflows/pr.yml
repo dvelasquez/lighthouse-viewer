@@ -11,7 +11,8 @@ jobs:
   install_dependencies:
     name: Install dependencies & lint
     runs-on: ubuntu-latest
-
+    env:
+      NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       

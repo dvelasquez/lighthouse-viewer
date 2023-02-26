@@ -98,6 +98,7 @@ jobs:
     # needs: run_cypress
     needs: install_dependencies
     env:
+      NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
       CI: 'true'
     steps:
       - uses: actions/checkout@v3
