@@ -14,20 +14,7 @@ jobs:
     env:
       NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: actions/checkout@v3
-      - name: Cache node_modules 📦
-        uses: actions/cache@v3.2.6
-        with:
-          path: |
-            ~/.pnpm-store
-            /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-      
+      - uses: actions/checkout@v3      
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
@@ -37,7 +24,27 @@ jobs:
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 7.27.1
-          run_install: true
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3.2.6
+        with:
+          path: |
+            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
       
       - name: Lint
         run: pnpm lint
@@ -46,20 +53,10 @@ jobs:
     name: E2E tests
     runs-on: ubuntu-latest
     needs: install_dependencies
-
+    env:
+      NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Cache node_modules 📦
-        uses: actions/cache@v3.2.6
-        with:
-          path: |
-            ~/.pnpm-store
-            /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-      
+      - uses: actions/checkout@v3      
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
@@ -69,7 +66,27 @@ jobs:
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 7.27.1
-          run_install: true
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3.2.6
+        with:
+          path: |
+            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
 
       - name: Build library
         run: pnpm lerna:build
