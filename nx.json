@@ -13,65 +13,40 @@
           "copy:vue",
           "copy:home",
           "copy:demo"
-        ],
-        "accessToken": "NDdmMWQ0ZTAtMjFiOC00MTU4LWFiN2EtZDk1OTk0NTkxMzg2fHJlYWQtd3JpdGU="
+        ]
       }
     }
   },
   "targetDefaults": {
     "build:demo": {
-      "dependsOn": [
-        "^build:demo"
-      ],
-      "outputs": [
-        "{projectRoot}/demo"
-      ]
+      "dependsOn": ["^build:demo"],
+      "outputs": ["{projectRoot}/demo"]
     },
     "build:lib": {
-      "dependsOn": [
-        "^build:lib"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ]
+      "dependsOn": ["^build:lib"],
+      "outputs": ["{projectRoot}/dist"]
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"]
     },
     "copy:vanilla": {
-      "dependsOn": [
-        "^copy:vanilla"
-      ]
+      "dependsOn": ["^copy:vanilla"]
     },
     "copy:react": {
-      "dependsOn": [
-        "^copy:react"
-      ]
+      "dependsOn": ["^copy:react"]
     },
     "copy:svelte": {
-      "dependsOn": [
-        "^copy:svelte"
-      ]
+      "dependsOn": ["^copy:svelte"]
     },
     "copy:vue": {
-      "dependsOn": [
-        "^copy:vue"
-      ]
+      "dependsOn": ["^copy:vue"]
     },
     "copy:home": {
-      "dependsOn": [
-        "^copy:home"
-      ]
+      "dependsOn": ["^copy:home"]
     },
     "copy:demo": {
-      "dependsOn": [
-        "^copy:demo"
-      ]
+      "dependsOn": ["^copy:demo"]
     }
   },
   "defaultBase": "main"

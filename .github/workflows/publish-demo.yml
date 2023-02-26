@@ -11,6 +11,7 @@ jobs:
     name: Update demo pages
     runs-on: ubuntu-latest
     env:
+      NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
       CI: 'true'
     steps:
       - uses: actions/checkout@v3
