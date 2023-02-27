@@ -4,5 +4,6 @@ packages:
   - 'packages/svelte-lighthouse-viewer'
   - 'packages/vue-lighthouse-viewer'
   - 'web/lighthouse-viewer'
+  - 'examples/create-react-app'
 
 link-workspace-packages: true

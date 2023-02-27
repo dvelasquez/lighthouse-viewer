@@ -2,16 +2,16 @@
   "name": "react2-lighthouse-viewer",
   "version": "0.1.201",
   "private": false,
-  "main": "./dist/react-lighthouse-viewer.umd.js",
-  "module": "./dist/react-lighthouse-viewer.es.js",
+  "main": "./dist/react2-lighthouse-viewer.umd.js",
+  "module": "./dist/react2-lighthouse-viewer.es.js",
   "types": "./types/types.d.ts",
   "files": [
     "/dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/react-lighthouse-viewer.es.js",
-      "require": "./dist/react-lighthouse-viewer.umd.js"
+      "import": "./dist/react2-lighthouse-viewer.es.js",
+      "require": "./dist/react2-lighthouse-viewer.umd.js"
     }
   },
   "license": "Apache-2.0",
