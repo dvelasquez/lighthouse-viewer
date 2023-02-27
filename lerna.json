@@ -5,7 +5,7 @@
       "message": "chore(release): publish [skip ci]"
     }
   },
-  "packages": ["packages/**", "web/**"],
+  "packages": ["packages/**", "web/**", "examples/**"],
   "version": "independent",
   "useWorkspaces": true,
   "npmClient": "pnpm"
