@@ -17,3 +17,7 @@ import React2LighthouseViewer from "react2-lighthouse-viewer";
 ```
 4. That's all!
 
+You can also refer to the examples in the [examples](/examples) folder.
+
+1. [Create React App example](/examples/create-react-app)
+
