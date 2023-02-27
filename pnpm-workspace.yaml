@@ -5,6 +5,6 @@ packages:
   - 'packages/vue-lighthouse-viewer'
   - 'web/lighthouse-viewer'
   - 'examples/create-react-app'
-  - 'examples/nextjs'
+  - 'examples/nextjs-ts'
 
 link-workspace-packages: true
