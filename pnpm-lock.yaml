@@ -95,12 +95,12 @@ importers:
 
   packages/lighthouse-viewer:
     specifiers:
-      lighthouse: 10.0.1
+      lighthouse: 10.0.2
       typed-query-selector: 2.8.0
       typescript: 4.9.5
       vite: 4.1.4
     devDependencies:
-      lighthouse: 10.0.1_typescript@4.9.5
+      lighthouse: 10.0.2_typescript@4.9.5
       typed-query-selector: 2.8.0
       typescript: 4.9.5
       vite: 4.1.4
@@ -11617,8 +11617,8 @@ packages:
     resolution: {integrity: sha512-9prq6oMkVHz3GeCkphq4FHXXdj3M/WPiFWUvJAczLYV8j/oTxsgiHSPMqh1KVV11CP0VTxD40hFC0pDfXF+khQ==}
     dev: true
 
-  /lighthouse/10.0.1_typescript@4.9.5:
-    resolution: {integrity: sha512-vxHggvQPAx5ousLosVzWHTPJ+MpVYee+ojiP0r0ewq8cWAvnzLb6M2EieeBfjjm87shRaj0BB2puC8gFztwXXw==}
+  /lighthouse/10.0.2_typescript@4.9.5:
+    resolution: {integrity: sha512-RVHBzDI0gi323oWKyG9JvU3y/DLdRvsOv1avlDbARwVoIWnoCCpB5uPE0LNYAipzwDwKc5sCEY7HVKafqwJjYQ==}
     engines: {node: '>=16.16'}
     hasBin: true
     dependencies:
