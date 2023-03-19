@@ -10,7 +10,7 @@ importers:
       '@typescript-eslint/parser': 5.51.0
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 12.7.0
+      cypress: 12.8.1
       eslint: 8.35.0
       eslint-config-prettier: 8.7.0
       eslint-plugin-prettier: 4.2.1
@@ -29,7 +29,7 @@ importers:
       '@typescript-eslint/parser': 5.51.0_ycpbpc6yetojsgtrx3mwntkhsu
       cpx: 1.5.0
       cross-env: 7.0.3
-      cypress: 12.7.0
+      cypress: 12.8.1
       eslint: 8.35.0
       eslint-config-prettier: 8.7.0_eslint@8.35.0
       eslint-plugin-prettier: 4.2.1_xprnzp4ul2bcpmfe73av4voica
@@ -7104,8 +7104,8 @@ packages:
   /csstype/3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
 
-  /cypress/12.7.0:
-    resolution: {integrity: sha512-7rq+nmhzz0u6yabCFyPtADU2OOrYt6pvUau9qV7xyifJ/hnsaw/vkr0tnLlcuuQKUAOC1v1M1e4Z0zG7S0IAvA==}
+  /cypress/12.8.1:
+    resolution: {integrity: sha512-lIFbKdaSYAOarNLHNFa2aPZu6YSF+8UY4VRXMxJrFUnk6RvfG0AWsZ7/qle/aIz30TNUD4aOihz2ZgS4vuQVSA==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
