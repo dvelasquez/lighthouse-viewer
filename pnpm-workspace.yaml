@@ -6,5 +6,6 @@ packages:
   - 'web/lighthouse-viewer'
   - 'examples/create-react-app'
   - 'examples/nextjs-ts'
+  - 'examples/vite-vue3'
 
 link-workspace-packages: true
