@@ -171,8 +171,8 @@ importers:
   packages/svelte-lighthouse-viewer:
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
-        specifier: 2.0.3
-        version: 2.0.3(svelte@3.57.0)(vite@4.1.4)
+        specifier: 2.0.4
+        version: 2.0.4(svelte@3.57.0)(vite@4.1.4)
       '@tsconfig/svelte':
         specifier: 3.0.0
         version: 3.0.0
@@ -3660,7 +3660,7 @@ packages:
       '@rollup/pluginutils': 3.1.0(rollup@2.79.1)
       '@types/resolve': 1.17.1
       builtin-modules: 3.3.0
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       is-module: 1.0.0
       resolve: 1.22.1
       rollup: 2.79.1
@@ -3799,17 +3799,17 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /@sveltejs/vite-plugin-svelte@2.0.3(svelte@3.57.0)(vite@4.1.4):
-    resolution: {integrity: sha512-o+cguBFdwIGtRbNkYOyqTM7KvRUffxh5bfK4oJsWKG2obu+v/cbpT03tJrGl58C7tRXo/aEC0/axN5FVHBj0nA==}
+  /@sveltejs/vite-plugin-svelte@2.0.4(svelte@3.57.0)(vite@4.1.4):
+    resolution: {integrity: sha512-pjqhW00KwK2uzDGEr+yJBwut+D+4XfJO/+bHHdHzPRXn9+1Jeq5JcFHyrUiYaXgHtyhX0RsllCTm4ssAx4ZY7Q==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
       svelte: ^3.54.0
       vite: ^4.0.0
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       kleur: 4.1.5
-      magic-string: 0.29.0
+      magic-string: 0.30.0
       svelte: 3.57.0
       svelte-hmr: 0.15.1(svelte@3.57.0)
       vite: 4.1.4(@types/node@18.14.0)
@@ -3907,7 +3907,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       cosmiconfig: 7.0.1
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       svgo: 1.3.2
     dev: false
 
@@ -7243,8 +7243,8 @@ packages:
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
-  /deepmerge@4.3.0:
-    resolution: {integrity: sha512-z2wJZXrmeHdvYJp/Ux55wIjqo81G5Bp4c+oELTW+7ar6SogWHajt5a9gO3s3IDaGSAXjDk0vlQKN3rms8ab3og==}
+  /deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
 
   /default-gateway@6.0.3:
@@ -8648,7 +8648,7 @@ packages:
       chalk: 4.1.2
       chokidar: 3.5.3
       cosmiconfig: 6.0.0
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       eslint: 8.36.0
       fs-extra: 9.1.0
       glob: 7.2.3
@@ -10160,7 +10160,7 @@ packages:
       babel-jest: 27.5.1(@babel/core@7.21.0)
       chalk: 4.1.2
       ci-info: 3.3.2
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       glob: 7.2.3
       graceful-fs: 4.2.10
       jest-circus: 27.5.1
@@ -11309,8 +11309,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /magic-string@0.29.0:
-    resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
+  /magic-string@0.30.0:
+    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
@@ -16073,7 +16073,7 @@ packages:
       '@babel/plugin-transform-parameters': 7.17.12(@babel/core@7.20.12)
       '@babel/plugin-transform-spread': 7.17.12(@babel/core@7.20.12)
       '@babel/types': 7.20.7
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       vue-template-compiler: 2.7.14
     transitivePeerDependencies:
       - supports-color
