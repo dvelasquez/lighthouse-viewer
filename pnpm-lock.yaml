@@ -129,8 +129,8 @@ importers:
   packages/lighthouse-viewer:
     devDependencies:
       lighthouse:
-        specifier: 10.0.2
-        version: 10.0.2(typescript@4.9.5)
+        specifier: 10.1.1
+        version: 10.1.1(typescript@4.9.5)
       typed-query-selector:
         specifier: 2.8.0
         version: 2.8.0
@@ -7568,6 +7568,10 @@ packages:
     resolution: {integrity: sha512-pmMDBKiRVjh0uKK6CT1WqZmM3hBVSgD+N2MrgyV1uNizAZMw4tx6i/RTc+/uCsKSCmg0xXx7arCP/OFcIwTsiQ==}
     dev: true
 
+  /devtools-protocol@0.0.1130274:
+    resolution: {integrity: sha512-kIozBWajgsi1g0W8yzALI4ZdCp6KG1yWaq8NN1ehQM3zX6JRegLSzfexz7XT5eFjmq1RkpMYgeKmfi3GsHrCLw==}
+    dev: true
+
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
     dev: false
@@ -9562,8 +9566,9 @@ packages:
       toidentifier: 1.0.1
     dev: false
 
-  /http-link-header@0.8.0:
-    resolution: {integrity: sha512-qsh/wKe1Mk1vtYEFr+LpQBFWTO1gxZQBdii2D0Umj+IUQ23r5sT088Rhpq4XzpSyIpaX7vwjB8Rrtx8u9JTg+Q==}
+  /http-link-header@1.1.1:
+    resolution: {integrity: sha512-mW3N/rTYpCn99s1do0zx6nzFZSwLH9HGfUM4ZqLWJ16ylmYaC2v5eYGqrNTQlByx8AzUgGI+V/32gXPugs1+Sw==}
+    engines: {node: '>=6.0.0'}
     dev: true
 
   /http-parser-js@0.5.8:
@@ -11309,8 +11314,8 @@ packages:
     resolution: {integrity: sha512-9prq6oMkVHz3GeCkphq4FHXXdj3M/WPiFWUvJAczLYV8j/oTxsgiHSPMqh1KVV11CP0VTxD40hFC0pDfXF+khQ==}
     dev: true
 
-  /lighthouse@10.0.2(typescript@4.9.5):
-    resolution: {integrity: sha512-RVHBzDI0gi323oWKyG9JvU3y/DLdRvsOv1avlDbARwVoIWnoCCpB5uPE0LNYAipzwDwKc5sCEY7HVKafqwJjYQ==}
+  /lighthouse@10.1.1(typescript@4.9.5):
+    resolution: {integrity: sha512-fw+IErhG3MB3SS8SWDcz+RMzM7n6/CPBShdQUTnc39U4V1yDVr+qBRtlXBhbpH5SFASzJnD6Xkm5SoYyCACHMg==}
     engines: {node: '>=16.16'}
     hasBin: true
     dependencies:
@@ -11319,8 +11324,9 @@ packages:
       chrome-launcher: 0.15.1
       configstore: 5.0.1
       csp_evaluator: 1.1.1
+      devtools-protocol: 0.0.1130274
       enquirer: 2.3.6
-      http-link-header: 0.8.0
+      http-link-header: 1.1.1
       intl-messageformat: 4.4.0
       jpeg-js: 0.4.4
       js-library-detector: 6.6.0
