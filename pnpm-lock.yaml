@@ -23,8 +23,8 @@ importers:
         specifier: 7.0.3
         version: 7.0.3
       cypress:
-        specifier: 12.11.0
-        version: 12.11.0
+        specifier: 12.12.0
+        version: 12.12.0
       eslint:
         specifier: 8.39.0
         version: 8.39.0
@@ -6158,10 +6158,6 @@ packages:
     resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==}
     dev: true
 
-  /ci-info@3.3.2:
-    resolution: {integrity: sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==}
-    dev: false
-
   /ci-info@3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
@@ -7266,8 +7262,8 @@ packages:
   /csstype@3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
 
-  /cypress@12.11.0:
-    resolution: {integrity: sha512-TJE+CCWI26Hwr5Msb9GpQhFLubdYooW0fmlPwTsfiyxmngqc7+SZGLPeIkj2dTSSZSEtpQVzOzvcnzH0o8G7Vw==}
+  /cypress@12.12.0:
+    resolution: {integrity: sha512-UU5wFQ7SMVCR/hyKok/KmzG6fpZgBHHfrXcHzDmPHWrT+UUetxFzQgt7cxCszlwfozckzwkd22dxMwl/vNkWRw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
@@ -10821,7 +10817,7 @@ packages:
       '@jest/types': 29.4.3
       '@types/node': 18.14.0
       chalk: 4.1.2
-      ci-info: 3.3.2
+      ci-info: 3.8.0
       graceful-fs: 4.2.10
       picomatch: 2.3.1
     dev: false
