@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Lighthouse Viewer / Reporter React</title>
+    <title>Lighthouse Viewer / Reporter Vanilla JS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105846650-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
+
       gtag('js', new Date());
 
       gtag('config', 'UA-105846650-1');
     </script>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
-    <script type="module" crossorigin src="/lighthouse-viewer/react/assets/index-5db7669b.js"></script>
+    <script type="module" crossorigin src="/lighthouse-viewer/vanillajs/assets/index-01f4c90d.js"></script>
+    <link rel="stylesheet" href="/lighthouse-viewer/vanillajs/assets/index-54c62cf2.css">
   </head>
   <body>
     <header>
@@ -26,12 +29,13 @@
           <li><a id="vue-lighthouse-viewer-link" href="#">VueJS Demo</a></li>
           <li><a id="react2-lighthouse-viewer-link" href="#">React Demo</a></li>
           <li><a id="svelte-lighthouse-viewer-link" href="#">Svelte Demo</a></li>
+          <li><a id="ngx-lighthouse-viewer-link" href="#">Angular Demo</a></li>
         </ul>
       </nav>
-      <h1>React Implementation</h1>
+      <h1>Vanilla JS Implementation</h1>
       <br />
       <p>
-        <a href="https://github.com/dvelasquez/lighthouse-viewer/tree/master/packages/react2-lighthouse-viewer">
+        <a href="https://github.com/dvelasquez/lighthouse-viewer/tree/master/packages/lighthouse-viewer">
           <b>
             <img
               style="filter: invert(); height: 1rem"
@@ -41,7 +45,7 @@
             View on Github
           </b>
         </a>
-        <a href="https://www.npmjs.com/package/react2-lighthouse-viewer">
+        <a href="https://www.npmjs.com/package/lighthouse-viewer">
           <b>
             <img
               style="filter: invert(); height: 1rem"
@@ -54,7 +58,8 @@
       </p>
     </header>
     <main>
-      <div id="react-app"></div>
+      <h1>VANILLA APP</h1>
+      <div id="lighthouse-viewer-element"></div>
       
     </main>
     <footer>
@@ -92,6 +97,10 @@
         {
           id: 'svelte-lighthouse-viewer-link',
           link: '/lighthouse-viewer/svelte/index.html',
+        },
+        {
+          id: 'ngx-lighthouse-viewer-link',
+          link: '/lighthouse-viewer/ngx/index.html',
         },
       ];
       lighthouseLinks.forEach(({ id, link }) => {
