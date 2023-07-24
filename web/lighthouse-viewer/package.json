@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "typescript": "4.9.5",
-    "vite": "4.4.4",
+    "vite": "4.4.5",
     "cpx": "1.5.0",
     "react2-lighthouse-viewer": "workspace:^0.1.201",
     "vue-lighthouse-viewer": "workspace:^0.1.195",
