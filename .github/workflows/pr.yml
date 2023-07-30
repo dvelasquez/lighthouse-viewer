@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 18.14.2
       
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: pnpm/action-setup@v2.4.0
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 7.27.1
@@ -62,7 +62,7 @@ jobs:
         with:
           node-version: 18.14.2
       
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: pnpm/action-setup@v2.4.0
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 7.27.1
