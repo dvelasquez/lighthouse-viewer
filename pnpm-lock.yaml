@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@nrwl/nx-cloud':
         specifier: latest
-        version: 16.1.1
+        version: 16.2.0
       '@types/node':
         specifier: '18'
         version: 18.14.0
@@ -148,8 +148,8 @@ importers:
   packages/react2-lighthouse-viewer:
     devDependencies:
       '@types/react':
-        specifier: 18.2.17
-        version: 18.2.17
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -3472,10 +3472,10 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/nx-cloud@16.1.1:
-    resolution: {integrity: sha512-iJIPP46+saFZK748FKU4u4YZH+Sv3ZvZPbMwGVMhwqhOYcrlO5aSa0lpilyoN8WuhooKNqcCfiqshx6V577fTg==}
+  /@nrwl/nx-cloud@16.2.0:
+    resolution: {integrity: sha512-NNSXBxI6DRndO5SRtvqi9qtTdknbqUNHIJO511S61YmdeQM18OflUB7ejyRQvQVhkB+XpGutSIp/BJPLocJf+w==}
     dependencies:
-      nx-cloud: 16.1.1
+      nx-cloud: 16.2.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -4398,7 +4398,7 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.17
+      '@types/react': 18.2.18
     dev: true
 
   /@types/react@18.0.28:
@@ -4409,8 +4409,8 @@ packages:
       csstype: 3.1.0
     dev: false
 
-  /@types/react@18.2.17:
-    resolution: {integrity: sha512-u+e7OlgPPh+aryjOm5UJMX32OvB2E3QASOAqVMY6Ahs90djagxwv2ya0IctglNbNTexC12qCSMZG47KPfy1hAA==}
+  /@types/react@18.2.18:
+    resolution: {integrity: sha512-da4NTSeBv/P34xoZPhtcLkmZuJ+oYaCxHmyHzwaDQo9RQPBeXV+06gEk2FpqEcsX9XrnNLvRpVh6bdavDSjtiQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -12614,11 +12614,11 @@ packages:
     resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==}
     dev: false
 
-  /nx-cloud@16.1.1:
-    resolution: {integrity: sha512-Rq7ynvkYzAJ67N3pDqU6cMqwvWP7WXJGP4EFjLxgUrRHNCccqDPggeAqePodfk3nZEUrZB8F5QBKZuuw1DR3oA==}
+  /nx-cloud@16.2.0:
+    resolution: {integrity: sha512-LESjpYO6Ksg4AjbXnzH9qZqyQzTauwFFUITeyz5NAVEFKaBTEICyupSk+3Xq3v4QQurFJOE3rShhYuSQP5moeQ==}
     hasBin: true
     dependencies:
-      '@nrwl/nx-cloud': 16.1.1
+      '@nrwl/nx-cloud': 16.2.0
       axios: 1.1.3
       chalk: 4.1.2
       dotenv: 10.0.0
