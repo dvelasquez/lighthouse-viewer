@@ -44,7 +44,7 @@
   ],
   "volta": {
     "npm": "9.8.0",
-    "node": "16.19.1"
+    "node": "16.20.2"
   },
   "workspaces": [
     "packages/*",
