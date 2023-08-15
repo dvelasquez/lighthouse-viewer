@@ -33,7 +33,7 @@
     "http-server": "14.1.1",
     "lerna": "7.1.5",
     "nx": "16.6.0",
-    "prettier": "2.8.8",
+    "prettier": "3.0.1",
     "rimraf": "5.0.1",
     "tslib": "2.6.1",
     "typescript": "5.1.6"
