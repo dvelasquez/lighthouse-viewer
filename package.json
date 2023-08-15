@@ -34,7 +34,7 @@
     "lerna": "7.1.5",
     "nx": "16.6.0",
     "prettier": "3.0.1",
-    "rimraf": "4.4.1",
+    "rimraf": "5.0.1",
     "tslib": "2.6.1",
     "typescript": "5.1.6"
   },
