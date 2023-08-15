@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { renderReport } from 'lighthouse-viewer';
+import { renderReport, Result } from 'lighthouse-viewer';
 
 export type React2LighthouseViewerProps = {
-  json: any;
+  json: Result;
 };
+
+export type { Result };
 
 export default ({ json }: React2LighthouseViewerProps): JSX.Element => {
   const [template, setTemplate] = useState('');

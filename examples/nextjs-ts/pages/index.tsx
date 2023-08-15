@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
-import React2LighthouseViewer from 'react2-lighthouse-viewer';
+import React2LighthouseViewer, { Result } from 'react2-lighthouse-viewer';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<Result | null>(null);
   useEffect(() => {
     fetch('/report.json')
       .then((res) => res.json())
-      .then((data: any) => setData(data));
+      .then((data: Result) => setData(data));
   }, []);
   return (
     <>
