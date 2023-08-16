@@ -5,7 +5,7 @@ describe('Vue Component', () => {
   it('Check heading categories results', () => {
     cy.get('h1').contains('Vue 2 APP');
     cy.get('.lh-scores-header > [href="#performance"] > .lh-gauge__percentage').contains(100);
-    cy.get('.lh-scores-header > [href="#accessibility"] > .lh-gauge__percentage').contains(97);
+    cy.get('.lh-scores-header > [href="#accessibility"] > .lh-gauge__percentage').contains(95);
     cy.get('.lh-scores-header > [href="#best-practices"] > .lh-gauge__percentage').contains(100);
     cy.get('.lh-scores-header > [href="#seo"] > .lh-gauge__percentage').contains(98);
     cy.get('.lh-scores-header > .lh-gauge--pwa__wrapper > .lh-gauge__label').contains('PWA');
@@ -26,7 +26,7 @@ describe('Vue Component', () => {
   it('Check Accessibility metrics', () => {
     cy.get(
       ':nth-child(2) > .lh-category > .lh-category-header > .lh-score__gauge > .lh-gauge__wrapper > .lh-gauge__percentage',
-    ).contains(97);
+    ).contains(95);
   });
   it('Check Best Practices metrics', () => {
     cy.get(
@@ -40,10 +40,10 @@ describe('Vue Component', () => {
   });
   it('Runtime Settings', () => {
     cy.get('.lh-topbar__url').contains('https://d13z.dev');
-    cy.get('.lh-report-icon--devices').contains('Emulated Moto G Power with Lighthouse 10.0.1');
+    cy.get('.lh-report-icon--devices').contains('Emulated Moto G Power with Lighthouse 11.0.0');
     cy.get('.lh-report-icon--samples-one').contains('Single page load');
     cy.get('.lh-report-icon--stopwatch').contains('Initial page load');
     cy.get('.lh-report-icon--networkspeed').contains('Slow 4G throttling');
-    cy.get('.lh-report-icon--chrome').contains('Using Chromium 112.0.0.0 with cli');
+    cy.get('.lh-report-icon--chrome').contains('Using Chromium 118.0.0.0 with cli');
   });
 });
