@@ -10,7 +10,7 @@
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
     "lint": "eslint --quiet",
-    "lint:fix": "pnpm lint -- --fix",
+    "lint:fix": "pnpm lint --fix",
     "test": "start-server-and-test demo:serve http://localhost:8080 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
