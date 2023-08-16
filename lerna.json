@@ -7,6 +7,5 @@
   },
   "packages": ["packages/**", "web/**", "examples/**"],
   "version": "independent",
-  "useWorkspaces": true,
   "npmClient": "pnpm"
 }
