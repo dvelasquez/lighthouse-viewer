@@ -32,7 +32,7 @@
     "eslint-plugin-prettier": "5.0.0",
     "http-server": "14.1.1",
     "lerna": "7.1.5",
-    "nx": "16.6.0",
+    "nx": "16.7.1",
     "prettier": "3.0.2",
     "rimraf": "5.0.1",
     "tslib": "2.6.1",
