@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.212 (2023-08-27)
+
+**Note:** Version bump only for package svelte-lighthouse-viewer
+
 ## 0.1.211 (2023-08-20)
 
 **Note:** Version bump only for package svelte-lighthouse-viewer
