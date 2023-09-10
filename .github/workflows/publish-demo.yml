@@ -14,7 +14,7 @@ jobs:
       NX_CLOUD_ACCESS_TOKEN : ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
       CI: 'true'
     steps:
-      - uses: actions/checkout@v3      
+      - uses: actions/checkout@v4      
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
