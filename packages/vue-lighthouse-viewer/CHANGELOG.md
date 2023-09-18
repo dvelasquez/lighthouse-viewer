@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.221 (2023-09-18)
+
+**Note:** Version bump only for package vue-lighthouse-viewer
+
 ## 0.1.220 (2023-09-17)
 
 **Note:** Version bump only for package vue-lighthouse-viewer
