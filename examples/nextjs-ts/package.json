@@ -1,6 +1,6 @@
 {
   "name": "nextjs-ts",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "next": "13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react2-lighthouse-viewer": "workspace:0.1.233",
+    "react2-lighthouse-viewer": "workspace:0.1.234",
     "typescript": "4.9.5"
   }
 }
