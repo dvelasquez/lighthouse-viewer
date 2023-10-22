@@ -27,8 +27,8 @@ importers:
         specifier: 7.0.3
         version: 7.0.3
       cypress:
-        specifier: 13.3.1
-        version: 13.3.1
+        specifier: 13.3.2
+        version: 13.3.2
       eslint:
         specifier: 8.49.0
         version: 8.49.0
@@ -7487,8 +7487,8 @@ packages:
   /csstype@3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
 
-  /cypress@13.3.1:
-    resolution: {integrity: sha512-g4mJLZxYN+UAF2LMy3Znd4LBnUmS59Vynd81VES59RdW48Yt+QtR2cush3melOoVNz0PPbADpWr8DcUx6mif8Q==}
+  /cypress@13.3.2:
+    resolution: {integrity: sha512-ArLmZObcLC+xxCp7zJZZbhby9FUf5CueLej9dUM4+5j37FTS4iMSgHxQLDu01PydFUvDXcNoIVRCYrHHxD7Ybg==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
