@@ -42,8 +42,8 @@ importers:
         specifier: 14.1.1
         version: 14.1.1
       lerna:
-        specifier: 7.3.1
-        version: 7.3.1
+        specifier: 7.4.2
+        version: 7.4.2
       nx:
         specifier: 16.8.1
         version: 16.8.1
@@ -3026,8 +3026,8 @@ packages:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: false
 
-  /@lerna/child-process@7.3.1:
-    resolution: {integrity: sha512-9neRI51jOhyIGT3/xKUQZftzg78ZY5Ya8iBCmVQYWwo8rLiMqUqcgwIwFHFFYyY41Sb4/HXatQ0iiuTTB/vr8A==}
+  /@lerna/child-process@7.4.2:
+    resolution: {integrity: sha512-je+kkrfcvPcwL5Tg8JRENRqlbzjdlZXyaR88UcnCdNW0AJ1jX9IfHRys1X7AwSroU2ug8ESNC+suoBw1vX833Q==}
     engines: {node: '>=16.0.0'}
     dependencies:
       chalk: 4.1.2
@@ -3035,11 +3035,11 @@ packages:
       strong-log-transformer: 2.1.0
     dev: true
 
-  /@lerna/create@7.3.1:
-    resolution: {integrity: sha512-+gHt9rzWYaC0pxE/xMC8hQaLXJKW24rWlWJ7Vq6gETsl6D5v3rSy2VIlvoDE9WsvROnMSoXw2PZY371X79hNBw==}
+  /@lerna/create@7.4.2:
+    resolution: {integrity: sha512-1wplFbQ52K8E/unnqB0Tq39Z4e+NEoNrpovEnl6GpsTUrC6WDp8+w0Le2uCBV0hXyemxChduCkLz4/y1H1wTeg==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@lerna/child-process': 7.3.1
+      '@lerna/child-process': 7.4.2
       '@npmcli/run-script': 6.0.2
       '@nx/devkit': 16.6.0(nx@16.8.1)
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -6928,9 +6928,9 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /conventional-changelog-angular@6.0.0:
-    resolution: {integrity: sha512-6qLgrBF4gueoC7AFVHu51nHL9pF9FRjXrH+ceVf7WmAfH3gs+gEYOkvxhjMPjZu57I4AGUGoNTY8V7Hrgf1uqg==}
-    engines: {node: '>=14'}
+  /conventional-changelog-angular@7.0.0:
+    resolution: {integrity: sha512-ROjNchA9LgfNMTTFSIWPzebCwOGFdgkEq45EnvvrmSLvCtAw0HSmrCs7/ty+wAeYUZyNay0YMUNYFTRL72PkBQ==}
+    engines: {node: '>=16'}
     dependencies:
       compare-func: 2.0.0
     dev: true
@@ -11382,13 +11382,13 @@ packages:
     engines: {node: '> 0.8'}
     dev: true
 
-  /lerna@7.3.1:
-    resolution: {integrity: sha512-4Lt6nKIqCDqWgRlKu02g6+0Gfl5Hx9ZK3EIJTjMntea6QBuOgfSpJEj3j20osmE1tzFCkbAltJRyeLE1CImv+A==}
+  /lerna@7.4.2:
+    resolution: {integrity: sha512-gxavfzHfJ4JL30OvMunmlm4Anw7d7Tq6tdVHzUukLdS9nWnxCN/QB21qR+VJYp5tcyXogHKbdUEGh6qmeyzxSA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
-      '@lerna/child-process': 7.3.1
-      '@lerna/create': 7.3.1
+      '@lerna/child-process': 7.4.2
+      '@lerna/create': 7.4.2
       '@npmcli/run-script': 6.0.2
       '@nx/devkit': 16.6.0(nx@16.8.1)
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -11398,7 +11398,7 @@ packages:
       clone-deep: 4.0.1
       cmd-shim: 6.0.1
       columnify: 1.6.0
-      conventional-changelog-angular: 6.0.0
+      conventional-changelog-angular: 7.0.0
       conventional-changelog-core: 5.0.1
       conventional-recommended-bump: 7.0.1
       cosmiconfig: 8.2.0
