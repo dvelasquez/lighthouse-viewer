@@ -43,7 +43,7 @@
     "last 1 Chrome version"
   ],
   "volta": {
-    "npm": "10.2.0",
+    "npm": "10.2.4",
     "node": "18.18.2"
   },
   "workspaces": [
