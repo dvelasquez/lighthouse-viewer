@@ -12,7 +12,7 @@ describe('Vanilla Component', () => {
   });
   it('Check performance metrics', () => {
     cy.get(
-      '.lh-category-header > :nth-child(1) > .lh-score__gauge > .lh-gauge__wrapper > .lh-gauge__percentage',
+      '#performance > div.lh-category-header.lh-category-header__finalscreenshot > div:nth-child(1) > div.lh-exp-gauge-component > div > div > svg > g.lh-exp-gauge__inner > text',
     ).contains(100);
     cy.get('#first-contentful-paint > .lh-metric__innerwrap > .lh-metric__value').contains('1.0 s');
     cy.get('#speed-index > .lh-metric__innerwrap > .lh-metric__value').contains('1.8 s');
