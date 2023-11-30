@@ -12,8 +12,8 @@ importers:
         specifier: latest
         version: 16.5.2
       '@types/node':
-        specifier: '18'
-        version: 18.14.0
+        specifier: '20'
+        version: 20.10.0
       '@typescript-eslint/eslint-plugin':
         specifier: 6.7.4
         version: 6.7.4(@typescript-eslint/parser@6.7.4)(eslint@8.53.0)(typescript@5.2.2)
@@ -143,7 +143,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: 4.4.11
-        version: 4.4.11(@types/node@18.14.0)
+        version: 4.4.11(@types/node@20.10.0)
 
   packages/react2-lighthouse-viewer:
     devDependencies:
@@ -170,7 +170,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: 4.4.11
-        version: 4.4.11(@types/node@18.14.0)
+        version: 4.4.11(@types/node@20.10.0)
 
   packages/svelte-lighthouse-viewer:
     devDependencies:
@@ -200,7 +200,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: 4.4.11
-        version: 4.4.11(@types/node@18.14.0)
+        version: 4.4.11(@types/node@20.10.0)
 
   packages/vue-lighthouse-viewer:
     devDependencies:
@@ -215,7 +215,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: 4.4.11
-        version: 4.4.11(@types/node@18.14.0)
+        version: 4.4.11(@types/node@20.10.0)
       vite-plugin-vue2:
         specifier: 2.0.3
         version: 2.0.3(vite@4.4.11)(vue-template-compiler@2.7.15)
@@ -242,7 +242,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: 4.4.11
-        version: 4.4.11(@types/node@18.14.0)
+        version: 4.4.11(@types/node@20.10.0)
       vue-lighthouse-viewer:
         specifier: workspace:^0.1.235
         version: link:../../packages/vue-lighthouse-viewer
@@ -3849,7 +3849,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.7)(vite@4.4.11)
       debug: 4.3.4(supports-color@8.1.1)
       svelte: 4.2.7
-      vite: 4.4.11(@types/node@18.14.0)
+      vite: 4.4.11(@types/node@20.10.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3868,7 +3868,7 @@ packages:
       magic-string: 0.30.5
       svelte: 4.2.7
       svelte-hmr: 0.15.3(svelte@4.2.7)
-      vite: 4.4.11(@types/node@18.14.0)
+      vite: 4.4.11(@types/node@20.10.0)
       vitefu: 0.2.4(vite@4.4.11)
     transitivePeerDependencies:
       - supports-color
@@ -4247,9 +4247,16 @@ packages:
 
   /@types/node@18.14.0:
     resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
+    dev: false
 
   /@types/node@18.17.17:
     resolution: {integrity: sha512-cOxcXsQ2sxiwkykdJqvyFS+MLQPLvIdwh5l6gNg8qF6s+C7XSkEWOZjK+XhUZd+mYvHV/180g2cnCcIl4l06Pw==}
+
+  /@types/node@20.10.0:
+    resolution: {integrity: sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -4393,7 +4400,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.17.17
+      '@types/node': 20.10.0
     dev: true
     optional: true
 
@@ -4747,7 +4754,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.3)
       '@types/babel__core': 7.20.4
       react-refresh: 0.14.0
-      vite: 4.4.11(@types/node@18.14.0)
+      vite: 4.4.11(@types/node@20.10.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -16418,6 +16425,10 @@ packages:
       through: 2.3.8
     dev: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
@@ -16700,7 +16711,7 @@ packages:
       rollup: 2.79.1
       slash: 3.0.0
       source-map: 0.7.3
-      vite: 4.4.11(@types/node@18.14.0)
+      vite: 4.4.11(@types/node@20.10.0)
       vue-template-babel-compiler: 1.2.0(vue-template-compiler@2.7.15)
       vue-template-compiler: 2.7.15
     transitivePeerDependencies:
@@ -16760,7 +16771,7 @@ packages:
       - whiskers
     dev: true
 
-  /vite@4.4.11(@types/node@18.14.0):
+  /vite@4.4.11(@types/node@20.10.0):
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -16788,7 +16799,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.14.0
+      '@types/node': 20.10.0
       esbuild: 0.18.15
       postcss: 8.4.27
       rollup: 3.28.0
@@ -16804,7 +16815,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.11(@types/node@18.14.0)
+      vite: 4.4.11(@types/node@20.10.0)
     dev: true
 
   /vue-template-babel-compiler@1.2.0(vue-template-compiler@2.7.15):

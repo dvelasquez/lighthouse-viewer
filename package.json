@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
-    "@types/node": "18",
+    "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "6.7.4",
     "@typescript-eslint/parser": "6.7.4",
     "cpx": "1.5.0",
@@ -44,7 +44,7 @@
   ],
   "volta": {
     "npm": "10.2.4",
-    "node": "18.18.2"
+    "node": "20.10.0"
   },
   "workspaces": [
     "packages/*",
