@@ -190,8 +190,8 @@ importers:
         specifier: 3.5.2
         version: 3.5.2(svelte@4.2.7)
       svelte-preprocess:
-        specifier: 5.0.4
-        version: 5.0.4(svelte@4.2.7)(typescript@5.2.2)
+        specifier: 5.1.1
+        version: 5.1.1(svelte@4.2.7)(typescript@5.2.2)
       tslib:
         specifier: 2.6.2
         version: 2.6.2
@@ -15781,7 +15781,7 @@ packages:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.2.7
-      svelte-preprocess: 5.0.4(svelte@4.2.7)(typescript@5.2.2)
+      svelte-preprocess: 5.1.1(svelte@4.2.7)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@babel/core'
@@ -15804,8 +15804,8 @@ packages:
       svelte: 4.2.7
     dev: true
 
-  /svelte-preprocess@5.0.4(svelte@4.2.7)(typescript@5.2.2):
-    resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}
+  /svelte-preprocess@5.1.1(svelte@4.2.7)(typescript@5.2.2):
+    resolution: {integrity: sha512-p/Dp4hmrBW5mrCCq29lEMFpIJT2FZsRlouxEc5qpbOmXRbaFs7clLs8oKPwD3xCFyZfv1bIhvOzpQkhMEVQdMw==}
     engines: {node: '>= 14.10.0'}
     requiresBuild: true
     peerDependencies:
@@ -15818,7 +15818,7 @@ packages:
       sass: ^1.26.8
       stylus: ^0.55.0
       sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
-      svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0
+      svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
       typescript: '>=3.9.5 || ^4.0.0 || ^5.0.0'
     peerDependenciesMeta:
       '@babel/core':
