@@ -44,7 +44,7 @@
     "lighthouse-viewer": "^0.1.235",
     "typed-query-selector": "2.11.0",
     "typescript": "5.3.3",
-    "vite": "5.1.4",
+    "vite": "5.1.5",
     "vite-plugin-vue2": "2.0.3",
     "vue": "2.7.16",
     "vue-template-compiler": "2.7.16"
