@@ -44,7 +44,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.67",
+    "@types/react": "18.2.73",
     "@types/react-dom": "18.2.22",
     "@vitejs/plugin-react": "4.2.1",
     "lighthouse-viewer": "workspace:^0.1.235",
