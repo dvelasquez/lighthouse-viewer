@@ -178,8 +178,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(svelte@4.2.12)(vite@5.1.6)
       '@tsconfig/svelte':
-        specifier: 5.0.2
-        version: 5.0.2
+        specifier: 5.0.4
+        version: 5.0.4
       lighthouse-viewer:
         specifier: ^0.1.235
         version: link:../lighthouse-viewer
@@ -4254,8 +4254,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@tsconfig/svelte@5.0.2:
-    resolution: {integrity: sha512-BRbo1fOtyVbhfLyuCWw6wAWp+U8UQle+ZXu84MYYWzYSEB28dyfnRBIE99eoG+qdAC0po6L2ScIEivcT07UaMA==}
+  /@tsconfig/svelte@5.0.4:
+    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
     dev: true
 
   /@tufjs/canonical-json@1.0.0:
