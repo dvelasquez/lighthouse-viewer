@@ -136,8 +136,8 @@ importers:
         specifier: 11.6.0
         version: 11.6.0
       typed-query-selector:
-        specifier: 2.11.1
-        version: 2.11.1
+        specifier: 2.11.2
+        version: 2.11.2
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -148,8 +148,8 @@ importers:
   packages/react2-lighthouse-viewer:
     devDependencies:
       '@types/react':
-        specifier: 18.2.67
-        version: 18.2.67
+        specifier: 18.2.73
+        version: 18.2.73
       '@types/react-dom':
         specifier: 18.2.22
         version: 18.2.22
@@ -178,8 +178,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(svelte@4.2.12)(vite@5.1.6)
       '@tsconfig/svelte':
-        specifier: 5.0.2
-        version: 5.0.2
+        specifier: 5.0.4
+        version: 5.0.4
       lighthouse-viewer:
         specifier: ^0.1.235
         version: link:../lighthouse-viewer
@@ -187,8 +187,8 @@ importers:
         specifier: 4.2.12
         version: 4.2.12
       svelte-check:
-        specifier: 3.6.7
-        version: 3.6.7(svelte@4.2.12)
+        specifier: 3.6.8
+        version: 3.6.8(svelte@4.2.12)
       svelte-preprocess:
         specifier: 5.1.3
         version: 5.1.3(svelte@4.2.12)(typescript@5.3.3)
@@ -208,8 +208,8 @@ importers:
         specifier: ^0.1.235
         version: link:../lighthouse-viewer
       typed-query-selector:
-        specifier: 2.11.1
-        version: 2.11.1
+        specifier: 2.11.2
+        version: 2.11.2
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -4254,8 +4254,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@tsconfig/svelte@5.0.2:
-    resolution: {integrity: sha512-BRbo1fOtyVbhfLyuCWw6wAWp+U8UQle+ZXu84MYYWzYSEB28dyfnRBIE99eoG+qdAC0po6L2ScIEivcT07UaMA==}
+  /@tsconfig/svelte@5.0.4:
+    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
     dev: true
 
   /@tufjs/canonical-json@1.0.0:
@@ -4500,7 +4500,7 @@ packages:
   /@types/react-dom@18.2.22:
     resolution: {integrity: sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==}
     dependencies:
-      '@types/react': 18.2.67
+      '@types/react': 18.2.73
     dev: true
 
   /@types/react@18.0.28:
@@ -4511,11 +4511,10 @@ packages:
       csstype: 3.1.0
     dev: false
 
-  /@types/react@18.2.67:
-    resolution: {integrity: sha512-vkIE2vTIMHQ/xL0rgmuoECBCkZFZeHr49HeWSc24AptMbNRo7pwSBvj73rlJJs9fGKj0koS+V7kQB1jHS0uCgw==}
+  /@types/react@18.2.73:
+    resolution: {integrity: sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==}
     dependencies:
       '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
       csstype: 3.1.0
     dev: true
 
@@ -4531,6 +4530,7 @@ packages:
 
   /@types/scheduler@0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+    dev: false
 
   /@types/semver@7.5.0:
     resolution: {integrity: sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==}
@@ -15166,8 +15166,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /svelte-check@3.6.7(svelte@4.2.12):
-    resolution: {integrity: sha512-tKEjemK9FYCySAseCaIt+ps5o0XRvLC7ECjyJXXtO7vOQhR9E6JavgoUbGP1PCulD2OTcB/fi9RjV3nyF1AROw==}
+  /svelte-check@3.6.8(svelte@4.2.12):
+    resolution: {integrity: sha512-rhXU7YCDtL+lq2gCqfJDXKTxJfSsCgcd08d7VWBFxTw6IWIbMWSaASbAOD3N0VV9TYSSLUqEBiratLd8WxAJJA==}
     hasBin: true
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
@@ -15729,8 +15729,8 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /typed-query-selector@2.11.1:
-    resolution: {integrity: sha512-/ETnbg+mXwdtSc8FmotqzGJsFn1frnREGNi9ki/Gd9MFDyUbSu2i0WvU+29Wfspd+9awvk6DQbcWwZAASghl8g==}
+  /typed-query-selector@2.11.2:
+    resolution: {integrity: sha512-6rZP+cG3wPg2w1Zqv2VCOsSqlkGElrLSGeEkyrIU9mHG+JfQZE/6lE3oyQouz42sTS9n8fQXvwQBaVWz6dzpfQ==}
     dev: true
 
   /typedarray-to-buffer@3.1.5:
