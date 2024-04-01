@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Cache node_modules 📦
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v3.3.3
         with:
           path: |
             ~/.pnpm-store
@@ -117,7 +117,7 @@ jobs:
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v3.3.3
         with:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
