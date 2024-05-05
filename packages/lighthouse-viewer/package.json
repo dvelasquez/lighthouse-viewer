@@ -45,7 +45,7 @@
     "lighthouse": "11.7.1",
     "typed-query-selector": "2.11.2",
     "typescript": "5.4.5",
-    "vite": "5.1.6"
+    "vite": "5.2.11"
   },
   "browserslist": [
     "last 1 Chrome version"
