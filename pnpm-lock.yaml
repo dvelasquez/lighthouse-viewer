@@ -21,8 +21,8 @@ importers:
         specifier: 6.21.0
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       cpx2:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 7.0.1
+        version: 7.0.1
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -229,8 +229,8 @@ importers:
   web/lighthouse-viewer:
     devDependencies:
       cpx2:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 7.0.1
+        version: 7.0.1
       react2-lighthouse-viewer:
         specifier: workspace:^0.1.241
         version: link:../../packages/react2-lighthouse-viewer
@@ -6642,6 +6642,7 @@ packages:
   /co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
+    dev: false
 
   /coa@2.0.2:
     resolution: {integrity: sha512-q5/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrCqIRaSjws4ygRCTCAXA==}
@@ -7314,22 +7315,23 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /cpx2@2.0.0:
-    resolution: {integrity: sha512-hSkh9xHmUnHMxVS99SpACbAw6jOCaji0KyepBQ4/ULZQ+RB+3uP2PB/zylOCjSxZv9/cvoeG1XuQbZPyNuYftA==}
-    engines: {node: '>=6.5'}
+  /cpx2@7.0.1:
+    resolution: {integrity: sha512-ZgK/DRvPFM5ATZ5DQ5UzY6ajkBrI/p9Uc7VyLHc7b4OSFeBO4yOQz/GEmccc4Om6capGYlY4K1XX+BtYQiPPIA==}
+    engines: {node: '>=18', npm: '>=10'}
     hasBin: true
     dependencies:
-      co: 4.6.0
-      debounce: 1.2.1
+      debounce: 2.1.0
       debug: 4.3.4(supports-color@8.1.1)
       duplexer: 0.1.2
-      fs-extra: 8.1.0
-      glob: 7.2.3
+      fs-extra: 11.1.1
+      glob: 10.3.10
       glob2base: 0.0.12
-      minimatch: 3.1.2
+      ignore: 5.3.1
+      minimatch: 9.0.3
+      p-map: 6.0.0
       resolve: 1.22.1
       safe-buffer: 5.2.1
-      shell-quote: 1.7.3
+      shell-quote: 1.8.1
       subarg: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -7691,8 +7693,9 @@ packages:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
     dev: true
 
-  /debounce@1.2.1:
-    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
+  /debounce@2.1.0:
+    resolution: {integrity: sha512-OkL3+0pPWCqoBc/nhO9u6TIQNTK44fnBnzuVtJAbp13Naxw9R6u21x+8tVTka87AhDZ3htqZ2pSSsZl9fqL2Wg==}
+    engines: {node: '>=18'}
     dev: true
 
   /debug@2.6.9:
@@ -9402,6 +9405,7 @@ packages:
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -12652,6 +12656,11 @@ packages:
       aggregate-error: 3.1.0
     dev: true
 
+  /p-map@6.0.0:
+    resolution: {integrity: sha512-T8BatKGY+k5rU+Q/GTYgrEf2r4xRMevAN5mtXc2aPc4rS1j3s+vWTaO2Wag94neXuCAUAs8cxBL9EeB5EA6diw==}
+    engines: {node: '>=16'}
+    dev: true
+
   /p-pipe@3.1.0:
     resolution: {integrity: sha512-08pj8ATpzMR0Y80x50yJHn37NF6vjrqHutASaX5LiH5npS9XPvrUmscd9MF5R4fuYRHOxQR1FfMIlF7AzwoPqw==}
     engines: {node: '>=8'}
@@ -14888,6 +14897,11 @@ packages:
 
   /shell-quote@1.7.3:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
+    dev: false
+
+  /shell-quote@1.8.1:
+    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
+    dev: true
 
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
