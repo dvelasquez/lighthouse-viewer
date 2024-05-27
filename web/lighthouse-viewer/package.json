@@ -14,7 +14,7 @@
     "copy:demo": "pnpm run copy:vanilla && pnpm run copy:react && pnpm run copy:svelte && pnpm run copy:vue && pnpm run copy:home"
   },
   "devDependencies": {
-    "cpx2": "2.0.0",
+    "cpx2": "7.0.1",
     "react2-lighthouse-viewer": "workspace:^0.1.241",
     "svelte-lighthouse-viewer": "workspace:^0.1.246",
     "typescript": "5.4.5",

@@ -24,7 +24,7 @@
     "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
-    "cpx2": "2.0.0",
+    "cpx2": "7.0.1",
     "cross-env": "7.0.3",
     "cypress": "13.10.0",
     "eslint": "8.57.0",
