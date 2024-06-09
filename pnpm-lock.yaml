@@ -27,8 +27,8 @@ importers:
         specifier: 7.0.3
         version: 7.0.3
       cypress:
-        specifier: 13.10.0
-        version: 13.10.0
+        specifier: 13.11.0
+        version: 13.11.0
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -107,7 +107,7 @@ importers:
     dependencies:
       '@types/node':
         specifier: '18'
-        version: 20.14.2
+        version: 18.19.34
       '@types/react':
         specifier: 18.0.28
         version: 18.0.28
@@ -4628,6 +4628,12 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
+  /@types/node@18.19.34:
+    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: false
+
   /@types/node@20.14.2:
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
     dependencies:
@@ -5252,7 +5258,7 @@ packages:
       source-map: 0.6.1
       vue-template-es2015-compiler: 1.9.1
     optionalDependencies:
-      prettier: 2.8.1
+      prettier: 2.8.8
     transitivePeerDependencies:
       - arc-templates
       - atpl
@@ -7600,8 +7606,8 @@ packages:
   /csstype@3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
 
-  /cypress@13.10.0:
-    resolution: {integrity: sha512-tOhwRlurVOQbMduX+KonoMeQILs2cwR3yHGGENoFvvSoLUBHmJ8b9/n21gFSDqjlOJ+SRVcwuh+fG/JDsHsT6Q==}
+  /cypress@13.11.0:
+    resolution: {integrity: sha512-NXXogbAxVlVje4XHX+Cx5eMFZv4Dho/2rIcdBHg9CNPFUGZdM4cRdgIgM7USmNYsC12XY0bZENEQ+KBk72fl+A==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
