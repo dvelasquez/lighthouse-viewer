@@ -25,12 +25,12 @@ jobs:
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
             ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
-      - name: Use Node.js 18.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 18.17.1
+          node-version: 20.15.0
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v4
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
           version: 8.7.4
@@ -99,15 +99,15 @@ jobs:
       CI: 'true'
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 18.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 18.17.1
+          node-version: 20.15.0
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v4
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          version: 8.7.4
+          version: 9.5.0
           run_install: false
 
       - name: Get pnpm store directory
