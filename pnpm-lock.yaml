@@ -136,8 +136,8 @@ importers:
         specifier: 11.7.1
         version: 11.7.1
       typed-query-selector:
-        specifier: 2.11.3
-        version: 2.11.3
+        specifier: 2.12.0
+        version: 2.12.0
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -208,8 +208,8 @@ importers:
         specifier: ^0.1.235
         version: link:../lighthouse-viewer
       typed-query-selector:
-        specifier: 2.11.3
-        version: 2.11.3
+        specifier: 2.12.0
+        version: 2.12.0
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -15741,8 +15741,8 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /typed-query-selector@2.11.3:
-    resolution: {integrity: sha512-lMG8vpGrthemzydrNhGbpFqLEDEe4ivjNcofh2L2JYC8OBnkIAZLAsNVEkxS8rix2YZhTMqbwwJh91uk31kKTA==}
+  /typed-query-selector@2.12.0:
+    resolution: {integrity: sha512-SbklCd1F0EiZOyPiW192rrHZzZ5sBijB6xM+cpmrwDqObvdtunOHHIk9fCGsoK5JVIYXoyEp4iEdE3upFH3PAg==}
     dev: true
 
   /typedarray-to-buffer@3.1.5:

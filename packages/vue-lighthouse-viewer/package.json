@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "lighthouse-viewer": "^0.1.235",
-    "typed-query-selector": "2.11.3",
+    "typed-query-selector": "2.12.0",
     "typescript": "5.5.4",
     "vite": "5.3.5",
     "vite-plugin-vue2": "2.0.3",
