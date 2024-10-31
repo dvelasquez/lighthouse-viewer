@@ -1,9 +1,7 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "schedule": ["after 10pm and before 5am every sunday"],
-  "stabilityDays": 3,
+  "extends": ["config:recommended"],
+  "schedule": ["after 10pm on sunday", "before 5am on sunday"],
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
