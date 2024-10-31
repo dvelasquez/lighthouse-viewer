@@ -8,7 +8,7 @@ describe('Vue Component', () => {
     cy.get('.lh-scores-header > [href="#accessibility"] > .lh-gauge__percentage').contains(95);
     cy.get('.lh-scores-header > [href="#best-practices"] > .lh-gauge__percentage').contains(100);
     cy.get('.lh-scores-header > [href="#seo"] > .lh-gauge__percentage').contains(98);
-    cy.get('.lh-scores-header > .lh-gauge--pwa__wrapper > .lh-gauge__label').contains('PWA');
+    cy.get('.lh-scores-header > .lh-gauge__wrapper--average > .lh-gauge__label').contains('PWA');
   });
   it('Check performance metrics', () => {
     cy.get(
