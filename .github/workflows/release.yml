@@ -29,12 +29,13 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - name: Cache node_modules 📦
+      - name: Cache node_modules & NX 📦
         uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
+            ./nx
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
@@ -70,12 +71,13 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - name: Cache node_modules 📦
+      - name: Cache node_modules & NX 📦
         uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
+            ./nx
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
@@ -105,8 +107,6 @@ jobs:
     name: Build & Release
     runs-on: ubuntu-latest
     needs: run_cypress
-    env:
-      NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20.x
@@ -126,12 +126,13 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - name: Cache node_modules 📦
+      - name: Cache node_modules & NX 📦
         uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
+            ./nx
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
