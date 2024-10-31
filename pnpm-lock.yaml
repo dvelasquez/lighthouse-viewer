@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@nrwl/nx-cloud':
         specifier: latest
-        version: 16.5.2
+        version: 19.1.0
       '@types/node':
         specifier: '20'
         version: 20.16.12
@@ -3546,10 +3546,10 @@ packages:
       - nx
     dev: true
 
-  /@nrwl/nx-cloud@16.5.2:
-    resolution: {integrity: sha512-oHO5T1HRJsR9mbRd8eUqMBPCgqVZLSbAh3zJoPFmhEmjbM4YB9ePRpgYFT8dRNeZUOUd/8Yt7Pb6EVWOHvpD/w==}
+  /@nrwl/nx-cloud@19.1.0:
+    resolution: {integrity: sha512-krngXVPfX0Zf6+zJDtcI59/Pt3JfcMPMZ9C/+/x6rvz4WGgyv1s0MI4crEUM0Lx5ZpS4QI0WNDCFVQSfGEBXUg==}
     dependencies:
-      nx-cloud: 16.5.2
+      nx-cloud: 19.1.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -3873,7 +3873,7 @@ packages:
     hasBin: true
     dependencies:
       debug: 4.3.7
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@8.1.1)
       progress: 2.0.3
       proxy-agent: 6.4.0
       semver: 7.6.3
@@ -5869,16 +5869,6 @@ packages:
     resolution: {integrity: sha512-CZLSKisu/bhJ2awW4kJndluz2HLZYIHh5Uy1+ZwDRkJi69811xgIXXfdU9HSLX0Th+ILrHj8qfL/5wzamsFtQg==}
     engines: {node: '>=4'}
     dev: false
-
-  /axios@1.1.3:
-    resolution: {integrity: sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==}
-    dependencies:
-      follow-redirects: 1.15.6
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-    dev: true
 
   /axios@1.7.4:
     resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
@@ -8887,20 +8877,6 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /extract-zip@2.0.1:
-    resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
-    engines: {node: '>= 10.17.0'}
-    hasBin: true
-    dependencies:
-      debug: 4.3.7
-      get-stream: 5.2.0
-      yauzl: 2.10.0
-    optionalDependencies:
-      '@types/yauzl': 2.10.3
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /extract-zip@2.0.1(supports-color@8.1.1):
     resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
     engines: {node: '>= 10.17.0'}
@@ -9989,6 +9965,11 @@ packages:
   /ini@2.0.0:
     resolution: {integrity: sha512-7PnF4oN3CvZF23ADhA5wRaYEQpJ8qygSkbtTXWBeXWXmEVRXK+1ITciHWwHhsjv1TmW0MgacIv6hEi5pX5NQdA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /ini@4.1.3:
+    resolution: {integrity: sha512-X7rqawQBvfdjS10YU1y1YVreA3SsLrW9dX2CewP2EbBJM4ypVNLDkO5y04gejPwKIY9lR+7r9gn3rFPt/kmWFg==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dev: true
 
   /init-package-json@6.0.3:
@@ -12306,19 +12287,19 @@ packages:
     resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==}
     dev: false
 
-  /nx-cloud@16.5.2:
-    resolution: {integrity: sha512-1t1Ii9gojl8r/8hFGaZ/ZyYR0Cb0hzvXLCsaFuvg+EJEFdvua3P4cfNya/0bdRrm+7Eb/ITUOskbvYq4TSlyGg==}
+  /nx-cloud@19.1.0:
+    resolution: {integrity: sha512-f24vd5/57/MFSXNMfkerdDiK0EvScGOKO71iOWgJNgI1xVweDRmOA/EfjnPMRd5m+pnoPs/4A7DzuwSW0jZVyw==}
     hasBin: true
     dependencies:
-      '@nrwl/nx-cloud': 16.5.2
-      axios: 1.1.3
+      '@nrwl/nx-cloud': 19.1.0
+      axios: 1.7.4
       chalk: 4.1.2
       dotenv: 10.0.0
       fs-extra: 11.2.0
+      ini: 4.1.3
       node-machine-id: 1.1.12
       open: 8.4.0
-      strip-json-comments: 3.1.1
-      tar: 6.1.11
+      tar: 6.2.1
       yargs-parser: 21.1.1
     transitivePeerDependencies:
       - debug
@@ -15594,18 +15575,6 @@ packages:
       b4a: 1.6.6
       fast-fifo: 1.3.2
       streamx: 2.18.0
-    dev: true
-
-  /tar@6.1.11:
-    resolution: {integrity: sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==}
-    engines: {node: '>= 10'}
-    dependencies:
-      chownr: 2.0.0
-      fs-minipass: 2.1.0
-      minipass: 3.3.4
-      minizlib: 2.1.2
-      mkdirp: 1.0.4
-      yallist: 4.0.0
     dev: true
 
   /tar@6.2.1:
