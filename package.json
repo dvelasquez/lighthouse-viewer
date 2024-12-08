@@ -22,8 +22,8 @@
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
     "@types/node": "20",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
+    "@typescript-eslint/eslint-plugin": "8.17.0",
+    "@typescript-eslint/parser": "8.17.0",
     "cpx2": "8.0.0",
     "cross-env": "7.0.3",
     "cypress": "13.16.0",
