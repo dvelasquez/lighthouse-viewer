@@ -32,7 +32,7 @@ jobs:
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Cache node_modules & NX 📦
-        uses: actions/cache@v4.1.2
+        uses: actions/cache@v4.2.0
         with:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
