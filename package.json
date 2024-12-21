@@ -4,8 +4,8 @@
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",
   "scripts": {
-    "lerna:start": "nx run-many --target=dev",
-    "lerna:build": "nx run-many --target=build",
+    "lerna:start": "turbo run dev",
+    "lerna:build": "turbo run build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
@@ -20,7 +20,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@nrwl/nx-cloud": "latest",
+    "@lerna-lite/cli": "3.10.1",
+    "@lerna-lite/core": "3.10.1",
+    "@lerna-lite/publish": "3.10.1",
+    "@lerna-lite/version": "3.10.1",
     "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -31,11 +34,10 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "http-server": "14.1.1",
-    "lerna": "8.1.9",
-    "nx": "20.2.2",
     "prettier": "3.4.2",
     "rimraf": "6.0.1",
     "tslib": "2.8.1",
+    "turbo": "2.3.3",
     "typescript": "5.6.3"
   },
   "snyk": true,
@@ -46,7 +48,9 @@
     "npm": "10.8.2",
     "node": "20.18.0"
   },
+  "packageManager": "pnpm@9.15.1",
   "workspaces": [
+    "examples/*",
     "packages/*",
     "examples/*"
   ]

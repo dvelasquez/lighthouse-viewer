@@ -5,3 +5,4 @@ dist
 .angular
 .npmrc
 .nx
+.turbo
