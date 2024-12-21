@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
@@ -36,7 +36,8 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
-            ./turbo
+            .turbo
+            **/.turbo
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
@@ -54,7 +55,7 @@ jobs:
     needs: install_dependencies
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
@@ -77,7 +78,8 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
-            ./turbo
+            .turbo
+            **/.turbo
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
