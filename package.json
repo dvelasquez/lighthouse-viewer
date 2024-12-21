@@ -50,6 +50,7 @@
   },
   "packageManager": "pnpm@9.15.1",
   "workspaces": [
+    "examples/*",
     "packages/*",
     "examples/*"
   ]
