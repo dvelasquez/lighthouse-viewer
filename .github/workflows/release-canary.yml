@@ -28,7 +28,7 @@ jobs:
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.15.0
+          node-version: 22.12.0
 
       - uses: pnpm/action-setup@v4
         name: Setup PNPM & Install dependencies 👨🏻‍💻
@@ -102,12 +102,12 @@ jobs:
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.15.0
+          node-version: 22.12.0
 
       - uses: pnpm/action-setup@v4
         name: Setup PNPM & Install dependencies 👨🏻‍💻
         with:
-          version: 9.5.0
+          version: 9.15.1
           run_install: false
 
       - name: Get pnpm store directory
@@ -122,7 +122,7 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             /home/runner/.cache/Cypress
-            ./nx
+            ./turbo
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
