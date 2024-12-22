@@ -87,7 +87,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.2.0)(type-fest@4.30.2)(typescript@4.9.5)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.1.244
+        specifier: workspace:0.1.245
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -130,7 +130,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.1.244
+        specifier: workspace:0.1.245
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 4.9.5
@@ -163,7 +163,7 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(vite@5.4.11(@types/node@22.10.2)(terser@5.37.0))
       lighthouse-viewer:
-        specifier: workspace:^0.1.238
+        specifier: workspace:^0.1.239
         version: link:../lighthouse-viewer
       react:
         specifier: 18.3.1
@@ -187,14 +187,14 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.1.238
+        specifier: workspace:^0.1.239
         version: link:../lighthouse-viewer
       svelte:
         specifier: 4.2.19
         version: 4.2.19
       svelte-check:
-        specifier: 4.0.9
-        version: 4.0.9(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3)
+        specifier: 4.1.1
+        version: 4.1.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3)
       svelte-preprocess:
         specifier: 6.0.3
         version: 6.0.3(@babel/core@7.26.0)(postcss-load-config@4.0.2(postcss@8.4.49))(postcss@8.4.49)(svelte@4.2.19)(typescript@5.6.3)
@@ -211,7 +211,7 @@ importers:
   packages/vue-lighthouse-viewer:
     devDependencies:
       lighthouse-viewer:
-        specifier: workspace:^0.1.238
+        specifier: workspace:^0.1.239
         version: link:../lighthouse-viewer
       typed-query-selector:
         specifier: 2.12.0
@@ -238,10 +238,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.1.244
+        specifier: workspace:^0.1.245
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.1.249
+        specifier: workspace:^0.1.250
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.6.3
@@ -250,7 +250,7 @@ importers:
         specifier: 5.4.11
         version: 5.4.11(@types/node@22.10.2)(terser@5.37.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.1.238
+        specifier: workspace:^0.1.239
         version: link:../../packages/vue-lighthouse-viewer
 
 packages:
@@ -7794,8 +7794,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-check@4.0.9:
-    resolution: {integrity: sha512-SVNCz2L+9ZELGli7G0n3B3QE5kdf0u27RtKr2ZivWQhcWIXatZxwM4VrQ6AiA2k9zKp2mk5AxkEhdjbpjv7rEw==}
+  svelte-check@4.1.1:
+    resolution: {integrity: sha512-NfaX+6Qtc8W/CyVGS/F7/XdiSSyXz+WGYA9ZWV3z8tso14V2vzjfXviKaTFEzB7g8TqfgO2FOzP6XT4ApSTUTw==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
@@ -17506,7 +17506,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.0.9(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3):
+  svelte-check@4.1.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.3
