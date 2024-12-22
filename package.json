@@ -52,6 +52,6 @@
   "workspaces": [
     "examples/*",
     "packages/*",
-    "examples/*"
+    "web/*"
   ]
 }
