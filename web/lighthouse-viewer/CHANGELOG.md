@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2024-12-22)
+
+### Bug Fixes
+
+* nextjs build ([e13a4dc](https://github.com/dvelasquez/lighthouse-viewer/commit/e13a4dc4fa4e605831762b247e14f022a9bf0ac2))
+
 ## 0.1.3 (2024-12-22)
 
 **Note:** Version bump only for package lighthouse-viewer-web
