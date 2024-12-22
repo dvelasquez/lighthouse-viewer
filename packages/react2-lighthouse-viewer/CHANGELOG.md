@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.246 (2024-12-22)
+
+### Bug Fixes
+
+* replaced vue2 vite plugin for the official one ([#1595](https://github.com/dvelasquez/lighthouse-viewer/issues/1595)) ([699a260](https://github.com/dvelasquez/lighthouse-viewer/commit/699a260dd4c03fc2b84a1ec50a1f87bdf2079c91))
+
 ## 0.1.245 (2024-12-22)
 
 **Note:** Version bump only for package react2-lighthouse-viewer
