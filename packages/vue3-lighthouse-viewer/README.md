@@ -1,5 +1,17 @@
-# Vue 3 + TypeScript + Vite
+# vue3-lighthouse-viewer
+This component is a Vue wrapper for the lighthouse-viewer.
+It depends on [lighthouse-viewer](../lighthouse-viewer), package that exports the original lighthouse-viewer from Google as an ES modules package.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Getting started
+1. Install using `npm install vue3-lighthouse-viewer` or `yarn add vue3-lighthouse-viewer`
+2. Import in your project:
+```ts
+import VueLighthouseViewer from "vue3-lighthouse-viewer";
+```
+3. Load the component in your code as follows:
+```vue
+<div id="app">
+    <VueLighthouseViewer :json="json" />
+</div>
+```
+4. That's all!
