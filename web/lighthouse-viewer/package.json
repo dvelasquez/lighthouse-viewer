@@ -10,8 +10,9 @@
     "copy:react": "cpx \"../../packages/react2-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/react",
     "copy:svelte": "cpx \"../../packages/svelte-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/svelte",
     "copy:vue": "cpx \"../../packages/vue-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/vue",
+    "copy:vue3": "cpx \"../../packages/vue3-lighthouse-viewer/demo/**/*\" ./dist/lighthouse-viewer/vue3",
     "copy:home": "cpx \"./dist/index.html\" ./dist/lighthouse-viewer/",
-    "copy:demo": "pnpm run copy:vanilla && pnpm run copy:react && pnpm run copy:svelte && pnpm run copy:vue && pnpm run copy:home"
+    "copy:demo": "pnpm run copy:vanilla && pnpm run copy:react && pnpm run copy:svelte && pnpm run copy:vue && pnpm run copy:vue3 && pnpm run copy:home"
   },
   "devDependencies": {
     "cpx2": "8.0.0",

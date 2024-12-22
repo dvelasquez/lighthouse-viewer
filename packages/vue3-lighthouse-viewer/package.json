@@ -1,8 +1,39 @@
 {
   "name": "vue3-lighthouse-viewer",
+  "description": "A Vue 3 component for viewing Lighthouse reports",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/vue-lighthouse-viewer.umd.js",
+  "module": "./dist/vue-lighthouse-viewer.es.js",
+  "types": "./types/types.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/vue-lighthouse-viewer.es.js",
+      "require": "./dist/vue-lighthouse-viewer.umd.js"
+    }
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Danilo Velasquez",
+    "email": "danilo.velasquez@gmail.com",
+    "url": "https://d13z.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/dvelasquez/lighthouse-viewer/issues"
+  },
+  "homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/vue3-lighthouse-viewer/demo/index.html",
+  "repository": "https://github.com/dvelasquez/lighthouse-viewer",
+  "keywords": [
+    "lighthouse",
+    "devtools",
+    "vue",
+    "performance",
+    "webperf"
+  ],
   "scripts": {
     "dev": "vite",
     "build:demo": "vite build",
@@ -10,15 +41,16 @@
     "build": "pnpm build:demo && pnpm build:lib",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vue": "^3.5.13"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/tsconfig": "^0.7.0",
+    "@vitejs/plugin-vue": "5.2.1",
+    "@vue/tsconfig": "0.7.0",
     "lighthouse-viewer": "workspace:^0.1.240",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.3",
-    "vue-tsc": "^2.1.10"
+    "typescript": "5.6.2",
+    "vite": "6.0.3",
+    "vue": "3.5.13",
+    "vue-tsc": "2.1.10"
   }
 }
