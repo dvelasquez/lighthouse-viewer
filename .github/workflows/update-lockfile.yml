@@ -61,6 +61,10 @@ jobs:
       - name: Update lockfile
         if: steps.check-changes.outputs.outcome == failure()
         run: |
-          git add pnpm-lock.yaml
-          git commit -m "chore: update lockfile [skip ci]"
-          git push
+          if [[ -n "$(git status --porcelain pnpm-lock.yaml)" ]]; then
+            git add pnpm-lock.yaml
+            git commit -m "chore: update lockfile [skip ci]"
+            git push
+          else
+            echo "No changes to commit in pnpm-lock.yaml"
+          fi
