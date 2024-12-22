@@ -3,6 +3,7 @@ packages:
   - 'packages/react2-lighthouse-viewer'
   - 'packages/svelte-lighthouse-viewer'
   - 'packages/vue-lighthouse-viewer'
+  - 'packages/vue3-lighthouse-viewer'
   - 'web/lighthouse-viewer'
   - 'examples/create-react-app'
   - 'examples/nextjs-ts'
