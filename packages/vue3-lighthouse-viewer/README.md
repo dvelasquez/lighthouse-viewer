@@ -1,5 +1,5 @@
 # vue3-lighthouse-viewer
-This component is a Vue wrapper for the lighthouse-viewer.
+This component is a Vue wrapper for the lighthouse-viewer. 
 It depends on [lighthouse-viewer](../lighthouse-viewer), package that exports the original lighthouse-viewer from Google as an ES modules package.
 
 ## Getting started
