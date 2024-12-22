@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-12-22)
+
+### Features
+
+* added vue 3 wrapper ([#1596](https://github.com/dvelasquez/lighthouse-viewer/issues/1596)) ([f56cd03](https://github.com/dvelasquez/lighthouse-viewer/commit/f56cd03f5706d6328c6d67a0e764f56aba23270b))
+
 ## 0.1.45 (2024-12-22)
 
 ### Bug Fixes
