@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const { defineConfig } = require('vite');
-import { createVuePlugin } from 'vite-plugin-vue2';
-
+import vue from '@vitejs/plugin-vue2'
 const { BUILD_TYPE } = process.env;
 
 const libraryOptions = {
-  plugins: [createVuePlugin()],
+  plugins: [vue()],
   build: {
     minify: 'esbuild',
     outDir: path.resolve(__dirname, 'dist'),
@@ -30,7 +29,7 @@ const libraryOptions = {
   },
 };
 const demoOptions = {
-  plugins: [createVuePlugin()],
+  plugins: [vue()],
   base: '/lighthouse-viewer/vue/',
   build: {
     outDir: path.resolve(__dirname, 'demo'),
