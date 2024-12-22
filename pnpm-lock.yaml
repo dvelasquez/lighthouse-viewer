@@ -185,7 +185,7 @@ importers:
         specifier: workspace:^0.2.5
         version: link:../lighthouse-viewer
       svelte:
-        specifier: ^5.15.0
+        specifier: 5.15.0
         version: 5.15.0
       svelte-check:
         specifier: 4.1.1
