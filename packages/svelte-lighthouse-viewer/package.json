@@ -46,15 +46,12 @@
     "svelte": "^3.23.2 || ^4.0.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "3.1.2",
+    "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tsconfig/svelte": "5.0.4",
     "lighthouse-viewer": "workspace:^0.2.5",
     "svelte": "4.2.19",
     "svelte-check": "4.1.1",
-    "svelte-preprocess": "6.0.3",
-    "tslib": "2.8.1",
-    "typescript": "5.7.2",
-    "vite": "5.4.11"
+    "svelte-preprocess": "6.0.3"
   },
   "alias": {},
   "browserslist": [

@@ -20,7 +20,8 @@
     "svelte-lighthouse-viewer": "workspace:^0.2.5",
     "typescript": "5.7.2",
     "vite": "5.4.11",
-    "vue-lighthouse-viewer": "workspace:^0.2.5"
+    "vue-lighthouse-viewer": "workspace:^0.2.5",
+    "vue3-lighthouse-viewer": "workspace:^0.1.5"
   },
   "volta": {
     "extends": "../../package.json"
