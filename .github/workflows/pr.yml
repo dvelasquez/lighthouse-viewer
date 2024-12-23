@@ -8,27 +8,31 @@ on:
     branches: [main]
 
 jobs:
-  setup:
-    uses: ./.github/workflows/setup.yml
-
-  lint:
-    name: Lint
-    needs: setup
+  lint_build:
+    name: Lint & Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          node-version: 22.12.0
+          pnpm-version: 9.15.1
       - name: Lint
         run: pnpm lint
 
   e2e:
     name: E2E tests
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          node-version: 22.12.0
+          pnpm-version: 9.15.1
       - name: Build library
         run: pnpm lerna:build
-
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:

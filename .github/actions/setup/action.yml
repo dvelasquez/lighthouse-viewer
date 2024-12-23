@@ -1,0 +1,47 @@
+name: Reusable Setup
+description: "Setup the environment for the project"
+inputs:
+  node-version:
+    required: false
+    default: '22.12.0'
+    description: "The version of Node.js to use"
+  pnpm-version:
+    required: false
+    default: '9.15.1'
+    description: "The version of PNPM to use"
+runs:
+  using: composite
+  steps:
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - uses: pnpm/action-setup@v4
+      name: Setup PNPM
+      with:
+        version: ${{ inputs.pnpm-version }}
+        run_install: false
+
+    - name: Get pnpm store directory
+      id: pnpm-cache
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+    - name: Cache node_modules & Turborepo 📦
+      uses: actions/cache@v4
+      with:
+        path: |
+          ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          /home/runner/.cache/Cypress
+          .turbo
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+          ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          ${{ runner.os }}-node-
+
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile
