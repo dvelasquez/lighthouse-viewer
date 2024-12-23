@@ -44,12 +44,13 @@ jobs:
             ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - name: Install
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Configure CI Git User
         run: |
           git config --global user.name 'Danilo Velasquez'
           git config --global user.email 'danilo.velasquez@gmail.com'
+          git config --global --add safe.directory /github/workspace
           git remote set-url origin https://$GITHUB_TOKEN@github.com/dvelasquez/lighthouse-viewer
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
