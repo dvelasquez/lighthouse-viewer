@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.8 (2024-12-23)
+
+### Bug Fixes
+
+* update-lockfile ([cf338ef](https://github.com/dvelasquez/vue-lighthouse-viewer/commit/cf338efe147f51d9f6a051b125d1597a296e67a6))
+
 ## 0.2.7 (2024-12-23)
 
 ### Bug Fixes
