@@ -88,5 +88,3 @@ jobs:
   update-lockfile:
     needs: release
     uses: ./.github/workflows/update-lockfile.yml
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
