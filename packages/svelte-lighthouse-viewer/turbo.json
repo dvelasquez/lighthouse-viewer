@@ -1,0 +1,19 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs":[
+        "src/**",
+        "lib/**",
+        "types/**",
+        "index.html",
+        "vite.config.mts",
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.*.json"
+      ],
+      "outputs": ["dist/**", "demo/**"]
+    }
+  }
+}

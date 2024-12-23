@@ -21,7 +21,7 @@ jobs:
           pnpm-version: 9.15.1
 
       - name: Build libraries
-        run: pnpm lerna:build
+        run: pnpm build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
