@@ -4,20 +4,6 @@
       "build": {
         "dependsOn": ["^build"]
       },
-      "check-types": {
-        "dependsOn": ["^check-types"]
-      },
-      "cypress:run":{
-        "dependsOn": ["^cypress:run"],
-        "inputs": [
-          "cypress.config.ts",
-          "cypress/**",
-          "packages/**/demo/**",
-          "packages/**/dist/**",
-          "web/**/dist/**"
-        ]
-      },
-
       "dev": {
         "persistent": true,
         "cache": false
