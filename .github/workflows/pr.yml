@@ -32,7 +32,7 @@ jobs:
           node-version: 22.12.0
           pnpm-version: 9.15.1
       - name: Build library
-        run: pnpm lerna:build
+        run: pnpm build
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:

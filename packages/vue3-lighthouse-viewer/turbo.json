@@ -1,0 +1,17 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs":[
+        "pages/**",
+        "public/**",
+        "styles/**",
+        "next.config.js",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "outputs": [".next/**"]
+    }
+  }
+}

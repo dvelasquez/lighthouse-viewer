@@ -4,8 +4,8 @@
   "description": "Root of the monorepo multipackage project for the lighthouse viewer stuffs",
   "main": "index.js",
   "scripts": {
-    "lerna:start": "turbo run dev",
-    "lerna:build": "turbo run build",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
     "lerna:release": "lerna version --conventional-commits --yes",
     "lerna:deploy:ci": "lerna publish from-package --yes",
     "lerna:deploy:ci:canary": "lerna publish from-package --yes --canary --preid beta --message 'chore: release new canary versions'",
@@ -24,7 +24,7 @@
     "@lerna-lite/core": "3.10.1",
     "@lerna-lite/publish": "3.10.1",
     "@lerna-lite/version": "3.10.1",
-    "@types/node": "20",
+    "@types/node": "22",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "cpx2": "8.0.0",
@@ -47,7 +47,7 @@
   ],
   "volta": {
     "npm": "10.9.2",
-    "node": "20.18.0"
+    "node": "22.12.0"
   },
   "packageManager": "pnpm@9.15.1",
   "workspaces": [
