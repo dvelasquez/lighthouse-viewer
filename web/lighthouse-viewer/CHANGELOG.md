@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.7 (2024-12-23)
+
+### Bug Fixes
+
+* lockfile input ([827d19d](https://github.com/dvelasquez/lighthouse-viewer/commit/827d19d3f88abc0ec6ed32419d52b19cc5e4a393))
+
 ## 0.1.6 (2024-12-23)
 
 **Note:** Version bump only for package lighthouse-viewer-web
