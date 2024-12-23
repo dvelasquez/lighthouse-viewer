@@ -1,23 +1,21 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import path from 'path';
+import { defineConfig, UserConfig } from 'vite';
 
 const { BUILD_TYPE } = process.env;
 
-const libraryOptions = {
-  plugins: [react()],
+const libraryOptions: UserConfig = {
   build: {
     minify: 'esbuild',
     outDir: path.resolve(__dirname, 'dist'),
     lib: {
-      entry: path.resolve(__dirname, 'lib/main.tsx'),
-      name: 'ReactLighthouseViewer',
-      fileName: (format) => `react2-lighthouse-viewer.${format}.js`,
+      entry: path.resolve(__dirname, 'lib/main.ts'),
+      name: 'LighthouseViewer',
+      fileName: (format) => `lighthouse-viewer.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react', 'react-dom'],
+      external: [],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
@@ -26,19 +24,18 @@ const libraryOptions = {
     },
   },
 };
-const demoOptions = {
-  plugins: [react()],
-  base: '/lighthouse-viewer/react/',
+const demoOptions: UserConfig = {
+  base: '/lighthouse-viewer/vanillajs/',
   build: {
     outDir: path.resolve(__dirname, 'demo'),
   },
 };
 
-const returnConfig = () => {
+const returnConfig = (): UserConfig => {
   if (BUILD_TYPE === 'library') {
     return libraryOptions;
   }
   return demoOptions;
 };
 
-module.exports = defineConfig(returnConfig());
+export default defineConfig(returnConfig());

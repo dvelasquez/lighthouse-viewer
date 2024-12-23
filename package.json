@@ -38,7 +38,8 @@
     "rimraf": "6.0.1",
     "tslib": "2.8.1",
     "turbo": "2.3.3",
-    "typescript": "5.7.2"
+    "typescript": "5.6.3",
+    "vite": "6.0.5"
   },
   "snyk": true,
   "browserslist": [
