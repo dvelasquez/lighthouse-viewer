@@ -29,18 +29,24 @@ runs:
       run: |
         echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-    - name: Cache node_modules & Turborepo 📦
+    - name: Cache node_modules & Cypress Installation 📦
       uses: actions/cache@v4
       with:
         path: |
           ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           /home/runner/.cache/Cypress
-          .turbo
-        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           ${{ runner.os }}-node-
+
+    - name: Cache turbo build setup
+      uses: actions/cache@v4
+      with: 
+        path: .turbo
+        key: ${{ runner.os }}-turbo-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-turbo-
 
     - name: Install Dependencies
       shell: bash

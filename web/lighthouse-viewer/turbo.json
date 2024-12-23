@@ -4,14 +4,15 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs":[
-        "pages/**",
-        "public/**",
-        "styles/**",
-        "next.config.js",
+        "src/**",
+        "lib/**",
+        "types/**",
+        "index.html",
+        "vite.config.mts",
         "package.json",
         "tsconfig.json"
       ],
-      "outputs": [".next/**"]
+      "outputs": ["dist/**"]
     }
   }
 }
