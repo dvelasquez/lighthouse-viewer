@@ -6,88 +6,29 @@ on:
       - main
 
 jobs:
-  install_dependencies:
-    name: Install dependencies & lint
+  lint_build:
+    name: Lint & Build
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-
-      - uses: pnpm/action-setup@v4
-        name: Setup PNPM & Install dependencies 👨🏻‍💻
-        with:
-          version: 9.15.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Cache node_modules & Turborepo 📦
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
-            .turbo
-            **/.turbo
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
+          pnpm-version: 9.15.1
       - name: Lint
         run: pnpm lint
 
-  run_cypress:
+  e2e:
     name: E2E tests
     runs-on: ubuntu-latest
-    needs: install_dependencies
-
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-
-      - uses: pnpm/action-setup@v4
-        name: Setup PNPM & Install dependencies 👨🏻‍💻
-        with:
-          version: 9.15.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Cache node_modules & Turborepo 📦
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
-            .turbo
-            **/.turbo
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
+          pnpm-version: 9.15.1
       - name: Build library
         run: pnpm lerna:build
 
@@ -100,49 +41,20 @@ jobs:
           wait-on: 'http://127.0.0.1:8080/lighthouse-viewer/'
           command: pnpm cypress:run
         env:
-          # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   release:
     name: Build & Release
+    needs: [e2e]
     runs-on: ubuntu-latest
-    needs: run_cypress
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-
-      - uses: pnpm/action-setup@v4
-        name: Setup PNPM & Install dependencies 👨🏻‍💻
-        with:
-          version: 9.15.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Cache node_modules & Turborepo 📦
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
-            .turbo
-            **/.turbo
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
+          pnpm-version: 9.15.1
 
       - name: Build library
         run: pnpm lerna:build
@@ -172,3 +84,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update-lockfile:
+    needs: release
+    uses: ./.github/workflows/update-lockfile.yml
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

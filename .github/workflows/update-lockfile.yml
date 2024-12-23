@@ -1,49 +1,19 @@
 name: Update lockfile
 
 on:
-  push:
-    branches:
-      - main
-      - build/ci
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        required: true
 
 jobs:
   check_lockfile:
     name: Check lockfile status
     runs-on: ubuntu-latest
-    env:
-      NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.12.0
 
-      - uses: pnpm/action-setup@v4
-        name: Setup PNPM & Install dependencies 👨🏻‍💻
-        with:
-          version: 9.15.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Cache node_modules & Turborepo 📦
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
-            .turbo
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - name: Install
+      - name: Install without frozen lockfile
         run: pnpm install --no-frozen-lockfile
 
       - name: Configure CI Git User
@@ -55,14 +25,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check for uncommitted changes
-        id: check-changes
-        uses: mskri/check-uncommitted-changes-action@v1.0.1
-
       - name: Update lockfile
-        if: steps.check-changes.outputs.outcome == failure()
         run: |
           if [[ -n "$(git status --porcelain pnpm-lock.yaml)" ]]; then
+            echo "Lockfile is outdated, updating..."
             git add pnpm-lock.yaml
             git commit -m "chore: update lockfile [skip ci]"
             git push

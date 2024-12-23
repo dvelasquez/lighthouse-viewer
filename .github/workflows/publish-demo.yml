@@ -14,44 +14,17 @@ jobs:
       CI: 'true'
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-
-      - uses: pnpm/action-setup@v4
-        name: Setup PNPM & Install dependencies 👨🏻‍💻
-        with:
-          version: 9.15.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Cache node_modules & Turborepo 📦
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
-            .turbo
-            **/.turbo
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/package.json') }}
-            ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
+          pnpm-version: 9.15.1
 
       - name: Build libraries
         run: pnpm lerna:build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.9
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: web/lighthouse-viewer/dist/lighthouse-viewer # The folder the action should deploy.
