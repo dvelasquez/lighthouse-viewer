@@ -10,25 +10,25 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/core':
         specifier: 3.10.1
-        version: 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+        version: 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/publish':
         specifier: 3.10.1
-        version: 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+        version: 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/version':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@types/node':
         specifier: '22'
         version: 22.10.2
       '@typescript-eslint/eslint-plugin':
         specifier: 6.21.0
-        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
       '@typescript-eslint/parser':
         specifier: 6.21.0
-        version: 6.21.0(eslint@8.57.1)(typescript@5.6.3)
+        version: 6.21.0(eslint@8.57.1)(typescript@5.7.2)
       cpx2:
         specifier: 8.0.0
         version: 8.0.0
@@ -63,8 +63,8 @@ importers:
         specifier: 2.3.3
         version: 2.3.3
       typescript:
-        specifier: 5.6.3
-        version: 5.6.3
+        specifier: 5.7.2
+        version: 5.7.2
       vite:
         specifier: 6.0.6
         version: 6.0.6(@types/node@22.10.2)(jiti@1.21.7)(terser@5.37.0)(yaml@2.6.1)
@@ -7852,11 +7852,6 @@ packages:
   typedarray-to-buffer@3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
@@ -9886,10 +9881,10 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
-  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)':
+  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
-      '@lerna-lite/init': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
+      '@lerna-lite/init': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       dedent: 1.5.3(babel-plugin-macros@3.1.0)
       dotenv: 16.4.7
@@ -9897,8 +9892,8 @@ snapshots:
       load-json-file: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/publish': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/publish': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -9906,7 +9901,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/core@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)':
+  '@lerna-lite/core@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)':
     dependencies:
       '@inquirer/expand': 4.0.4(@types/node@22.10.2)
       '@inquirer/input': 4.1.1(@types/node@22.10.2)
@@ -9915,7 +9910,7 @@ snapshots:
       '@npmcli/run-script': 8.1.0
       clone-deep: 4.0.1
       config-chain: 1.1.13
-      cosmiconfig: 9.0.0(typescript@5.6.3)
+      cosmiconfig: 9.0.0(typescript@5.7.2)
       dedent: 1.5.3(babel-plugin-macros@3.1.0)
       execa: 8.0.1
       fs-extra: 11.2.0
@@ -9944,9 +9939,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/init@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)':
+  '@lerna-lite/init@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       fs-extra: 11.2.0
       p-map: 7.0.3
       write-json-file: 6.0.0
@@ -9968,12 +9963,12 @@ snapshots:
       string-width: 7.2.0
       wide-align: 1.1.5
 
-  '@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)':
+  '@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
-      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
+      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
@@ -10007,10 +10002,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)':
+  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
-      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2))(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
+      '@lerna-lite/core': 3.10.1(@types/node@22.10.2)(babel-plugin-macros@3.1.0)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 21.0.2
@@ -10908,26 +10903,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)':
-    dependencies:
-      '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@5.6.3)
-      '@typescript-eslint/scope-manager': 6.21.0
-      '@typescript-eslint/type-utils': 6.21.0(eslint@8.57.1)(typescript@5.6.3)
-      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.6.3)
-      '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.0(supports-color@8.1.1)
-      eslint: 8.57.1
-      graphemer: 1.4.0
-      ignore: 5.3.2
-      natural-compare: 1.4.0
-      semver: 7.6.3
-      ts-api-utils: 1.4.3(typescript@5.6.3)
-    optionalDependencies:
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
@@ -10968,19 +10943,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3)':
-    dependencies:
-      '@typescript-eslint/scope-manager': 6.21.0
-      '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.6.3)
-      '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.0(supports-color@8.1.1)
-      eslint: 8.57.1
-    optionalDependencies:
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/scope-manager': 6.21.0
@@ -11016,18 +10978,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/type-utils@6.21.0(eslint@8.57.1)(typescript@5.6.3)':
-    dependencies:
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.6.3)
-      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.6.3)
-      debug: 4.4.0(supports-color@8.1.1)
-      eslint: 8.57.1
-      ts-api-utils: 1.4.3(typescript@5.6.3)
-    optionalDependencies:
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/type-utils@6.21.0(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.7.2)
@@ -11058,21 +11008,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.6.3)':
-    dependencies:
-      '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.0(supports-color@8.1.1)
-      globby: 11.1.0
-      is-glob: 4.0.3
-      minimatch: 9.0.3
-      semver: 7.6.3
-      ts-api-utils: 1.4.3(typescript@5.6.3)
-    optionalDependencies:
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/typescript-estree@6.21.0(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/types': 6.21.0
@@ -11098,20 +11033,6 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.7.2)
       eslint: 8.57.1
       eslint-scope: 5.1.1
-      semver: 7.6.3
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-
-  '@typescript-eslint/utils@6.21.0(eslint@8.57.1)(typescript@5.6.3)':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.1)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.8
-      '@typescript-eslint/scope-manager': 6.21.0
-      '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.6.3)
-      eslint: 8.57.1
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
@@ -12226,14 +12147,14 @@ snapshots:
       path-type: 4.0.0
       yaml: 1.10.2
 
-  cosmiconfig@9.0.0(typescript@5.6.3):
+  cosmiconfig@9.0.0(typescript@5.7.2):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.6.3
+      typescript: 5.7.2
 
   cpx2@8.0.0:
     dependencies:
@@ -17526,10 +17447,6 @@ snapshots:
 
   tryer@1.0.1: {}
 
-  ts-api-utils@1.4.3(typescript@5.6.3):
-    dependencies:
-      typescript: 5.6.3
-
   ts-api-utils@1.4.3(typescript@5.7.2):
     dependencies:
       typescript: 5.7.2
@@ -17658,8 +17575,6 @@ snapshots:
   typedarray-to-buffer@3.1.5:
     dependencies:
       is-typedarray: 1.0.0
-
-  typescript@5.6.3: {}
 
   typescript@5.7.2: {}
 
