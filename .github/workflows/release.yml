@@ -15,7 +15,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-          pnpm-version: 9.15.1
+          pnpm-version: 9.15.2
       - name: Lint
         run: pnpm lint
 
@@ -28,7 +28,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-          pnpm-version: 9.15.1
+          pnpm-version: 9.15.2
       - name: Build library
         run: pnpm build
 
@@ -54,7 +54,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-          pnpm-version: 9.15.1
+          pnpm-version: 9.15.2
 
       - name: Build library
         run: pnpm build
