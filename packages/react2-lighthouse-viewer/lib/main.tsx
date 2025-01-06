@@ -7,7 +7,7 @@ export type React2LighthouseViewerProps = {
 
 export type { Result };
 
-export default ({ json }: React2LighthouseViewerProps): JSX.Element => {
+export default ({ json }: React2LighthouseViewerProps): React.JSX.Element => {
   const [template, setTemplate] = useState('');
   useEffect(() => {
     setTemplate(renderReport(json, {}).outerHTML);
