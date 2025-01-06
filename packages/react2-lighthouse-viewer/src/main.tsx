@@ -1,4 +1,4 @@
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import reportJson from './assets/report.json';
 import React2LighthouseViewer from '../lib/main';
 import React, { FC, useEffect, useState } from 'react';
@@ -6,6 +6,7 @@ import React, { FC, useEffect, useState } from 'react';
 const reactRootElement = document.getElementById('react-app');
 if (reactRootElement) {
   const ReactApp: FC = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const report: any = {};
     const [data, setData] = useState(report);
 
