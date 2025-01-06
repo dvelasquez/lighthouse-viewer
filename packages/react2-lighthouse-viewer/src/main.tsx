@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import reportJson from './assets/report.json';
 import React2LighthouseViewer from '../lib/main';
 import React, { FC, useEffect, useState } from 'react';
@@ -20,6 +20,6 @@ if (reactRootElement) {
       </div>
     );
   };
-
-  render(<ReactApp />, reactRootElement);
+  const root = createRoot(reactRootElement);
+  root.render(<ReactApp />);
 }
