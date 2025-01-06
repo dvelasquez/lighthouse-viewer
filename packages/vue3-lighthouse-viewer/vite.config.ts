@@ -1,5 +1,5 @@
-import { defineConfig, UserConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig, UserConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import path from 'path';
 const { BUILD_TYPE } = process.env;
 
