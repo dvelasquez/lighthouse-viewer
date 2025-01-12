@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.30.2)(typescript@5.7.2)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.20
+        specifier: workspace:0.2.21
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.20
+        specifier: workspace:0.2.21
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -161,16 +161,16 @@ importers:
   packages/react2-lighthouse-viewer:
     devDependencies:
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.4
+        version: 19.0.4
       '@types/react-dom':
         specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        version: 19.0.2(@types/react@19.0.4)
       '@vitejs/plugin-react':
         specifier: 4.3.4
         version: 4.3.4(vite@6.0.6(@types/node@22.10.5)(jiti@1.21.7)(terser@5.37.0)(yaml@2.6.1))
       lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -188,7 +188,7 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.16.1
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.3
         version: 2.3.3(vite@6.0.6(@types/node@22.10.5)(jiti@1.21.7)(terser@5.37.0)(yaml@2.6.1))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
       lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.6
         version: 6.0.6(@types/node@22.10.5)(jiti@1.21.7)(terser@5.37.0)(yaml@2.6.1)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.20
+        specifier: workspace:^0.2.21
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.21
+        specifier: workspace:^0.1.22
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -2215,8 +2215,8 @@ packages:
   '@types/react@18.3.17':
     resolution: {integrity: sha512-opAQ5no6LqJNo9TqnxBKsgnkIYHozW9KSTlFVoSUJYh1Fl/sswkEoqIugRSm7tbh6pABtYjGAjW+GOS23j8qbw==}
 
-  '@types/react@19.0.2':
-    resolution: {integrity: sha512-USU8ZI/xyKJwFTpjSVIrSeHBVAGagkHQKPNbxeWwql/vDmnTIBgx+TJnhFnj1NXgz8XfprU0egV2dROLGpsBEg==}
+  '@types/react@19.0.4':
+    resolution: {integrity: sha512-3O4QisJDYr1uTUMZHA2YswiQZRq+Pd8D+GdVFYikTutYsTz+QZgWkAPnP7rx9txoI6EXKcPiluMqWPFV3tT9Wg==}
 
   '@types/resolve@1.17.1':
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -10921,16 +10921,16 @@ snapshots:
     dependencies:
       '@types/react': 18.3.17
 
-  '@types/react-dom@19.0.2(@types/react@19.0.2)':
+  '@types/react-dom@19.0.2(@types/react@19.0.4)':
     dependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.4
 
   '@types/react@18.3.17':
     dependencies:
       '@types/prop-types': 15.7.14
       csstype: 3.1.3
 
-  '@types/react@19.0.2':
+  '@types/react@19.0.4':
     dependencies:
       csstype: 3.1.3
 
