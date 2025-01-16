@@ -7,7 +7,7 @@ import { onMounted, watch } from 'vue';
 import { renderReport, Result } from 'lighthouse-viewer';
 
 const props = defineProps<{
-  json: Object
+  json: Result
 }>();
 
 let elementRef: HTMLElement | null = null;
@@ -22,7 +22,7 @@ const setElementRef = (el: HTMLElement | null) => {
 
 const generateReport = () => {
   if (elementRef) {
-    const renderedReport = renderReport(props.json as Result, {});
+    const renderedReport = renderReport(props.json, {});
     elementRef.innerHTML = '';
     elementRef.appendChild(renderedReport);
   }

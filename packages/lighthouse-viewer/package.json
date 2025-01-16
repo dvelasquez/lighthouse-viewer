@@ -5,7 +5,7 @@
   "private": false,
   "main": "./dist/lighthouse-viewer.umd.js",
   "module": "./dist/lighthouse-viewer.es.js",
-  "types": "./types/types.d.ts",
+  "types": "./dist/main.d.ts",
   "files": [
     "/dist",
     "/types"
@@ -43,6 +43,9 @@
   },
   "devDependencies": {
     "lighthouse": "12.3.0"
+  },
+  "peerDependencies": {
+    "lighthouse": "12"
   },
   "browserslist": [
     "last 1 Chrome version"

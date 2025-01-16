@@ -5,7 +5,7 @@
   "private": false,
   "main": "./dist/vue-lighthouse-viewer.umd.js",
   "module": "./dist/vue-lighthouse-viewer.es.js",
-  "types": "./types/types.d.ts",
+  "types": "./dist/main.d.ts",
   "files": [
     "/dist"
   ],

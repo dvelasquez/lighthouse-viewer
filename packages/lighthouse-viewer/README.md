@@ -13,12 +13,12 @@ This is only for convenience, and it would be cool if some day the people from L
 2. In your code, import the following modules:
 
 ```ts
-import { renderReport } from 'lighthouse-viewer';
+import { renderReport, Result } from 'lighthouse-viewer';
 import report from './static/report.json';
 
 const app = document.querySelector<HTMLDivElement>('#lighthouse-viewer-element')!;
 
-const reportHtml = renderReport(report as any, {});
+const reportHtml = renderReport(report as Result, {});
 app.appendChild(reportHtml);
 ```
 

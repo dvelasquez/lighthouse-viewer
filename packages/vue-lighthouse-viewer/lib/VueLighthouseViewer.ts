@@ -1,8 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Vue from 'vue';
-import { renderReport } from 'lighthouse-viewer';
+import { renderReport, type Result } from 'lighthouse-viewer';
 
-export default Vue.extend<any, any, any, any>({
+interface Props {
+  json: Result;
+}
+
+interface Methods {
+  generateReport(): void;
+}
+
+interface Computed {
+  computedJson: Result;
+}
+
+export default Vue.extend<Record<string, never>, Methods, Computed, Props>({
   name: 'VueLighthouseViewer',
   components: {},
   render(h) {
@@ -15,7 +26,7 @@ export default Vue.extend<any, any, any, any>({
     },
   },
   computed: {
-    computedJson: function (): any {
+    computedJson: function (): Result {
       return this.json;
     },
   },
