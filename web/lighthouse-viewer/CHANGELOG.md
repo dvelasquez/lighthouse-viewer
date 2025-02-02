@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.30 (2025-02-02)
+
+**Note:** Version bump only for package lighthouse-viewer-web
+
 ## 0.1.29 (2025-02-02)
 
 **Note:** Version bump only for package lighthouse-viewer-web
