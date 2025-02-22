@@ -5,10 +5,7 @@ inputs:
     required: false
     default: '22.12.0'
     description: "The version of Node.js to use"
-  pnpm-version:
-    required: false
-    default: '9.15.1'
-    description: "The version of PNPM to use"
+
 runs:
   using: composite
   steps:
@@ -20,7 +17,6 @@ runs:
     - uses: pnpm/action-setup@v4
       name: Setup PNPM
       with:
-        version: ${{ inputs.pnpm-version }}
         run_install: false
 
     - name: Get pnpm store directory

@@ -13,7 +13,6 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: 22.12.0
-          pnpm-version: 9.15.2
       - name: Install without frozen lockfile
         run: pnpm install --no-frozen-lockfile
 
