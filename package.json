@@ -56,5 +56,14 @@
     "examples/*",
     "packages/*",
     "web/*"
-  ]
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "esbuild",
+      "svelte-preprocess"
+    ]
+  }
 }
