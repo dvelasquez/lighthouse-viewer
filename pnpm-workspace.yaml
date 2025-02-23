@@ -1,11 +1,4 @@
 packages:
-  - 'packages/lighthouse-viewer'
-  - 'packages/react2-lighthouse-viewer'
-  - 'packages/svelte-lighthouse-viewer'
-  - 'packages/vue-lighthouse-viewer'
-  - 'packages/vue3-lighthouse-viewer'
-  - 'web/lighthouse-viewer'
-  - 'examples/create-react-app'
-  - 'examples/nextjs-ts'
-
-link-workspace-packages: true
+  - 'packages/**'
+  - 'web/**'
+  - 'examples/**'

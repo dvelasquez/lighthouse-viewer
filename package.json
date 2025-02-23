@@ -51,10 +51,19 @@
     "npm": "11.1.0",
     "node": "22.12.0"
   },
-  "packageManager": "pnpm@9.15.5",
+  "packageManager": "pnpm@10.4.1",
   "workspaces": [
     "examples/*",
     "packages/*",
     "web/*"
-  ]
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "esbuild",
+      "svelte-preprocess"
+    ]
+  }
 }
