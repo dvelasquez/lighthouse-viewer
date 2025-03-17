@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.35.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.46
+        specifier: workspace:0.2.47
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.46
+        specifier: workspace:0.2.47
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -170,7 +170,7 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(vite@6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -188,7 +188,7 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.20.4
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.3
         version: 2.3.3(vite@6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
       lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -236,8 +236,8 @@ importers:
         specifier: 3.5.13
         version: 3.5.13(typescript@5.7.3)
       vue-tsc:
-        specifier: 2.2.2
-        version: 2.2.2(typescript@5.7.3)
+        specifier: 2.2.8
+        version: 2.2.8(typescript@5.7.3)
 
   web/lighthouse-viewer:
     devDependencies:
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.11
         version: 6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.46
+        specifier: workspace:^0.2.47
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.47
+        specifier: workspace:^0.1.48
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -2448,8 +2448,8 @@ packages:
   '@vue/compiler-vue2@2.7.16':
     resolution: {integrity: sha512-qYC3Psj9S/mfu9uVi5WvNZIzq+xnXMhOwbTFKKDD7b1lhpnn71jXSFdTQ+WsIEk0ONCd7VV2IMm7ONl6tbQ86A==}
 
-  '@vue/language-core@2.2.2':
-    resolution: {integrity: sha512-QotO41kurE5PLf3vrNgGTk3QswO2PdUFjBwNiOi7zMmGhwb25PSTh9hD1MCgKC06AVv+8sZQvlL3Do4TTVHSiQ==}
+  '@vue/language-core@2.2.8':
+    resolution: {integrity: sha512-rrzB0wPGBvcwaSNRriVWdNAbHQWSf0NlGqgKHK5mEkXpefjUlVRP62u03KvwZpvKVjRnBIQ/Lwre+Mx9N6juUQ==}
     peerDependencies:
       typescript: '*'
     peerDependenciesMeta:
@@ -8147,8 +8147,8 @@ packages:
   vue-template-compiler@2.7.16:
     resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
 
-  vue-tsc@2.2.2:
-    resolution: {integrity: sha512-1icPKkxAA5KTAaSwg0wVWdE48EdsH8fgvcbAiqojP4jXKl6LEM3soiW1aG/zrWrFt8Mw1ncG2vG1PvpZpVfehA==}
+  vue-tsc@2.2.8:
+    resolution: {integrity: sha512-jBYKBNFADTN+L+MdesNX/TB3XuDSyaWynKMDgR+yCSln0GQ9Tfb7JS2lr46s2LiFUT1WsmfWsSvIElyxzOPqcQ==}
     hasBin: true
     peerDependencies:
       typescript: '>=5.0.0'
@@ -11322,7 +11322,7 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  '@vue/language-core@2.2.2(typescript@5.7.3)':
+  '@vue/language-core@2.2.8(typescript@5.7.3)':
     dependencies:
       '@volar/language-core': 2.4.11
       '@vue/compiler-dom': 3.5.13
@@ -17964,10 +17964,10 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  vue-tsc@2.2.2(typescript@5.7.3):
+  vue-tsc@2.2.8(typescript@5.7.3):
     dependencies:
       '@volar/typescript': 2.4.11
-      '@vue/language-core': 2.2.2(typescript@5.7.3)
+      '@vue/language-core': 2.2.8(typescript@5.7.3)
       typescript: 5.7.3
 
   vue@2.7.16:
