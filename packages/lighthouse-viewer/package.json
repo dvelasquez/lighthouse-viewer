@@ -42,7 +42,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "lighthouse": "12.3.0"
+    "lighthouse": "12.4.0"
   },
   "browserslist": [
     "last 1 Chrome version"
