@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.35.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.50
+        specifier: workspace:0.2.51
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.50
+        specifier: workspace:0.2.51
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -155,8 +155,8 @@ importers:
   packages/lighthouse-viewer:
     devDependencies:
       lighthouse:
-        specifier: 12.3.0
-        version: 12.3.0
+        specifier: 12.4.0
+        version: 12.4.0
 
   packages/react2-lighthouse-viewer:
     devDependencies:
@@ -170,7 +170,7 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(vite@6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -188,7 +188,7 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.20.4
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.3
         version: 2.3.3(vite@6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
       lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.11
         version: 6.0.11(@types/node@22.13.10)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.50
+        specifier: workspace:^0.2.51
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.51
+        specifier: workspace:^0.1.52
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -1748,8 +1748,8 @@ packages:
   '@octokit/types@13.8.0':
     resolution: {integrity: sha512-x7DjTIbEpEWXK99DMd01QfWy0hd5h4EN+Q7shkdKds3otGQP+oWE/y0A76i1OvH9fygo4ddvNf7ZvF0t78P98A==}
 
-  '@paulirish/trace_engine@0.0.39':
-    resolution: {integrity: sha512-2Y/ejHX5DDi5bjfWY/0c/BLVSfQ61Jw1Hy60Hnh0hfEO632D3FVctkzT4Q/lVAdvIPR0bUaok9JDTr1pu/OziA==}
+  '@paulirish/trace_engine@0.0.44':
+    resolution: {integrity: sha512-QjDv5qVaUXd5WZzE2ktKvqtGA17v4HFtj6MROCGkK57AZr9n0ZKgcx7dEFho+5EHZ6V6h1upW2eqheo8C4Y4dA==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1785,8 +1785,8 @@ packages:
       webpack-plugin-serve:
         optional: true
 
-  '@puppeteer/browsers@2.6.1':
-    resolution: {integrity: sha512-aBSREisdsGH890S2rQqK82qmQYU3uFpSH8wcZWHgHzl3LfzsxAKbLNiAG9mO8v1Y0UICBeClICxPJvyr0rcuxg==}
+  '@puppeteer/browsers@2.8.0':
+    resolution: {integrity: sha512-yTwt2KWRmCQAfhvbCRjebaSX8pV1//I0Y3g+A7f/eS7gf0l4eRJoUCvcYdVtboeU4CTOZQuqYbZNS8aBYb8ROQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3116,8 +3116,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromium-bidi@0.11.0:
-    resolution: {integrity: sha512-6CJWHkNRoyZyjV9Rwv2lYONZf1Xm0IuDyNq97nwSsxxP3wf5Bwy15K5rOvVKMtJ127jJBmxFUanSAOjgFRxgrA==}
+  chromium-bidi@2.1.2:
+    resolution: {integrity: sha512-vtRWBK2uImo5/W2oG6/cDkkHSm+2t6VHgnj+Rcwhb0pP74OoUb4GipyRX/T/y39gYQPhioP0DPShn+A7P6CHNw==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -3390,8 +3390,8 @@ packages:
     resolution: {integrity: sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==}
     engines: {node: '>=8'}
 
-  csp_evaluator@1.1.1:
-    resolution: {integrity: sha512-N3ASg0C4kNPUaNxt1XAvzHIVuzdtr8KLgfk1O8WDyimp1GisPAHESupArO2ieHk9QWbrJ/WkQODyh21Ps/xhxw==}
+  csp_evaluator@1.1.5:
+    resolution: {integrity: sha512-EL/iN9etCTzw/fBnp0/uj0f5BOOGvZut2mzsiiBZ/FdT6gFQCKRO/tmcKOxn5drWZ2Ndm/xBb1SI4zwWbGtmIw==}
 
   css-blank-pseudo@3.0.3:
     resolution: {integrity: sha512-VS90XWtsHGqoM0t4KpH053c4ehxZ2E6HtGI7x68YFV0pTo/QmkV/YFA+NnlvK8guxZVNWGQhVNJGC39Q8XF4OQ==}
@@ -3681,11 +3681,11 @@ packages:
     engines: {node: '>= 4.2.1'}
     hasBin: true
 
-  devtools-protocol@0.0.1312386:
-    resolution: {integrity: sha512-DPnhUXvmvKT2dFA/j7B+riVLUt9Q6RKJlcppojL5CoRywJJKLDYnRlw0gTFKfgDPHP5E04UoB71SxoJlVZy8FA==}
+  devtools-protocol@0.0.1413902:
+    resolution: {integrity: sha512-yRtvFD8Oyk7C9Os3GmnFZLu53yAfsnyw1s+mLmHHUK0GQEc9zthHWvS1r67Zqzm5t7v56PILHIVZ7kmFMaL2yQ==}
 
-  devtools-protocol@0.0.1367902:
-    resolution: {integrity: sha512-XxtPuC3PGakY6PD7dG66/o8KwJ/LkH2/EKe19Dcw58w53dv4/vSQEkn/SzuyhHE2q4zPgCkxQBxus3VV4ql+Pg==}
+  devtools-protocol@0.0.1423531:
+    resolution: {integrity: sha512-z6cOcajZWxk80zvFnkTGa7tj3oqF+C5SnOF1KSMeAr5/WW/nLNHlEpKr7voSzMz8IaUoq5rjdI0Mqv5k/BUkhg==}
 
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
@@ -5466,8 +5466,8 @@ packages:
   lighthouse-stack-packs@1.12.2:
     resolution: {integrity: sha512-Ug8feS/A+92TMTCK6yHYLwaFMuelK/hAKRMdldYkMNwv+d9PtWxjXEg6rwKtsUXTADajhdrhXyuNCJ5/sfmPFw==}
 
-  lighthouse@12.3.0:
-    resolution: {integrity: sha512-OaLE8DasnwQkn2CBo2lKtD+IQv42mNP3T+Vaw29I++rAh0Zpgc6SM15usdIYyzhRMR5EWFxze5Fyb+HENJSh2A==}
+  lighthouse@12.4.0:
+    resolution: {integrity: sha512-1p/YKQpMqfYVSKVOB43RG3xbnxkSUOG0zqVm/bxJHAaAHKrEACgFi8HZxD9CCTFrt+d/Q/x9gjDyeUDarm1SIg==}
     engines: {node: '>=18.16'}
     hasBin: true
 
@@ -6793,8 +6793,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@23.11.1:
-    resolution: {integrity: sha512-3HZ2/7hdDKZvZQ7dhhITOUg4/wOrDRjyK2ZBllRB0ZCOi9u0cwq1ACHDjBB+nX+7+kltHjQvBRdeY7+W0T+7Gg==}
+  puppeteer-core@24.4.0:
+    resolution: {integrity: sha512-eFw66gCnWo0X8Hyf9KxxJtms7a61NJVMiSaWfItsFPzFBsjsWdmcNlBdsA1WVwln6neoHhsG+uTVesKmTREn/g==}
     engines: {node: '>=18'}
 
   q@1.5.1:
@@ -7967,9 +7967,6 @@ packages:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
 
-  unbzip2-stream@1.4.3:
-    resolution: {integrity: sha512-mlExGW4w71ebDJviH16lQLtZS32VKqsSfk80GCfUlwT/4/hNRFsoscrF/c++9xinkMzECL1uL9DDwXqFWkruPg==}
-
   underscore@1.12.1:
     resolution: {integrity: sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==}
 
@@ -8495,8 +8492,8 @@ packages:
   zimmerframe@1.1.2:
     resolution: {integrity: sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==}
 
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
 snapshots:
 
@@ -10421,7 +10418,7 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 23.0.1
 
-  '@paulirish/trace_engine@0.0.39':
+  '@paulirish/trace_engine@0.0.44':
     dependencies:
       third-party-web: 0.26.5
 
@@ -10445,7 +10442,7 @@ snapshots:
       type-fest: 4.35.0
       webpack-dev-server: 4.15.2(webpack@5.98.0)
 
-  '@puppeteer/browsers@2.6.1':
+  '@puppeteer/browsers@2.8.0':
     dependencies:
       debug: 4.4.0(supports-color@8.1.1)
       extract-zip: 2.0.1(supports-color@8.1.1)
@@ -10453,7 +10450,6 @@ snapshots:
       proxy-agent: 6.5.0
       semver: 7.7.1
       tar-fs: 3.0.8
-      unbzip2-stream: 1.4.3
       yargs: 17.7.2
     transitivePeerDependencies:
       - bare-buffer
@@ -12096,11 +12092,11 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromium-bidi@0.11.0(devtools-protocol@0.0.1367902):
+  chromium-bidi@2.1.2(devtools-protocol@0.0.1413902):
     dependencies:
-      devtools-protocol: 0.0.1367902
+      devtools-protocol: 0.0.1413902
       mitt: 3.0.1
-      zod: 3.23.8
+      zod: 3.24.2
 
   ci-info@3.9.0: {}
 
@@ -12382,7 +12378,7 @@ snapshots:
 
   crypto-random-string@2.0.0: {}
 
-  csp_evaluator@1.1.1: {}
+  csp_evaluator@1.1.5: {}
 
   css-blank-pseudo@3.0.3(postcss@8.5.3):
     dependencies:
@@ -12708,9 +12704,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  devtools-protocol@0.0.1312386: {}
+  devtools-protocol@0.0.1413902: {}
 
-  devtools-protocol@0.0.1367902: {}
+  devtools-protocol@0.0.1423531: {}
 
   didyoumean@1.2.2: {}
 
@@ -15070,15 +15066,15 @@ snapshots:
 
   lighthouse-stack-packs@1.12.2: {}
 
-  lighthouse@12.3.0:
+  lighthouse@12.4.0:
     dependencies:
-      '@paulirish/trace_engine': 0.0.39
+      '@paulirish/trace_engine': 0.0.44
       '@sentry/node': 7.120.3
       axe-core: 4.10.2
       chrome-launcher: 1.1.2
       configstore: 5.0.1
-      csp_evaluator: 1.1.1
-      devtools-protocol: 0.0.1312386
+      csp_evaluator: 1.1.5
+      devtools-protocol: 0.0.1423531
       enquirer: 2.4.1
       http-link-header: 1.1.3
       intl-messageformat: 10.7.15
@@ -15091,7 +15087,7 @@ snapshots:
       metaviewport-parser: 0.3.0
       open: 8.4.2
       parse-cache-control: 1.0.1
-      puppeteer-core: 23.11.1
+      puppeteer-core: 24.4.0
       robots-parser: 3.0.1
       semver: 5.7.2
       speedline-core: 1.4.3
@@ -16428,12 +16424,12 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@23.11.1:
+  puppeteer-core@24.4.0:
     dependencies:
-      '@puppeteer/browsers': 2.6.1
-      chromium-bidi: 0.11.0(devtools-protocol@0.0.1367902)
+      '@puppeteer/browsers': 2.8.0
+      chromium-bidi: 2.1.2(devtools-protocol@0.0.1413902)
       debug: 4.4.0(supports-color@8.1.1)
-      devtools-protocol: 0.0.1367902
+      devtools-protocol: 0.0.1413902
       typed-query-selector: 2.12.0
       ws: 8.18.1
     transitivePeerDependencies:
@@ -17834,11 +17830,6 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
-  unbzip2-stream@1.4.3:
-    dependencies:
-      buffer: 5.7.1
-      through: 2.3.8
-
   underscore@1.12.1: {}
 
   undici-types@6.20.0: {}
@@ -18440,4 +18431,4 @@ snapshots:
 
   zimmerframe@1.1.2: {}
 
-  zod@3.23.8: {}
+  zod@3.24.2: {}
