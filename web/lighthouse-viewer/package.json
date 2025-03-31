@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-viewer-web",
-  "version": "0.1.54",
+  "version": "0.1.55",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -16,12 +16,12 @@
   },
   "devDependencies": {
     "cpx2": "8.0.0",
-    "react2-lighthouse-viewer": "workspace:^0.2.54",
-    "svelte-lighthouse-viewer": "workspace:^0.2.54",
+    "react2-lighthouse-viewer": "workspace:^0.2.55",
+    "svelte-lighthouse-viewer": "workspace:^0.2.55",
     "typescript": "5.7.3",
     "vite": "6.0.11",
-    "vue-lighthouse-viewer": "workspace:^0.2.54",
-    "vue3-lighthouse-viewer": "workspace:^0.1.55"
+    "vue-lighthouse-viewer": "workspace:^0.2.55",
+    "vue3-lighthouse-viewer": "workspace:^0.1.56"
   },
   "volta": {
     "extends": "../../package.json"
