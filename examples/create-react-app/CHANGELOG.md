@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.57 (2025-04-06)
+
+**Note:** Version bump only for package create-react-app
+
 ## 0.2.56 (2025-03-31)
 
 **Note:** Version bump only for package create-react-app
