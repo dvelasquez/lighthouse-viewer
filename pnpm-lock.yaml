@@ -16,19 +16,19 @@ importers:
         version: 9.17.0
       '@lerna-lite/cli':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/core':
         specifier: 3.10.1
-        version: 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+        version: 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/publish':
         specifier: 3.10.1
-        version: 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+        version: 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/version':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@types/node':
         specifier: '22'
-        version: 22.15.29
+        version: 22.15.30
       '@typescript-eslint/eslint-plugin':
         specifier: 8.19.0
         version: 8.19.0(@typescript-eslint/parser@8.19.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3)
@@ -73,7 +73,7 @@ importers:
         version: 5.7.3
       vite:
         specifier: 6.0.11
-        version: 6.0.11(@types/node@22.15.29)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
+        version: 6.0.11(@types/node@22.15.30)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
 
   examples/create-react-app:
     dependencies:
@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.35.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.83
+        specifier: workspace:0.2.84
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.83
+        specifier: workspace:0.2.84
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -170,7 +170,7 @@ importers:
         specifier: 4.5.1
         version: 4.5.1(vite@6.0.11(@types/node@22.15.30)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -188,7 +188,7 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.25.12
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.3
         version: 2.3.3(vite@6.0.11(@types/node@22.15.30)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.7.3)(vue@3.5.16(typescript@5.7.3))
       lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.11
         version: 6.0.11(@types/node@22.15.30)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.83
+        specifier: workspace:^0.2.84
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.84
+        specifier: workspace:^0.1.85
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -2265,9 +2265,6 @@ packages:
 
   '@types/node@22.13.14':
     resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
-
-  '@types/node@22.15.29':
-    resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
   '@types/node@22.15.30':
     resolution: {integrity: sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==}
@@ -9888,10 +9885,10 @@ snapshots:
 
   '@hutson/parse-repository-url@5.0.0': {}
 
-  '@inquirer/core@10.1.7(@types/node@22.15.29)':
+  '@inquirer/core@10.1.7(@types/node@22.15.30)':
     dependencies:
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.15.29)
+      '@inquirer/type': 3.0.4(@types/node@22.15.30)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -9899,38 +9896,38 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
-  '@inquirer/expand@4.0.9(@types/node@22.15.29)':
+  '@inquirer/expand@4.0.9(@types/node@22.15.30)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.15.29)
-      '@inquirer/type': 3.0.4(@types/node@22.15.29)
+      '@inquirer/core': 10.1.7(@types/node@22.15.30)
+      '@inquirer/type': 3.0.4(@types/node@22.15.30)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
   '@inquirer/figures@1.0.10': {}
 
-  '@inquirer/input@4.1.6(@types/node@22.15.29)':
+  '@inquirer/input@4.1.6(@types/node@22.15.30)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.15.29)
-      '@inquirer/type': 3.0.4(@types/node@22.15.29)
+      '@inquirer/core': 10.1.7(@types/node@22.15.30)
+      '@inquirer/type': 3.0.4(@types/node@22.15.30)
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
-  '@inquirer/select@4.0.9(@types/node@22.15.29)':
+  '@inquirer/select@4.0.9(@types/node@22.15.30)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.15.29)
+      '@inquirer/core': 10.1.7(@types/node@22.15.30)
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.15.29)
+      '@inquirer/type': 3.0.4(@types/node@22.15.30)
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
-  '@inquirer/type@3.0.4(@types/node@22.15.29)':
+  '@inquirer/type@3.0.4(@types/node@22.15.30)':
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -10171,10 +10168,10 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
-  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
+  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/core': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
-      '@lerna-lite/init': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/init': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.10.1
       dedent: 1.5.3(babel-plugin-macros@3.1.0)
       dotenv: 16.4.7
@@ -10182,8 +10179,8 @@ snapshots:
       load-json-file: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/publish': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/publish': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -10191,11 +10188,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/core@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
+  '@lerna-lite/core@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
     dependencies:
-      '@inquirer/expand': 4.0.9(@types/node@22.15.29)
-      '@inquirer/input': 4.1.6(@types/node@22.15.29)
-      '@inquirer/select': 4.0.9(@types/node@22.15.29)
+      '@inquirer/expand': 4.0.9(@types/node@22.15.30)
+      '@inquirer/input': 4.1.6(@types/node@22.15.30)
+      '@inquirer/select': 4.0.9(@types/node@22.15.30)
       '@lerna-lite/npmlog': 3.10.1
       '@npmcli/run-script': 8.1.0
       clone-deep: 4.0.1
@@ -10229,9 +10226,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/init@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
+  '@lerna-lite/init@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/core': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       fs-extra: 11.3.0
       p-map: 7.0.3
       write-json-file: 6.0.0
@@ -10253,12 +10250,12 @@ snapshots:
       string-width: 7.2.0
       wide-align: 1.1.5
 
-  '@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
+  '@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
-      '@lerna-lite/core': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.10.1
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
@@ -10292,10 +10289,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
+  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
-      '@lerna-lite/core': 3.10.1(@types/node@22.15.29)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3))(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
+      '@lerna-lite/core': 3.10.1(@types/node@22.15.30)(babel-plugin-macros@3.1.0)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.10.1
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 21.1.1
@@ -11090,10 +11087,6 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@22.15.29':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.15.30':
     dependencies:
       undici-types: 6.21.0
@@ -11186,7 +11179,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
     optional: true
 
   '@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3)':
@@ -18130,18 +18123,6 @@ snapshots:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
-
-  vite@6.0.11(@types/node@22.15.29)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0):
-    dependencies:
-      esbuild: 0.24.2
-      postcss: 8.5.3
-      rollup: 4.34.8
-    optionalDependencies:
-      '@types/node': 22.15.29
-      fsevents: 2.3.3
-      jiti: 1.21.7
-      terser: 5.39.0
-      yaml: 2.7.0
 
   vite@6.0.11(@types/node@22.15.30)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0):
     dependencies:
