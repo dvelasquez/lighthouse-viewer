@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.35.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.93
+        specifier: workspace:0.2.94
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.93
+        specifier: workspace:0.2.94
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -170,7 +170,7 @@ importers:
         specifier: 4.5.2
         version: 4.5.2(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -182,13 +182,13 @@ importers:
   packages/svelte-lighthouse-viewer:
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
-        specifier: 5.0.3
-        version: 5.0.3(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+        specifier: 5.1.0
+        version: 5.1.0(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       '@tsconfig/svelte':
         specifier: 5.0.4
         version: 5.0.4
       lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.25.12
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.3
         version: 2.3.3(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.7.3)(vue@3.5.17(typescript@5.7.3))
       lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.11
         version: 6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.93
+        specifier: workspace:^0.2.94
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.94
+        specifier: workspace:^0.1.95
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -2099,8 +2099,8 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
-  '@sveltejs/vite-plugin-svelte@5.0.3':
-    resolution: {integrity: sha512-MCFS6CrQDu1yGwspm4qtli0e63vaPCehf6V7pIMP15AsWgMKrqDGCPFF/0kn4SP0ii4aySu4Pa62+fIRGFMjgw==}
+  '@sveltejs/vite-plugin-svelte@5.1.0':
+    resolution: {integrity: sha512-wojIS/7GYnJDYIg1higWj2ROA6sSRWvcR1PO/bqEyFr/5UZah26c8Cz4u0NaqjPeVltzsVpt2Tm8d2io0V+4Tw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22}
     peerDependencies:
       svelte: ^5.0.0
@@ -8277,10 +8277,10 @@ packages:
       yaml:
         optional: true
 
-  vitefu@1.0.5:
-    resolution: {integrity: sha512-h4Vflt9gxODPFNGPwp4zAMZRpZR7eslzwH2c5hn5kNZ5rhnKyRJ50U+yGCdc2IRaBs8O4haIgLNGrV5CrpMsCA==}
+  vitefu@1.1.1:
+    resolution: {integrity: sha512-B/Fegf3i8zh0yFbpzZ21amWzHmuNlLlmJT6n7bu5e+pCHUKQIfXSYokrqOBGEMMe9UG2sostKQF9mml/vYaWJQ==}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
     peerDependenciesMeta:
       vite:
         optional: true
@@ -8815,7 +8815,7 @@ snapshots:
       '@babel/core': 7.21.0
       '@babel/helper-compilation-targets': 7.27.1
       '@babel/helper-plugin-utils': 7.26.5
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       lodash.debounce: 4.0.8
       resolve: 1.22.10
     transitivePeerDependencies:
@@ -9699,7 +9699,7 @@ snapshots:
       '@babel/parser': 7.27.5
       '@babel/template': 7.27.1
       '@babel/types': 7.27.1
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -9711,7 +9711,7 @@ snapshots:
       '@babel/parser': 7.27.5
       '@babel/template': 7.27.2
       '@babel/types': 7.27.6
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -10926,25 +10926,25 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
-      debug: 4.4.0(supports-color@8.1.1)
+      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+      debug: 4.4.1
       svelte: 5.25.12
       vite: 6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
+  '@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
-      debug: 4.4.0(supports-color@8.1.1)
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.25.12)(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+      debug: 4.4.1
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.17
       svelte: 5.25.12
       vite: 6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+      vitefu: 1.1.1(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -11314,7 +11314,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/type-utils': 5.62.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3)
       '@typescript-eslint/utils': 5.62.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3)
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       eslint: 9.17.0(jiti@1.21.7)
       graphemer: 1.4.0
       ignore: 5.3.2
@@ -11373,7 +11373,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.7.3)
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       eslint: 9.17.0(jiti@1.21.7)
     optionalDependencies:
       typescript: 5.7.3
@@ -11418,7 +11418,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.7.3)
       '@typescript-eslint/utils': 5.62.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.3)
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       eslint: 9.17.0(jiti@1.21.7)
       tsutils: 3.21.0(typescript@5.7.3)
     optionalDependencies:
@@ -11456,7 +11456,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.7.1
@@ -11780,7 +11780,7 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
@@ -13390,7 +13390,7 @@ snapshots:
   eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0)(eslint@9.17.0(jiti@1.21.7)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       enhanced-resolve: 5.18.1
       eslint: 9.17.0(jiti@1.21.7)
       get-tsconfig: 4.10.0
@@ -14307,14 +14307,14 @@ snapshots:
     dependencies:
       '@tootallnate/once': 1.1.2
       agent-base: 6.0.2
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
@@ -14366,14 +14366,14 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
@@ -14687,7 +14687,7 @@ snapshots:
 
   istanbul-lib-source-maps@4.0.1:
     dependencies:
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       istanbul-lib-coverage: 3.2.2
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -17449,7 +17449,7 @@ snapshots:
   socks-proxy-agent@8.0.5:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       socks: 2.8.4
     transitivePeerDependencies:
       - supports-color
@@ -17505,7 +17505,7 @@ snapshots:
 
   spdy-transport@3.0.0:
     dependencies:
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       detect-node: 2.1.0
       hpack.js: 2.1.6
       obuf: 1.1.2
@@ -17516,7 +17516,7 @@ snapshots:
 
   spdy@4.0.2:
     dependencies:
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       handle-thing: 2.0.1
       http-deceiver: 1.2.7
       select-hose: 2.0.0
@@ -18037,7 +18037,7 @@ snapshots:
   tuf-js@2.2.1:
     dependencies:
       '@tufjs/models': 2.0.1
-      debug: 4.4.0(supports-color@8.1.1)
+      debug: 4.4.1
       make-fetch-happen: 13.0.1
     transitivePeerDependencies:
       - supports-color
@@ -18283,7 +18283,7 @@ snapshots:
       terser: 5.39.0
       yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)):
+  vitefu@1.1.1(vite@6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)):
     optionalDependencies:
       vite: 6.0.11(@types/node@24.0.7)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
 
