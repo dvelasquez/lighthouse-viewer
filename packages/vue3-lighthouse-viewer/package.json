@@ -13,7 +13,8 @@
   "exports": {
     ".": {
       "import": "./dist/vue-lighthouse-viewer.es.js",
-      "require": "./dist/vue-lighthouse-viewer.umd.js"
+      "require": "./dist/vue-lighthouse-viewer.umd.js",
+      "types": "./types/types.d.ts"
     }
   },
   "license": "Apache-2.0",

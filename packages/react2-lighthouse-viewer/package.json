@@ -11,7 +11,8 @@
   "exports": {
     ".": {
       "import": "./dist/react2-lighthouse-viewer.es.js",
-      "require": "./dist/react2-lighthouse-viewer.umd.js"
+      "require": "./dist/react2-lighthouse-viewer.umd.js",
+      "types": "./dist/main.d.ts"
     }
   },
   "license": "Apache-2.0",
