@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "import": "./dist/svelte-lighthouse-viewer.es.js",
-      "require": "./dist/svelte-lighthouse-viewer.umd.js"
+      "require": "./dist/svelte-lighthouse-viewer.umd.js",
+      "types": "./dist/main.d.ts"
     }
   },
   "license": "Apache-2.0",
