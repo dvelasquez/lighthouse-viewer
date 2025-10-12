@@ -42,7 +42,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue2": "2.3.3",
+    "@vitejs/plugin-vue2": "2.3.4",
     "lighthouse-viewer": "workspace:^0.2.118",
     "vue": "2.7.16",
     "vue-template-compiler": "2.7.16"
