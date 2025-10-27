@@ -51,7 +51,7 @@
     "@tsconfig/svelte": "5.0.5",
     "lighthouse-viewer": "workspace:^0.2.125",
     "svelte": "5.41.3",
-    "svelte-check": "4.1.7",
+    "svelte-check": "4.3.3",
     "svelte-preprocess": "6.0.3"
   },
   "alias": {},
