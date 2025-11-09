@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.132 (2025-11-09)
+
+**Note:** Version bump only for package nextjs-ts
+
 ## 0.2.131 (2025-11-09)
 
 **Note:** Version bump only for package nextjs-ts
