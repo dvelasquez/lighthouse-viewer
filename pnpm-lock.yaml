@@ -96,7 +96,7 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.18.6(@babel/core@7.21.0))(@babel/plugin-transform-react-jsx@7.21.0(@babel/core@7.21.0))(@types/babel__core@7.20.5)(eslint@9.17.0(jiti@1.21.7))(react@18.2.0)(type-fest@4.35.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.132
+        specifier: workspace:0.2.133
         version: link:../../packages/react2-lighthouse-viewer
       web-vitals:
         specifier: 2.1.4
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react2-lighthouse-viewer:
-        specifier: workspace:0.2.132
+        specifier: workspace:0.2.133
         version: link:../../packages/react2-lighthouse-viewer
       typescript:
         specifier: 5.7.2
@@ -170,7 +170,7 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@6.0.11(@types/node@24.10.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../lighthouse-viewer
       react:
         specifier: 19.0.0
@@ -185,10 +185,10 @@ importers:
         specifier: 5.1.1
         version: 5.1.1(svelte@5.43.3)(vite@6.0.11(@types/node@24.10.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       '@tsconfig/svelte':
-        specifier: 5.0.5
-        version: 5.0.5
+        specifier: 5.0.6
+        version: 5.0.6
       lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../lighthouse-viewer
       svelte:
         specifier: 5.43.3
@@ -206,7 +206,7 @@ importers:
         specifier: 2.3.4
         version: 2.3.4(vite@6.0.11(@types/node@24.10.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))(vue@2.7.16)
       lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../lighthouse-viewer
       vue:
         specifier: 2.7.16
@@ -224,7 +224,7 @@ importers:
         specifier: 0.8.1
         version: 0.8.1(typescript@5.7.3)(vue@3.5.23(typescript@5.7.3))
       lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -245,10 +245,10 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       react2-lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../../packages/react2-lighthouse-viewer
       svelte-lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../../packages/svelte-lighthouse-viewer
       typescript:
         specifier: 5.7.3
@@ -257,10 +257,10 @@ importers:
         specifier: 6.0.11
         version: 6.0.11(@types/node@24.10.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vue-lighthouse-viewer:
-        specifier: workspace:^0.2.132
+        specifier: workspace:^0.2.133
         version: link:../../packages/vue-lighthouse-viewer
       vue3-lighthouse-viewer:
-        specifier: workspace:^0.1.133
+        specifier: workspace:^0.1.134
         version: link:../../packages/vue3-lighthouse-viewer
 
 packages:
@@ -2419,8 +2419,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@tsconfig/svelte@5.0.5':
-    resolution: {integrity: sha512-48fAnUjKye38FvMiNOj0J9I/4XlQQiZlpe9xaNPfe8vy2Y1hFBt8g1yqf2EGjVvHavo4jf2lC+TQyENCr4BJBQ==}
+  '@tsconfig/svelte@5.0.6':
+    resolution: {integrity: sha512-yGxYL0I9eETH1/DR9qVJey4DAsCdeau4a9wYPKuXfEhm8lFO8wg+LLYJjIpAm6Fw7HSlhepPhYPDop75485yWQ==}
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -11697,7 +11697,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@tsconfig/svelte@5.0.5': {}
+  '@tsconfig/svelte@5.0.6': {}
 
   '@tufjs/canonical-json@2.0.0': {}
 
