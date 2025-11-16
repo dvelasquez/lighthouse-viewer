@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.134 (2025-11-16)
+
+**Note:** Version bump only for package vue3-lighthouse-viewer
+
 ## 0.1.133 (2025-11-09)
 
 **Note:** Version bump only for package vue3-lighthouse-viewer
