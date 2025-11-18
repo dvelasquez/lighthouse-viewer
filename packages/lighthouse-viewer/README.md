@@ -32,3 +32,5 @@ app.appendChild(reportHtml);
 ## All the credits to the Lightouse Authors
 If there is any issue with the license or the copyrights, please let me know. There is no other intentions behind this 
 besides making it easy to find.
+
+Made with ❤️ by [Danilo Velasquez](https://d13z.dev/)

@@ -22,3 +22,4 @@ You can also refer to the examples in the [examples](/examples) folder.
 1. [Create React App example](/examples/create-react-app)
 2. [Next.js example](/examples/nextjs-ts). The report can not be rendered on the server side due to how the original lighthouse code is implemented.
 
+Made with ❤️ by [Danilo Velasquez](https://d13z.dev/)

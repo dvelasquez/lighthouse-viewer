@@ -17,3 +17,4 @@ import VueLighthouseViewer from "vue-lighthouse-viewer";
 ```
 4. That's all!
 
+Made with ❤️ by [Danilo Velasquez](https://d13z.dev/)
