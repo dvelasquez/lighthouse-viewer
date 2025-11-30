@@ -18,7 +18,7 @@
     "cpx2": "8.0.0",
     "react2-lighthouse-viewer": "workspace:^0.2.140",
     "svelte-lighthouse-viewer": "workspace:^0.2.140",
-    "typescript": "5.7.3",
+    "typescript": "5.9.3",
     "vite": "6.0.11",
     "vue-lighthouse-viewer": "workspace:^0.2.140",
     "vue3-lighthouse-viewer": "workspace:^0.1.141"
