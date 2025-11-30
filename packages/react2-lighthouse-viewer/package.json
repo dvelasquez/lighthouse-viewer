@@ -1,6 +1,6 @@
 {
   "name": "react2-lighthouse-viewer",
-  "version": "0.2.140",
+  "version": "0.2.141",
   "private": false,
   "main": "./dist/react2-lighthouse-viewer.umd.js",
   "module": "./dist/react2-lighthouse-viewer.es.js",
@@ -48,7 +48,7 @@
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "@vitejs/plugin-react": "4.7.0",
-    "lighthouse-viewer": "workspace:^0.2.140",
+    "lighthouse-viewer": "workspace:^0.2.141",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
