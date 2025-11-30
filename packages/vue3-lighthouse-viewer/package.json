@@ -49,7 +49,7 @@
     "@vitejs/plugin-vue": "5.2.4",
     "@vue/tsconfig": "0.8.1",
     "lighthouse-viewer": "workspace:^0.2.140",
-    "typescript": "5.7.3",
+    "typescript": "5.9.3",
     "vite": "6.0.11",
     "vue": "3.5.25",
     "vue-tsc": "2.2.12"
