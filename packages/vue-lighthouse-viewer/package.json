@@ -1,7 +1,7 @@
 {
   "name": "vue-lighthouse-viewer",
   "description": "A Vue.js component for viewing Lighthouse reports",
-  "version": "0.2.142",
+  "version": "0.2.143",
   "private": false,
   "main": "./dist/vue-lighthouse-viewer.umd.js",
   "module": "./dist/vue-lighthouse-viewer.es.js",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "2.3.4",
-    "lighthouse-viewer": "workspace:^0.2.142",
+    "lighthouse-viewer": "workspace:^0.2.143",
     "vue": "2.7.16",
     "vue-template-compiler": "2.7.16"
   },
