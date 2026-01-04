@@ -19,7 +19,7 @@
     "react2-lighthouse-viewer": "workspace:^0.2.143",
     "svelte-lighthouse-viewer": "workspace:^0.2.143",
     "typescript": "5.9.3",
-    "vite": "6.0.11",
+    "vite": "6.4.1",
     "vue-lighthouse-viewer": "workspace:^0.2.143",
     "vue3-lighthouse-viewer": "workspace:^0.1.144"
   },
