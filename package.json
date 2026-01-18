@@ -34,7 +34,7 @@
     "cypress": "13.17.0",
     "eslint": "9.39.2",
     "eslint-config-prettier": "9.1.2",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "http-server": "14.1.1",
     "prettier": "3.7.4",
     "rimraf": "6.1.2",
