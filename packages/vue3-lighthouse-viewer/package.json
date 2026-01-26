@@ -51,7 +51,7 @@
     "lighthouse-viewer": "workspace:^0.2.143",
     "typescript": "5.9.3",
     "vite": "6.4.1",
-    "vue": "3.5.26",
+    "vue": "3.5.27",
     "vue-tsc": "2.2.12"
   }
 }
