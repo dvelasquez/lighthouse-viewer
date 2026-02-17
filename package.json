@@ -49,7 +49,7 @@
   ],
   "volta": {
     "npm": "11.6.2",
-    "node": "22.12.0"
+    "node": "22.22.0"
   },
   "packageManager": "pnpm@10.4.1",
   "workspaces": [
