@@ -185,8 +185,8 @@ importers:
         specifier: 5.1.1
         version: 5.1.1(svelte@5.46.4)(vite@6.4.1(@types/node@25.2.3)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       '@tsconfig/svelte':
-        specifier: 5.0.7
-        version: 5.0.7
+        specifier: 5.0.8
+        version: 5.0.8
       lighthouse-viewer:
         specifier: workspace:^0.2.143
         version: link:../lighthouse-viewer
@@ -2441,8 +2441,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@tsconfig/svelte@5.0.7':
-    resolution: {integrity: sha512-NOtJF9LQnV7k6bpzcXwL/rXdlFHvAT9e0imrftiMc6/+FUNBHRZ8UngDrM+jciA6ENzFYNoFs8rfwumuGF+Dhw==}
+  '@tsconfig/svelte@5.0.8':
+    resolution: {integrity: sha512-UkNnw1/oFEfecR8ypyHIQuWYdkPvHiwcQ78sh+ymIiYoF+uc5H1UBetbjyqT+vgGJ3qQN6nhucJviX6HesWtKQ==}
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -11760,7 +11760,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@tsconfig/svelte@5.0.7': {}
+  '@tsconfig/svelte@5.0.8': {}
 
   '@tufjs/canonical-json@2.0.0': {}
 
