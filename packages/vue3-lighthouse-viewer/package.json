@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "5.2.4",
-    "@vue/tsconfig": "0.8.1",
+    "@vue/tsconfig": "0.9.1",
     "lighthouse-viewer": "workspace:^0.2.143",
     "typescript": "5.9.3",
     "vite": "6.4.1",
