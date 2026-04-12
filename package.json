@@ -29,7 +29,7 @@
     "@types/node": "22",
     "@typescript-eslint/eslint-plugin": "8.19.0",
     "@typescript-eslint/parser": "8.19.0",
-    "cpx2": "8.0.0",
+    "cpx2": "8.0.2",
     "cross-env": "7.0.3",
     "cypress": "13.17.0",
     "eslint": "9.39.4",
