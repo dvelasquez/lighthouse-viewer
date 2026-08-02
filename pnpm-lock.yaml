@@ -183,7 +183,7 @@ importers:
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: 5.1.1
-        version: 5.1.1(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+        version: 5.1.1(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       '@tsconfig/svelte':
         specifier: 5.0.8
         version: 5.0.8
@@ -191,14 +191,14 @@ importers:
         specifier: workspace:^0.2.143
         version: link:../lighthouse-viewer
       svelte:
-        specifier: 5.56.7
-        version: 5.56.7(@typescript-eslint/types@8.19.0)
+        specifier: 5.56.8
+        version: 5.56.8(@typescript-eslint/types@8.19.0)
       svelte-check:
         specifier: 4.7.2
-        version: 4.7.2(picomatch@4.0.3)(svelte@5.56.7(@typescript-eslint/types@8.19.0))(typescript@5.9.3)
+        version: 4.7.2(picomatch@4.0.3)(svelte@5.56.8(@typescript-eslint/types@8.19.0))(typescript@5.9.3)
       svelte-preprocess:
         specifier: 6.0.5
-        version: 6.0.5(@babel/core@7.28.0)(postcss-load-config@4.0.2(postcss@8.5.15))(postcss@8.5.15)(svelte@5.56.7(@typescript-eslint/types@8.19.0))(typescript@5.9.3)
+        version: 6.0.5(@babel/core@7.28.0)(postcss-load-config@4.0.2(postcss@8.5.15))(postcss@8.5.15)(svelte@5.56.8(@typescript-eslint/types@8.19.0))(typescript@5.9.3)
 
   packages/vue-lighthouse-viewer:
     devDependencies:
@@ -8172,8 +8172,8 @@ packages:
       typescript:
         optional: true
 
-  svelte@5.56.7:
-    resolution: {integrity: sha512-5qERUZX80oQj6XrDMUmD2Uhd/cIpCPDWWKBK3ZHmyRUC9apPyamWM8xMo31mbWsIQxwG2hVoSnOJ/EcnhVkkzQ==}
+  svelte@5.56.8:
+    resolution: {integrity: sha512-PY8LOw7xP6c8IOiVqdo0sbbZVYhXRSfklOQLAUyGBKqjTX0wx/z4l/9J+PmBpmlLnxzEb1NqltxQ5/wZme/Cmg==}
     engines: {node: '>=18'}
 
   svg-parser@2.0.4:
@@ -11605,23 +11605,23 @@ snapshots:
 
   '@sveltejs/load-config@0.2.0': {}
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       debug: 4.4.3(supports-color@8.1.1)
-      svelte: 5.56.7(@typescript-eslint/types@8.19.0)
+      svelte: 5.56.8(@typescript-eslint/types@8.19.0)
       vite: 6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
+  '@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.56.7(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.56.8(@typescript-eslint/types@8.19.0))(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
       debug: 4.4.1
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.17
-      svelte: 5.56.7(@typescript-eslint/types@8.19.0)
+      svelte: 5.56.8(@typescript-eslint/types@8.19.0)
       vite: 6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)
       vitefu: 1.1.1(vite@6.4.3(@types/node@26.1.1)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
     transitivePeerDependencies:
@@ -18568,7 +18568,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.7.2(picomatch@4.0.3)(svelte@5.56.7(@typescript-eslint/types@8.19.0))(typescript@5.9.3):
+  svelte-check@4.7.2(picomatch@4.0.3)(svelte@5.56.8(@typescript-eslint/types@8.19.0))(typescript@5.9.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.29
       '@sveltejs/load-config': 0.2.0
@@ -18576,21 +18576,21 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.3)
       picocolors: 1.1.1
       sade: 1.8.1
-      svelte: 5.56.7(@typescript-eslint/types@8.19.0)
+      svelte: 5.56.8(@typescript-eslint/types@8.19.0)
       typescript: 5.9.3
     transitivePeerDependencies:
       - picomatch
 
-  svelte-preprocess@6.0.5(@babel/core@7.28.0)(postcss-load-config@4.0.2(postcss@8.5.15))(postcss@8.5.15)(svelte@5.56.7(@typescript-eslint/types@8.19.0))(typescript@5.9.3):
+  svelte-preprocess@6.0.5(@babel/core@7.28.0)(postcss-load-config@4.0.2(postcss@8.5.15))(postcss@8.5.15)(svelte@5.56.8(@typescript-eslint/types@8.19.0))(typescript@5.9.3):
     dependencies:
-      svelte: 5.56.7(@typescript-eslint/types@8.19.0)
+      svelte: 5.56.8(@typescript-eslint/types@8.19.0)
     optionalDependencies:
       '@babel/core': 7.28.0
       postcss: 8.5.15
       postcss-load-config: 4.0.2(postcss@8.5.15)
       typescript: 5.9.3
 
-  svelte@5.56.7(@typescript-eslint/types@8.19.0):
+  svelte@5.56.8(@typescript-eslint/types@8.19.0):
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
