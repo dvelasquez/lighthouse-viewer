@@ -8,7 +8,7 @@ jobs:
     name: Check lockfile status
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Setup
         uses: ./.github/actions/setup
         with:
