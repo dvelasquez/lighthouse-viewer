@@ -26,7 +26,7 @@ runs:
         echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
     - name: Cache node_modules & Cypress Installation 📦
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: |
           ${{ steps.pnpm-cache.outputs.STORE_PATH }}
@@ -37,7 +37,7 @@ runs:
           ${{ runner.os }}-node-
 
     - name: Cache turbo build setup
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with: 
         path: .turbo
         key: ${{ runner.os }}-turbo-${{ github.sha }}
